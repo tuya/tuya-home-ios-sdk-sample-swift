@@ -9,10 +9,17 @@
 /* Begin PBXBuildFile section */
 		AF5531E025A5992500E13562 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5531DF25A5992500E13562 /* AppDelegate.swift */; };
 		AF5531E225A5992500E13562 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5531E125A5992500E13562 /* SceneDelegate.swift */; };
-		AF5531E725A5992500E13562 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5531E525A5992500E13562 /* Main.storyboard */; };
 		AF5531E925A5992800E13562 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF5531E825A5992800E13562 /* Assets.xcassets */; };
-		AF5531EC25A5992800E13562 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5531EA25A5992800E13562 /* LaunchScreen.storyboard */; };
 		AF55320D25A59BE800E13562 /* AppKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF55320C25A59BE800E13562 /* AppKey.swift */; };
+		AF5E2F3125A59FE600DAF14E /* t_s.bmp in Resources */ = {isa = PBXBuildFile; fileRef = AF5E2F3025A59FE600DAF14E /* t_s.bmp */; };
+		AF5E2F3E25A5A08600DAF14E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5E2F3425A5A08600DAF14E /* LaunchScreen.storyboard */; };
+		AF5E2F3F25A5A08600DAF14E /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5E2F3625A5A08600DAF14E /* Register.storyboard */; };
+		AF5E2F4025A5A08600DAF14E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5E2F3825A5A08600DAF14E /* Main.storyboard */; };
+		AF5E2F4125A5A08600DAF14E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5E2F3A25A5A08600DAF14E /* Login.storyboard */; };
+		AF5E2F4225A5A08600DAF14E /* UserInformation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5E2F3C25A5A08600DAF14E /* UserInformation.storyboard */; };
+		AF5E2F4825A5A51B00DAF14E /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5E2F4725A5A51B00DAF14E /* MainTableViewController.swift */; };
+		AF5E2F4D25A5D28A00DAF14E /* RegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5E2F4C25A5D28A00DAF14E /* RegisterTableViewController.swift */; };
+		AF5E2F5225A5D60B00DAF14E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5E2F5125A5D60B00DAF14E /* Alert.swift */; };
 		D64DAAF8C02D7910A3FDF6AA /* libPods-TuyaAppSDKSample-iOS-Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D9CF2E131C02FB7CF628AC8 /* libPods-TuyaAppSDKSample-iOS-Swift.a */; };
 /* End PBXBuildFile section */
 
@@ -22,11 +29,18 @@
 		AF5531DC25A5992500E13562 /* TuyaAppSDKSample-iOS-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TuyaAppSDKSample-iOS-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF5531DF25A5992500E13562 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF5531E125A5992500E13562 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AF5531E625A5992500E13562 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF5531E825A5992800E13562 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AF5531EB25A5992800E13562 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF5531ED25A5992800E13562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF55320C25A59BE800E13562 /* AppKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppKey.swift; sourceTree = "<group>"; };
+		AF5E2F3025A59FE600DAF14E /* t_s.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = t_s.bmp; sourceTree = "<group>"; };
+		AF5E2F3525A5A08600DAF14E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AF5E2F3725A5A08600DAF14E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Register.storyboard; sourceTree = "<group>"; };
+		AF5E2F3925A5A08600DAF14E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF5E2F3B25A5A08600DAF14E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
+		AF5E2F3D25A5A08600DAF14E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/UserInformation.storyboard; sourceTree = "<group>"; };
+		AF5E2F4725A5A51B00DAF14E /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		AF5E2F4C25A5D28A00DAF14E /* RegisterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTableViewController.swift; sourceTree = "<group>"; };
+		AF5E2F5125A5D60B00DAF14E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		B2A4751A3340941A1C42F4D9 /* Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig"; path = "Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,12 +88,51 @@
 				AF55320C25A59BE800E13562 /* AppKey.swift */,
 				AF5531DF25A5992500E13562 /* AppDelegate.swift */,
 				AF5531E125A5992500E13562 /* SceneDelegate.swift */,
-				AF5531E525A5992500E13562 /* Main.storyboard */,
+				AF5E2F3325A5A08600DAF14E /* StoryBoard */,
+				AF5E2F4625A5A4F300DAF14E /* ViewController */,
+				AF5E2F5025A5D5FB00DAF14E /* Helper */,
 				AF5531E825A5992800E13562 /* Assets.xcassets */,
-				AF5531EA25A5992800E13562 /* LaunchScreen.storyboard */,
 				AF5531ED25A5992800E13562 /* Info.plist */,
+				AF5E2F3025A59FE600DAF14E /* t_s.bmp */,
 			);
 			path = "TuyaAppSDKSample-iOS-Swift";
+			sourceTree = "<group>";
+		};
+		AF5E2F3325A5A08600DAF14E /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				AF5E2F3425A5A08600DAF14E /* LaunchScreen.storyboard */,
+				AF5E2F3625A5A08600DAF14E /* Register.storyboard */,
+				AF5E2F3825A5A08600DAF14E /* Main.storyboard */,
+				AF5E2F3A25A5A08600DAF14E /* Login.storyboard */,
+				AF5E2F3C25A5A08600DAF14E /* UserInformation.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		AF5E2F4625A5A4F300DAF14E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF5E2F4725A5A51B00DAF14E /* MainTableViewController.swift */,
+				AF5E2F4B25A5D26E00DAF14E /* User Management */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		AF5E2F4B25A5D26E00DAF14E /* User Management */ = {
+			isa = PBXGroup;
+			children = (
+				AF5E2F4C25A5D28A00DAF14E /* RegisterTableViewController.swift */,
+			);
+			path = "User Management";
+			sourceTree = "<group>";
+		};
+		AF5E2F5025A5D5FB00DAF14E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				AF5E2F5125A5D60B00DAF14E /* Alert.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		BD36B163EF3854B6423E5580 /* Pods */ = {
@@ -151,9 +204,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF5531EC25A5992800E13562 /* LaunchScreen.storyboard in Resources */,
+				AF5E2F4125A5A08600DAF14E /* Login.storyboard in Resources */,
+				AF5E2F4025A5A08600DAF14E /* Main.storyboard in Resources */,
 				AF5531E925A5992800E13562 /* Assets.xcassets in Resources */,
-				AF5531E725A5992500E13562 /* Main.storyboard in Resources */,
+				AF5E2F3125A59FE600DAF14E /* t_s.bmp in Resources */,
+				AF5E2F3E25A5A08600DAF14E /* LaunchScreen.storyboard in Resources */,
+				AF5E2F3F25A5A08600DAF14E /* Register.storyboard in Resources */,
+				AF5E2F4225A5A08600DAF14E /* UserInformation.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +280,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF5E2F5225A5D60B00DAF14E /* Alert.swift in Sources */,
+				AF5E2F4825A5A51B00DAF14E /* MainTableViewController.swift in Sources */,
+				AF5E2F4D25A5D28A00DAF14E /* RegisterTableViewController.swift in Sources */,
 				AF5531E025A5992500E13562 /* AppDelegate.swift in Sources */,
 				AF55320D25A59BE800E13562 /* AppKey.swift in Sources */,
 				AF5531E225A5992500E13562 /* SceneDelegate.swift in Sources */,
@@ -232,20 +292,44 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AF5531E525A5992500E13562 /* Main.storyboard */ = {
+		AF5E2F3425A5A08600DAF14E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AF5531E625A5992500E13562 /* Base */,
+				AF5E2F3525A5A08600DAF14E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		AF5E2F3625A5A08600DAF14E /* Register.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF5E2F3725A5A08600DAF14E /* Base */,
+			);
+			name = Register.storyboard;
+			sourceTree = "<group>";
+		};
+		AF5E2F3825A5A08600DAF14E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF5E2F3925A5A08600DAF14E /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		AF5531EA25A5992800E13562 /* LaunchScreen.storyboard */ = {
+		AF5E2F3A25A5A08600DAF14E /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AF5531EB25A5992800E13562 /* Base */,
+				AF5E2F3B25A5A08600DAF14E /* Base */,
 			);
-			name = LaunchScreen.storyboard;
+			name = Login.storyboard;
+			sourceTree = "<group>";
+		};
+		AF5E2F3C25A5A08600DAF14E /* UserInformation.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF5E2F3D25A5A08600DAF14E /* Base */,
+			);
+			name = UserInformation.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
