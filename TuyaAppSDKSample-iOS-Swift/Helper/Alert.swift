@@ -7,11 +7,15 @@
 import UIKit
 
 struct Alert {
-    static func showBasicAlert(on vc: UIViewController, with title: String, message: String) {
+    static func showBasicAlert(on vc: UIViewController, with title: String, message: String, actions: [UIAlertAction] = [UIAlertAction(title: "OK", style: .default)]) {
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default)
-        alertVC.addAction(action)
+
+        for action in actions {
+            alertVC.addAction(action)
+        }
         
-        vc.present(alertVC, animated: true)
+        DispatchQueue.main.async {
+            vc.present(alertVC, animated: true)
+        }
     }
 }

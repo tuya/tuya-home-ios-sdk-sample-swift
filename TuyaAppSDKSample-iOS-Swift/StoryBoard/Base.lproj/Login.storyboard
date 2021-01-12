@@ -10,22 +10,25 @@
         <!--Login-->
         <scene sceneID="z9Y-H6-ILG">
             <objects>
-                <tableViewController id="PEB-QI-ZXI" customClass="LoginTableViewController" sceneMemberID="viewController">
+                <tableViewController id="PEB-QI-ZXI" customClass="LoginTableViewController" customModule="TuyaAppSDKSample_iOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="VM7-C8-Vs3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <sections>
-                            <tableViewSection headerTitle="Login by Email" id="rEn-fl-dXY">
+                            <tableViewSection id="rEn-fl-dXY">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="20o-YK-bis">
-                                        <rect key="frame" x="20" y="55.5" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="18" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="20o-YK-bis" id="iSt-en-XDO">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="20o-YK-bis" id="iSt-en-XDO">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Country Code" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="k7Z-L9-7PN">
-                                                    <rect key="frame" x="20" y="8" width="334" height="28"/>
+                                                    <rect key="frame" x="20" y="8" width="334" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="EcW-HU-g97"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
@@ -39,14 +42,17 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="sV7-Xf-rHP">
-                                        <rect key="frame" x="20" y="99" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="61.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sV7-Xf-rHP" id="ION-H1-oCK">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sV7-Xf-rHP" id="ION-H1-oCK">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0Qz-La-oYh">
-                                                    <rect key="frame" x="20" y="8" width="334" height="28"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address or Phone Number" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0Qz-La-oYh">
+                                                    <rect key="frame" x="20" y="8" width="334" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="WSL-BW-o78"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                 </textField>
@@ -60,14 +66,17 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="R97-Ps-6xr">
-                                        <rect key="frame" x="20" y="142.5" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="105" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R97-Ps-6xr" id="zz2-pr-QtS">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R97-Ps-6xr" id="zz2-pr-QtS">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eYm-X4-pFJ">
-                                                    <rect key="frame" x="20" y="8" width="334" height="28"/>
+                                                    <rect key="frame" x="20" y="8" width="334" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="Oo0-aC-B9F"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 </textField>
@@ -85,7 +94,7 @@
                             <tableViewSection id="Njt-Se-Axy">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="vmu-5L-N6v">
-                                        <rect key="frame" x="20" y="222" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="184.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vmu-5L-N6v" id="1Qn-Me-rrX">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
@@ -95,7 +104,7 @@
                                                     <rect key="frame" x="168" y="7" width="38" height="30"/>
                                                     <state key="normal" title="Login"/>
                                                     <connections>
-                                                        <action selector="loginTapped:" destination="PEB-QI-ZXI" eventType="touchUpInside" id="EFu-wE-5hT"/>
+                                                        <action selector="loginTapped:" destination="PEB-QI-ZXI" eventType="touchUpInside" id="mmv-Gk-L84"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -110,7 +119,7 @@
                             <tableViewSection id="iJK-eg-BRG">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="cA2-Q9-LJI">
-                                        <rect key="frame" x="20" y="301.5" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="264" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cA2-Q9-LJI" id="PZB-5V-otz">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
@@ -140,8 +149,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Login" id="kEH-w9-yzz"/>
                     <connections>
+                        <outlet property="accountTextField" destination="0Qz-La-oYh" id="WvL-Ud-gdF"/>
                         <outlet property="countryCodeTextField" destination="k7Z-L9-7PN" id="aea-TZ-01M"/>
-                        <outlet property="emailAddressTextField" destination="0Qz-La-oYh" id="4PI-8i-JPg"/>
                         <outlet property="passwordTextField" destination="eYm-X4-pFJ" id="3NP-k3-3JG"/>
                     </connections>
                 </tableViewController>
@@ -152,22 +161,25 @@
         <!--Reset Password-->
         <scene sceneID="sPu-w6-Igi">
             <objects>
-                <tableViewController id="8UT-Uw-bSm" customClass="ResetPasswordTableViewController" sceneMemberID="viewController">
+                <tableViewController id="8UT-Uw-bSm" customClass="ResetPasswordTableViewController" customModule="TuyaAppSDKSample_iOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="0ze-bc-rWx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <sections>
-                            <tableViewSection headerTitle="Reset Password by Email" id="iFz-qS-PFR">
+                            <tableViewSection id="iFz-qS-PFR">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="2Sc-Nf-UZz">
-                                        <rect key="frame" x="20" y="55.5" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="18" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Sc-Nf-UZz" id="snt-ch-U67">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Sc-Nf-UZz" id="snt-ch-U67">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Country Code" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tmd-dx-fqr">
-                                                    <rect key="frame" x="20" y="8" width="334" height="28"/>
+                                                    <rect key="frame" x="20" y="8" width="334" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="qJb-tm-dfQ"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
@@ -181,14 +193,17 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="1Kb-v6-qLo">
-                                        <rect key="frame" x="20" y="99" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="61.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Kb-v6-qLo" id="ToD-f8-gDZ">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Kb-v6-qLo" id="ToD-f8-gDZ">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Tmz-IU-mNw">
-                                                    <rect key="frame" x="20" y="8" width="334" height="28"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address or Phone Number" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Tmz-IU-mNw">
+                                                    <rect key="frame" x="20" y="8" width="334" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="tTU-hk-gub"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                 </textField>
@@ -202,14 +217,17 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Jfo-8y-dMK">
-                                        <rect key="frame" x="20" y="142.5" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="105" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jfo-8y-dMK" id="dxy-cQ-hY0">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jfo-8y-dMK" id="dxy-cQ-hY0">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="yCi-uu-Voj">
-                                                    <rect key="frame" x="20" y="8" width="334" height="28"/>
+                                                    <rect key="frame" x="20" y="8" width="334" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="WE0-hG-CaX"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 </textField>
@@ -227,14 +245,17 @@
                             <tableViewSection id="sGx-gJ-8Go">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="wEy-VQ-eoV">
-                                        <rect key="frame" x="20" y="222" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="184.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wEy-VQ-eoV" id="nTf-Hd-CBS">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wEy-VQ-eoV" id="nTf-Hd-CBS">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Verification Code" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jNx-Nw-Bag">
-                                                    <rect key="frame" x="20" y="8" width="334" height="28"/>
+                                                    <rect key="frame" x="20" y="8" width="334" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="DvT-Uh-um9"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
@@ -248,7 +269,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="oVA-ak-SvE">
-                                        <rect key="frame" x="20" y="265.5" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="228" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oVA-ak-SvE" id="dO7-eU-KFa">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
@@ -258,7 +279,7 @@
                                                     <rect key="frame" x="108.5" y="7" width="157" height="30"/>
                                                     <state key="normal" title="Send Verification Code"/>
                                                     <connections>
-                                                        <action selector="sendVerificationCode:" destination="8UT-Uw-bSm" eventType="touchUpInside" id="0yW-jD-Nke"/>
+                                                        <action selector="sendVerificationCode:" destination="8UT-Uw-bSm" eventType="touchUpInside" id="sgH-iF-S8T"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -273,17 +294,17 @@
                             <tableViewSection id="ze1-3G-fpB">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="cxC-aW-ag0">
-                                        <rect key="frame" x="20" y="345" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="307.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cxC-aW-ag0" id="ouf-qR-Ksn">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uH1-KS-vd6">
-                                                    <rect key="frame" x="132.5" y="7" width="109" height="30"/>
-                                                    <state key="normal" title="Reset Password"/>
+                                                    <rect key="frame" x="167.5" y="7" width="39" height="30"/>
+                                                    <state key="normal" title="Reset"/>
                                                     <connections>
-                                                        <action selector="resetPassword:" destination="8UT-Uw-bSm" eventType="touchUpInside" id="MTt-gK-p7i"/>
+                                                        <action selector="resetPassword:" destination="8UT-Uw-bSm" eventType="touchUpInside" id="04P-p0-PQO"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -303,10 +324,10 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Reset Password" id="8dI-Me-up7"/>
                     <connections>
-                        <outlet property="countryCodeTextField" destination="tmd-dx-fqr" id="uy8-5p-BQM"/>
-                        <outlet property="emailAddressTextField" destination="Tmz-IU-mNw" id="P11-71-pA7"/>
-                        <outlet property="passwordTextField" destination="yCi-uu-Voj" id="aT5-uL-VkX"/>
-                        <outlet property="verificationCodeTextField" destination="jNx-Nw-Bag" id="Gh0-x7-kzx"/>
+                        <outlet property="accountTextField" destination="Tmz-IU-mNw" id="JRg-az-9uO"/>
+                        <outlet property="countryCodeTextField" destination="tmd-dx-fqr" id="PWo-Ck-93I"/>
+                        <outlet property="passwordTextField" destination="yCi-uu-Voj" id="stN-xc-Tsf"/>
+                        <outlet property="verificationCodeTextField" destination="jNx-Nw-Bag" id="Qh0-rG-raN"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7fW-yo-wGA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
