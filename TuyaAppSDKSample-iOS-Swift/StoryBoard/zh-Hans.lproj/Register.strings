@@ -1,0 +1,21 @@
+
+/* Class = "UIButton"; normalTitle = "Send Verification Code"; ObjectID = "7vh-7F-bdI"; */
+"7vh-7F-bdI.normalTitle" = "Send Verification Code";
+
+/* Class = "UITextField"; placeholder = "Email Address or Phone Number"; ObjectID = "HB4-6i-BjL"; */
+"HB4-6i-BjL.placeholder" = "Email Address or Phone Number";
+
+/* Class = "UITextField"; placeholder = "Verification Code"; ObjectID = "OT3-Mz-tHV"; */
+"OT3-Mz-tHV.placeholder" = "Verification Code";
+
+/* Class = "UINavigationItem"; title = "Register"; ObjectID = "T3m-D8-8P2"; */
+"T3m-D8-8P2.title" = "Register";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "sTx-DJ-2W3"; */
+"sTx-DJ-2W3.normalTitle" = "Register";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "wae-TX-aOn"; */
+"wae-TX-aOn.placeholder" = "Password";
+
+/* Class = "UITextField"; placeholder = "Country Code"; ObjectID = "yha-sh-brg"; */
+"yha-sh-brg.placeholder" = "Country Code";

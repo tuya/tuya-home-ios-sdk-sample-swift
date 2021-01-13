@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF37DBB425AEE842000EB0FD /* EditHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37DBB325AEE842000EB0FD /* EditHomeTableViewController.swift */; };
 		AF3A259C25A835AE003EB9FF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A259B25A835AE003EB9FF /* MainViewController.swift */; };
 		AF3A25A425A8426D003EB9FF /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A25A325A8426D003EB9FF /* UIButtonExtension.swift */; };
 		AF3A25A725A844DA003EB9FF /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A25A625A844DA003EB9FF /* LoginTableViewController.swift */; };
@@ -15,6 +16,11 @@
 		AF3A25B225A99E02003EB9FF /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A25B125A99E02003EB9FF /* UIViewControllerExtension.swift */; };
 		AF3A25B525A9ADD6003EB9FF /* AccountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A25B425A9ADD6003EB9FF /* AccountType.swift */; };
 		AF3A25B925AD7CC1003EB9FF /* UserInformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A25B825AD7CC1003EB9FF /* UserInformationTableViewController.swift */; };
+		AF3A25BD25AD9AE1003EB9FF /* NewHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A25BC25AD9AE0003EB9FF /* NewHomeTableViewController.swift */; };
+		AF3A25C125AE904C003EB9FF /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A25C025AE904C003EB9FF /* Home.swift */; };
+		AF3A25C525AE930E003EB9FF /* SwitchHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A25C425AE930E003EB9FF /* SwitchHomeTableViewController.swift */; };
+		AF3A25C925AE9F9A003EB9FF /* HomeListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A25C825AE9F99003EB9FF /* HomeListTableViewController.swift */; };
+		AF3A25D025AECFCF003EB9FF /* HomeDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A25CF25AECFCF003EB9FF /* HomeDetailTableViewController.swift */; };
 		AF5531E025A5992500E13562 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5531DF25A5992500E13562 /* AppDelegate.swift */; };
 		AF5531E225A5992500E13562 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5531E125A5992500E13562 /* SceneDelegate.swift */; };
 		AF5531E925A5992800E13562 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF5531E825A5992800E13562 /* Assets.xcassets */; };
@@ -34,6 +40,7 @@
 /* Begin PBXFileReference section */
 		207E8BAF216CF8ED00C5937A /* Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig"; path = "Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		8D9CF2E131C02FB7CF628AC8 /* libPods-TuyaAppSDKSample-iOS-Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TuyaAppSDKSample-iOS-Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF37DBB325AEE842000EB0FD /* EditHomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditHomeTableViewController.swift; path = "TuyaAppSDKSample-iOS-Swift/StoryBoard/EditHomeTableViewController.swift"; sourceTree = SOURCE_ROOT; };
 		AF3A259B25A835AE003EB9FF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AF3A25A325A8426D003EB9FF /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		AF3A25A625A844DA003EB9FF /* LoginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +49,11 @@
 		AF3A25B125A99E02003EB9FF /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		AF3A25B425A9ADD6003EB9FF /* AccountType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountType.swift; sourceTree = "<group>"; };
 		AF3A25B825AD7CC1003EB9FF /* UserInformationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationTableViewController.swift; sourceTree = "<group>"; };
+		AF3A25BC25AD9AE0003EB9FF /* NewHomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHomeTableViewController.swift; sourceTree = "<group>"; };
+		AF3A25C025AE904C003EB9FF /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		AF3A25C425AE930E003EB9FF /* SwitchHomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwitchHomeTableViewController.swift; path = "TuyaAppSDKSample-iOS-Swift/StoryBoard/SwitchHomeTableViewController.swift"; sourceTree = SOURCE_ROOT; };
+		AF3A25C825AE9F99003EB9FF /* HomeListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListTableViewController.swift; sourceTree = "<group>"; };
+		AF3A25CF25AECFCF003EB9FF /* HomeDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeDetailTableViewController.swift; path = "TuyaAppSDKSample-iOS-Swift/StoryBoard/HomeDetailTableViewController.swift"; sourceTree = SOURCE_ROOT; };
 		AF5531DC25A5992500E13562 /* TuyaAppSDKSample-iOS-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TuyaAppSDKSample-iOS-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF5531DF25A5992500E13562 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF5531E125A5992500E13562 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +90,19 @@
 				8D9CF2E131C02FB7CF628AC8 /* libPods-TuyaAppSDKSample-iOS-Swift.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF3A25BB25AD9AC3003EB9FF /* Home Management */ = {
+			isa = PBXGroup;
+			children = (
+				AF3A25C025AE904C003EB9FF /* Home.swift */,
+				AF3A25BC25AD9AE0003EB9FF /* NewHomeTableViewController.swift */,
+				AF3A25C425AE930E003EB9FF /* SwitchHomeTableViewController.swift */,
+				AF3A25C825AE9F99003EB9FF /* HomeListTableViewController.swift */,
+				AF3A25CF25AECFCF003EB9FF /* HomeDetailTableViewController.swift */,
+				AF37DBB325AEE842000EB0FD /* EditHomeTableViewController.swift */,
+			);
+			path = "Home Management";
 			sourceTree = "<group>";
 		};
 		AF5531D325A5992500E13562 = {
@@ -133,6 +158,7 @@
 				AF3A259B25A835AE003EB9FF /* MainViewController.swift */,
 				AF5E2F4725A5A51B00DAF14E /* TuyaSmartMainTableViewController.swift */,
 				AF5E2F4B25A5D26E00DAF14E /* User Management */,
+				AF3A25BB25AD9AC3003EB9FF /* Home Management */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -305,19 +331,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF3A25C525AE930E003EB9FF /* SwitchHomeTableViewController.swift in Sources */,
 				AF3A259C25A835AE003EB9FF /* MainViewController.swift in Sources */,
 				AF3A25A425A8426D003EB9FF /* UIButtonExtension.swift in Sources */,
+				AF3A25D025AECFCF003EB9FF /* HomeDetailTableViewController.swift in Sources */,
+				AF3A25BD25AD9AE1003EB9FF /* NewHomeTableViewController.swift in Sources */,
 				AF3A25AA25A98A77003EB9FF /* ResetPasswordTableViewController.swift in Sources */,
 				AF3A25A725A844DA003EB9FF /* LoginTableViewController.swift in Sources */,
 				AF5E2F5225A5D60B00DAF14E /* Alert.swift in Sources */,
 				AF3A25B925AD7CC1003EB9FF /* UserInformationTableViewController.swift in Sources */,
+				AF3A25C125AE904C003EB9FF /* Home.swift in Sources */,
 				AF5E2F4825A5A51B00DAF14E /* TuyaSmartMainTableViewController.swift in Sources */,
 				AF5E2F4D25A5D28A00DAF14E /* RegisterTableViewController.swift in Sources */,
 				AF3A25B525A9ADD6003EB9FF /* AccountType.swift in Sources */,
+				AF37DBB425AEE842000EB0FD /* EditHomeTableViewController.swift in Sources */,
 				AF5531E025A5992500E13562 /* AppDelegate.swift in Sources */,
 				AF55320D25A59BE800E13562 /* AppKey.swift in Sources */,
 				AF3A25B225A99E02003EB9FF /* UIViewControllerExtension.swift in Sources */,
 				AF5531E225A5992500E13562 /* SceneDelegate.swift in Sources */,
+				AF3A25C925AE9F9A003EB9FF /* HomeListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +411,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -440,6 +473,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -499,6 +533,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64ZYG66RMG;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "TuyaAppSDKSample-iOS-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -520,6 +555,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64ZYG66RMG;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "TuyaAppSDKSample-iOS-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (

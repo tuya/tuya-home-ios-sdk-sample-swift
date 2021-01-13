@@ -1,0 +1,39 @@
+
+/* Class = "UITextField"; placeholder = "Email Address or Phone Number"; ObjectID = "0Qz-La-oYh"; */
+"0Qz-La-oYh.placeholder" = "Email Address or Phone Number";
+
+/* Class = "UINavigationItem"; title = "Reset Password"; ObjectID = "8dI-Me-up7"; */
+"8dI-Me-up7.title" = "Reset Password";
+
+/* Class = "UIButton"; normalTitle = "Forget Password?"; ObjectID = "9MR-le-GWV"; */
+"9MR-le-GWV.normalTitle" = "Forget Password?";
+
+/* Class = "UIButton"; normalTitle = "Send Verification Code"; ObjectID = "JWu-Lu-DId"; */
+"JWu-Lu-DId.normalTitle" = "Send Verification Code";
+
+/* Class = "UITextField"; placeholder = "Email Address or Phone Number"; ObjectID = "Tmz-IU-mNw"; */
+"Tmz-IU-mNw.placeholder" = "Email Address or Phone Number";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "eYm-X4-pFJ"; */
+"eYm-X4-pFJ.placeholder" = "Password";
+
+/* Class = "UITextField"; placeholder = "Verification Code"; ObjectID = "jNx-Nw-Bag"; */
+"jNx-Nw-Bag.placeholder" = "Verification Code";
+
+/* Class = "UITextField"; placeholder = "Country Code"; ObjectID = "k7Z-L9-7PN"; */
+"k7Z-L9-7PN.placeholder" = "Country Code";
+
+/* Class = "UINavigationItem"; title = "Login"; ObjectID = "kEH-w9-yzz"; */
+"kEH-w9-yzz.title" = "Login";
+
+/* Class = "UITextField"; placeholder = "Country Code"; ObjectID = "tmd-dx-fqr"; */
+"tmd-dx-fqr.placeholder" = "Country Code";
+
+/* Class = "UIButton"; normalTitle = "Reset"; ObjectID = "uH1-KS-vd6"; */
+"uH1-KS-vd6.normalTitle" = "Reset";
+
+/* Class = "UITextField"; placeholder = "New Password"; ObjectID = "yCi-uu-Voj"; */
+"yCi-uu-Voj.placeholder" = "New Password";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "yoX-Qn-PEK"; */
+"yoX-Qn-PEK.normalTitle" = "Login";

@@ -1,0 +1,12 @@
+
+/* Class = "UINavigationItem"; title = "Tuya SDK Sample"; ObjectID = "CWv-aU-yDU"; */
+"CWv-aU-yDU.title" = "Tuya SDK Sample";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "Cbb-x5-OQ8"; */
+"Cbb-x5-OQ8.normalTitle" = "Login";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "YiB-nC-tNo"; */
+"YiB-nC-tNo.normalTitle" = "Register";
+
+/* Class = "UILabel"; text = "SDK Ver: 3.22"; ObjectID = "bGF-Pc-rVR"; */
+"bGF-Pc-rVR.text" = "SDK Ver: 3.22";
