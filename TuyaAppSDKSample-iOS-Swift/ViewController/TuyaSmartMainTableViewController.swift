@@ -9,6 +9,7 @@ import TuyaSmartDeviceKit
 
 class TuyaSmartMainTableViewController: UITableViewController {
     // MARK: - IBOutlet
+    @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var currentHomeLabel: UILabel!
     
     // MARK: - Property
@@ -69,5 +70,10 @@ class TuyaSmartMainTableViewController: UITableViewController {
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        // Logout button row tapped
+        if indexPath.section == 0 && indexPath.row == 1 {
+            logoutButton.sendActions(for: .touchUpInside)
+        }
     }
 }

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2C1DBF10CF3BA0115FC2AAF /* Pods_TuyaAppSDKSample_iOS_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 552D3541B5A00E74AD66D9D5 /* Pods_TuyaAppSDKSample_iOS_Swift.framework */; };
+		AF21C1F925B03D1200D52FBA /* NewHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF21C1F825B03D1200D52FBA /* NewHome.storyboard */; };
+		AF21C1FF25B03D6000D52FBA /* SwitchHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF21C1FD25B03D6000D52FBA /* SwitchHome.storyboard */; };
+		AF21C20225B03D8900D52FBA /* HomeList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF21C20125B03D8900D52FBA /* HomeList.storyboard */; };
+		AF21C20625B0400F00D52FBA /* EZModeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21C20525B0400F00D52FBA /* EZModeTableViewController.swift */; };
 		AF37DBB425AEE842000EB0FD /* EditHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37DBB325AEE842000EB0FD /* EditHomeTableViewController.swift */; };
 		AF3A259C25A835AE003EB9FF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A259B25A835AE003EB9FF /* MainViewController.swift */; };
 		AF3A25A425A8426D003EB9FF /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A25A325A8426D003EB9FF /* UIButtonExtension.swift */; };
@@ -34,12 +39,22 @@
 		AF5E2F4825A5A51B00DAF14E /* TuyaSmartMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5E2F4725A5A51B00DAF14E /* TuyaSmartMainTableViewController.swift */; };
 		AF5E2F4D25A5D28A00DAF14E /* RegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5E2F4C25A5D28A00DAF14E /* RegisterTableViewController.swift */; };
 		AF5E2F5225A5D60B00DAF14E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5E2F5125A5D60B00DAF14E /* Alert.swift */; };
-		D64DAAF8C02D7910A3FDF6AA /* libPods-TuyaAppSDKSample-iOS-Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D9CF2E131C02FB7CF628AC8 /* libPods-TuyaAppSDKSample-iOS-Swift.a */; };
+		AF96112425B17F38000971CC /* DeviceListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF96112325B17F38000971CC /* DeviceListTableViewController.swift */; };
+		AF96129925B58CE1000971CC /* DeviceControlTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF96129825B58CE1000971CC /* DeviceControlTableViewController.swift */; };
+		AF96129D25B5ACE6000971CC /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF96129C25B5ACE6000971CC /* SwitchTableViewCell.swift */; };
+		AF9612F325B6C6ED000971CC /* StepperTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9612F225B6C6ED000971CC /* StepperTableViewCell.swift */; };
+		AF9612F625B6C80E000971CC /* EnumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9612F525B6C80E000971CC /* EnumTableViewCell.swift */; };
+		AF96133C25B7085D000971CC /* StringTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF96133B25B7085D000971CC /* StringTableViewCell.swift */; };
+		AF96134025B708AE000971CC /* LabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF96133F25B708AE000971CC /* LabelTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		207E8BAF216CF8ED00C5937A /* Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig"; path = "Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig"; sourceTree = "<group>"; };
-		8D9CF2E131C02FB7CF628AC8 /* libPods-TuyaAppSDKSample-iOS-Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TuyaAppSDKSample-iOS-Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		552D3541B5A00E74AD66D9D5 /* Pods_TuyaAppSDKSample_iOS_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuyaAppSDKSample_iOS_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF21C1F825B03D1200D52FBA /* NewHome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewHome.storyboard; sourceTree = "<group>"; };
+		AF21C1FE25B03D6000D52FBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SwitchHome.storyboard; sourceTree = "<group>"; };
+		AF21C20125B03D8900D52FBA /* HomeList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeList.storyboard; sourceTree = SOURCE_ROOT; };
+		AF21C20525B0400F00D52FBA /* EZModeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZModeTableViewController.swift; sourceTree = "<group>"; };
 		AF37DBB325AEE842000EB0FD /* EditHomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditHomeTableViewController.swift; path = "TuyaAppSDKSample-iOS-Swift/StoryBoard/EditHomeTableViewController.swift"; sourceTree = SOURCE_ROOT; };
 		AF3A259B25A835AE003EB9FF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AF3A25A325A8426D003EB9FF /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
@@ -69,6 +84,13 @@
 		AF5E2F4725A5A51B00DAF14E /* TuyaSmartMainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuyaSmartMainTableViewController.swift; sourceTree = "<group>"; };
 		AF5E2F4C25A5D28A00DAF14E /* RegisterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTableViewController.swift; sourceTree = "<group>"; };
 		AF5E2F5125A5D60B00DAF14E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		AF96112325B17F38000971CC /* DeviceListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListTableViewController.swift; sourceTree = "<group>"; };
+		AF96129825B58CE1000971CC /* DeviceControlTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceControlTableViewController.swift; sourceTree = "<group>"; };
+		AF96129C25B5ACE6000971CC /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		AF9612F225B6C6ED000971CC /* StepperTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperTableViewCell.swift; sourceTree = "<group>"; };
+		AF9612F525B6C80E000971CC /* EnumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumTableViewCell.swift; sourceTree = "<group>"; };
+		AF96133B25B7085D000971CC /* StringTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StringTableViewCell.swift; path = "TuyaAppSDKSample-iOS-Swift/StoryBoard/StringTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		AF96133F25B708AE000971CC /* LabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LabelTableViewCell.swift; path = "TuyaAppSDKSample-iOS-Swift/StoryBoard/LabelTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		B2A4751A3340941A1C42F4D9 /* Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig"; path = "Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,7 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D64DAAF8C02D7910A3FDF6AA /* libPods-TuyaAppSDKSample-iOS-Swift.a in Frameworks */,
+				A2C1DBF10CF3BA0115FC2AAF /* Pods_TuyaAppSDKSample_iOS_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,9 +109,17 @@
 		87E8F60384D829671393D688 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8D9CF2E131C02FB7CF628AC8 /* libPods-TuyaAppSDKSample-iOS-Swift.a */,
+				552D3541B5A00E74AD66D9D5 /* Pods_TuyaAppSDKSample_iOS_Swift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF21C20425B03FAC00D52FBA /* Device Network Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				AF21C20525B0400F00D52FBA /* EZModeTableViewController.swift */,
+			);
+			path = "Device Network Configuration";
 			sourceTree = "<group>";
 		};
 		AF3A25BB25AD9AC3003EB9FF /* Home Management */ = {
@@ -148,6 +178,9 @@
 				AF5E2F3825A5A08600DAF14E /* Main.storyboard */,
 				AF5E2F3A25A5A08600DAF14E /* Login.storyboard */,
 				AF5E2F3C25A5A08600DAF14E /* UserInformation.storyboard */,
+				AF21C1F825B03D1200D52FBA /* NewHome.storyboard */,
+				AF21C1FD25B03D6000D52FBA /* SwitchHome.storyboard */,
+				AF21C20125B03D8900D52FBA /* HomeList.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -159,6 +192,8 @@
 				AF5E2F4725A5A51B00DAF14E /* TuyaSmartMainTableViewController.swift */,
 				AF5E2F4B25A5D26E00DAF14E /* User Management */,
 				AF3A25BB25AD9AC3003EB9FF /* Home Management */,
+				AF21C20425B03FAC00D52FBA /* Device Network Configuration */,
+				AF96112225B17F1E000971CC /* Device Management */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -183,6 +218,28 @@
 				AF3A25B125A99E02003EB9FF /* UIViewControllerExtension.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		AF96112225B17F1E000971CC /* Device Management */ = {
+			isa = PBXGroup;
+			children = (
+				AF96129B25B5ACC2000971CC /* Cell */,
+				AF96112325B17F38000971CC /* DeviceListTableViewController.swift */,
+				AF96129825B58CE1000971CC /* DeviceControlTableViewController.swift */,
+			);
+			path = "Device Management";
+			sourceTree = "<group>";
+		};
+		AF96129B25B5ACC2000971CC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AF96129C25B5ACE6000971CC /* SwitchTableViewCell.swift */,
+				AF9612F225B6C6ED000971CC /* StepperTableViewCell.swift */,
+				AF9612F525B6C80E000971CC /* EnumTableViewCell.swift */,
+				AF96133B25B7085D000971CC /* StringTableViewCell.swift */,
+				AF96133F25B708AE000971CC /* LabelTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		BD36B163EF3854B6423E5580 /* Pods */ = {
@@ -257,9 +314,12 @@
 				AF5E2F4125A5A08600DAF14E /* Login.storyboard in Resources */,
 				AF5E2F4025A5A08600DAF14E /* Main.storyboard in Resources */,
 				AF5531E925A5992800E13562 /* Assets.xcassets in Resources */,
+				AF21C1FF25B03D6000D52FBA /* SwitchHome.storyboard in Resources */,
+				AF21C1F925B03D1200D52FBA /* NewHome.storyboard in Resources */,
 				AF5E2F3125A59FE600DAF14E /* t_s.bmp in Resources */,
 				AF5E2F3E25A5A08600DAF14E /* LaunchScreen.storyboard in Resources */,
 				AF5E2F3F25A5A08600DAF14E /* Register.storyboard in Resources */,
+				AF21C20225B03D8900D52FBA /* HomeList.storyboard in Resources */,
 				AF3A25AE25A99555003EB9FF /* TuyaSmartMain.storyboard in Resources */,
 				AF5E2F4225A5A08600DAF14E /* UserInformation.storyboard in Resources */,
 			);
@@ -332,10 +392,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF3A25C525AE930E003EB9FF /* SwitchHomeTableViewController.swift in Sources */,
+				AF96129925B58CE1000971CC /* DeviceControlTableViewController.swift in Sources */,
+				AF96112425B17F38000971CC /* DeviceListTableViewController.swift in Sources */,
 				AF3A259C25A835AE003EB9FF /* MainViewController.swift in Sources */,
 				AF3A25A425A8426D003EB9FF /* UIButtonExtension.swift in Sources */,
+				AF96134025B708AE000971CC /* LabelTableViewCell.swift in Sources */,
 				AF3A25D025AECFCF003EB9FF /* HomeDetailTableViewController.swift in Sources */,
 				AF3A25BD25AD9AE1003EB9FF /* NewHomeTableViewController.swift in Sources */,
+				AF21C20625B0400F00D52FBA /* EZModeTableViewController.swift in Sources */,
 				AF3A25AA25A98A77003EB9FF /* ResetPasswordTableViewController.swift in Sources */,
 				AF3A25A725A844DA003EB9FF /* LoginTableViewController.swift in Sources */,
 				AF5E2F5225A5D60B00DAF14E /* Alert.swift in Sources */,
@@ -347,8 +411,12 @@
 				AF37DBB425AEE842000EB0FD /* EditHomeTableViewController.swift in Sources */,
 				AF5531E025A5992500E13562 /* AppDelegate.swift in Sources */,
 				AF55320D25A59BE800E13562 /* AppKey.swift in Sources */,
+				AF9612F325B6C6ED000971CC /* StepperTableViewCell.swift in Sources */,
 				AF3A25B225A99E02003EB9FF /* UIViewControllerExtension.swift in Sources */,
+				AF9612F625B6C80E000971CC /* EnumTableViewCell.swift in Sources */,
+				AF96129D25B5ACE6000971CC /* SwitchTableViewCell.swift in Sources */,
 				AF5531E225A5992500E13562 /* SceneDelegate.swift in Sources */,
+				AF96133C25B7085D000971CC /* StringTableViewCell.swift in Sources */,
 				AF3A25C925AE9F9A003EB9FF /* HomeListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +424,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		AF21C1FD25B03D6000D52FBA /* SwitchHome.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF21C1FE25B03D6000D52FBA /* Base */,
+			);
+			name = SwitchHome.storyboard;
+			sourceTree = "<group>";
+		};
 		AF3A25AC25A99555003EB9FF /* TuyaSmartMain.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -445,6 +521,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -459,7 +536,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LIBRARY_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -507,6 +586,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -515,7 +595,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LIBRARY_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -534,6 +616,24 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64ZYG66RMG;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/TYBluetooth/ios\"",
+					"\"${PODS_ROOT}/TuyaSmartActivatorKit/ios\"",
+					"\"${PODS_ROOT}/TuyaSmartBLEKit/ios\"",
+					"\"${PODS_ROOT}/TuyaSmartBLEMeshKit/ios\"",
+					"\"${PODS_ROOT}/TuyaSmartBaseKit/ios\"",
+					"\"${PODS_ROOT}/TuyaSmartDeviceCoreKit/ios\"",
+					"\"${PODS_ROOT}/TuyaSmartDeviceKit/ios\"",
+					"\"${PODS_ROOT}/TuyaSmartFeedbackKit/ios\"",
+					"\"${PODS_ROOT}/TuyaSmartMQTTChannelKit/ios\"",
+					"\"${PODS_ROOT}/TuyaSmartMessageKit/ios\"",
+					"\"${PODS_ROOT}/TuyaSmartQUIC/Carthage/Build/iOS\"",
+					"\"${PODS_ROOT}/TuyaSmartSceneKit/ios\"",
+					"\"${PODS_ROOT}/TuyaSmartSocketChannelKit/ios\"",
+					"\"${PODS_ROOT}/TuyaSmartTimerKit/ios\"",
+					"\"${PODS_ROOT}/TuyaSmartUtil/ios\"",
+				);
 				INFOPLIST_FILE = "TuyaAppSDKSample-iOS-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -556,6 +656,24 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64ZYG66RMG;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/TYBluetooth/ios\"",
+					"\"${PODS_ROOT}/TuyaSmartActivatorKit/ios\"",
+					"\"${PODS_ROOT}/TuyaSmartBLEKit/ios\"",
+					"\"${PODS_ROOT}/TuyaSmartBLEMeshKit/ios\"",
+					"\"${PODS_ROOT}/TuyaSmartBaseKit/ios\"",
+					"\"${PODS_ROOT}/TuyaSmartDeviceCoreKit/ios\"",
+					"\"${PODS_ROOT}/TuyaSmartDeviceKit/ios\"",
+					"\"${PODS_ROOT}/TuyaSmartFeedbackKit/ios\"",
+					"\"${PODS_ROOT}/TuyaSmartMQTTChannelKit/ios\"",
+					"\"${PODS_ROOT}/TuyaSmartMessageKit/ios\"",
+					"\"${PODS_ROOT}/TuyaSmartQUIC/Carthage/Build/iOS\"",
+					"\"${PODS_ROOT}/TuyaSmartSceneKit/ios\"",
+					"\"${PODS_ROOT}/TuyaSmartSocketChannelKit/ios\"",
+					"\"${PODS_ROOT}/TuyaSmartTimerKit/ios\"",
+					"\"${PODS_ROOT}/TuyaSmartUtil/ios\"",
+				);
 				INFOPLIST_FILE = "TuyaAppSDKSample-iOS-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (

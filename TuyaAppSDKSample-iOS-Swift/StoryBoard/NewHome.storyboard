@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yWe-dn-J8N">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New Home-->
+        <scene sceneID="uTF-Ik-Jxp">
+            <objects>
+                <tableViewController id="yWe-dn-J8N" customClass="NewHomeTableViewController" customModule="TuyaAppSDKSample_iOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="JZc-MU-9gI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <sections>
+                            <tableViewSection id="eXL-fm-RJC">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="E5k-ak-Osp">
+                                        <rect key="frame" x="20" y="18" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E5k-ak-Osp" id="ad0-si-EpX">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Home Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gYJ-8c-ugk">
+                                                    <rect key="frame" x="13" y="4" width="341" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="aQt-QP-LHg"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="gYJ-8c-ugk" secondAttribute="bottom" constant="4" id="1xw-iz-U1T"/>
+                                                <constraint firstItem="gYJ-8c-ugk" firstAttribute="leading" secondItem="ad0-si-EpX" secondAttribute="leading" constant="13" id="Sgi-h4-C9n"/>
+                                                <constraint firstAttribute="trailing" secondItem="gYJ-8c-ugk" secondAttribute="trailing" constant="20" symbolic="YES" id="URM-mk-gdP"/>
+                                                <constraint firstItem="gYJ-8c-ugk" firstAttribute="top" secondItem="ad0-si-EpX" secondAttribute="top" constant="4" id="l4G-gt-Kfn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6UO-PD-G1Z">
+                                        <rect key="frame" x="20" y="61.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6UO-PD-G1Z" id="KgQ-vx-gmr">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nXT-Um-kMV">
+                                                    <rect key="frame" x="20" y="4" width="334" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="RxQ-lH-VKv"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nXT-Um-kMV" firstAttribute="leading" secondItem="KgQ-vx-gmr" secondAttribute="leading" constant="20" symbolic="YES" id="ESd-V7-Pc8"/>
+                                                <constraint firstAttribute="bottom" secondItem="nXT-Um-kMV" secondAttribute="bottom" constant="4" id="J7n-Lr-Iss"/>
+                                                <constraint firstItem="nXT-Um-kMV" firstAttribute="top" secondItem="KgQ-vx-gmr" secondAttribute="top" constant="4" id="KD2-da-QFN"/>
+                                                <constraint firstAttribute="trailing" secondItem="nXT-Um-kMV" secondAttribute="trailing" constant="20" symbolic="YES" id="TEP-9a-RnR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="yWe-dn-J8N" id="fl3-2s-0pS"/>
+                            <outlet property="delegate" destination="yWe-dn-J8N" id="t0y-hB-x1f"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="New Home" id="KDq-xN-G4L">
+                        <barButtonItem key="rightBarButtonItem" title="Create" style="done" id="jY0-OZ-nnO">
+                            <connections>
+                                <action selector="createTapped:" destination="yWe-dn-J8N" id="2LS-v9-P0c"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cityTextField" destination="nXT-Um-kMV" id="psA-mD-CAa"/>
+                        <outlet property="homeNameTextField" destination="gYJ-8c-ugk" id="qTD-6Z-8oe"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aSH-ct-HHR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1712" y="-388"/>
+        </scene>
+    </scenes>
+</document>

@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         TuyaSmartSDK.sharedInstance().debugMode = true
         #endif
         
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
         if #available(iOS 13.0, *) {
             // Will go into scene delegate
         } else {
