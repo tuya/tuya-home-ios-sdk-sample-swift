@@ -6,17 +6,19 @@
 
 import UIKit
 
-class StepperTableViewCell: UITableViewCell {
+class SliderTableViewCell: UITableViewCell {
     
     // MARK: - IBOutlet
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
-    @IBOutlet weak var stepper: UIStepper!
+    @IBOutlet weak var slider: UISlider!
+    
     
     // MARK: - Property
-    var stepperAction: ((UIStepper) -> Void)?
+    var sliderAction: ((UISlider) -> Void)?
 
-    @IBAction func stepperTapped(_ sender: UIStepper) {
-        stepperAction?(sender)
+    @IBAction func sliderValueChanged(_ sender: UISlider) {
+        sliderAction?(sender)
     }
+
 }
