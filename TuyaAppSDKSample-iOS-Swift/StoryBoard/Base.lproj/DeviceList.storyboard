@@ -84,7 +84,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="fBr-Lq-lBB" secondAttribute="trailing" constant="20" symbolic="YES" id="6lG-Bg-4rF"/>
-                                        <constraint firstItem="B3M-Vj-fmh" firstAttribute="leading" secondItem="KKE-py-wu4" secondAttribute="leading" constant="20" symbolic="YES" id="AnX-kR-oLl"/>
+                                        <constraint firstItem="B3M-Vj-fmh" firstAttribute="leading" secondItem="KKE-py-wu4" secondAttribute="leadingMargin" id="AnX-kR-oLl"/>
                                         <constraint firstItem="B3M-Vj-fmh" firstAttribute="centerY" secondItem="KKE-py-wu4" secondAttribute="centerY" id="L3J-8Z-rhg"/>
                                         <constraint firstAttribute="bottom" secondItem="fBr-Lq-lBB" secondAttribute="bottom" constant="6" id="gbH-tj-HeA"/>
                                         <constraint firstItem="fBr-Lq-lBB" firstAttribute="top" secondItem="KKE-py-wu4" secondAttribute="top" constant="6" id="pMy-qg-Aml"/>
@@ -139,7 +139,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="E87-xl-6S9" secondAttribute="trailing" constant="20" symbolic="YES" id="ECe-ca-pub"/>
-                                        <constraint firstItem="E87-xl-6S9" firstAttribute="leading" secondItem="Bqn-oP-1hp" secondAttribute="leading" constant="20" symbolic="YES" id="Gr7-em-9C9"/>
+                                        <constraint firstItem="E87-xl-6S9" firstAttribute="leading" secondItem="Bqn-oP-1hp" secondAttribute="leadingMargin" id="Gr7-em-9C9"/>
                                         <constraint firstItem="E87-xl-6S9" firstAttribute="centerY" secondItem="Bqn-oP-1hp" secondAttribute="centerY" id="Ueq-pD-1eV"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -222,7 +222,7 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="NGP-dI-rSa" firstAttribute="leading" secondItem="KxM-JR-ypu" secondAttribute="leading" constant="20" symbolic="YES" id="7VK-ZS-hWR"/>
+                                        <constraint firstItem="NGP-dI-rSa" firstAttribute="leading" secondItem="KxM-JR-ypu" secondAttribute="leadingMargin" id="7VK-ZS-hWR"/>
                                         <constraint firstAttribute="trailing" secondItem="NGP-dI-rSa" secondAttribute="trailing" constant="20" symbolic="YES" id="Gzw-9L-3De"/>
                                         <constraint firstItem="NGP-dI-rSa" firstAttribute="top" secondItem="KxM-JR-ypu" secondAttribute="top" constant="4" id="KbF-W9-R3Z"/>
                                         <constraint firstAttribute="bottom" secondItem="NGP-dI-rSa" secondAttribute="bottom" constant="4" id="eSi-AM-9a9"/>

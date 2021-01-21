@@ -16,11 +16,8 @@ class DeviceControlTableViewController: UITableViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let isOnline = device?.deviceModel.isOnline, !isOnline {
-            SVProgressHUD.show(withStatus: "The device is offline. The control panel is unavailable.")
-        }
-        
+
+        detectDeviceAvailability()
         navigationItem.title = device?.deviceModel.name
         device?.delegate = self
     }
@@ -30,6 +27,27 @@ class DeviceControlTableViewController: UITableViewController {
         
         SVProgressHUD.dismiss()
     }
+    
+    // MARK: -  Private Method
+    private func detectDeviceAvailability() {
+        if let isOnline = device?.deviceModel.isOnline, !isOnline {
+            SVProgressHUD.show(withStatus: "The device is offline. The control panel is unavailable.")
+        } else {
+            SVProgressHUD.dismiss()
+        }
+    }
+    
+    private func publishMessage(with dps: NSDictionary) {
+        guard let dps = dps as? [AnyHashable : Any] else { return }
+
+        device?.publishDps(dps, success: {
+
+        }, failure: { (error) in
+            let errorMessage = error?.localizedDescription ?? ""
+            SVProgressHUD.showError(withStatus: errorMessage)
+        })
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -65,7 +83,7 @@ class DeviceControlTableViewController: UITableViewController {
                       let dpID = schema.dpId
                 else { return }
                 
-                self.publicMessage(with: [dpID : switchButton.isOn])
+                self.publishMessage(with: [dpID : switchButton.isOn])
             }
 
         case .sliderCell:
@@ -89,7 +107,7 @@ class DeviceControlTableViewController: UITableViewController {
                 
                 let step = Float(schema.property.step)
                 let roundedValue = round(slider.value / step) * step
-                self.publicMessage(with: [dpID : Int(roundedValue)])
+                self.publishMessage(with: [dpID : Int(roundedValue)])
             }
             
         case .enumCell:
@@ -105,7 +123,7 @@ class DeviceControlTableViewController: UITableViewController {
             cell.currentOption = option
             cell.selectAction = { [weak self] option in
                 guard let self = self else { return }
-                self.publicMessage(with: [dpID : option])
+                self.publishMessage(with: [dpID : option])
             }
             
         case .stringCell:
@@ -119,7 +137,7 @@ class DeviceControlTableViewController: UITableViewController {
             cell.textField.text = text
             cell.buttonAction = { [weak self] text in
                 guard let self = self else { return }
-                self.publicMessage(with: [dpID : text])
+                self.publishMessage(with: [dpID : text])
             }
             
         case .labelCell:
@@ -135,21 +153,17 @@ class DeviceControlTableViewController: UITableViewController {
 
         return cell
     }
-    
-    private func publicMessage(with dps: NSDictionary) {
-        guard let dps = dps as? [AnyHashable : Any] else { return }
 
-        device?.publishDps(dps, success: {
-
-        }, failure: { (error) in
-            let errorMessage = error?.localizedDescription ?? ""
-            SVProgressHUD.showError(withStatus: errorMessage)
-        })
-    }
 }
 
 extension DeviceControlTableViewController: TuyaSmartDeviceDelegate {
+    func deviceInfoUpdate(_ device: TuyaSmartDevice) {
+        detectDeviceAvailability()
+        tableView.reloadData()
+    }
+    
     func device(_ device: TuyaSmartDevice, dpsUpdate dps: [AnyHashable : Any]) {
+        detectDeviceAvailability()
         tableView.reloadData()
     }
 }
