@@ -6,6 +6,7 @@
 
 import UIKit
 import TuyaSmartBaseKit
+import SVProgressHUD
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #if DEBUG
         TuyaSmartSDK.sharedInstance().debugMode = true
         #endif
+        
+        SVProgressHUD.setDefaultStyle(.dark)
         
         window = UIWindow(frame: UIScreen.main.bounds)
         

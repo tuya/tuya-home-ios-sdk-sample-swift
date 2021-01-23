@@ -6,7 +6,7 @@
 
 import UIKit
 
-class StringTableViewCell: UITableViewCell {
+class StringTableViewCell: DeviceStatusBehaveCell {
     // MARK: - IBOutlet
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textField: UITextField!
@@ -14,6 +14,13 @@ class StringTableViewCell: UITableViewCell {
     
     // MARK: - Property
     var buttonAction: ((String) -> Void)?
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        controls.append(button)
+        controls.append(textField)
+    }
     
     // MARK: - IBAction
     @IBAction func buttonTapped(_ sender: UIButton) {

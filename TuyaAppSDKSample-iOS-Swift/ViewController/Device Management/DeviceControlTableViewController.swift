@@ -5,6 +5,7 @@
 //  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
 
 import UIKit
+import NotificationCenter
 import TuyaSmartDeviceKit
 import SVProgressHUD
 
@@ -17,22 +18,31 @@ class DeviceControlTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        detectDeviceAvailability()
         navigationItem.title = device?.deviceModel.name
         device?.delegate = self
+        NotificationCenter.default.addObserver(self, selector: #selector(deviceHasRemoved(_:)), name: .SVProgressHUDDidDisappear, object: nil)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        detectDeviceAvailability()
     }
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
         SVProgressHUD.dismiss()
+        NotificationCenter.default.removeObserver(self, name: .SVProgressHUDDidDisappear, object: nil)
     }
     
     // MARK: -  Private Method
     private func detectDeviceAvailability() {
         if let isOnline = device?.deviceModel.isOnline, !isOnline {
+            NotificationCenter.default.post(name: .deviceOffline, object: nil)
             SVProgressHUD.show(withStatus: "The device is offline. The control panel is unavailable.")
         } else {
+            NotificationCenter.default.post(name: .deviceOnline, object: nil)
             SVProgressHUD.dismiss()
         }
     }
@@ -46,6 +56,13 @@ class DeviceControlTableViewController: UITableViewController {
             let errorMessage = error?.localizedDescription ?? ""
             SVProgressHUD.showError(withStatus: errorMessage)
         })
+    }
+    
+    @objc private func deviceHasRemoved(_ notification: Notification) {
+        guard let key = notification.userInfo?[SVProgressHUDStatusUserInfoKey] as? String,
+              key.contains("removed")
+        else { return }
+        navigationController?.popViewController(animated: true)
     }
     
     // MARK: - Table view data source
@@ -160,6 +177,11 @@ extension DeviceControlTableViewController: TuyaSmartDeviceDelegate {
     func deviceInfoUpdate(_ device: TuyaSmartDevice) {
         detectDeviceAvailability()
         tableView.reloadData()
+    }
+    
+    func deviceRemoved(_ device: TuyaSmartDevice) {
+        NotificationCenter.default.post(name: .deviceOffline, object: nil)
+        SVProgressHUD.showError(withStatus: "The device has been removed.")
     }
     
     func device(_ device: TuyaSmartDevice, dpsUpdate dps: [AnyHashable : Any]) {

@@ -6,13 +6,18 @@
 
 import UIKit
 
-class SliderTableViewCell: UITableViewCell {
+class SliderTableViewCell: DeviceStatusBehaveCell {
     
     // MARK: - IBOutlet
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var slider: UISlider!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        controls.append(slider)
+    }
     
     // MARK: - Property
     var sliderAction: ((UISlider) -> Void)?

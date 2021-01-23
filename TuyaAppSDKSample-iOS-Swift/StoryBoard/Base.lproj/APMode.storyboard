@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F64-XI-pW5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -8,9 +10,9 @@
         <!--AP Mode-->
         <scene sceneID="qX6-sU-2sR">
             <objects>
-                <tableViewController id="F64-XI-pW5" sceneMemberID="viewController">
+                <tableViewController id="F64-XI-pW5" customClass="APModeTableViewController" customModule="TuyaAppSDKSample_iOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="jWK-w4-Gqu">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <sections>
                             <tableViewSection id="7Pf-bX-7ED">
@@ -72,8 +74,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="AP Mode" id="81o-gw-8kr">
-                        <barButtonItem key="rightBarButtonItem" title="Search" id="OAK-a3-sHb"/>
+                        <barButtonItem key="rightBarButtonItem" title="Search" id="OAK-a3-sHb">
+                            <connections>
+                                <action selector="searchTapped:" destination="F64-XI-pW5" id="9CH-Eo-9Kb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="passwordTextField" destination="xJ6-Pd-Dol" id="EvA-rS-fCg"/>
+                        <outlet property="ssidTextField" destination="ojp-Zp-meh" id="WH5-ft-Omb"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TDB-5A-ViH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

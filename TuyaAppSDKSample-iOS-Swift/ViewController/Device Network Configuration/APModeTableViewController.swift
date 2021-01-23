@@ -1,5 +1,5 @@
 //
-//  EZModeTableViewController.swift
+//  APModeTableViewController.swift
 //  TuyaAppSDKSample-iOS-Swift
 //
 //  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
@@ -9,49 +9,50 @@ import TuyaSmartDeviceKit
 import TuyaSmartActivatorKit
 import SVProgressHUD
 
-class EZModeTableViewController: UITableViewController {
+class APModeTableViewController: UITableViewController {
     
     @IBOutlet weak var ssidTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    private var token: String = ""
+    var token: String = ""
     private var isSuccess = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        requestToken()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         stopConfigWifi()
     }
-    
+
     @IBAction func searchTapped(_ sender: UIBarButtonItem) {
         startConfiguration()
     }
     
-    private func startConfiguration() {
+    private func requestToken() {
         guard let homeID = Home.current?.homeId else { return }
         SVProgressHUD.show(withStatus: "Requesting for Token")
         
         TuyaSmartActivator.sharedInstance()?.getTokenWithHomeId(homeID, success: { [weak self] (token) in
             guard let self = self else { return }
             self.token = token ?? ""
-            self.startConfiguration(with: self.token)
+            SVProgressHUD.dismiss()
         }, failure: { (error) in
             let errorMessage = error?.localizedDescription ?? ""
             SVProgressHUD.showError(withStatus: errorMessage)
         })
     }
-     
-    private func startConfiguration(with token: String) {
+    
+    private func startConfiguration() {
         SVProgressHUD.show(withStatus: "Configuring")
         
         let ssid = ssidTextField.text ?? ""
         let password = passwordTextField.text ?? ""
         TuyaSmartActivator.sharedInstance()?.delegate = self
-        TuyaSmartActivator.sharedInstance()?.startConfigWiFi(TYActivatorModeEZ, ssid: ssid, password: password, token: token, timeout: 100)
+        TuyaSmartActivator.sharedInstance()?.startConfigWiFi(TYActivatorModeAP, ssid: ssid, password: password, token: token, timeout: 100)
     }
     
     private func stopConfigWifi() {
@@ -64,7 +65,7 @@ class EZModeTableViewController: UITableViewController {
     
 }
 
-extension EZModeTableViewController: TuyaSmartActivatorDelegate {
+extension APModeTableViewController: TuyaSmartActivatorDelegate {
     func activator(_ activator: TuyaSmartActivator!, didReceiveDevice deviceModel: TuyaSmartDeviceModel!, error: Error!) {
         if deviceModel != nil && error == nil {
             // Success

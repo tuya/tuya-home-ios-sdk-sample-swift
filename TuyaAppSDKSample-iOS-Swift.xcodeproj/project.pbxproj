@@ -43,6 +43,7 @@
 		AF5E2F4825A5A51B00DAF14E /* TuyaSmartMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5E2F4725A5A51B00DAF14E /* TuyaSmartMainTableViewController.swift */; };
 		AF5E2F4D25A5D28A00DAF14E /* RegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5E2F4C25A5D28A00DAF14E /* RegisterTableViewController.swift */; };
 		AF5E2F5225A5D60B00DAF14E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5E2F5125A5D60B00DAF14E /* Alert.swift */; };
+		AF60B88C25BBC1F600E18F6F /* APModeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60B88B25BBC1F600E18F6F /* APModeTableViewController.swift */; };
 		AF96112425B17F38000971CC /* DeviceListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF96112325B17F38000971CC /* DeviceListTableViewController.swift */; };
 		AF96129925B58CE1000971CC /* DeviceControlTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF96129825B58CE1000971CC /* DeviceControlTableViewController.swift */; };
 		AF96129D25B5ACE6000971CC /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF96129C25B5ACE6000971CC /* SwitchTableViewCell.swift */; };
@@ -50,6 +51,8 @@
 		AF9612F625B6C80E000971CC /* EnumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9612F525B6C80E000971CC /* EnumTableViewCell.swift */; };
 		AF96133C25B7085D000971CC /* StringTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF96133B25B7085D000971CC /* StringTableViewCell.swift */; };
 		AF96134025B708AE000971CC /* LabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF96133F25B708AE000971CC /* LabelTableViewCell.swift */; };
+		AFBB5BBF25B95BBA006BDDD7 /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB5BBE25B95BBA006BDDD7 /* NotificationName.swift */; };
+		AFBB5BC225B95F3C006BDDD7 /* DeviceStatusBehaveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB5BC125B95F3C006BDDD7 /* DeviceStatusBehaveCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +95,7 @@
 		AF5E2F4725A5A51B00DAF14E /* TuyaSmartMainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuyaSmartMainTableViewController.swift; sourceTree = "<group>"; };
 		AF5E2F4C25A5D28A00DAF14E /* RegisterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTableViewController.swift; sourceTree = "<group>"; };
 		AF5E2F5125A5D60B00DAF14E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		AF60B88B25BBC1F600E18F6F /* APModeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APModeTableViewController.swift; sourceTree = "<group>"; };
 		AF96112325B17F38000971CC /* DeviceListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListTableViewController.swift; sourceTree = "<group>"; };
 		AF96129825B58CE1000971CC /* DeviceControlTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceControlTableViewController.swift; sourceTree = "<group>"; };
 		AF96129C25B5ACE6000971CC /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 		AF9612F525B6C80E000971CC /* EnumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumTableViewCell.swift; sourceTree = "<group>"; };
 		AF96133B25B7085D000971CC /* StringTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StringTableViewCell.swift; path = "TuyaAppSDKSample-iOS-Swift/StoryBoard/StringTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		AF96133F25B708AE000971CC /* LabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LabelTableViewCell.swift; path = "TuyaAppSDKSample-iOS-Swift/StoryBoard/LabelTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		AFBB5BBE25B95BBA006BDDD7 /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
+		AFBB5BC125B95F3C006BDDD7 /* DeviceStatusBehaveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceStatusBehaveCell.swift; sourceTree = "<group>"; };
 		B2A4751A3340941A1C42F4D9 /* Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig"; path = "Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				AF21C20525B0400F00D52FBA /* EZModeTableViewController.swift */,
+				AF60B88B25BBC1F600E18F6F /* APModeTableViewController.swift */,
 			);
 			path = "Device Network Configuration";
 			sourceTree = "<group>";
@@ -227,6 +234,7 @@
 				AF5E2F5125A5D60B00DAF14E /* Alert.swift */,
 				AF3A25A325A8426D003EB9FF /* UIButtonExtension.swift */,
 				AF3A25B125A99E02003EB9FF /* UIViewControllerExtension.swift */,
+				AFBB5BBE25B95BBA006BDDD7 /* NotificationName.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -245,6 +253,7 @@
 		AF96129B25B5ACC2000971CC /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				AFBB5BC125B95F3C006BDDD7 /* DeviceStatusBehaveCell.swift */,
 				AF96129C25B5ACE6000971CC /* SwitchTableViewCell.swift */,
 				AF9612F225B6C6ED000971CC /* SliderTableViewCell.swift */,
 				AF9612F525B6C80E000971CC /* EnumTableViewCell.swift */,
@@ -408,6 +417,8 @@
 			files = (
 				AF3A25C525AE930E003EB9FF /* SwitchHomeTableViewController.swift in Sources */,
 				AF96129925B58CE1000971CC /* DeviceControlTableViewController.swift in Sources */,
+				AFBB5BC225B95F3C006BDDD7 /* DeviceStatusBehaveCell.swift in Sources */,
+				AFBB5BBF25B95BBA006BDDD7 /* NotificationName.swift in Sources */,
 				AF96112425B17F38000971CC /* DeviceListTableViewController.swift in Sources */,
 				AF3A259C25A835AE003EB9FF /* MainViewController.swift in Sources */,
 				AF3A25A425A8426D003EB9FF /* UIButtonExtension.swift in Sources */,
@@ -427,6 +438,7 @@
 				AF37DBB425AEE842000EB0FD /* EditHomeTableViewController.swift in Sources */,
 				AF5531E025A5992500E13562 /* AppDelegate.swift in Sources */,
 				AF55320D25A59BE800E13562 /* AppKey.swift in Sources */,
+				AF60B88C25BBC1F600E18F6F /* APModeTableViewController.swift in Sources */,
 				AF9612F325B6C6ED000971CC /* SliderTableViewCell.swift in Sources */,
 				AF3A25B225A99E02003EB9FF /* UIViewControllerExtension.swift in Sources */,
 				AF9612F625B6C80E000971CC /* EnumTableViewCell.swift in Sources */,

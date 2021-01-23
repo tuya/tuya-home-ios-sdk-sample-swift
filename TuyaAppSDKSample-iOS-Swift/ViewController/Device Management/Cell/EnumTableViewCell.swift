@@ -6,7 +6,7 @@
 
 import UIKit
 
-class EnumTableViewCell: UITableViewCell {
+class EnumTableViewCell: DeviceStatusBehaveCell {
     
     // MARK: - IBOutlet
     @IBOutlet weak var label: UILabel!
@@ -42,5 +42,13 @@ class EnumTableViewCell: UITableViewCell {
         alert.addAction(cancelAction)
         
         vc.present(alert, animated: true, completion: nil)
+    }
+    
+    override func deviceOnline() {
+        self.isUserInteractionEnabled = true
+    }
+    
+    override func deviceOffline() {
+        self.isUserInteractionEnabled = false
     }
 }
