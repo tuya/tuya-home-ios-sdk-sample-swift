@@ -13,15 +13,17 @@ class SliderTableViewCell: DeviceStatusBehaveCell {
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var slider: UISlider!
     
+    // MARK: - Property
+    var sliderAction: ((UISlider) -> Void)?
+    
+    // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
         
         controls.append(slider)
     }
-    
-    // MARK: - Property
-    var sliderAction: ((UISlider) -> Void)?
 
+    // MARK: - IBAction
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         sliderAction?(sender)
     }

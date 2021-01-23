@@ -7,7 +7,7 @@
 import UIKit
 
 class LabelTableViewCell: UITableViewCell {
-    
+    // MARK: - IBOutlet
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
     

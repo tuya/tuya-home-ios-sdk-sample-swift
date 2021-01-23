@@ -9,9 +9,11 @@ import TuyaSmartDeviceKit
 
 class SwitchHomeTableViewController: UITableViewController {
     
+    // MARK: - Property
     private let homeManager = TuyaSmartHomeManager()
     private var homeList = [TuyaSmartHomeModel]()
 
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 

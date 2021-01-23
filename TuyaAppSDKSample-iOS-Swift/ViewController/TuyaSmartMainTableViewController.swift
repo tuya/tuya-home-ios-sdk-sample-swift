@@ -34,6 +34,7 @@ class TuyaSmartMainTableViewController: UITableViewController {
         }
     }
     
+    // MARK: - Private Method
     private func initiateCurrentHome() {
         homeManager.getHomeList { (homeModels) in
             Home.current = homeModels?.first

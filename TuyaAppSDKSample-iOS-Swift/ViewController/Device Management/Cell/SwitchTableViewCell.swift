@@ -14,11 +14,13 @@ class SwitchTableViewCell: DeviceStatusBehaveCell {
     // MARK: - Property
     var switchAction: ((UISwitch) -> Void)?
     
+    // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
         controls.append(switchButton)
     }
 
+    // MARK: - IBAction
     @IBAction func switchTapped(_ sender: UISwitch) {
         switchAction?(sender)
     }

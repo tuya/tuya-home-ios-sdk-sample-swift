@@ -21,6 +21,7 @@ class EnumTableViewCell: DeviceStatusBehaveCell {
     }
     var selectAction: ((String) -> Void)?
     
+    // MARK: - Table view cell row selected
     override func setSelected(_ selected: Bool, animated: Bool) {
         guard selected,
               optionArray.count != 0,
@@ -44,6 +45,7 @@ class EnumTableViewCell: DeviceStatusBehaveCell {
         vc.present(alert, animated: true, completion: nil)
     }
     
+    // MARK: - Device status reaction
     override func deviceOnline() {
         self.isUserInteractionEnabled = true
     }

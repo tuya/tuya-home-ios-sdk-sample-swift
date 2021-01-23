@@ -42,6 +42,7 @@ class RegisterTableViewController: UITableViewController {
         }
     }
     
+    // MARK: - Private Method
     private func sendVerificationCode(by type: AccountType) {
         let countryCode = countryCodeTextField.text ?? ""
         let account = accountTextField.text ?? ""

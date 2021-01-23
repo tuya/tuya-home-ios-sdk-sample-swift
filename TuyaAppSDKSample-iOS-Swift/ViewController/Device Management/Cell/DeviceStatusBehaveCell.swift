@@ -8,8 +8,10 @@ import UIKit
 import NotificationCenter
 
 class DeviceStatusBehaveCell: UITableViewCell {
+    // MARK: - Property
     var controls = [UIControl]()
     
+    // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -22,6 +24,7 @@ class DeviceStatusBehaveCell: UITableViewCell {
         NotificationCenter.default.removeObserver(self, name: .deviceOffline, object: nil)
     }
     
+    // MARK: - Device status reaction
     @objc func deviceOffline() {
         for control in controls {
             control.isEnabled = false
@@ -33,6 +36,4 @@ class DeviceStatusBehaveCell: UITableViewCell {
             control.isEnabled = true
         }
     }
-    
-    
 }

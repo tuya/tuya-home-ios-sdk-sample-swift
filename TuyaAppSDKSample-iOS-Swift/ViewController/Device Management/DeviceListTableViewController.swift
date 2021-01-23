@@ -8,9 +8,10 @@ import UIKit
 import TuyaSmartDeviceKit
 
 class DeviceListTableViewController: UITableViewController {
-    
+    // MARK: - Property
     private var home: TuyaSmartHome?
 
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -54,7 +55,8 @@ class DeviceListTableViewController: UITableViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
 
-    func updateHomeDetail() {
+    // MARK: - Private method
+    private func updateHomeDetail() {
         home?.getDetailWithSuccess({ (model) in
             self.tableView.reloadData()
         }, failure: { [weak self] (error) in

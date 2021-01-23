@@ -15,6 +15,7 @@ class StringTableViewCell: DeviceStatusBehaveCell {
     // MARK: - Property
     var buttonAction: ((String) -> Void)?
     
+    // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
         

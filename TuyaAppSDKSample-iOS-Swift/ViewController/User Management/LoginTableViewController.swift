@@ -30,6 +30,7 @@ class LoginTableViewController: UITableViewController {
         }
     }
     
+    // MARK: - Private Method
     private func login(by type: AccountType) {
         let countryCode = countryCodeTextField.text ?? ""
         let account = accountTextField.text ?? ""

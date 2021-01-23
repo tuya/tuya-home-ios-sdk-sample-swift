@@ -19,6 +19,7 @@ class MainViewController: UIViewController {
         configureView()
     }
 
+    // MARK: - Private Method
     private func configureView() {
         loginButton.roundCorner()
         registerButton.roundCorner()

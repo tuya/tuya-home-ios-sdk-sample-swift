@@ -10,13 +10,15 @@ import TuyaSmartActivatorKit
 import SVProgressHUD
 
 class APModeTableViewController: UITableViewController {
-    
+    // MARK: - IBOutlet
     @IBOutlet weak var ssidTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    // MARK: - Property
     var token: String = ""
     private var isSuccess = false
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,10 +30,12 @@ class APModeTableViewController: UITableViewController {
         stopConfigWifi()
     }
 
+    // MARK: - IBAction
     @IBAction func searchTapped(_ sender: UIBarButtonItem) {
         startConfiguration()
     }
     
+    // MARK: - Private Method
     private func requestToken() {
         guard let homeID = Home.current?.homeId else { return }
         SVProgressHUD.show(withStatus: "Requesting for Token")
