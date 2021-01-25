@@ -1,33 +1,33 @@
-
 /* Class = "UILabel"; text = "Country Code"; ObjectID = "93V-H6-HPS"; */
-"93V-H6-HPS.text" = "Country Code";
+"93V-H6-HPS.text" = "国家码";
 
 /* Class = "UILabel"; text = "Detail"; ObjectID = "A2r-0g-5ea"; */
-"A2r-0g-5ea.text" = "Detail";
+"A2r-0g-5ea.text" = "详情";
 
 /* Class = "UILabel"; text = "Email Address"; ObjectID = "ABH-kJ-SIN"; */
-"ABH-kJ-SIN.text" = "Email Address";
+"ABH-kJ-SIN.text" = "电子邮箱";
 
 /* Class = "UINavigationItem"; title = "User Information"; ObjectID = "Cgw-fb-waU"; */
-"Cgw-fb-waU.title" = "User Information";
-
-/* Class = "UILabel"; text = "User Name"; ObjectID = "JWe-iv-AOL"; */
-"JWe-iv-AOL.text" = "User Name";
-
-/* Class = "UILabel"; text = "Detail"; ObjectID = "LPd-O1-TPT"; */
-"LPd-O1-TPT.text" = "Detail";
-
-/* Class = "UILabel"; text = "Detail"; ObjectID = "Qm5-TG-MAv"; */
-"Qm5-TG-MAv.text" = "Detail";
-
-/* Class = "UILabel"; text = "Detail"; ObjectID = "UWK-WF-Ed6"; */
-"UWK-WF-Ed6.text" = "Detail";
-
-/* Class = "UILabel"; text = "Phone Number"; ObjectID = "Y2C-5J-9gC"; */
-"Y2C-5J-9gC.text" = "Phone Number";
-
-/* Class = "UILabel"; text = "Time Zone"; ObjectID = "ZMX-tR-OsV"; */
-"ZMX-tR-OsV.text" = "Time Zone";
+"Cgw-fb-waU.title" = "用户信息";
 
 /* Class = "UILabel"; text = "Detail"; ObjectID = "eVT-4M-Vgg"; */
-"eVT-4M-Vgg.text" = "Detail";
+"eVT-4M-Vgg.text" = "详情";
+
+/* Class = "UILabel"; text = "User Name"; ObjectID = "JWe-iv-AOL"; */
+"JWe-iv-AOL.text" = "用户名";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "LPd-O1-TPT"; */
+"LPd-O1-TPT.text" = "详情";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "Qm5-TG-MAv"; */
+"Qm5-TG-MAv.text" = "详情";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "UWK-WF-Ed6"; */
+"UWK-WF-Ed6.text" = "详情";
+
+/* Class = "UILabel"; text = "Phone Number"; ObjectID = "Y2C-5J-9gC"; */
+"Y2C-5J-9gC.text" = "手机号码";
+
+/* Class = "UILabel"; text = "Time Zone"; ObjectID = "ZMX-tR-OsV"; */
+"ZMX-tR-OsV.text" = "时区";
+

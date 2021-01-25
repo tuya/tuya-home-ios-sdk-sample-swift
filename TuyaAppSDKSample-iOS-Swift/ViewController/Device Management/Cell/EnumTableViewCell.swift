@@ -28,7 +28,7 @@ class EnumTableViewCell: DeviceStatusBehaveCell {
               let vc = window?.rootViewController
         else { return }
         
-        let alert = UIAlertController(title: "Select Option", message: nil, preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: NSLocalizedString("Select Option", comment: "Select option to control enum value dp."), message: nil, preferredStyle: .actionSheet)
         
         for option in optionArray {
             let action = UIAlertAction(title: option, style: .default) { [weak self] _ in
@@ -39,7 +39,7 @@ class EnumTableViewCell: DeviceStatusBehaveCell {
             alert.addAction(action)
         }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil)
         alert.addAction(cancelAction)
         
         vc.present(alert, animated: true, completion: nil)

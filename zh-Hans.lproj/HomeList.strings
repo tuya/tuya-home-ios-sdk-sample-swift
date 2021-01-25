@@ -1,0 +1,48 @@
+/* Class = "UILabel"; text = "Weather Condition"; ObjectID = "1gJ-xw-lc9"; */
+"1gJ-xw-lc9.text" = "天气状况";
+
+/* Class = "UITextField"; placeholder = "Home Name"; ObjectID = "by0-Jc-Lwn"; */
+"by0-Jc-Lwn.placeholder" = "家庭名称";
+
+/* Class = "UINavigationItem"; title = "Home Detail"; ObjectID = "erY-MS-1Qg"; */
+"erY-MS-1Qg.title" = "家庭详情";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "fxR-8V-mWV"; */
+"fxR-8V-mWV.text" = "详情";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "gKn-jF-o1l"; */
+"gKn-jF-o1l.text" = "详情";
+
+/* Class = "UIButton"; normalTitle = "Dismiss"; ObjectID = "HfD-A1-DtT"; */
+"HfD-A1-DtT.normalTitle" = "解散家庭";
+
+/* Class = "UINavigationItem"; title = "Home List"; ObjectID = "IdX-vX-CyC"; */
+"IdX-vX-CyC.title" = "家庭列表";
+
+/* Class = "UILabel"; text = "City"; ObjectID = "JAY-Is-f72"; */
+"JAY-Is-f72.text" = "城市";
+
+/* Class = "UINavigationItem"; title = "Edit Home"; ObjectID = "JGY-xu-dY7"; */
+"JGY-xu-dY7.title" = "编辑家庭";
+
+/* Class = "UITextField"; placeholder = "City"; ObjectID = "nym-vD-QSw"; */
+"nym-vD-QSw.placeholder" = "城市";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "NZk-b8-J7P"; */
+"NZk-b8-J7P.text" = "详情";
+
+/* Class = "UILabel"; text = "Home ID"; ObjectID = "owa-cj-QYx"; */
+"owa-cj-QYx.text" = "家庭ID";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "uoq-3u-1L2"; */
+"uoq-3u-1L2.text" = "详情";
+
+/* Class = "UILabel"; text = "Home Name"; ObjectID = "vSs-NM-ijE"; */
+"vSs-NM-ijE.text" = "家庭名称";
+
+/* Class = "UILabel"; text = "Temperature"; ObjectID = "xZG-0n-v5l"; */
+"xZG-0n-v5l.text" = "温度";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "ZEM-Ps-kML"; */
+"ZEM-Ps-kML.text" = "详情";
+

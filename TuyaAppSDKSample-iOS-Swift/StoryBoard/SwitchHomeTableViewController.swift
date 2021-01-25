@@ -24,7 +24,7 @@ class SwitchHomeTableViewController: UITableViewController {
         } failure: { [weak self] (error) in
             guard let self = self else { return }
             let errorMessage = error?.localizedDescription ?? ""
-            Alert.showBasicAlert(on: self, with: "Failed to Fetch Home List", message: errorMessage)
+            Alert.showBasicAlert(on: self, with: NSLocalizedString("Failed to Add New Home", comment: ""), message: errorMessage)
         }
 
     }

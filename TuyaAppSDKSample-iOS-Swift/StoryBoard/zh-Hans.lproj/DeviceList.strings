@@ -1,0 +1,33 @@
+/* Class = "UINavigationItem"; title = "Device List"; ObjectID = "8hw-cY-PzK"; */
+"8hw-cY-PzK.title" = "设备列表";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "11T-VB-iBU"; */
+"11T-VB-iBU.text" = "标题";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "B3M-Vj-fmh"; */
+"B3M-Vj-fmh.text" = "标签";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "d0r-od-8Ve"; */
+"d0r-od-8Ve.text" = "副标题";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "eZf-aa-GbJ"; */
+"eZf-aa-GbJ.text" = "标签";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "f7z-eY-PgJ"; */
+"f7z-eY-PgJ.text" = "标签";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "lqt-xP-Tts"; */
+"lqt-xP-Tts.text" = "标签";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "m2H-Zb-62q"; */
+"m2H-Zb-62q.text" = "标题";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "QBC-5e-jTZ"; */
+"QBC-5e-jTZ.text" = "详情";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "VDT-34-jCX"; */
+"VDT-34-jCX.text" = "详情";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "w7z-0N-wn4"; */
+"w7z-0N-wn4.text" = "标题";
+

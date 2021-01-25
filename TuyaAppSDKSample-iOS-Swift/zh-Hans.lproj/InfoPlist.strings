@@ -1,0 +1,12 @@
+/* Privacy - Bluetooth Always Usage Description */
+"NSBluetoothAlwaysUsageDescription" = "为了更好的使用，建议打开使用蓝牙的权限。";
+
+/* Privacy - Location Always and When In Use Usage Description */
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "为了更好的使用，建议您打开使用您的位置的权限。";
+
+/* Privacy - Location Always Usage Description */
+"NSLocationAlwaysUsageDescription" = "为了更好的使用，建议您打开使用您的位置的权限。";
+
+/* Privacy - Location When In Use Usage Description */
+"NSLocationWhenInUseUsageDescription" = "为了更好的使用，建议您打开使用您的位置的权限。";
+

@@ -37,7 +37,7 @@ class EZModeTableViewController: UITableViewController {
     // MARK: - Private Method
     private func startConfiguration() {
         guard let homeID = Home.current?.homeId else { return }
-        SVProgressHUD.show(withStatus: "Requesting for Token")
+        SVProgressHUD.show(withStatus: NSLocalizedString("Requesting for Token", comment: ""))
         
         TuyaSmartActivator.sharedInstance()?.getTokenWithHomeId(homeID, success: { [weak self] (token) in
             guard let self = self else { return }
@@ -50,7 +50,7 @@ class EZModeTableViewController: UITableViewController {
     }
      
     private func startConfiguration(with token: String) {
-        SVProgressHUD.show(withStatus: "Configuring")
+        SVProgressHUD.show(withStatus: NSLocalizedString("Configuring", comment: ""))
         
         let ssid = ssidTextField.text ?? ""
         let password = passwordTextField.text ?? ""
@@ -72,8 +72,8 @@ extension EZModeTableViewController: TuyaSmartActivatorDelegate {
     func activator(_ activator: TuyaSmartActivator!, didReceiveDevice deviceModel: TuyaSmartDeviceModel!, error: Error!) {
         if deviceModel != nil && error == nil {
             // Success
-            let name = deviceModel.name ?? "Unknown Name"
-            SVProgressHUD.showSuccess(withStatus: "Successfully Added \(name)")
+            let name = deviceModel.name ?? NSLocalizedString("Unknown Name", comment: "Unknown name device.")
+            SVProgressHUD.showSuccess(withStatus: NSLocalizedString("Successfully Added \(name)", comment: "Successfully added one device."))
             isSuccess = true
             navigationController?.popViewController(animated: true)
         }

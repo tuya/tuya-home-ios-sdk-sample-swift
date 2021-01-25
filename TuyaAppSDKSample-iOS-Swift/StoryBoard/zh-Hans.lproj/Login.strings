@@ -1,39 +1,39 @@
-
 /* Class = "UITextField"; placeholder = "Email Address or Phone Number"; ObjectID = "0Qz-La-oYh"; */
-"0Qz-La-oYh.placeholder" = "Email Address or Phone Number";
+"0Qz-La-oYh.placeholder" = "电子邮箱或手机号码";
 
 /* Class = "UINavigationItem"; title = "Reset Password"; ObjectID = "8dI-Me-up7"; */
-"8dI-Me-up7.title" = "Reset Password";
+"8dI-Me-up7.title" = "重置密码";
 
 /* Class = "UIButton"; normalTitle = "Forget Password?"; ObjectID = "9MR-le-GWV"; */
-"9MR-le-GWV.normalTitle" = "Forget Password?";
-
-/* Class = "UIButton"; normalTitle = "Send Verification Code"; ObjectID = "JWu-Lu-DId"; */
-"JWu-Lu-DId.normalTitle" = "Send Verification Code";
-
-/* Class = "UITextField"; placeholder = "Email Address or Phone Number"; ObjectID = "Tmz-IU-mNw"; */
-"Tmz-IU-mNw.placeholder" = "Email Address or Phone Number";
+"9MR-le-GWV.normalTitle" = "忘记密码？";
 
 /* Class = "UITextField"; placeholder = "Password"; ObjectID = "eYm-X4-pFJ"; */
-"eYm-X4-pFJ.placeholder" = "Password";
+"eYm-X4-pFJ.placeholder" = "密码";
 
 /* Class = "UITextField"; placeholder = "Verification Code"; ObjectID = "jNx-Nw-Bag"; */
-"jNx-Nw-Bag.placeholder" = "Verification Code";
+"jNx-Nw-Bag.placeholder" = "验证码";
+
+/* Class = "UIButton"; normalTitle = "Send Verification Code"; ObjectID = "JWu-Lu-DId"; */
+"JWu-Lu-DId.normalTitle" = "发送验证码";
 
 /* Class = "UITextField"; placeholder = "Country Code"; ObjectID = "k7Z-L9-7PN"; */
-"k7Z-L9-7PN.placeholder" = "Country Code";
+"k7Z-L9-7PN.placeholder" = "国家码";
 
 /* Class = "UINavigationItem"; title = "Login"; ObjectID = "kEH-w9-yzz"; */
-"kEH-w9-yzz.title" = "Login";
+"kEH-w9-yzz.title" = "登录";
 
 /* Class = "UITextField"; placeholder = "Country Code"; ObjectID = "tmd-dx-fqr"; */
-"tmd-dx-fqr.placeholder" = "Country Code";
+"tmd-dx-fqr.placeholder" = "国家码";
+
+/* Class = "UITextField"; placeholder = "Email Address or Phone Number"; ObjectID = "Tmz-IU-mNw"; */
+"Tmz-IU-mNw.placeholder" = "电子邮箱或手机号";
 
 /* Class = "UIButton"; normalTitle = "Reset"; ObjectID = "uH1-KS-vd6"; */
-"uH1-KS-vd6.normalTitle" = "Reset";
+"uH1-KS-vd6.normalTitle" = "重置";
 
 /* Class = "UITextField"; placeholder = "New Password"; ObjectID = "yCi-uu-Voj"; */
-"yCi-uu-Voj.placeholder" = "New Password";
+"yCi-uu-Voj.placeholder" = "新密码";
 
 /* Class = "UIButton"; normalTitle = "Login"; ObjectID = "yoX-Qn-PEK"; */
-"yoX-Qn-PEK.normalTitle" = "Login";
+"yoX-Qn-PEK.normalTitle" = "登录";
+

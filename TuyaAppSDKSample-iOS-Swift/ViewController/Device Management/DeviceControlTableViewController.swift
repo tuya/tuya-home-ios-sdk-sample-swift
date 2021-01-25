@@ -40,7 +40,7 @@ class DeviceControlTableViewController: UITableViewController {
     private func detectDeviceAvailability() {
         if let isOnline = device?.deviceModel.isOnline, !isOnline {
             NotificationCenter.default.post(name: .deviceOffline, object: nil)
-            SVProgressHUD.show(withStatus: "The device is offline. The control panel is unavailable.")
+            SVProgressHUD.show(withStatus: NSLocalizedString("The device is offline. The control panel is unavailable.", comment: ""))
         } else {
             NotificationCenter.default.post(name: .deviceOnline, object: nil)
             SVProgressHUD.dismiss()
@@ -181,7 +181,7 @@ extension DeviceControlTableViewController: TuyaSmartDeviceDelegate {
     
     func deviceRemoved(_ device: TuyaSmartDevice) {
         NotificationCenter.default.post(name: .deviceOffline, object: nil)
-        SVProgressHUD.showError(withStatus: "The device has been removed.")
+        SVProgressHUD.showError(withStatus: NSLocalizedString("The device has been removed.", comment: ""))
     }
     
     func device(_ device: TuyaSmartDevice, dpsUpdate dps: [AnyHashable : Any]) {

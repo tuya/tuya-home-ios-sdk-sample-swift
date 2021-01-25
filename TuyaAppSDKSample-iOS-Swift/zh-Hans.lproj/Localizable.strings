@@ -1,0 +1,117 @@
+/* Cancel */
+"Cancel" = "取消";
+
+/* No comment provided by engineer. */
+"Cannot Access Location" = "无法访问位置";
+
+/* No comment provided by engineer. */
+"Configuring" = "配置中";
+
+/* Dismiss a home. */
+"Dismiss" = "解散";
+
+/* No comment provided by engineer. */
+"Dismiss This Home" = "解散这个家庭";
+
+/* No comment provided by engineer. */
+"Failed to Add New Home" = "创建家庭失败";
+
+/* Failed to dismiss a home. */
+"Failed to Dismiss" = "解散家庭失败";
+
+/* No comment provided by engineer. */
+"Failed to Fetch Home" = "获取家庭失败";
+
+/* No comment provided by engineer. */
+"Failed to Fetch Home List" = "获取家庭列表失败";
+
+/* No comment provided by engineer. */
+"Failed to Fetch Weather" = "获取天气信息失败";
+
+/* Failed to Log Out */
+"Failed to Log Out" = "未能成功退出登录";
+
+/* No comment provided by engineer. */
+"Failed to Login" = "登录失败";
+
+/* No comment provided by engineer. */
+"Failed to Register" = "注册失败";
+
+/* No comment provided by engineer. */
+"Failed to Reset Password" = "重置密码失败";
+
+/* No comment provided by engineer. */
+"Failed to Sent Verification Code" = "验证码发送失败";
+
+/* No comment provided by engineer. */
+"Failed to Update Home" = "更新家庭信息失败";
+
+/* Confirm logout. */
+"Logout" = "退出登录";
+
+/* User hasn't select a current home. */
+"No Selection" = "未选择";
+
+/* No comment provided by engineer. */
+"Offline" = "离线";
+
+/* No comment provided by engineer. */
+"OK" = "好的";
+
+/* No comment provided by engineer. */
+"Online" = "在线";
+
+/* No comment provided by engineer. */
+"Password Reset Successfully" = "重置密码成功";
+
+/* No comment provided by engineer. */
+"Please check your email for the code." = "请检查您的电子邮件以获取验证码。";
+
+/* No comment provided by engineer. */
+"Please check your message for the code." = "请检查您的信息以获取验证码。";
+
+/* No comment provided by engineer. */
+"Please make sure if the location access is enabled for the app." = "请确认该应用是否启用了位置访问功能。";
+
+/* No comment provided by engineer. */
+"Please navigate back to login your account." = "请返回以登录您的账户。";
+
+/* No comment provided by engineer. */
+"Please navigate back." = "请返回。";
+
+/* No comment provided by engineer. */
+"Registered Successfully" = "注册成功";
+
+/* No comment provided by engineer. */
+"Requesting for Token" = "请求凭据中";
+
+/* Select option to control enum value dp. */
+"Select Option" = "请选择";
+
+/* No comment provided by engineer. */
+"Success" = "成功";
+
+/* Successfully added one device. */
+"Successfully Added (name)" = "成功添加了 %@";
+
+/* No comment provided by engineer. */
+"Successfully added new home." = "成功添加新家庭。";
+
+/* No comment provided by engineer. */
+"The device has been removed." = "该设备已被移除。";
+
+/* No comment provided by engineer. */
+"The device is offline. The control panel is unavailable." = "设备处于离线状态。控制面板不可用。";
+
+/* Unknown name device. */
+"Unknown Name" = "未知名称设备";
+
+/* No comment provided by engineer. */
+"Verification Code Sent Successfully" = "验证码发送成功";
+
+/* No comment provided by engineer. */
+"You're going to dismiss this home." = "您将要解散这个家庭。";
+
+/* User tapped the logout button. */
+"You're going to log out this account." = "您将要退出登录。";
+

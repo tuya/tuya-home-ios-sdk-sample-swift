@@ -25,7 +25,7 @@ class TuyaSmartMainTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        currentHomeLabel.text = Home.current?.name ?? "No Selection"
+        currentHomeLabel.text = Home.current?.name ?? NSLocalizedString("No Selection", comment: "User hasn't select a current home.")
         
         if #available(iOS 13.0, *) {
             currentHomeLabel.textColor = .secondaryLabel
@@ -46,8 +46,8 @@ class TuyaSmartMainTableViewController: UITableViewController {
     
     // MARK: - IBAction
     @IBAction func logoutTapped(_ sender: UIButton) {
-        let alertViewController = UIAlertController(title: nil, message: "You're going to log out this account.", preferredStyle: .actionSheet)
-        let logoutAction = UIAlertAction(title: "Logout", style: .destructive) { [weak self] (action) in
+        let alertViewController = UIAlertController(title: nil, message: NSLocalizedString("You're going to log out this account.", comment: "User tapped the logout button."), preferredStyle: .actionSheet)
+        let logoutAction = UIAlertAction(title: NSLocalizedString("Logout", comment: "Confirm logout."), style: .destructive) { [weak self] (action) in
             guard let self = self else { return }
             TuyaSmartUser.sharedInstance().loginOut {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -56,11 +56,11 @@ class TuyaSmartMainTableViewController: UITableViewController {
             } failure: {
                 [weak self] (error) in
                    guard let self = self else { return }
-                   Alert.showBasicAlert(on: self, with: "Failed to Log Out", message: error?.localizedDescription ?? "")
+                   Alert.showBasicAlert(on: self, with: NSLocalizedString("Failed to Log Out", comment: "Failed to Log Out"), message: error?.localizedDescription ?? "")
             }
         }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: "Cancel"), style: .cancel)
         
         alertViewController.addAction(logoutAction)
         alertViewController.addAction(cancelAction)

@@ -1,0 +1,12 @@
+/* Class = "UITextField"; placeholder = "Home Name"; ObjectID = "gYJ-8c-ugk"; */
+"gYJ-8c-ugk.placeholder" = "家庭名称";
+
+/* Class = "UIBarButtonItem"; title = "Create"; ObjectID = "jY0-OZ-nnO"; */
+"jY0-OZ-nnO.title" = "创建";
+
+/* Class = "UINavigationItem"; title = "New Home"; ObjectID = "KDq-xN-G4L"; */
+"KDq-xN-G4L.title" = "创建家庭";
+
+/* Class = "UITextField"; placeholder = "City"; ObjectID = "nXT-Um-kMV"; */
+"nXT-Um-kMV.placeholder" = "城市";
+

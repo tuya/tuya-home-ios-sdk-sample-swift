@@ -38,7 +38,7 @@ class APModeTableViewController: UITableViewController {
     // MARK: - Private Method
     private func requestToken() {
         guard let homeID = Home.current?.homeId else { return }
-        SVProgressHUD.show(withStatus: "Requesting for Token")
+        SVProgressHUD.show(withStatus: NSLocalizedString("Requesting for Token", comment: ""))
         
         TuyaSmartActivator.sharedInstance()?.getTokenWithHomeId(homeID, success: { [weak self] (token) in
             guard let self = self else { return }
@@ -51,7 +51,7 @@ class APModeTableViewController: UITableViewController {
     }
     
     private func startConfiguration() {
-        SVProgressHUD.show(withStatus: "Configuring")
+        SVProgressHUD.show(withStatus: NSLocalizedString("Requesting for Token", comment: ""))
         
         let ssid = ssidTextField.text ?? ""
         let password = passwordTextField.text ?? ""
@@ -73,8 +73,8 @@ extension APModeTableViewController: TuyaSmartActivatorDelegate {
     func activator(_ activator: TuyaSmartActivator!, didReceiveDevice deviceModel: TuyaSmartDeviceModel!, error: Error!) {
         if deviceModel != nil && error == nil {
             // Success
-            let name = deviceModel.name ?? "Unknown Name"
-            SVProgressHUD.showSuccess(withStatus: "Successfully Added \(name)")
+            let name = deviceModel.name ?? NSLocalizedString("Unknown Name", comment: "Unknown name device.")
+            SVProgressHUD.showSuccess(withStatus: NSLocalizedString("Successfully Added \(name)", comment: "Successfully added one device."))
             isSuccess = true
             navigationController?.popViewController(animated: true)
         }

@@ -32,7 +32,7 @@ class NewHomeTableViewController: UITableViewController {
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
         } else {
-            Alert.showBasicAlert(on: self, with: "Cannot Access Location", message: "Please make sure if the location access is enabled for the app.")
+            Alert.showBasicAlert(on: self, with: NSLocalizedString("Cannot Access Location", comment: ""), message: NSLocalizedString("Please make sure if the location access is enabled for the app.", comment: ""))
         }
     }
 
@@ -43,17 +43,17 @@ class NewHomeTableViewController: UITableViewController {
         
         homeManager.addHome(withName: homeName, geoName: geoName, rooms: [""], latitude: latitude, longitude: longitude) { [weak self] _ in
             guard let self = self else { return }
-            let action = UIAlertAction(title: "OK", style: .default) { [weak self] _ in
+            let action = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default) { [weak self] _ in
                 guard let self = self else { return }
                 self.navigationController?.popViewController(animated: true)
             }
             
-            Alert.showBasicAlert(on: self, with: "Success", message: "Successfully added new home.", actions: [action])
+            Alert.showBasicAlert(on: self, with: NSLocalizedString("Success", comment: ""), message: NSLocalizedString("Successfully added new home.", comment: ""), actions: [action])
             
         } failure: { [weak self] (error) in
             guard let self = self else { return }
             let errorMessage = error?.localizedDescription ?? ""
-            Alert.showBasicAlert(on: self, with: "Failed to Add New Home", message: errorMessage)
+            Alert.showBasicAlert(on: self, with: NSLocalizedString("Failed to Add New Home", comment: ""), message: errorMessage)
         }
 
     }

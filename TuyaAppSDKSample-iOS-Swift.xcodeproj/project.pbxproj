@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A2C1DBF10CF3BA0115FC2AAF /* Pods_TuyaAppSDKSample_iOS_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 552D3541B5A00E74AD66D9D5 /* Pods_TuyaAppSDKSample_iOS_Swift.framework */; };
-		AF21C1F925B03D1200D52FBA /* NewHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF21C1F825B03D1200D52FBA /* NewHome.storyboard */; };
 		AF21C1FF25B03D6000D52FBA /* SwitchHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF21C1FD25B03D6000D52FBA /* SwitchHome.storyboard */; };
-		AF21C20225B03D8900D52FBA /* HomeList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF21C20125B03D8900D52FBA /* HomeList.storyboard */; };
 		AF21C20625B0400F00D52FBA /* EZModeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21C20525B0400F00D52FBA /* EZModeTableViewController.swift */; };
 		AF37DBB425AEE842000EB0FD /* EditHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37DBB325AEE842000EB0FD /* EditHomeTableViewController.swift */; };
 		AF3A259C25A835AE003EB9FF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A259B25A835AE003EB9FF /* MainViewController.swift */; };
@@ -44,6 +42,10 @@
 		AF5E2F4D25A5D28A00DAF14E /* RegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5E2F4C25A5D28A00DAF14E /* RegisterTableViewController.swift */; };
 		AF5E2F5225A5D60B00DAF14E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5E2F5125A5D60B00DAF14E /* Alert.swift */; };
 		AF60B88C25BBC1F600E18F6F /* APModeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60B88B25BBC1F600E18F6F /* APModeTableViewController.swift */; };
+		AF60B89825BC1F5600E18F6F /* NewHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF60B89A25BC1F5600E18F6F /* NewHome.storyboard */; };
+		AF60B89E25BC1F6700E18F6F /* HomeList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF60B8A025BC1F6700E18F6F /* HomeList.storyboard */; };
+		AF60B8C225BEBA1600E18F6F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF60B8C025BEBA1600E18F6F /* InfoPlist.strings */; };
+		AF60B8C525BEBA1600E18F6F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF60B8C325BEBA1600E18F6F /* Localizable.strings */; };
 		AF96112425B17F38000971CC /* DeviceListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF96112325B17F38000971CC /* DeviceListTableViewController.swift */; };
 		AF96129925B58CE1000971CC /* DeviceControlTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF96129825B58CE1000971CC /* DeviceControlTableViewController.swift */; };
 		AF96129D25B5ACE6000971CC /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF96129C25B5ACE6000971CC /* SwitchTableViewCell.swift */; };
@@ -58,9 +60,7 @@
 /* Begin PBXFileReference section */
 		207E8BAF216CF8ED00C5937A /* Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig"; path = "Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		552D3541B5A00E74AD66D9D5 /* Pods_TuyaAppSDKSample_iOS_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuyaAppSDKSample_iOS_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF21C1F825B03D1200D52FBA /* NewHome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewHome.storyboard; sourceTree = "<group>"; };
 		AF21C1FE25B03D6000D52FBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SwitchHome.storyboard; sourceTree = "<group>"; };
-		AF21C20125B03D8900D52FBA /* HomeList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeList.storyboard; sourceTree = SOURCE_ROOT; };
 		AF21C20525B0400F00D52FBA /* EZModeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZModeTableViewController.swift; sourceTree = "<group>"; };
 		AF37DBB325AEE842000EB0FD /* EditHomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditHomeTableViewController.swift; path = "TuyaAppSDKSample-iOS-Swift/StoryBoard/EditHomeTableViewController.swift"; sourceTree = SOURCE_ROOT; };
 		AF3A259B25A835AE003EB9FF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +96,22 @@
 		AF5E2F4C25A5D28A00DAF14E /* RegisterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTableViewController.swift; sourceTree = "<group>"; };
 		AF5E2F5125A5D60B00DAF14E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		AF60B88B25BBC1F600E18F6F /* APModeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APModeTableViewController.swift; sourceTree = "<group>"; };
+		AF60B88E25BC1F0400E18F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TuyaSmartMain.strings"; sourceTree = "<group>"; };
+		AF60B88F25BC1F0400E18F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		AF60B89025BC1F0400E18F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Register.strings"; sourceTree = "<group>"; };
+		AF60B89125BC1F0400E18F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		AF60B89225BC1F0400E18F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Login.strings"; sourceTree = "<group>"; };
+		AF60B89325BC1F0400E18F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/UserInformation.strings"; sourceTree = "<group>"; };
+		AF60B89425BC1F0400E18F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SwitchHome.strings"; sourceTree = "<group>"; };
+		AF60B89525BC1F0500E18F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/EZMode.strings"; sourceTree = "<group>"; };
+		AF60B89625BC1F0500E18F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/APMode.strings"; sourceTree = "<group>"; };
+		AF60B89725BC1F0500E18F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/DeviceList.strings"; sourceTree = "<group>"; };
+		AF60B89925BC1F5600E18F6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/NewHome.storyboard; sourceTree = "<group>"; };
+		AF60B89D25BC1F5D00E18F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/NewHome.strings"; sourceTree = "<group>"; };
+		AF60B89F25BC1F6700E18F6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeList.storyboard; sourceTree = "<group>"; };
+		AF60B8A325BC1F6E00E18F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/HomeList.strings"; sourceTree = "<group>"; };
+		AF60B8C125BEBA1600E18F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		AF60B8C425BEBA1600E18F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		AF96112325B17F38000971CC /* DeviceListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListTableViewController.swift; sourceTree = "<group>"; };
 		AF96129825B58CE1000971CC /* DeviceControlTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceControlTableViewController.swift; sourceTree = "<group>"; };
 		AF96129C25B5ACE6000971CC /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
@@ -179,6 +195,8 @@
 				AF5E2F5025A5D5FB00DAF14E /* Helper */,
 				AF5531E825A5992800E13562 /* Assets.xcassets */,
 				AF5531ED25A5992800E13562 /* Info.plist */,
+				AF60B8C325BEBA1600E18F6F /* Localizable.strings */,
+				AF60B8C025BEBA1600E18F6F /* InfoPlist.strings */,
 				AF5E2F3025A59FE600DAF14E /* t_s.bmp */,
 			);
 			path = "TuyaAppSDKSample-iOS-Swift";
@@ -193,9 +211,9 @@
 				AF5E2F3825A5A08600DAF14E /* Main.storyboard */,
 				AF5E2F3A25A5A08600DAF14E /* Login.storyboard */,
 				AF5E2F3C25A5A08600DAF14E /* UserInformation.storyboard */,
-				AF21C1F825B03D1200D52FBA /* NewHome.storyboard */,
+				AF60B89A25BC1F5600E18F6F /* NewHome.storyboard */,
 				AF21C1FD25B03D6000D52FBA /* SwitchHome.storyboard */,
-				AF21C20125B03D8900D52FBA /* HomeList.storyboard */,
+				AF60B8A025BC1F6700E18F6F /* HomeList.storyboard */,
 				AF3B498525B808D700286C4A /* EZMode.storyboard */,
 				AF3B498A25B8093600286C4A /* APMode.storyboard */,
 				AF3B498F25B8095800286C4A /* DeviceList.storyboard */,
@@ -316,6 +334,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = AF5531D325A5992500E13562;
 			productRefGroup = AF5531DD25A5992500E13562 /* Products */;
@@ -336,14 +355,16 @@
 				AF3B498C25B8093600286C4A /* APMode.storyboard in Resources */,
 				AF5E2F4125A5A08600DAF14E /* Login.storyboard in Resources */,
 				AF5E2F4025A5A08600DAF14E /* Main.storyboard in Resources */,
+				AF60B8C225BEBA1600E18F6F /* InfoPlist.strings in Resources */,
 				AF5531E925A5992800E13562 /* Assets.xcassets in Resources */,
 				AF21C1FF25B03D6000D52FBA /* SwitchHome.storyboard in Resources */,
-				AF21C1F925B03D1200D52FBA /* NewHome.storyboard in Resources */,
+				AF60B89825BC1F5600E18F6F /* NewHome.storyboard in Resources */,
 				AF5E2F3125A59FE600DAF14E /* t_s.bmp in Resources */,
 				AF5E2F3E25A5A08600DAF14E /* LaunchScreen.storyboard in Resources */,
 				AF5E2F3F25A5A08600DAF14E /* Register.storyboard in Resources */,
 				AF3B498725B808D700286C4A /* EZMode.storyboard in Resources */,
-				AF21C20225B03D8900D52FBA /* HomeList.storyboard in Resources */,
+				AF60B89E25BC1F6700E18F6F /* HomeList.storyboard in Resources */,
+				AF60B8C525BEBA1600E18F6F /* Localizable.strings in Resources */,
 				AF3A25AE25A99555003EB9FF /* TuyaSmartMain.storyboard in Resources */,
 				AF5E2F4225A5A08600DAF14E /* UserInformation.storyboard in Resources */,
 			);
@@ -456,6 +477,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				AF21C1FE25B03D6000D52FBA /* Base */,
+				AF60B89425BC1F0400E18F6F /* zh-Hans */,
 			);
 			name = SwitchHome.storyboard;
 			sourceTree = "<group>";
@@ -464,6 +486,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				AF3A25AD25A99555003EB9FF /* Base */,
+				AF60B88E25BC1F0400E18F6F /* zh-Hans */,
 			);
 			name = TuyaSmartMain.storyboard;
 			sourceTree = "<group>";
@@ -472,6 +495,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				AF3B498625B808D700286C4A /* Base */,
+				AF60B89525BC1F0500E18F6F /* zh-Hans */,
 			);
 			name = EZMode.storyboard;
 			sourceTree = "<group>";
@@ -480,6 +504,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				AF3B498B25B8093600286C4A /* Base */,
+				AF60B89625BC1F0500E18F6F /* zh-Hans */,
 			);
 			name = APMode.storyboard;
 			sourceTree = "<group>";
@@ -488,6 +513,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				AF3B499025B8095800286C4A /* Base */,
+				AF60B89725BC1F0500E18F6F /* zh-Hans */,
 			);
 			name = DeviceList.storyboard;
 			sourceTree = "<group>";
@@ -496,6 +522,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				AF5E2F3525A5A08600DAF14E /* Base */,
+				AF60B88F25BC1F0400E18F6F /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -504,6 +531,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				AF5E2F3725A5A08600DAF14E /* Base */,
+				AF60B89025BC1F0400E18F6F /* zh-Hans */,
 			);
 			name = Register.storyboard;
 			sourceTree = "<group>";
@@ -512,6 +540,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				AF5E2F3925A5A08600DAF14E /* Base */,
+				AF60B89125BC1F0400E18F6F /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -520,6 +549,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				AF5E2F3B25A5A08600DAF14E /* Base */,
+				AF60B89225BC1F0400E18F6F /* zh-Hans */,
 			);
 			name = Login.storyboard;
 			sourceTree = "<group>";
@@ -528,8 +558,43 @@
 			isa = PBXVariantGroup;
 			children = (
 				AF5E2F3D25A5A08600DAF14E /* Base */,
+				AF60B89325BC1F0400E18F6F /* zh-Hans */,
 			);
 			name = UserInformation.storyboard;
+			sourceTree = "<group>";
+		};
+		AF60B89A25BC1F5600E18F6F /* NewHome.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF60B89925BC1F5600E18F6F /* Base */,
+				AF60B89D25BC1F5D00E18F6F /* zh-Hans */,
+			);
+			name = NewHome.storyboard;
+			sourceTree = "<group>";
+		};
+		AF60B8A025BC1F6700E18F6F /* HomeList.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF60B89F25BC1F6700E18F6F /* Base */,
+				AF60B8A325BC1F6E00E18F6F /* zh-Hans */,
+			);
+			name = HomeList.storyboard;
+			sourceTree = SOURCE_ROOT;
+		};
+		AF60B8C025BEBA1600E18F6F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF60B8C125BEBA1600E18F6F /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AF60B8C325BEBA1600E18F6F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF60B8C425BEBA1600E18F6F /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

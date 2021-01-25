@@ -31,7 +31,7 @@ class EditHomeTableViewController: UITableViewController {
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
         } else {
-            Alert.showBasicAlert(on: self, with: "Cannot Access Location", message: "Please make sure if the location access is enabled for the app.")
+            Alert.showBasicAlert(on: self, with: NSLocalizedString("Cannot Access Location", comment: ""), message: NSLocalizedString("Please make sure if the location access is enabled for the app.", comment: ""))
         }
         
         guard let home = home else { return }
@@ -49,7 +49,7 @@ class EditHomeTableViewController: UITableViewController {
         }, failure: { [weak self] (error) in
             guard let self = self else { return }
             let errorMessage = error?.localizedDescription ?? ""
-            Alert.showBasicAlert(on: self, with: "Failed to Update Home", message: errorMessage)
+            Alert.showBasicAlert(on: self, with: NSLocalizedString("Failed to Update Home", comment: ""), message: errorMessage)
         })
     }
 }

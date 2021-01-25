@@ -29,23 +29,23 @@ class ResetPasswordTableViewController: UITableViewController {
         if account.contains("@") {
             TuyaSmartUser.sharedInstance().sendVerifyCode(byEmail: countryCode, email: account) { [weak self] in
                 guard let self = self else { return }
-                Alert.showBasicAlert(on: self, with: "Verification Code Sent Successfully", message: "Please check your email for the code.")
+                Alert.showBasicAlert(on: self, with: NSLocalizedString(NSLocalizedString("Failed to Login", comment: ""), comment: ""), message: NSLocalizedString("Please check your email for the code.", comment: ""))
                 
             } failure: { [weak self] (error) in
                 guard let self = self else { return }
                 let errorMessage = error?.localizedDescription ?? ""
-                Alert.showBasicAlert(on: self, with: "Failed to Sent Verification Code", message: errorMessage)
+                Alert.showBasicAlert(on: self, with: NSLocalizedString("Failed to Sent Verification Code", comment: ""), message: errorMessage)
             }
 
         } else {
             TuyaSmartUser.sharedInstance().sendVerifyCode(countryCode, phoneNumber: account, type: 2) {  [weak self] in
                 guard let self = self else { return }
-                Alert.showBasicAlert(on: self, with: "Verification Code Sent Successfully", message: "Please check your message for the code.")
+                Alert.showBasicAlert(on: self, with: NSLocalizedString("Verification Code Sent Successfully", comment: ""), message: NSLocalizedString("Please check your message for the code.", comment: ""))
                 
             } failure: { [weak self] (error) in
                 guard let self = self else { return }
                 let errorMessage = error?.localizedDescription ?? ""
-                Alert.showBasicAlert(on: self, with: "Failed to Sent Verification Code", message: errorMessage)
+                Alert.showBasicAlert(on: self, with: NSLocalizedString("Failed to Sent Verification Code", comment: ""), message: errorMessage)
             }
 
         }
@@ -60,22 +60,22 @@ class ResetPasswordTableViewController: UITableViewController {
         if account.contains("@") {
             TuyaSmartUser.sharedInstance().resetPassword(byEmail: countryCode, email: account, newPassword: password, code: verificationCode) { [weak self] in
                 guard let self = self else { return }
-                Alert.showBasicAlert(on: self, with: "Password Reset Successfully", message: "Please navigate back.")
+                Alert.showBasicAlert(on: self, with: NSLocalizedString("Password Reset Successfully", comment: ""), message: NSLocalizedString("Please navigate back.", comment: ""))
             } failure: { [weak self] (error) in
                 guard let self = self else { return }
                 let errorMessage = error?.localizedDescription ?? ""
-                Alert.showBasicAlert(on: self, with: "Failed to Reset Password", message: errorMessage)
+                Alert.showBasicAlert(on: self, with: NSLocalizedString("Failed to Reset Password", comment: ""), message: errorMessage)
             }
 
         } else {
             TuyaSmartUser.sharedInstance().resetPassword(byPhone: countryCode, phoneNumber: account, newPassword: password, code: verificationCode) { [weak self] in
                 guard let self = self else { return }
-                Alert.showBasicAlert(on: self, with: "Password Reset Successfully", message: "Please navigate back.")
+                Alert.showBasicAlert(on: self, with: NSLocalizedString("Password Reset Successfully", comment: ""), message: NSLocalizedString("Password Reset Successfully", comment: ""))
                 
             } failure: { [weak self] (error) in
                 guard let self = self else { return }
                 let errorMessage = error?.localizedDescription ?? ""
-                Alert.showBasicAlert(on: self, with: "Failed to Reset Password", message: errorMessage)
+                Alert.showBasicAlert(on: self, with: NSLocalizedString("Failed to Reset Password", comment: ""), message: errorMessage)
             }
 
         }

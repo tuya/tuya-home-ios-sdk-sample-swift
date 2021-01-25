@@ -51,23 +51,23 @@ class RegisterTableViewController: UITableViewController {
         case .email:
             TuyaSmartUser.sharedInstance().sendVerifyCode(byRegisterEmail: countryCode, email: account) {  [weak self] in
                 guard let self = self else { return }
-                Alert.showBasicAlert(on: self, with: "Verification Code Sent Successfully", message: "Please check your email for the code.")
+                Alert.showBasicAlert(on: self, with: NSLocalizedString("Verification Code Sent Successfully", comment: ""), message: NSLocalizedString("Please check your email for the code.", comment: ""))
                 
             } failure: { [weak self] (error) in
                 guard let self = self else { return }
                 let errorMessage = error?.localizedDescription ?? ""
-                Alert.showBasicAlert(on: self, with: "Failed to Sent Verification Code", message: errorMessage)
+                Alert.showBasicAlert(on: self, with: NSLocalizedString("Failed to Sent Verification Code", comment: ""), message: errorMessage)
             }
 
         case .phone:
             TuyaSmartUser.sharedInstance().sendVerifyCode(countryCode, phoneNumber: account, type: 1) {  [weak self] in
                 guard let self = self else { return }
-                Alert.showBasicAlert(on: self, with: "Verification Code Sent Successfully", message: "Please check your message for the code.")
+                Alert.showBasicAlert(on: self, with: NSLocalizedString("Verification Code Sent Successfully", comment: ""), message: NSLocalizedString("Please check your message for the code.", comment: ""))
                 
             } failure: { [weak self] (error) in
                 guard let self = self else { return }
                 let errorMessage = error?.localizedDescription ?? ""
-                Alert.showBasicAlert(on: self, with: "Failed to Sent Verification Code", message: errorMessage)
+                Alert.showBasicAlert(on: self, with: NSLocalizedString("Failed to Sent Verification Code", comment: ""), message: errorMessage)
                 
             }
 
@@ -85,30 +85,30 @@ class RegisterTableViewController: UITableViewController {
             TuyaSmartUser.sharedInstance().register(byEmail: countryCode, email: account, password: password, code: verificationCode) { [weak self] in
                 guard let self = self else { return }
                 
-                let action = UIAlertAction(title: "OK", style: .default) { _ in
+                let action = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default) { _ in
                     self.navigationController?.popViewController(animated: true)
                 }
                 
-                Alert.showBasicAlert(on: self, with: "Registered Successfully", message: "Please navigate back to login your account.", actions: [action])
+                Alert.showBasicAlert(on: self, with: NSLocalizedString("Registered Successfully", comment: ""), message: NSLocalizedString("Please navigate back to login your account.", comment: ""), actions: [action])
             } failure: { [weak self] (error) in
                 guard let self = self else { return }
                 let errorMessage = error?.localizedDescription ?? ""
-                Alert.showBasicAlert(on: self, with: "Failed to Register", message: errorMessage)
+                Alert.showBasicAlert(on: self, with: NSLocalizedString("Failed to Register", comment: ""), message: errorMessage)
             }
         case .phone:
             TuyaSmartUser.sharedInstance().register(byPhone: countryCode, phoneNumber: account, password: password, code: verificationCode) { [weak self] in
                 guard let self = self else { return }
                 
-                let action = UIAlertAction(title: "OK", style: .default) { _ in
+                let action = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default) { _ in
                     self.navigationController?.popViewController(animated: true)
                 }
                 
-                Alert.showBasicAlert(on: self, with: "Registered Successfully", message: "Please navigate back to login your account.", actions: [action])
+                Alert.showBasicAlert(on: self, with: NSLocalizedString("Registered Successfully", comment: ""), message: NSLocalizedString("Please navigate back to login your account.", comment: ""), actions: [action])
                 
             } failure: { [weak self] (error) in
                 guard let self = self else { return }
                 let errorMessage = error?.localizedDescription ?? ""
-                Alert.showBasicAlert(on: self, with: "Failed to Register", message: errorMessage)
+                Alert.showBasicAlert(on: self, with: NSLocalizedString("Failed to Register", comment: ""), message: errorMessage)
             }
         }
         

@@ -1,12 +1,12 @@
-
-/* Class = "UINavigationItem"; title = "Tuya SDK Sample"; ObjectID = "CWv-aU-yDU"; */
-"CWv-aU-yDU.title" = "Tuya SDK Sample";
+/* Class = "UILabel"; text = "SDK Ver: 3.22"; ObjectID = "bGF-Pc-rVR"; */
+"bGF-Pc-rVR.text" = "SDK 版本: 3.22";
 
 /* Class = "UIButton"; normalTitle = "Login"; ObjectID = "Cbb-x5-OQ8"; */
-"Cbb-x5-OQ8.normalTitle" = "Login";
+"Cbb-x5-OQ8.normalTitle" = "登录";
+
+/* Class = "UINavigationItem"; title = "Tuya SDK Sample"; ObjectID = "CWv-aU-yDU"; */
+"CWv-aU-yDU.title" = "涂鸦 SDK 示例";
 
 /* Class = "UIButton"; normalTitle = "Register"; ObjectID = "YiB-nC-tNo"; */
-"YiB-nC-tNo.normalTitle" = "Register";
+"YiB-nC-tNo.normalTitle" = "注册";
 
-/* Class = "UILabel"; text = "SDK Ver: 3.22"; ObjectID = "bGF-Pc-rVR"; */
-"bGF-Pc-rVR.text" = "SDK Ver: 3.22";

@@ -1,87 +1,42 @@
-
-/* Class = "UILabel"; text = "Weather Condition"; ObjectID = "1gJ-xw-lc9"; */
-"1gJ-xw-lc9.text" = "Weather Condition";
+/* Class = "UILabel"; text = "AP Mode"; ObjectID = "8Hz-95-i0i"; */
+"8Hz-95-i0i.text" = "AP 模式";
 
 /* Class = "UILabel"; text = "Detail"; ObjectID = "Aq0-Hw-9TL"; */
-"Aq0-Hw-9TL.text" = "Detail";
-
-/* Class = "UIButton"; normalTitle = "Dismiss"; ObjectID = "HfD-A1-DtT"; */
-"HfD-A1-DtT.normalTitle" = "Dismiss";
-
-/* Class = "UINavigationItem"; title = "Home List"; ObjectID = "IdX-vX-CyC"; */
-"IdX-vX-CyC.title" = "Home List";
-
-/* Class = "UILabel"; text = "City"; ObjectID = "JAY-Is-f72"; */
-"JAY-Is-f72.text" = "City";
-
-/* Class = "UINavigationItem"; title = "New Home"; ObjectID = "KDq-xN-G4L"; */
-"KDq-xN-G4L.title" = "New Home";
-
-/* Class = "UITableViewSection"; headerTitle = "Device Configuration"; ObjectID = "Lww-IN-i6Q"; */
-"Lww-IN-i6Q.headerTitle" = "Device Configuration";
-
-/* Class = "UILabel"; text = "Detail"; ObjectID = "NZk-b8-J7P"; */
-"NZk-b8-J7P.text" = "Detail";
-
-/* Class = "UILabel"; text = "New Home"; ObjectID = "UPg-L3-96Q"; */
-"UPg-L3-96Q.text" = "New Home";
-
-/* Class = "UILabel"; text = "Current Home"; ObjectID = "Ylu-0o-u1B"; */
-"Ylu-0o-u1B.text" = "Current Home";
-
-/* Class = "UILabel"; text = "Detail"; ObjectID = "ZEM-Ps-kML"; */
-"ZEM-Ps-kML.text" = "Detail";
-
-/* Class = "UINavigationItem"; title = "Home Detail"; ObjectID = "erY-MS-1Qg"; */
-"erY-MS-1Qg.title" = "Home Detail";
+"Aq0-Hw-9TL.text" = "详情";
 
 /* Class = "UITableViewSection"; headerTitle = "Home Management"; ObjectID = "fDa-sc-eBQ"; */
-"fDa-sc-eBQ.headerTitle" = "Home Management";
-
-/* Class = "UILabel"; text = "Detail"; ObjectID = "fxR-8V-mWV"; */
-"fxR-8V-mWV.text" = "Detail";
-
-/* Class = "UILabel"; text = "Detail"; ObjectID = "gKn-jF-o1l"; */
-"gKn-jF-o1l.text" = "Detail";
-
-/* Class = "UITextField"; placeholder = "Home Name"; ObjectID = "gYJ-8c-ugk"; */
-"gYJ-8c-ugk.placeholder" = "Home Name";
+"fDa-sc-eBQ.headerTitle" = "家庭管理";
 
 /* Class = "UILabel"; text = "Home List"; ObjectID = "hVu-vd-yrL"; */
-"hVu-vd-yrL.text" = "Home List";
+"hVu-vd-yrL.text" = "家庭列表";
 
 /* Class = "UIButton"; normalTitle = "Logout"; ObjectID = "hWi-1l-FSC"; */
-"hWi-1l-FSC.normalTitle" = "Logout";
-
-/* Class = "UIBarButtonItem"; title = "Create"; ObjectID = "jY0-OZ-nnO"; */
-"jY0-OZ-nnO.title" = "Create";
+"hWi-1l-FSC.normalTitle" = "退出登录";
 
 /* Class = "UITableViewSection"; headerTitle = "User Management"; ObjectID = "llS-dv-ZAG"; */
-"llS-dv-ZAG.headerTitle" = "User Management";
+"llS-dv-ZAG.headerTitle" = "用户管理";
 
-/* Class = "UITextField"; placeholder = "City"; ObjectID = "nXT-Um-kMV"; */
-"nXT-Um-kMV.placeholder" = "City";
+/* Class = "UITableViewSection"; headerTitle = "Device Network Configuration"; ObjectID = "Lww-IN-i6Q"; */
+"Lww-IN-i6Q.headerTitle" = "设备网络配置";
 
-/* Class = "UILabel"; text = "Home ID"; ObjectID = "owa-cj-QYx"; */
-"owa-cj-QYx.text" = "Home ID";
-
-/* Class = "UINavigationItem"; title = "Switch Home"; ObjectID = "qHC-03-4DN"; */
-"qHC-03-4DN.title" = "Switch Home";
+/* Class = "UILabel"; text = "Device List"; ObjectID = "Sc8-6Q-jjJ"; */
+"Sc8-6Q-jjJ.text" = "设备列表";
 
 /* Class = "UILabel"; text = "User Information"; ObjectID = "sDU-vp-zT6"; */
-"sDU-vp-zT6.text" = "User Information";
+"sDU-vp-zT6.text" = "用户信息";
 
 /* Class = "UINavigationItem"; title = "TuyaSmart"; ObjectID = "sFB-be-PT7"; */
-"sFB-be-PT7.title" = "TuyaSmart";
+"sFB-be-PT7.title" = "涂鸦智能";
 
-/* Class = "UILabel"; text = "Detail"; ObjectID = "uoq-3u-1L2"; */
-"uoq-3u-1L2.text" = "Detail";
+/* Class = "UILabel"; text = "New Home"; ObjectID = "UPg-L3-96Q"; */
+"UPg-L3-96Q.text" = "创建家庭";
 
-/* Class = "UILabel"; text = "Home Name"; ObjectID = "vSs-NM-ijE"; */
-"vSs-NM-ijE.text" = "Home Name";
-
-/* Class = "UILabel"; text = "Temperature"; ObjectID = "xZG-0n-v5l"; */
-"xZG-0n-v5l.text" = "Temperature";
+/* Class = "UILabel"; text = "EZ Mode"; ObjectID = "xKZ-bx-CAn"; */
+"xKZ-bx-CAn.text" = "EZ 模式";
 
 /* Class = "UITableViewSection"; headerTitle = "Device Management"; ObjectID = "y2h-dz-wG3"; */
-"y2h-dz-wG3.headerTitle" = "Device Management";
+"y2h-dz-wG3.headerTitle" = "设备管理";
+
+/* Class = "UILabel"; text = "Current Home"; ObjectID = "Ylu-0o-u1B"; */
+"Ylu-0o-u1B.text" = "当前家庭";
+

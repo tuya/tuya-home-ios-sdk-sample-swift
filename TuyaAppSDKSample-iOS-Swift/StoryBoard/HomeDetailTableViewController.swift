@@ -39,7 +39,7 @@ class HomeDetailTableViewController: UITableViewController {
         }) { [weak self] error in
             guard let self = self else { return }
             let errorMessage = error?.localizedDescription ?? ""
-            Alert.showBasicAlert(on: self, with: "Failed to Fetch Weather", message: errorMessage)
+            Alert.showBasicAlert(on: self, with: NSLocalizedString("Failed to Fetch Weather", comment: ""), message: errorMessage)
         }
     }
     
@@ -50,8 +50,8 @@ class HomeDetailTableViewController: UITableViewController {
 
     // MARK: - IBAction
     @IBAction func dismiss(_ sender: UIButton) {
-        let alertVC = UIAlertController(title: "Dismiss This Home", message: "You're going to dismiss this home.", preferredStyle: .actionSheet)
-        let action = UIAlertAction(title: "Dismiss", style: .destructive) { [weak self] (action) in
+        let alertVC = UIAlertController(title: NSLocalizedString("Dismiss This Home", comment: ""), message: NSLocalizedString("You're going to dismiss this home.", comment: ""), preferredStyle: .actionSheet)
+        let action = UIAlertAction(title: NSLocalizedString("Dismiss", comment: "Dismiss a home."), style: .destructive) { [weak self] (action) in
             guard let self = self else { return }
             
             self.home?.dismiss(success: {
@@ -60,11 +60,11 @@ class HomeDetailTableViewController: UITableViewController {
             }, failure: { [weak self] error in
                 guard let self = self else { return }
                 let errorMessage = error?.localizedDescription ?? ""
-                Alert.showBasicAlert(on: self, with: "Failed to Dismiss", message: errorMessage)
+                Alert.showBasicAlert(on: self, with: NSLocalizedString("Failed to Dismiss", comment: "Failed to dismiss a home."), message: errorMessage)
             })
         }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil)
         alertVC.addAction(action)
         alertVC.addAction(cancelAction)
         

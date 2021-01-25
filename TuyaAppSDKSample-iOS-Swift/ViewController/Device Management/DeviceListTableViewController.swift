@@ -38,7 +38,7 @@ class DeviceListTableViewController: UITableViewController {
         guard let deviceModel = home?.deviceList[indexPath.row] else { return cell }
         
         cell.textLabel?.text = deviceModel.name
-        cell.detailTextLabel?.text = deviceModel.isOnline ? "Online" : "Offline"
+        cell.detailTextLabel?.text = deviceModel.isOnline ? NSLocalizedString("Online", comment: "") : NSLocalizedString("Offline", comment: "")
         return cell
     }
     
@@ -62,7 +62,7 @@ class DeviceListTableViewController: UITableViewController {
         }, failure: { [weak self] (error) in
             guard let self = self else { return }
             let errorMessage = error?.localizedDescription ?? ""
-            Alert.showBasicAlert(on: self, with: "Failed to Fetch Home", message: errorMessage)
+            Alert.showBasicAlert(on: self, with: NSLocalizedString("Failed to Fetch Home", comment: ""), message: errorMessage)
         })
     }
 

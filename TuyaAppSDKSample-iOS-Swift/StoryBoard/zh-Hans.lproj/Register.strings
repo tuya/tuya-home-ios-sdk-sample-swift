@@ -1,21 +1,21 @@
-
 /* Class = "UIButton"; normalTitle = "Send Verification Code"; ObjectID = "7vh-7F-bdI"; */
-"7vh-7F-bdI.normalTitle" = "Send Verification Code";
+"7vh-7F-bdI.normalTitle" = "发送验证信息";
 
 /* Class = "UITextField"; placeholder = "Email Address or Phone Number"; ObjectID = "HB4-6i-BjL"; */
-"HB4-6i-BjL.placeholder" = "Email Address or Phone Number";
+"HB4-6i-BjL.placeholder" = "电子邮箱或手机号码";
 
 /* Class = "UITextField"; placeholder = "Verification Code"; ObjectID = "OT3-Mz-tHV"; */
-"OT3-Mz-tHV.placeholder" = "Verification Code";
-
-/* Class = "UINavigationItem"; title = "Register"; ObjectID = "T3m-D8-8P2"; */
-"T3m-D8-8P2.title" = "Register";
+"OT3-Mz-tHV.placeholder" = "验证码";
 
 /* Class = "UIButton"; normalTitle = "Register"; ObjectID = "sTx-DJ-2W3"; */
-"sTx-DJ-2W3.normalTitle" = "Register";
+"sTx-DJ-2W3.normalTitle" = "注册";
+
+/* Class = "UINavigationItem"; title = "Register"; ObjectID = "T3m-D8-8P2"; */
+"T3m-D8-8P2.title" = "注册";
 
 /* Class = "UITextField"; placeholder = "Password"; ObjectID = "wae-TX-aOn"; */
-"wae-TX-aOn.placeholder" = "Password";
+"wae-TX-aOn.placeholder" = "密码";
 
 /* Class = "UITextField"; placeholder = "Country Code"; ObjectID = "yha-sh-brg"; */
-"yha-sh-brg.placeholder" = "Country Code";
+"yha-sh-brg.placeholder" = "国际码";
+

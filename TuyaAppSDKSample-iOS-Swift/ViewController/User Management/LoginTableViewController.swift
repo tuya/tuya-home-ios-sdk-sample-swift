@@ -48,7 +48,7 @@ class LoginTableViewController: UITableViewController {
 
             } failure: { [weak self] (error) in
                 guard let self = self else { return }
-                Alert.showBasicAlert(on: self, with: "Failed to Login", message: error?.localizedDescription ?? "")
+                Alert.showBasicAlert(on: self, with: NSLocalizedString("Failed to Login", comment: ""), message: error?.localizedDescription ?? "")
             }
 
         case .phone:
@@ -60,7 +60,7 @@ class LoginTableViewController: UITableViewController {
                 
             } failure: { [weak self] (error) in
                 guard let self = self else { return }
-                Alert.showBasicAlert(on: self, with: "Failed to Login", message: error?.localizedDescription ?? "")
+                Alert.showBasicAlert(on: self, with: NSLocalizedString("Failed to Login", comment: ""), message: error?.localizedDescription ?? "")
             }
 
         }
