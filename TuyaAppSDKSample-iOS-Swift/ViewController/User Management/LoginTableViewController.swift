@@ -12,6 +12,8 @@ class LoginTableViewController: UITableViewController {
     @IBOutlet weak var countryCodeTextField: UITextField!
     @IBOutlet weak var accountTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var forgetPasswordButton: UIButton!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -63,6 +65,16 @@ class LoginTableViewController: UITableViewController {
                 Alert.showBasicAlert(on: self, with: NSLocalizedString("Failed to Login", comment: ""), message: error?.localizedDescription ?? "")
             }
 
+        }
+    }
+    
+    // MARK: - Table view data source
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.section == 1 {
+            loginButton.sendActions(for: .touchUpInside)
+        } else if indexPath.section == 2 {
+            forgetPasswordButton.sendActions(for: .touchUpInside)
         }
     }
 }

@@ -1,5 +1,5 @@
 /* Class = "UILabel"; text = "SDK Ver: 3.22"; ObjectID = "bGF-Pc-rVR"; */
-"bGF-Pc-rVR.text" = "SDK 版本: 3.22";
+"bGF-Pc-rVR.text" = "Home SDK 版本: 3.22";
 
 /* Class = "UIButton"; normalTitle = "Login"; ObjectID = "Cbb-x5-OQ8"; */
 "Cbb-x5-OQ8.normalTitle" = "登录";

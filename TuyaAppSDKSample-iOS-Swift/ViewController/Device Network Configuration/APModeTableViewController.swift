@@ -7,7 +7,6 @@
 import UIKit
 import TuyaSmartDeviceKit
 import TuyaSmartActivatorKit
-import SVProgressHUD
 
 class APModeTableViewController: UITableViewController {
     // MARK: - IBOutlet

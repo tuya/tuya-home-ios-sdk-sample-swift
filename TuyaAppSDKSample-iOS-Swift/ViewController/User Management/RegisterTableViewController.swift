@@ -14,6 +14,8 @@ class RegisterTableViewController: UITableViewController {
     @IBOutlet weak var accountTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var verificationCodeTextField: UITextField!
+    @IBOutlet weak var sendVerificationCodeButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -113,4 +115,15 @@ class RegisterTableViewController: UITableViewController {
         }
         
     }
+    
+    // MARK: - Table view data source
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.section == 0, indexPath.row == 4 {
+            sendVerificationCodeButton.sendActions(for: .touchUpInside)
+        } else if indexPath.section == 1 {
+            registerButton.sendActions(for: .touchUpInside)
+        }
+    }
+    
 }

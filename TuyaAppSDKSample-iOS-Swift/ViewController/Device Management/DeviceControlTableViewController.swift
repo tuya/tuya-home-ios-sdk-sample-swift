@@ -7,7 +7,6 @@
 import UIKit
 import NotificationCenter
 import TuyaSmartDeviceKit
-import SVProgressHUD
 
 class DeviceControlTableViewController: UITableViewController {
 

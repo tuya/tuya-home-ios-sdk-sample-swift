@@ -93,7 +93,7 @@
                             </tableViewSection>
                             <tableViewSection id="Njt-Se-Axy">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="vmu-5L-N6v">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vmu-5L-N6v">
                                         <rect key="frame" x="20" y="184.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vmu-5L-N6v" id="1Qn-Me-rrX">
@@ -118,7 +118,7 @@
                             </tableViewSection>
                             <tableViewSection id="iJK-eg-BRG">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="cA2-Q9-LJI">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="cA2-Q9-LJI">
                                         <rect key="frame" x="20" y="264" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cA2-Q9-LJI" id="PZB-5V-otz">
@@ -151,6 +151,8 @@
                     <connections>
                         <outlet property="accountTextField" destination="0Qz-La-oYh" id="WvL-Ud-gdF"/>
                         <outlet property="countryCodeTextField" destination="k7Z-L9-7PN" id="aea-TZ-01M"/>
+                        <outlet property="forgetPasswordButton" destination="9MR-le-GWV" id="IFe-IL-aU3"/>
+                        <outlet property="loginButton" destination="yoX-Qn-PEK" id="EJ5-Cv-kjQ"/>
                         <outlet property="passwordTextField" destination="eYm-X4-pFJ" id="3NP-k3-3JG"/>
                     </connections>
                 </tableViewController>
@@ -268,7 +270,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="oVA-ak-SvE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="oVA-ak-SvE">
                                         <rect key="frame" x="20" y="228" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oVA-ak-SvE" id="dO7-eU-KFa">
@@ -293,7 +295,7 @@
                             </tableViewSection>
                             <tableViewSection id="ze1-3G-fpB">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="cxC-aW-ag0">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="cxC-aW-ag0">
                                         <rect key="frame" x="20" y="307.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cxC-aW-ag0" id="ouf-qR-Ksn">
@@ -327,6 +329,8 @@
                         <outlet property="accountTextField" destination="Tmz-IU-mNw" id="JRg-az-9uO"/>
                         <outlet property="countryCodeTextField" destination="tmd-dx-fqr" id="PWo-Ck-93I"/>
                         <outlet property="passwordTextField" destination="yCi-uu-Voj" id="stN-xc-Tsf"/>
+                        <outlet property="resetButton" destination="uH1-KS-vd6" id="0Yp-Hn-R2g"/>
+                        <outlet property="sendVerificationCodeButton" destination="JWu-Lu-DId" id="zW3-jq-n7c"/>
                         <outlet property="verificationCodeTextField" destination="jNx-Nw-Bag" id="Qh0-rG-raN"/>
                     </connections>
                 </tableViewController>

@@ -113,7 +113,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="C3F-iw-fpS">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="C3F-iw-fpS">
                                         <rect key="frame" x="20" y="192" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="C3F-iw-fpS" id="aaW-XJ-XgT">
@@ -138,7 +138,7 @@
                             </tableViewSection>
                             <tableViewSection id="cRu-Lw-jhG">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="ECO-O1-jvq">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ECO-O1-jvq">
                                         <rect key="frame" x="20" y="271.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ECO-O1-jvq" id="Tcp-tu-65L">
@@ -172,6 +172,8 @@
                         <outlet property="accountTextField" destination="HB4-6i-BjL" id="74O-68-QIU"/>
                         <outlet property="countryCodeTextField" destination="yha-sh-brg" id="GcZ-zg-ief"/>
                         <outlet property="passwordTextField" destination="wae-TX-aOn" id="EQw-bW-eII"/>
+                        <outlet property="registerButton" destination="sTx-DJ-2W3" id="UH2-Z2-3mO"/>
+                        <outlet property="sendVerificationCodeButton" destination="7vh-7F-bdI" id="kX9-U1-WlB"/>
                         <outlet property="verificationCodeTextField" destination="OT3-Mz-tHV" id="D7i-bz-35Q"/>
                     </connections>
                 </tableViewController>
