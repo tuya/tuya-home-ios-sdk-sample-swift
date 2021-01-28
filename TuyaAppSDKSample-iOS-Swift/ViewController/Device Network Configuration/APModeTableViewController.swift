@@ -5,8 +5,6 @@
 //  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
 
 import UIKit
-import TuyaSmartDeviceKit
-import TuyaSmartActivatorKit
 
 class APModeTableViewController: UITableViewController {
     // MARK: - IBOutlet

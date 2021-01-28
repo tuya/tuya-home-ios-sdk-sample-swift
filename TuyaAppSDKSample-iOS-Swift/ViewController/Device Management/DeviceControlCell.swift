@@ -5,7 +5,6 @@
 //  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
 
 import Foundation
-import TuyaSmartDeviceKit
 
 enum DeviceControlCell: String {
     case switchCell = "device-switch-cell"

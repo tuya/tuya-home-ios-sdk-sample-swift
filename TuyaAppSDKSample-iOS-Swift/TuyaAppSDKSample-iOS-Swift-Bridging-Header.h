@@ -8,5 +8,6 @@
 #define TuyaAppSDKSample_iOS_Swift_Bridging_Header_h
 
 #import <SVProgressHUD/SVProgressHUD.h>
+#import <TuyaSmartHomeKit/TuyaSmartKit.h>
 
 #endif /* TuyaAppSDKSample_iOS_Swift_Bridging_Header_h */
