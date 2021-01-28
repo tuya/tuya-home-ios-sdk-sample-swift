@@ -6,6 +6,7 @@
 
 import UIKit
 import NotificationCenter
+import TuyaSmartDeviceKit
 
 class DeviceControlTableViewController: UITableViewController {
 

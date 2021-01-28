@@ -6,6 +6,7 @@
 
 import UIKit
 import CoreLocation
+import TuyaSmartDeviceKit
 
 class EditHomeTableViewController: UITableViewController {
     
