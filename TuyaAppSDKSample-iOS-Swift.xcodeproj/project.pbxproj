@@ -188,6 +188,7 @@
 		AF5531DE25A5992500E13562 /* TuyaAppSDKSample-iOS-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				AF5E2F3025A59FE600DAF14E /* t_s.bmp */,
 				AF55320C25A59BE800E13562 /* AppKey.swift */,
 				AF5531DF25A5992500E13562 /* AppDelegate.swift */,
 				AF5531E125A5992500E13562 /* SceneDelegate.swift */,
@@ -198,7 +199,6 @@
 				AF5531ED25A5992800E13562 /* Info.plist */,
 				AF60B8C325BEBA1600E18F6F /* Localizable.strings */,
 				AF60B8C025BEBA1600E18F6F /* InfoPlist.strings */,
-				AF5E2F3025A59FE600DAF14E /* t_s.bmp */,
 				AF60B93625BFEEF200E18F6F /* TuyaAppSDKSample-iOS-Swift-Bridging-Header.h */,
 			);
 			path = "TuyaAppSDKSample-iOS-Swift";
