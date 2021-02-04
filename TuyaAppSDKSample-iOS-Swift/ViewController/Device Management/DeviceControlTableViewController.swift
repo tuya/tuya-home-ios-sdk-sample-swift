@@ -167,8 +167,12 @@ class DeviceControlTableViewController: UITableViewController {
             guard let cell = cell as? LabelTableViewCell,
                   let dps = dps,
                   let dpID = schema.dpId,
-                  let text = dps[dpID] as? String
+                  let value = dps[dpID]
             else { break }
+            
+            var text = ""
+
+            ((value as? Int) != nil) ? (text = String(value as! Int)) : (text = value as? String ?? "")
             
             cell.label.text = schema.name
             cell.detailLabel.text = text
