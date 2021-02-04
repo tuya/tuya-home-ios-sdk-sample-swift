@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		10F4AAB953F4FBCFFBD0F199 /* libPods-TuyaAppSDKSample-iOS-Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A631D49E2E0E816D32C2CC /* libPods-TuyaAppSDKSample-iOS-Swift.a */; };
+		AF05ECC625CB968500C84AF6 /* DeviceDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF05ECC525CB968500C84AF6 /* DeviceDetailTableViewController.swift */; };
 		AF21C1FF25B03D6000D52FBA /* SwitchHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF21C1FD25B03D6000D52FBA /* SwitchHome.storyboard */; };
 		AF21C20625B0400F00D52FBA /* EZModeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21C20525B0400F00D52FBA /* EZModeTableViewController.swift */; };
 		AF37DBB425AEE842000EB0FD /* EditHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37DBB325AEE842000EB0FD /* EditHomeTableViewController.swift */; };
@@ -60,6 +61,8 @@
 /* Begin PBXFileReference section */
 		207E8BAF216CF8ED00C5937A /* Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig"; path = "Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		98A631D49E2E0E816D32C2CC /* libPods-TuyaAppSDKSample-iOS-Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TuyaAppSDKSample-iOS-Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF05ECC525CB968500C84AF6 /* DeviceDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetailTableViewController.swift; sourceTree = "<group>"; };
+		AF05ECCB25CBA83F00C84AF6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/DeviceList.strings"; sourceTree = "<group>"; };
 		AF21C1FE25B03D6000D52FBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SwitchHome.storyboard; sourceTree = "<group>"; };
 		AF21C20525B0400F00D52FBA /* EZModeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZModeTableViewController.swift; sourceTree = "<group>"; };
 		AF37DBB325AEE842000EB0FD /* EditHomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditHomeTableViewController.swift; path = "TuyaAppSDKSample-iOS-Swift/ViewController/Home Management/EditHomeTableViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -105,7 +108,6 @@
 		AF60B89425BC1F0400E18F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SwitchHome.strings"; sourceTree = "<group>"; };
 		AF60B89525BC1F0500E18F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/EZMode.strings"; sourceTree = "<group>"; };
 		AF60B89625BC1F0500E18F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/APMode.strings"; sourceTree = "<group>"; };
-		AF60B89725BC1F0500E18F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/DeviceList.strings"; sourceTree = "<group>"; };
 		AF60B89925BC1F5600E18F6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/NewHome.storyboard; sourceTree = "<group>"; };
 		AF60B89D25BC1F5D00E18F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/NewHome.strings"; sourceTree = "<group>"; };
 		AF60B89F25BC1F6700E18F6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TuyaAppSDKSample-iOS-Swift/StoryBoard/Base.lproj/HomeList.storyboard"; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				AF3B497F25B7D6C000286C4A /* DeviceControlCell.swift */,
 				AF96112325B17F38000971CC /* DeviceListTableViewController.swift */,
 				AF96129825B58CE1000971CC /* DeviceControlTableViewController.swift */,
+				AF05ECC525CB968500C84AF6 /* DeviceDetailTableViewController.swift */,
 			);
 			path = "Device Management";
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				AF96134025B708AE000971CC /* LabelTableViewCell.swift in Sources */,
 				AF3A25D025AECFCF003EB9FF /* HomeDetailTableViewController.swift in Sources */,
 				AF3A25BD25AD9AE1003EB9FF /* NewHomeTableViewController.swift in Sources */,
+				AF05ECC625CB968500C84AF6 /* DeviceDetailTableViewController.swift in Sources */,
 				AF21C20625B0400F00D52FBA /* EZModeTableViewController.swift in Sources */,
 				AF3A25AA25A98A77003EB9FF /* ResetPasswordTableViewController.swift in Sources */,
 				AF3A25A725A844DA003EB9FF /* LoginTableViewController.swift in Sources */,
@@ -515,7 +519,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				AF3B499025B8095800286C4A /* Base */,
-				AF60B89725BC1F0500E18F6F /* zh-Hans */,
+				AF05ECCB25CBA83F00C84AF6 /* zh-Hans */,
 			);
 			name = DeviceList.storyboard;
 			sourceTree = "<group>";

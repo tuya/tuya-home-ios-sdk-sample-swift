@@ -1,5 +1,14 @@
+/* Class = "UILabel"; text = "Device ID"; ObjectID = "1fz-cf-P4f"; */
+"1fz-cf-P4f.text" = "设备ID";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "4GE-VC-iYe"; */
+"4GE-VC-iYe.title" = "Item";
+
 /* Class = "UINavigationItem"; title = "Device List"; ObjectID = "8hw-cY-PzK"; */
 "8hw-cY-PzK.title" = "设备列表";
+
+/* Class = "UILabel"; text = "MAC Address"; ObjectID = "9y0-Jg-cWl"; */
+"9y0-Jg-cWl.text" = "MAC 地址";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "11T-VB-iBU"; */
 "11T-VB-iBU.text" = "标题";
@@ -11,10 +20,16 @@
 "d0r-od-8Ve.text" = "副标题";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "eZf-aa-GbJ"; */
-"eZf-aa-GbJ.text" = "标签";
+"eZf-aa-GbJ.text" = "Label";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "f7z-eY-PgJ"; */
-"f7z-eY-PgJ.text" = "标签";
+"f7z-eY-PgJ.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Device Detail"; ObjectID = "gEr-Wk-HET"; */
+"gEr-Wk-HET.title" = "设备详情";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "l92-Zb-eeo"; */
+"l92-Zb-eeo.text" = "详情";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "lqt-xP-Tts"; */
 "lqt-xP-Tts.text" = "标签";
@@ -22,12 +37,24 @@
 /* Class = "UILabel"; text = "Title"; ObjectID = "m2H-Zb-62q"; */
 "m2H-Zb-62q.text" = "标题";
 
+/* Class = "UILabel"; text = "IP Address"; ObjectID = "mXO-J8-NOI"; */
+"mXO-J8-NOI.text" = "IP 地址";
+
+/* Class = "UIButton"; normalTitle = "Remove Device"; ObjectID = "pFk-LR-atG"; */
+"pFk-LR-atG.normalTitle" = "移除设备";
+
 /* Class = "UILabel"; text = "Detail"; ObjectID = "QBC-5e-jTZ"; */
 "QBC-5e-jTZ.text" = "详情";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "rck-fd-YXh"; */
+"rck-fd-YXh.text" = "详情";
 
 /* Class = "UILabel"; text = "Detail"; ObjectID = "VDT-34-jCX"; */
 "VDT-34-jCX.text" = "详情";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "w7z-0N-wn4"; */
 "w7z-0N-wn4.text" = "标题";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "ZJg-RX-F3g"; */
+"ZJg-RX-F3g.text" = "详情";
 

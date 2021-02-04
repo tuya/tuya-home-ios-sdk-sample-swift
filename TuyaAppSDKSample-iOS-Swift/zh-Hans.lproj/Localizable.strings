@@ -46,6 +46,9 @@
 /* No comment provided by engineer. */
 "Failed to Update Home" = "更新家庭信息失败";
 
+/* No comment provided by engineer. */
+"If you choose to remove the device, you'll no long hold control over this device." = "如果移除设备，你将不再能控制此设备";
+
 /* Confirm logout. */
 "Logout" = "退出登录";
 
@@ -81,6 +84,12 @@
 
 /* No comment provided by engineer. */
 "Registered Successfully" = "注册成功";
+
+/* Perform remove device action */
+"Remove" = "移除";
+
+/* No comment provided by engineer. */
+"Remove the Device?" = "确认移除设备？";
 
 /* No comment provided by engineer. */
 "Requesting for Token" = "请求凭据中";
