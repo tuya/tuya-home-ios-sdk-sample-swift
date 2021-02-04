@@ -46,6 +46,8 @@ class DeviceDetailTableViewController: UITableViewController {
         alert.addAction(removeAction)
         alert.addAction(cancelAction)
         
+        alert.popoverPresentationController?.sourceView = sender
+        
         self.present(alert, animated: true, completion: nil)
     }
     

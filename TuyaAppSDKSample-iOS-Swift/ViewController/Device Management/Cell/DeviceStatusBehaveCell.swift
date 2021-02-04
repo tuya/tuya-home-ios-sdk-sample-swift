@@ -39,15 +39,14 @@ class DeviceStatusBehaveCell: UITableViewCell {
             enableControls()
         }
     }
-    
-    // MARK: - Private Function
-    private func enableControls() {
+
+    func enableControls() {
         for control in controls {
             control.isEnabled = true
         }
     }
     
-    private func disableControls() {
+    func disableControls() {
         for control in controls {
             control.isEnabled = false
         }
