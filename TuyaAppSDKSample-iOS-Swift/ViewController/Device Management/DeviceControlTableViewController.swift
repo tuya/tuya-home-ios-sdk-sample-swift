@@ -35,6 +35,13 @@ class DeviceControlTableViewController: UITableViewController {
         NotificationCenter.default.removeObserver(self, name: .SVProgressHUDDidDisappear, object: nil)
     }
     
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "show-device-detail" else { return }
+        let vc = segue.destination as! DeviceDetailTableViewController
+        vc.device = device
+    }
+    
     // MARK: -  Private Method
     private func detectDeviceAvailability() {
         if let isOnline = device?.deviceModel.isOnline, !isOnline {
@@ -71,7 +78,7 @@ class DeviceControlTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return device?.deviceModel.schemaArray.count ?? 0
+        return device?.deviceModel.schemaArray?.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
