@@ -87,8 +87,13 @@ class DeviceControlTableViewController: UITableViewController {
         
         let schema = device.deviceModel.schemaArray[indexPath.row]
         let dps = device.deviceModel.dps
+        var isReadOnly = false
         let cellIdentifier = DeviceControlCell.cellIdentifier(with: schema)
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier.rawValue)!
+        
+        if let mode = schema.mode {
+            isReadOnly = mode == "ro"
+        }
         
         switch cellIdentifier {
         case .switchCell:
@@ -100,6 +105,7 @@ class DeviceControlTableViewController: UITableViewController {
             
             cell.label.text = schema.name
             cell.switchButton.isOn = isOn
+            cell.isReadOnly = isReadOnly
             
             cell.switchAction = { [weak self] switchButton in
                 guard let self = self,
@@ -122,6 +128,7 @@ class DeviceControlTableViewController: UITableViewController {
             cell.slider.maximumValue = Float(schema.property.max)
             cell.slider.isContinuous = false
             cell.slider.value = Float(value)
+            cell.isReadOnly = isReadOnly
             
             cell.sliderAction = { [weak self] slider in
                 guard let self = self,
@@ -144,6 +151,8 @@ class DeviceControlTableViewController: UITableViewController {
             cell.label.text = schema.name
             cell.optionArray = range
             cell.currentOption = option
+            cell.isReadOnly = isReadOnly
+            
             cell.selectAction = { [weak self] option in
                 guard let self = self else { return }
                 self.publishMessage(with: [dpID : option])
@@ -158,6 +167,8 @@ class DeviceControlTableViewController: UITableViewController {
             
             cell.label.text = schema.name
             cell.textField.text = text
+            cell.isReadOnly = isReadOnly
+            
             cell.buttonAction = { [weak self] text in
                 guard let self = self else { return }
                 self.publishMessage(with: [dpID : text])
