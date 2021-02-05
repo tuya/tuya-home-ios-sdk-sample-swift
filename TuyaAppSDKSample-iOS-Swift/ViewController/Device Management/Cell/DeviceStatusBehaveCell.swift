@@ -10,6 +10,11 @@ import NotificationCenter
 class DeviceStatusBehaveCell: UITableViewCell {
     // MARK: - Property
     var controls = [UIControl]()
+    var isReadOnly: Bool = false {
+        didSet {
+            isReadOnly ? disableControls() : enableControls()
+        }
+    }
     
     // MARK: - Lifecycle
     override func awakeFromNib() {
@@ -18,7 +23,7 @@ class DeviceStatusBehaveCell: UITableViewCell {
         NotificationCenter.default.addObserver(self, selector: #selector(deviceOffline), name: .deviceOffline, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(deviceOnline), name: .deviceOnline, object: nil)
     }
-    
+
     deinit {
         NotificationCenter.default.removeObserver(self, name: .deviceOnline, object: nil)
         NotificationCenter.default.removeObserver(self, name: .deviceOffline, object: nil)
@@ -26,14 +31,24 @@ class DeviceStatusBehaveCell: UITableViewCell {
     
     // MARK: - Device status reaction
     @objc func deviceOffline() {
-        for control in controls {
-            control.isEnabled = false
-        }
+        disableControls()
     }
     
     @objc func deviceOnline() {
+        if !isReadOnly {
+            enableControls()
+        }
+    }
+
+    func enableControls() {
         for control in controls {
             control.isEnabled = true
+        }
+    }
+    
+    func disableControls() {
+        for control in controls {
+            control.isEnabled = false
         }
     }
 }

@@ -87,8 +87,13 @@ class DeviceControlTableViewController: UITableViewController {
         
         let schema = device.deviceModel.schemaArray[indexPath.row]
         let dps = device.deviceModel.dps
+        var isReadOnly = false
         let cellIdentifier = DeviceControlCell.cellIdentifier(with: schema)
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier.rawValue)!
+        
+        if let mode = schema.mode {
+            isReadOnly = mode == "ro"
+        }
         
         switch cellIdentifier {
         case .switchCell:
@@ -100,6 +105,7 @@ class DeviceControlTableViewController: UITableViewController {
             
             cell.label.text = schema.name
             cell.switchButton.isOn = isOn
+            cell.isReadOnly = isReadOnly
             
             cell.switchAction = { [weak self] switchButton in
                 guard let self = self,
@@ -122,6 +128,7 @@ class DeviceControlTableViewController: UITableViewController {
             cell.slider.maximumValue = Float(schema.property.max)
             cell.slider.isContinuous = false
             cell.slider.value = Float(value)
+            cell.isReadOnly = isReadOnly
             
             cell.sliderAction = { [weak self] slider in
                 guard let self = self,
@@ -144,6 +151,8 @@ class DeviceControlTableViewController: UITableViewController {
             cell.label.text = schema.name
             cell.optionArray = range
             cell.currentOption = option
+            cell.isReadOnly = isReadOnly
+            
             cell.selectAction = { [weak self] option in
                 guard let self = self else { return }
                 self.publishMessage(with: [dpID : option])
@@ -152,12 +161,18 @@ class DeviceControlTableViewController: UITableViewController {
         case .stringCell:
             guard let cell = cell as? StringTableViewCell,
                   let dps = dps,
-                  let dpID = schema.dpId,
-                  let text = dps[dpID] as? String
+                  let dpID = schema.dpId
             else { break }
+            
+            let value = dps[dpID] ?? ""
+            var text = ""
+            
+            ((value as? Int) != nil) ? (text = String(value as! Int)) : (text = value as? String ?? "")
             
             cell.label.text = schema.name
             cell.textField.text = text
+            cell.isReadOnly = isReadOnly
+            
             cell.buttonAction = { [weak self] text in
                 guard let self = self else { return }
                 self.publishMessage(with: [dpID : text])
@@ -167,8 +182,12 @@ class DeviceControlTableViewController: UITableViewController {
             guard let cell = cell as? LabelTableViewCell,
                   let dps = dps,
                   let dpID = schema.dpId,
-                  let text = dps[dpID] as? String
+                  let value = dps[dpID]
             else { break }
+            
+            var text = ""
+
+            ((value as? Int) != nil) ? (text = String(value as! Int)) : (text = value as? String ?? "")
             
             cell.label.text = schema.name
             cell.detailLabel.text = text

@@ -42,15 +42,20 @@ class EnumTableViewCell: DeviceStatusBehaveCell {
         let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil)
         alert.addAction(cancelAction)
         
+        alert.popoverPresentationController?.sourceView = self
+        
         vc.present(alert, animated: true, completion: nil)
     }
     
     // MARK: - Device status reaction
-    override func deviceOnline() {
+    override func enableControls() {
         self.isUserInteractionEnabled = true
+        self.accessoryType = .disclosureIndicator
     }
     
-    override func deviceOffline() {
+    override func disableControls() {
         self.isUserInteractionEnabled = false
+        self.accessoryType = .none
     }
+
 }

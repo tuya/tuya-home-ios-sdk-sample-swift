@@ -15,6 +15,8 @@ class HomeDetailTableViewController: UITableViewController {
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var weatherConditionLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var dismissButton: UIButton!
+    
     
     // MARK: - Property
     var homeModel: TuyaSmartHomeModel?
@@ -68,6 +70,8 @@ class HomeDetailTableViewController: UITableViewController {
         alertVC.addAction(action)
         alertVC.addAction(cancelAction)
         
+        alertVC.popoverPresentationController?.sourceView = sender
+        
         self.present(alertVC, animated: true, completion: nil)
     }
 
@@ -77,5 +81,12 @@ class HomeDetailTableViewController: UITableViewController {
         
         let destination = segue.destination as! EditHomeTableViewController
         destination.home = home
+    }
+    
+    // MARK: - Table view data source
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.section == 1 else { return }
+        
+        dismissButton.sendActions(for: .touchUpInside)
     }
 }

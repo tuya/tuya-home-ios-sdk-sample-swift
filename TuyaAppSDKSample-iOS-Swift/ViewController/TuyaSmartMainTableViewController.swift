@@ -62,6 +62,8 @@ class TuyaSmartMainTableViewController: UITableViewController {
         
         let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: "Cancel"), style: .cancel)
         
+        alertViewController.popoverPresentationController?.sourceView = sender
+        
         alertViewController.addAction(logoutAction)
         alertViewController.addAction(cancelAction)
         
