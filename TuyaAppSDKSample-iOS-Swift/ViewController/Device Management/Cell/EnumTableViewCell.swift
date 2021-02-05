@@ -50,10 +50,12 @@ class EnumTableViewCell: DeviceStatusBehaveCell {
     // MARK: - Device status reaction
     override func enableControls() {
         self.isUserInteractionEnabled = true
+        self.accessoryType = .disclosureIndicator
     }
     
     override func disableControls() {
         self.isUserInteractionEnabled = false
+        self.accessoryType = .none
     }
 
 }
