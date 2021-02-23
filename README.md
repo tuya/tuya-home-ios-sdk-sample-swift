@@ -42,3 +42,6 @@ struct AppKey {
 6. Download the security image and rename it to `t_s.bmp`, then drag it into the workspace to be at the same level as `Info.plist`.
 
 **Note:** The bundle ID, AppKey, AppSecret, and security image must be the same as your App in Tuya IoT Platform; otherwise, the sample cannot successfully request the API.
+
+## Documentation
+For more details about Tuya iOS HomeSDK, please refer to the [offical documentaion](https://developer.tuya.com/en/docs/app-development).
