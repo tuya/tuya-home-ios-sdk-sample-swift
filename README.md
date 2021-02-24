@@ -1,6 +1,6 @@
 # Tuya iOS HomeSDK Sample for Swift
 
-This sample demonstrates the use of Tuya iOS HomeSDK to build an IoT app from scratch. Tuta iOS HomeSDK is divided into several function groups to give developers a clear insight into the implementation of different features, including ser registration process, home management for different users, device network configuration, and controls. For device network configuration, the EZ mode and AP mode are implemented. This allows developers to pair devices over Wi-Fi and control the devices over LAN and MQTT. For device control, a common panel is used to send and receive any type of data points.
+This sample demonstrates the use of Tuya iOS HomeSDK to build an IoT app from scratch. Tuya iOS HomeSDK is divided into several function groups to give developers a clear insight into the implementation of different features, including ser registration process, home management for different users, device network configuration, and controls. For device network configuration, the EZ mode and AP mode are implemented. This allows developers to pair devices over Wi-Fi and control the devices over LAN and MQTT. For device control, a common panel is used to send and receive any type of data points.
 
 ![Tuya Smart app](https://github.com/tuya/tuya-home-ios-sdk-sample-swift/raw/main/screenshot.png)
 
