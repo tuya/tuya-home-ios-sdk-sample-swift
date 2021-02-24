@@ -1,6 +1,6 @@
 # Tuya iOS HomeSDK Sample for Swift
 
-This sample demonstrates the use of Tuya iOS HomeSDK to build an IoT app from scratch. Tuya iOS HomeSDK is divided into several function groups to give developers a clear insight into the implementation of different features, including user registration process, home management for different users, device network configuration, and controls. For device network configuration, the EZ mode and AP mode are implemented. This allows developers to pair devices over Wi-Fi and control the devices over LAN and MQTT. For device control, a common panel is used to send and receive any type of data points.
+This sample demonstrates the use of Tuya iOS HomeSDK to build an IoT app from scratch. Tuya iOS HomeSDK is divided into several function groups to give developers a clear insight into the implementation of different features, including the user registration process, home management for different users, device network configuration, and controls. For device network configuration, the EZ mode and AP mode are implemented. This allows developers to pair devices over Wi-Fi and control the devices over LAN and MQTT. For device control, a common panel is used to send and receive any type of data points.
 
 ![Tuya Smart app](https://github.com/tuya/tuya-home-ios-sdk-sample-swift/raw/main/screenshot.png)
 
@@ -10,7 +10,7 @@ This sample demonstrates the use of Tuya iOS HomeSDK to build an IoT app from sc
 
 
 ## Use the sample
-1. The Tuya HomeSDK is distributed through [CocoaPods](http://cocoapods.org/) and other dependencies in this sample. Make sure that you have installed CocoaPods. If not, run the following command to install CocoaPods first:
+1. The Tuya iOS HomeSDK is distributed through [CocoaPods](http://cocoapods.org/) and other dependencies in this sample. Make sure that you have installed CocoaPods. If not, run the following command to install CocoaPods first:
 
 ```bash
 sudo gem install cocoapods
