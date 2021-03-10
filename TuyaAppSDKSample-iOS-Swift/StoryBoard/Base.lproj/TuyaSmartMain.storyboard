@@ -173,12 +173,92 @@
                                             <segue destination="ehI-qI-FyY" kind="show" id="rue-Q5-A5H"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Hua-ii-gdT" style="IBUITableViewCellStyleDefault" id="yR3-t7-W3d">
+                                        <rect key="frame" x="20" y="472" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yR3-t7-W3d" id="Otc-no-lTh">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Bluetooth Low Energy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hua-ii-gdT">
+                                                    <rect key="frame" x="20" y="0.0" width="315" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="yOp-XN-KZd" kind="show" id="Dzo-93-KuF"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="fqQ-64-Gnu" style="IBUITableViewCellStyleDefault" id="vSX-aB-JCT">
+                                        <rect key="frame" x="20" y="515.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vSX-aB-JCT" id="VKw-Mo-IqF">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Dual Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fqQ-64-Gnu">
+                                                    <rect key="frame" x="20" y="0.0" width="315" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Hva-kd-3sn" kind="show" id="X5j-Ek-cGT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="ADg-Jx-wrW" style="IBUITableViewCellStyleDefault" id="I60-Tp-4gR">
+                                        <rect key="frame" x="20" y="559" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I60-Tp-4gR" id="3w3-bQ-sIp">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Zigbee Gateway" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ADg-Jx-wrW">
+                                                    <rect key="frame" x="20" y="0.0" width="315" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="j0O-1z-H4T" kind="show" id="Ps8-gW-K5N"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="c5z-xn-hzK" style="IBUITableViewCellStyleDefault" id="FsO-V8-2VR">
+                                        <rect key="frame" x="20" y="602.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FsO-V8-2VR" id="eeE-3Z-kh2">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Zigbee Subdevice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c5z-xn-hzK">
+                                                    <rect key="frame" x="20" y="0.0" width="315" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="TcC-db-3CW" kind="show" id="lnt-k4-iFh"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Device Management" id="y2h-dz-wG3">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Sc8-6Q-jjJ" style="IBUITableViewCellStyleDefault" id="D85-fC-FzY">
-                                        <rect key="frame" x="20" y="528" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="702" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D85-fC-FzY" id="pZL-1U-iLm">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
@@ -241,7 +321,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ch-Uq-fvX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1391" y="-179"/>
+            <point key="canvasLocation" x="1393" y="-263"/>
         </scene>
         <!--NewHome-->
         <scene sceneID="CaB-mA-QdJ">
@@ -251,7 +331,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ebn-Rw-kPf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1391" y="-135"/>
+            <point key="canvasLocation" x="1393" y="-218"/>
         </scene>
         <!--SwitchHome-->
         <scene sceneID="vBO-Dg-C8s">
@@ -261,7 +341,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wM3-ea-0HC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1391" y="-92"/>
+            <point key="canvasLocation" x="1393" y="-175"/>
         </scene>
         <!--HomeList-->
         <scene sceneID="t52-Mh-cnw">
@@ -271,7 +351,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g3Q-YS-0kD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1404" y="-44"/>
+            <point key="canvasLocation" x="1406" y="-127"/>
         </scene>
         <!--EZMode-->
         <scene sceneID="7Zq-cN-Ey9">
@@ -281,7 +361,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LoY-Ai-mwn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1404" y="-3"/>
+            <point key="canvasLocation" x="1407" y="-86"/>
         </scene>
         <!--APMode-->
         <scene sceneID="Ddt-6v-1rA">
@@ -291,7 +371,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ddj-hC-4BA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1402" y="36"/>
+            <point key="canvasLocation" x="1404" y="-48"/>
         </scene>
         <!--DeviceList-->
         <scene sceneID="1Ar-4W-JRW">
@@ -301,7 +381,57 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xs7-aM-FnX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1388" y="70"/>
+            <point key="canvasLocation" x="1401" y="154"/>
+        </scene>
+        <!--DeviceList-->
+        <scene sceneID="500-ke-gaM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DeviceList" id="be4-k6-fLP" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ZrB-Xc-v42"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g6Y-0f-DRG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2612" y="696"/>
+        </scene>
+        <!--BLE-->
+        <scene sceneID="jeU-gD-mXs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BLE" id="yOp-XN-KZd" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="V6y-s3-wfA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="koK-fU-ATF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1404" y="3"/>
+        </scene>
+        <!--DualMode-->
+        <scene sceneID="m0I-Lr-q4X">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DualMode" id="Hva-kd-3sn" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="LKe-ol-6oj"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RSx-Il-5SZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1388" y="39"/>
+        </scene>
+        <!--ZigbeeGateway-->
+        <scene sceneID="gd7-b9-jkH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ZigbeeGateway" id="j0O-1z-H4T" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="KEg-Hc-W0E"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tHd-kZ-GAc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1390" y="78"/>
+        </scene>
+        <!--ZigbeeSubdevice-->
+        <scene sceneID="vmA-CG-TdE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ZigbeeSubdevice" id="TcC-db-3CW" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="j9K-ZS-e7D"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HG7-vS-Iub" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1391" y="116"/>
         </scene>
     </scenes>
 </document>

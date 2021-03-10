@@ -40,3 +40,14 @@
 /* Class = "UILabel"; text = "Current Home"; ObjectID = "Ylu-0o-u1B"; */
 "Ylu-0o-u1B.text" = "当前家庭";
 
+/* Class = "UILabel"; text = "Zigbee Gateway"; ObjectID = "ADg-Jx-wrW"; */
+"ADg-Jx-wrW.text" = "Zigbee 网关";
+
+/* Class = "UILabel"; text = "Bluetooth Low Energy"; ObjectID = "Hua-ii-gdT"; */
+"Hua-ii-gdT.text" = "低功耗蓝牙";
+
+/* Class = "UILabel"; text = "Zigbee Subdevice"; ObjectID = "c5z-xn-hzK"; */
+"c5z-xn-hzK.text" = "Zigbee 子设备";
+
+/* Class = "UILabel"; text = "Dual Mode"; ObjectID = "fqQ-64-Gnu"; */
+"fqQ-64-Gnu.text" = "蓝牙 Wi-Fi 双模";

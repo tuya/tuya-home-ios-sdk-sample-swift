@@ -10,3 +10,7 @@
 /* Class = "UITextField"; placeholder = "Wi-Fi Password"; ObjectID = "xJ6-Pd-Dol"; */
 "xJ6-Pd-Dol.placeholder" = "Wi-Fi 密码";
 
+/* Class = "UILabel"; text = "AP Mode, also known as hotspot mode. The mobile phone connects the smart device’s hotspot, and the two parties establish a Socket connection to exchange data through the agreed port.\n\nLet the device in pairing mode, then switch iPhone’s Wi-Fi to the deivce’s hotspot. Type in the SSID and password of which Wi-Fi you want the device connect to, then tap Search."; ObjectID = "dvh-mM-pJw"; */
+"dvh-mM-pJw.text" = "AP 模式又称热点模式，手机作为 STA 连接智能设备的热点，双方建立一个 Socket 连接通过约定端口交互数据。\n\n让设备进入配网状态，将 iPhone 的 Wi-Fi 连接至设备的热点。输入你想让设备连接的 Wi-Fi SSID 和密码，然后点击搜索设备。";
+
+

@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "Let the Zigbee Gateway connect to the router, and make sure iPhone and the gateway are in the same local area network, then tap search. "; ObjectID = "48s-cQ-bhk"; */
+"48s-cQ-bhk.text" = "让Zigbee网关连接到路由器上，并确保 iPhone 和网关在同一个局域网内，然后点搜索设备。";
+
+/* Class = "UIBarButtonItem"; title = "Search"; ObjectID = "9c9-bm-Mlc"; */
+"9c9-bm-Mlc.title" = "搜索设备";
+
+/* Class = "UINavigationItem"; title = "Zigbee Gateway"; ObjectID = "dk9-GB-L7N"; */
+"dk9-GB-L7N.title" = "Zigbee 网关";

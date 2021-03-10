@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dQs-8h-9Ka">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bluetooth Low Energy-->
+        <scene sceneID="IU3-9n-dQu">
+            <objects>
+                <viewController id="dQs-8h-9Ka" customClass="BLEModeViewController" customModule="TuyaAppSDKSample_iOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o9d-h7-Zy0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9W-Aw-GZm">
+                                <rect key="frame" x="18" y="158" width="378" height="160"/>
+                                <string key="text">Single-point Bluetooth devices are devices that have a one-to-one connection with a cell phone terminal via Bluetooth, such as Bluetooth bracelets, Bluetooth headsets, Bluetooth speakers, etc. Each device can be connected to a cell phone at the same time, and the number of simultaneous Bluetooth connections per cell phone terminal is currently limited to 6 to 7.
+
+Tap Search to pair BLE device.</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TmH-Ww-xNE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TmH-Ww-xNE" firstAttribute="trailing" secondItem="B9W-Aw-GZm" secondAttribute="trailing" constant="18" id="3Q8-6f-iWR"/>
+                            <constraint firstItem="B9W-Aw-GZm" firstAttribute="leading" secondItem="TmH-Ww-xNE" secondAttribute="leading" constant="18" id="BHg-NY-5sc"/>
+                            <constraint firstItem="B9W-Aw-GZm" firstAttribute="top" secondItem="TmH-Ww-xNE" secondAttribute="top" constant="18" id="Soh-m5-RM2"/>
+                            <constraint firstItem="B9W-Aw-GZm" firstAttribute="centerX" secondItem="o9d-h7-Zy0" secondAttribute="centerX" id="o9u-if-vYF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bluetooth Low Energy" id="7ad-Ml-1Yx">
+                        <barButtonItem key="rightBarButtonItem" title="Search" id="FBI-h1-Obm">
+                            <connections>
+                                <action selector="searchTapped:" destination="dQs-8h-9Ka" id="FTe-pq-Bmf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Xl-6I-No6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1930" y="-44"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
