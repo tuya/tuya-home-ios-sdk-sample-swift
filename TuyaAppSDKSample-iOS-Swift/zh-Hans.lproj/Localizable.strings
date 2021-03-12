@@ -124,3 +124,28 @@
 /* User tapped the logout button. */
 "You're going to log out this account." = "您将要退出登录。";
 
+"Celsius" = "摄氏度";
+
+"Fahrenheit" = "华氏度";
+
+"Failed to Update Time Zone" = "更新时区失败";
+
+"Failed to Update Unit" = "更新温度单位失败";
+
+"Searching" = "搜索中";
+
+"No Home Selected" = "未选择家庭";
+
+"Activating" = "激活中";
+
+"Failed to Activate BLE Device" = "激活 BLE 设备失败";
+
+"Sending Data to the Device" = "发送数据至设备";
+
+"Failed to Send Data to the Device" = "发送数据至设备失败";
+
+"Select Zigbee Gateway" = "搜索 Zigbee 网关中";
+
+"You must have one Zigbee gateway selected." = "必须选择一个 Zigbee 网关。";
+
+

@@ -31,3 +31,24 @@
 /* Class = "UILabel"; text = "Time Zone"; ObjectID = "ZMX-tR-OsV"; */
 "ZMX-tR-OsV.text" = "时区";
 
+
+/* Class = "UINavigationItem"; title = "Switch Time Zone"; ObjectID = "0rF-N6-jKf"; */
+"0rF-N6-jKf.title" = "切换时区";
+
+/* Class = "UINavigationItem"; title = "Switch Unit"; ObjectID = "4Da-i5-jrq"; */
+"4Da-i5-jrq.title" = "切换单位";
+
+/* Class = "UIButton"; normalTitle = "Deactivate Account"; ObjectID = "SjE-SO-kgf"; */
+"SjE-SO-kgf.normalTitle" = "停用账号";
+
+/* Class = "UILabel"; text = "Unit of Temperature"; ObjectID = "cEE-NT-CeZ"; */
+"cEE-NT-CeZ.text" = "温度单位";
+
+/* Class = "UILabel"; text = "Fahrenheit"; ObjectID = "fS1-af-TAR"; */
+"fS1-af-TAR.text" = "华氏度";
+
+/* Class = "UILabel"; text = "Celsius"; ObjectID = "gT4-0G-ZRf"; */
+"gT4-0G-ZRf.text" = "摄氏度";
+
+/* Class = "UIButton"; normalTitle = "Update Geographic Coordinate"; ObjectID = "jrB-Jp-mVL"; */
+"jrB-Jp-mVL.normalTitle" = "更新地理坐标";
