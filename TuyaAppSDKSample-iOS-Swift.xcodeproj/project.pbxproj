@@ -65,7 +65,6 @@
 		AF9612F625B6C80E000971CC /* EnumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9612F525B6C80E000971CC /* EnumTableViewCell.swift */; };
 		AF96133C25B7085D000971CC /* StringTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF96133B25B7085D000971CC /* StringTableViewCell.swift */; };
 		AF96134025B708AE000971CC /* LabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF96133F25B708AE000971CC /* LabelTableViewCell.swift */; };
-		AFA19C6E25F7527D00A7B2FE /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA19C6D25F7527D00A7B2FE /* HomeKit.framework */; };
 		AFBB5BBF25B95BBA006BDDD7 /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB5BBE25B95BBA006BDDD7 /* NotificationName.swift */; };
 		AFBB5BC225B95F3C006BDDD7 /* DeviceStatusBehaveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB5BC125B95F3C006BDDD7 /* DeviceStatusBehaveCell.swift */; };
 /* End PBXBuildFile section */
@@ -149,7 +148,6 @@
 		AF9612F525B6C80E000971CC /* EnumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumTableViewCell.swift; sourceTree = "<group>"; };
 		AF96133B25B7085D000971CC /* StringTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StringTableViewCell.swift; path = "TuyaAppSDKSample-iOS-Swift/ViewController/Device Management/Cell/StringTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		AF96133F25B708AE000971CC /* LabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LabelTableViewCell.swift; path = "TuyaAppSDKSample-iOS-Swift/ViewController/Device Management/Cell/LabelTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
-		AFA19C6D25F7527D00A7B2FE /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
 		AFBB5BBE25B95BBA006BDDD7 /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 		AFBB5BC125B95F3C006BDDD7 /* DeviceStatusBehaveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceStatusBehaveCell.swift; sourceTree = "<group>"; };
 		B2A4751A3340941A1C42F4D9 /* Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig"; path = "Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,7 +158,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFA19C6E25F7527D00A7B2FE /* HomeKit.framework in Frameworks */,
 				10F4AAB953F4FBCFFBD0F199 /* libPods-TuyaAppSDKSample-iOS-Swift.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,7 +168,6 @@
 		87E8F60384D829671393D688 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AFA19C6D25F7527D00A7B2FE /* HomeKit.framework */,
 				98A631D49E2E0E816D32C2CC /* libPods-TuyaAppSDKSample-iOS-Swift.a */,
 			);
 			name = Frameworks;
