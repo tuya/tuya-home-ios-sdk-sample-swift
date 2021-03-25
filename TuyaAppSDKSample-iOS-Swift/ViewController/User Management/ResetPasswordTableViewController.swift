@@ -41,11 +41,12 @@ class ResetPasswordTableViewController: UITableViewController {
             }
 
         } else {
-            TuyaSmartUser.sharedInstance().sendVerifyCode(countryCode, phoneNumber: account, type: 2) {  [weak self] in
+            TuyaSmartUser.sharedInstance().sendVerifyCode(withUserName: account, region: nil, countryCode: countryCode, type: 2) {
+                [weak self] in
                 guard let self = self else { return }
                 Alert.showBasicAlert(on: self, with: NSLocalizedString("Verification Code Sent Successfully", comment: ""), message: NSLocalizedString("Please check your message for the code.", comment: ""))
-                
-            } failure: { [weak self] (error) in
+            } failure: {
+                [weak self] (error) in
                 guard let self = self else { return }
                 let errorMessage = error?.localizedDescription ?? ""
                 Alert.showBasicAlert(on: self, with: NSLocalizedString("Failed to Sent Verification Code", comment: ""), message: errorMessage)
