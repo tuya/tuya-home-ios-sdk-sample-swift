@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		10F4AAB953F4FBCFFBD0F199 /* libPods-TuyaAppSDKSample-iOS-Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A631D49E2E0E816D32C2CC /* libPods-TuyaAppSDKSample-iOS-Swift.a */; };
+		9A4C48FA260B27420000D9EA /* SIGMesh.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A4C48FC260B27420000D9EA /* SIGMesh.storyboard */; };
+		9AF91FF62608357F00CA5D66 /* t_s.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 9AF91FF52608357F00CA5D66 /* t_s.bmp */; };
+		9AF92004260840BA00CA5D66 /* SIGMeshTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF92002260840BA00CA5D66 /* SIGMeshTableViewController.swift */; };
 		AF00605D25EC968A001462B8 /* TimeZoneTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF00605C25EC968A001462B8 /* TimeZoneTableViewController.swift */; };
 		AF00606125ECBF3A001462B8 /* TemperatureUnitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF00606025ECBF3A001462B8 /* TemperatureUnitTableViewController.swift */; };
 		AF00606725EE638D001462B8 /* BLEModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF00606625EE638D001462B8 /* BLEModeViewController.swift */; };
@@ -40,7 +43,6 @@
 		AF5531E225A5992500E13562 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5531E125A5992500E13562 /* SceneDelegate.swift */; };
 		AF5531E925A5992800E13562 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF5531E825A5992800E13562 /* Assets.xcassets */; };
 		AF55320D25A59BE800E13562 /* AppKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF55320C25A59BE800E13562 /* AppKey.swift */; };
-		AF5E2F3125A59FE600DAF14E /* t_s.bmp in Resources */ = {isa = PBXBuildFile; fileRef = AF5E2F3025A59FE600DAF14E /* t_s.bmp */; };
 		AF5E2F3E25A5A08600DAF14E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5E2F3425A5A08600DAF14E /* LaunchScreen.storyboard */; };
 		AF5E2F3F25A5A08600DAF14E /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5E2F3625A5A08600DAF14E /* Register.storyboard */; };
 		AF5E2F4025A5A08600DAF14E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5E2F3825A5A08600DAF14E /* Main.storyboard */; };
@@ -72,6 +74,10 @@
 /* Begin PBXFileReference section */
 		207E8BAF216CF8ED00C5937A /* Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig"; path = "Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		98A631D49E2E0E816D32C2CC /* libPods-TuyaAppSDKSample-iOS-Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TuyaAppSDKSample-iOS-Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A4C48FF260B27900000D9EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SIGMesh.storyboard; sourceTree = "<group>"; };
+		9A4C4901260B27AA0000D9EA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SIGMesh.strings"; sourceTree = "<group>"; };
+		9AF91FF52608357F00CA5D66 /* t_s.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = t_s.bmp; sourceTree = "<group>"; };
+		9AF92002260840BA00CA5D66 /* SIGMeshTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIGMeshTableViewController.swift; sourceTree = "<group>"; };
 		AF00605C25EC968A001462B8 /* TimeZoneTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneTableViewController.swift; sourceTree = "<group>"; };
 		AF00606025ECBF3A001462B8 /* TemperatureUnitTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureUnitTableViewController.swift; sourceTree = "<group>"; };
 		AF00606625EE638D001462B8 /* BLEModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEModeViewController.swift; sourceTree = "<group>"; };
@@ -107,7 +113,6 @@
 		AF5531E825A5992800E13562 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF5531ED25A5992800E13562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF55320C25A59BE800E13562 /* AppKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppKey.swift; sourceTree = "<group>"; };
-		AF5E2F3025A59FE600DAF14E /* t_s.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = t_s.bmp; sourceTree = "<group>"; };
 		AF5E2F3525A5A08600DAF14E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF5E2F3725A5A08600DAF14E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Register.storyboard; sourceTree = "<group>"; };
 		AF5E2F3925A5A08600DAF14E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -183,6 +188,7 @@
 				AF00606D25EE6B30001462B8 /* ZigbeeGatewayViewController.swift */,
 				AF00607125EE6C79001462B8 /* ZigbeeSubdeviceTableViewController.swift */,
 				AF00607525EE6D33001462B8 /* ChooseGatewayTableViewController.swift */,
+				9AF92002260840BA00CA5D66 /* SIGMeshTableViewController.swift */,
 			);
 			path = "Device Network Configuration";
 			sourceTree = "<group>";
@@ -221,7 +227,7 @@
 		AF5531DE25A5992500E13562 /* TuyaAppSDKSample-iOS-Swift */ = {
 			isa = PBXGroup;
 			children = (
-				AF5E2F3025A59FE600DAF14E /* t_s.bmp */,
+				9AF91FF52608357F00CA5D66 /* t_s.bmp */,
 				AF55320C25A59BE800E13562 /* AppKey.swift */,
 				AF5531DF25A5992500E13562 /* AppDelegate.swift */,
 				AF5531E125A5992500E13562 /* SceneDelegate.swift */,
@@ -256,6 +262,7 @@
 				AF5E66D625F77DE9001D3C15 /* ZigbeeGateway.storyboard */,
 				AF5E66DA25F77E14001D3C15 /* ZigbeeSubdevice.storyboard */,
 				AF3B498F25B8095800286C4A /* DeviceList.storyboard */,
+				9A4C48FC260B27420000D9EA /* SIGMesh.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -394,16 +401,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF3B499125B8095800286C4A /* DeviceList.storyboard in Resources */,
+				9A4C48FA260B27420000D9EA /* SIGMesh.storyboard in Resources */,
 				AF5E66DC25F77E14001D3C15 /* ZigbeeSubdevice.storyboard in Resources */,
 				AF5E66D425F77DA7001D3C15 /* DualMode.storyboard in Resources */,
 				AF3B498C25B8093600286C4A /* APMode.storyboard in Resources */,
 				AF5E2F4125A5A08600DAF14E /* Login.storyboard in Resources */,
 				AF5E2F4025A5A08600DAF14E /* Main.storyboard in Resources */,
+				9AF91FF62608357F00CA5D66 /* t_s.bmp in Resources */,
 				AF60B8C225BEBA1600E18F6F /* InfoPlist.strings in Resources */,
 				AF5531E925A5992800E13562 /* Assets.xcassets in Resources */,
 				AF21C1FF25B03D6000D52FBA /* SwitchHome.storyboard in Resources */,
 				AF60B89825BC1F5600E18F6F /* NewHome.storyboard in Resources */,
-				AF5E2F3125A59FE600DAF14E /* t_s.bmp in Resources */,
 				AF5E66CF25F77D6B001D3C15 /* BLE.storyboard in Resources */,
 				AF5E2F3E25A5A08600DAF14E /* LaunchScreen.storyboard in Resources */,
 				AF5E2F3F25A5A08600DAF14E /* Register.storyboard in Resources */,
@@ -498,6 +506,7 @@
 				AF05ECC625CB968500C84AF6 /* DeviceDetailTableViewController.swift in Sources */,
 				AF21C20625B0400F00D52FBA /* EZModeTableViewController.swift in Sources */,
 				AF3A25AA25A98A77003EB9FF /* ResetPasswordTableViewController.swift in Sources */,
+				9AF92004260840BA00CA5D66 /* SIGMeshTableViewController.swift in Sources */,
 				AF3A25A725A844DA003EB9FF /* LoginTableViewController.swift in Sources */,
 				AF5E2F5225A5D60B00DAF14E /* Alert.swift in Sources */,
 				AF3A25B925AD7CC1003EB9FF /* UserInformationTableViewController.swift in Sources */,
@@ -527,6 +536,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		9A4C48FC260B27420000D9EA /* SIGMesh.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A4C48FF260B27900000D9EA /* Base */,
+				9A4C4901260B27AA0000D9EA /* zh-Hans */,
+			);
+			name = SIGMesh.storyboard;
+			sourceTree = "<group>";
+		};
 		AF21C1FD25B03D6000D52FBA /* SwitchHome.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -822,7 +840,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7AF5BA9M96;
+				DEVELOPMENT_TEAM = D8399XH2VW;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -848,7 +866,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dasautoooo.SDK-Sample";
+				PRODUCT_BUNDLE_IDENTIFIER = liuguang.SmartProduct;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TuyaAppSDKSample-iOS-Swift/TuyaAppSDKSample-iOS-Swift-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -864,7 +882,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7AF5BA9M96;
+				DEVELOPMENT_TEAM = D8399XH2VW;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -890,7 +908,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dasautoooo.SDK-Sample";
+				PRODUCT_BUNDLE_IDENTIFIER = liuguang.SmartProduct;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TuyaAppSDKSample-iOS-Swift/TuyaAppSDKSample-iOS-Swift-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

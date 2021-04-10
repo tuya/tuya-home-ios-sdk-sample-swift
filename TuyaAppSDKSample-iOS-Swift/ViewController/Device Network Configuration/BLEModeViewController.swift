@@ -53,15 +53,18 @@ extension BLEModeViewController: TuyaSmartBLEManagerDelegate {
         
         SVProgressHUD.show(withStatus: NSLocalizedString("Activating", comment: "Active BLE."))
         
-        // Trying to active the single BLE device.
-        TuyaSmartBLEManager.sharedInstance().activeBLE(deviceInfo, homeId: homeID) { model in
-            let name = model.name ?? NSLocalizedString("Unknown Name", comment: "Unknown name device.")
-            SVProgressHUD.showSuccess(withStatus: NSLocalizedString("Successfully Added \(name)", comment: "Successfully added one device."))
-            self.isSuccess = true
-            self.navigationController?.popViewController(animated: true)
-            
-        } failure: {
-            SVProgressHUD.showError(withStatus: NSLocalizedString("Failed to Activate BLE Device", comment: ""))
+        if deviceInfo.bleType == TYSmartBLETypeBLESecurity {
+            // Trying to active the single BLE device.
+            print("deviceInfo.uuid \(deviceInfo.uuid!)")
+            TuyaSmartBLEManager.sharedInstance().activeBLE(deviceInfo, homeId: homeID) { model in
+                let name = model.name ?? NSLocalizedString("Unknown Name", comment: "Unknown name device.")
+                SVProgressHUD.showSuccess(withStatus: NSLocalizedString("Successfully Added \(name)", comment: "Successfully added one device."))
+                self.isSuccess = true
+                self.navigationController?.popViewController(animated: true)
+                
+            } failure: {
+                SVProgressHUD.showError(withStatus: NSLocalizedString("Failed to Activate BLE Device", comment: ""))
+            }
         }
     }
 }

@@ -253,12 +253,32 @@
                                             <segue destination="TcC-db-3CW" kind="show" id="lnt-k4-iFh"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="2J1-GD-9tu" style="IBUITableViewCellStyleDefault" id="uyP-Hb-Dji">
+                                        <rect key="frame" x="20" y="646" width="374" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uyP-Hb-Dji" id="PaR-Dw-U68">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="SIG Mesh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2J1-GD-9tu">
+                                                    <rect key="frame" x="20" y="0.0" width="315" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="gem-Ek-44V" kind="show" id="zga-Gq-sKq"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Device Management" id="y2h-dz-wG3">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Sc8-6Q-jjJ" style="IBUITableViewCellStyleDefault" id="D85-fC-FzY">
-                                        <rect key="frame" x="20" y="702" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="746" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D85-fC-FzY" id="pZL-1U-iLm">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
@@ -412,6 +432,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RSx-Il-5SZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1388" y="39"/>
+        </scene>
+        <!--SIGMesh-->
+        <scene sceneID="NaJ-lr-IwA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SIGMesh" id="gem-Ek-44V" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="SnS-Im-ayx"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vUB-iL-bJo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1241" y="198"/>
         </scene>
         <!--ZigbeeGateway-->
         <scene sceneID="gd7-b9-jkH">
