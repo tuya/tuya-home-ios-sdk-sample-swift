@@ -55,6 +55,16 @@ extension DualModeTableViewController: TuyaSmartBLEManagerDelegate {
             return
         }
         
+        let type = deviceInfo.bleType
+        
+        guard
+            type == TYSmartBLETypeBLEWifiSecurity ||
+            type == TYSmartBLETypeBLEWifi ||
+            type == TYSmartBLETypeBLELTESecurity
+        else {
+            return
+        }
+        
         SVProgressHUD.show(withStatus: NSLocalizedString("Sending Data to the Device", comment: "Sending Data to the BLE Device"))
         
         // Found a BLE device, then try to config that using TuyaSmartBLEWifiActivator.
@@ -73,8 +83,16 @@ extension DualModeTableViewController: TuyaSmartBLEManagerDelegate {
 extension DualModeTableViewController: TuyaSmartBLEWifiActivatorDelegate {
     
     // When the device connected to the router and activate itself successfully to the cloud, this delegate method will be called.
-    func bleWifiActivator(_ activator: TuyaSmartBLEWifiActivator, didReceiveBLEWifiConfigDevice deviceModel: TuyaSmartDeviceModel, error: Error) {
+    func bleWifiActivator(_ activator: TuyaSmartBLEWifiActivator, didReceiveBLEWifiConfigDevice deviceModel: TuyaSmartDeviceModel?, error: Error?) {
+        
+        guard error == nil,
+              let deviceModel = deviceModel else {
+            return
+        }
+        
         let name = deviceModel.name ?? NSLocalizedString("Unknown Name", comment: "Unknown name device.")
+        
+
         SVProgressHUD.showSuccess(withStatus: NSLocalizedString("Successfully Added \(name)", comment: "Successfully added one device."))
         isSuccess = true
         self.navigationController?.popViewController(animated: true)

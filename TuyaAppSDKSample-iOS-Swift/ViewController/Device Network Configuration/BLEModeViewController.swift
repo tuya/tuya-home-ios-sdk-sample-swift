@@ -51,6 +51,15 @@ extension BLEModeViewController: TuyaSmartBLEManagerDelegate {
             return
         }
         
+        let type = deviceInfo.bleType
+        
+        guard
+            type == TYSmartBLETypeBLESecurity ||
+            type == TYSmartBLETypeBLEPlus
+        else {
+            return
+        }
+        
         SVProgressHUD.show(withStatus: NSLocalizedString("Activating", comment: "Active BLE."))
         
         // Trying to active the single BLE device.
