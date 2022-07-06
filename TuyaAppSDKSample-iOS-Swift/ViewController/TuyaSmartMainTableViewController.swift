@@ -32,12 +32,29 @@ class TuyaSmartMainTableViewController: UITableViewController {
         } else {
             currentHomeLabel.textColor = .systemGray
         }
+        
+        if let homeId = Home.current?.homeId {
+            if let sigMeshModel = TuyaSmartHome.init(homeId: homeId)?.sigMeshModel {
+                let userDefault = UserDefaults.standard
+                
+                let dict: [String: Any] = ["name": sigMeshModel.name, "meshId": sigMeshModel.meshId, "localKey": sigMeshModel.localKey,
+                            "pv": sigMeshModel.pv, "code": sigMeshModel.code, "password": sigMeshModel.password, "share": sigMeshModel.share,
+                            "homeId": sigMeshModel.homeId, "netKey": sigMeshModel.netKey, "appKey": sigMeshModel.appKey]
+                userDefault.setValue(dict, forKey: "userInfo")
+                print(userDefault.value(forKey: "userInfo"))
+            }
+            
+        }
     }
     
     // MARK: - Private Method
     private func initiateCurrentHome() {
-        homeManager.getHomeList { (homeModels) in
-            Home.current = homeModels?.first
+        homeManager.getHomeList {[weak self] (homeModels) in
+            guard let _ = Home.current else{
+                Home.current = homeModels?.first
+                self?.currentHomeLabel.text = Home.current?.name ?? NSLocalizedString("No Selection", comment: "User hasn't select a current home.")
+                return
+            }
         } failure: { (error) in
             
         }
