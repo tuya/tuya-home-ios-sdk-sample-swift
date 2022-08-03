@@ -53,7 +53,7 @@ class EZModeTableViewController: UITableViewController {
         let ssid = ssidTextField.text ?? ""
         let password = passwordTextField.text ?? ""
         TuyaSmartActivator.sharedInstance()?.delegate = self
-        TuyaSmartActivator.sharedInstance()?.startConfigWiFi(TYActivatorModeEZ, ssid: ssid, password: password, token: token, timeout: 100)
+        TuyaSmartActivator.sharedInstance()?.startConfigWiFi(.EZ, ssid: ssid, password: password, token: token, timeout: 100)
     }
     
     private func stopConfigWifi() {

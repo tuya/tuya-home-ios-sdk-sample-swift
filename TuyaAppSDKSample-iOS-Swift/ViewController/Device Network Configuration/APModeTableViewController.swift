@@ -54,7 +54,7 @@ class APModeTableViewController: UITableViewController {
         let ssid = ssidTextField.text ?? ""
         let password = passwordTextField.text ?? ""
         TuyaSmartActivator.sharedInstance()?.delegate = self
-        TuyaSmartActivator.sharedInstance()?.startConfigWiFi(TYActivatorModeAP, ssid: ssid, password: password, token: token, timeout: 100)
+        TuyaSmartActivator.sharedInstance()?.startConfigWiFi(.AP, ssid: ssid, password: password, token: token, timeout: 100)
     }
     
     private func stopConfigWifi() {
@@ -81,5 +81,16 @@ extension APModeTableViewController: TuyaSmartActivatorDelegate {
             // Error
             SVProgressHUD.showError(withStatus: error.localizedDescription)
         }
+    }
+    
+    func activator(_ activator: TuyaSmartActivator!, didPassWIFIToSecurityLevelDeviceWithUUID uuid: String!) {
+        SVProgressHUD.dismiss()
+        Alert.showBasicAlert(on: self, with: "SecurityLevelDevice", message: "continue pair? (Please check you phone connected the same Wi-Fi as you Inputed)", actions: [
+            UIAlertAction(title: "cancel", style: .cancel),
+            UIAlertAction(title: "continue", style: .destructive, handler: { _ in
+                TuyaSmartActivator.sharedInstance().continueConfigSecurityLevelDevice()
+                SVProgressHUD.show(withStatus: NSLocalizedString("Configuring", comment: ""))
+            })
+        ])
     }
 }
