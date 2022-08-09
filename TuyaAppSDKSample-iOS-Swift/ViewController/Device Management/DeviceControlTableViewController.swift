@@ -191,6 +191,20 @@ class DeviceControlTableViewController: UITableViewController {
             
             cell.label.text = schema.name
             cell.detailLabel.text = text
+        
+        case .textviewCell:
+            guard let cell = cell as? TextViewTableViewCell,
+                  let dps = dps,
+                  let dpID = schema.dpId,
+                  let value = dps[dpID]
+            else { break }
+            
+            cell.title.text = schema.name
+            cell.textview.text = ""
+            if let data = try? JSONSerialization.data(withJSONObject: value, options: []) as Data,
+               let s = String.init(data: data, encoding: .utf8) {
+                cell.textview.text = s
+            }
         }
 
         return cell

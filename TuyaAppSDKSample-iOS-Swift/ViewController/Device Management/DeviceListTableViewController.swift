@@ -45,14 +45,19 @@ class DeviceListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let storyboard = UIStoryboard(name: "DeviceList", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "DeviceControlTableViewController") as! DeviceControlTableViewController
-        
         guard let deviceID = home?.deviceList[indexPath.row].devId else { return }
         guard let device = TuyaSmartDevice(deviceId: deviceID) else { return }
-        vc.device = device
         
-        navigationController?.pushViewController(vc, animated: true)
+        let storyboard = UIStoryboard(name: "DeviceList", bundle: nil)
+        let isSupportThingModel = device.deviceModel.isSupportThingModelDevice()
+        let identifier = isSupportThingModel ? "TuyaLinkDeviceControlController" : "DeviceControlTableViewController"
+        
+        let vc = storyboard.instantiateViewController(withIdentifier: identifier)
+        if isSupportThingModel {
+            jumpTuyaLinkDeviceControl(vc as! TuyaLinkDeviceControlController, device: device)
+        } else {
+            jumpNormalDeviceControl(vc as! DeviceControlTableViewController, device: device)
+        }
     }
 
     // MARK: - Private method
@@ -64,6 +69,30 @@ class DeviceListTableViewController: UITableViewController {
             let errorMessage = error?.localizedDescription ?? ""
             Alert.showBasicAlert(on: self, with: NSLocalizedString("Failed to Fetch Home", comment: ""), message: errorMessage)
         })
+    }
+    
+    private func jumpTuyaLinkDeviceControl(_ vc: TuyaLinkDeviceControlController, device: TuyaSmartDevice) {
+        let goTuyaLinkControl = { () -> Void in
+            vc.device = device
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+        if let _ = device.deviceModel.thingModel {
+            goTuyaLinkControl()
+        } else {
+            SVProgressHUD.show(withStatus: NSLocalizedString("Fetching Thing Model", comment: ""))
+            device.getThingModel { _ in
+                SVProgressHUD.dismiss()
+                goTuyaLinkControl()
+            } failure: { error in
+                SVProgressHUD.showError(withStatus: NSLocalizedString("Failed to Fetch Thing Model", comment: ""))
+            }
+        }
+    }
+    
+    private func jumpNormalDeviceControl(_ vc: DeviceControlTableViewController, device: TuyaSmartDevice) {
+        vc.device = device
+        navigationController?.pushViewController(vc, animated: true)
     }
 
 }
