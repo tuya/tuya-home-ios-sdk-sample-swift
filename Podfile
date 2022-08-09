@@ -2,7 +2,11 @@ source 'https://cdn.cocoapods.org/'
 source 'https://github.com/tuya/TuyaPublicSpecs.git'
 
 target 'TuyaAppSDKSample-iOS-Swift' do
+  use_modular_headers!
+
   pod 'SVProgressHUD'
+  pod 'SGQRCode', '~> 4.1.0'
+
   pod 'TuyaSmartHomeKit'
 end
 
