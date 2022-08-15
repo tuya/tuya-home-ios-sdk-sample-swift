@@ -62,7 +62,7 @@ class DeviceListTableViewController: UITableViewController {
 
     // MARK: - Private method
     private func updateHomeDetail() {
-        home?.getDetailWithSuccess({ (model) in
+        home?.getDataWithSuccess({ (model) in
             self.tableView.reloadData()
         }, failure: { [weak self] (error) in
             guard let self = self else { return }
