@@ -55,13 +55,14 @@ extension DualModeTableViewController: TuyaSmartBLEManagerDelegate {
             return
         }
         
-        let type = deviceInfo.bleType
-        
-        guard
-            type == TYSmartBLETypeBLEWifiSecurity ||
-            type == TYSmartBLETypeBLEWifi ||
-            type == TYSmartBLETypeBLELTESecurity
-        else {
+        let bleType = deviceInfo.bleType
+        if bleType == TYSmartBLETypeUnknow ||
+            bleType == TYSmartBLETypeBLE ||
+            bleType == TYSmartBLETypeBLESecurity ||
+            bleType == TYSmartBLETypeBLEPlus ||
+            bleType == TYSmartBLETypeBLEZigbee ||
+            bleType == TYSmartBLETypeBLEBeacon {
+            print("Please use BLE to pair: %@", deviceInfo.uuid ?? "")
             return
         }
         

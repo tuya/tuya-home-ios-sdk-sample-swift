@@ -51,12 +51,13 @@ extension BLEModeViewController: TuyaSmartBLEManagerDelegate {
             return
         }
         
-        let type = deviceInfo.bleType
-        
-        guard
-            type == TYSmartBLETypeBLESecurity ||
-            type == TYSmartBLETypeBLEPlus
-        else {
+        let bleType = deviceInfo.bleType
+        if bleType == TYSmartBLETypeBLEWifi ||
+            bleType == TYSmartBLETypeBLEWifiSecurity ||
+            bleType == TYSmartBLETypeBLEWifiPlugPlay ||
+            bleType == TYSmartBLETypeBLEWifiPriorBLE ||
+            bleType == TYSmartBLETypeBLELTESecurity {
+            print("Please use Dual Mode to pair: %@", deviceInfo.uuid ?? "")
             return
         }
         
