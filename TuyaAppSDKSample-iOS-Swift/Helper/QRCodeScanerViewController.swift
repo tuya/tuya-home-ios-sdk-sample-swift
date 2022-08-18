@@ -12,23 +12,7 @@ class QRCodeScanerViewController: UIViewController {
     public var scanCallback: ((_ code: String?) -> Void)?
     
     let scanCode = SGScanCode()
-    lazy var scanView: SGScanView? = {
-        let config = SGScanViewConfigure()
-        config.isShowBorder = true
-        config.borderColor = UIColor.clear
-        config.cornerColor = UIColor.white
-        config.cornerWidth = 3
-        config.cornerLength = 15
-        config.isFromTop = true
-        config.scanline = "SGQRCode.bundle/scan_scanline_qq"
-        config.color = UIColor.clear
-        
-        let frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
-        let v = SGScanView(frame: frame, configure: config)
-        v?.startScanning()
-        v?.scanFrame = frame
-        return v
-    }()
+    var scanView: SGScanView!
     
     deinit {
         stop()
@@ -36,12 +20,12 @@ class QRCodeScanerViewController: UIViewController {
     
     func start() {
         scanCode.startRunning()
-        scanView!.startScanning()
+        scanView?.startScanning()
     }
     
     func stop() {
         scanCode.stopRunning()
-        scanView!.stopScanning()
+        scanView?.stopScanning()
     }
     
     override func viewDidLoad() {
@@ -57,6 +41,20 @@ class QRCodeScanerViewController: UIViewController {
     }
     
     func configureUI() {
+        let config = SGScanViewConfigure()
+        config.isShowBorder = true
+        config.borderColor = UIColor.clear
+        config.cornerColor = UIColor.white
+        config.cornerWidth = 3
+        config.cornerLength = 15
+        config.isFromTop = true
+        config.scanline = "SGQRCode.bundle/scan_scanline_qq"
+        config.color = UIColor.clear
+        
+        let frame = CGRect(x: 0, y: 0, width: view.frame.size.width , height: view.frame.size.height)
+        scanView = SGScanView(frame: frame, configure: config)
+        scanView.startScanning()
+        scanView.scanFrame = frame
         view.addSubview(scanView!)
     }
     

@@ -12,7 +12,7 @@ class TuyaLinkDeviceBindTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "TuyaLink Bind"
     }
     
     func bindTuyaLink(qrcode codeStr: String?) -> Void {
@@ -31,6 +31,7 @@ class TuyaLinkDeviceBindTableViewController: UITableViewController {
         vc.scanCallback = { [weak self] codeStr in
             self?.bindTuyaLink(qrcode: codeStr)
         }
+        navigationController?.pushViewController(vc, animated: true)
     }
 
 }
