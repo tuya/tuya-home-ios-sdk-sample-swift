@@ -22,6 +22,8 @@
 	<true/>
 	<key>NSBluetoothAlwaysUsageDescription</key>
 	<string>For better usage, we will suggest you to give us the permissions to use Bluetooth.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>For better usage, we will suggest you to give us the permissions to use your location</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>For better usage, we will suggest you to give us the permissions to use your location.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
