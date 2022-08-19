@@ -25,6 +25,7 @@ class StringTableViewCell: DeviceStatusBehaveCell {
     
     // MARK: - IBAction
     @IBAction func buttonTapped(_ sender: UIButton) {
+        endEditing(true)
         buttonAction?(textField.text ?? "")
     }
     

@@ -25,7 +25,7 @@ class EnumTableViewCell: DeviceStatusBehaveCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         guard selected,
               optionArray.count != 0,
-              let vc = window?.rootViewController
+              let vc = self.next?.next?.next as? UIViewController
         else { return }
         
         let alert = UIAlertController(title: NSLocalizedString("Select Option", comment: "Select option to control enum value dp."), message: nil, preferredStyle: .actionSheet)

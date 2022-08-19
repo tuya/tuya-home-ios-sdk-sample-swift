@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		10F4AAB953F4FBCFFBD0F199 /* libPods-TuyaAppSDKSample-iOS-Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A631D49E2E0E816D32C2CC /* libPods-TuyaAppSDKSample-iOS-Swift.a */; };
+		6719AB9128A202B5000588E7 /* TextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6719AB9028A202B5000588E7 /* TextViewTableViewCell.swift */; };
+		6719AB9328A208CC000588E7 /* TuyaLinkDeviceControlController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6719AB9228A208CB000588E7 /* TuyaLinkDeviceControlController.swift */; };
+		6719AB9528A208DF000588E7 /* TuyaLinkActionMsgSendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6719AB9428A208DF000588E7 /* TuyaLinkActionMsgSendController.swift */; };
+		67956196289A626300BD0FAB /* TuyaLinkBind.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67956198289A626300BD0FAB /* TuyaLinkBind.storyboard */; };
+		6795619C289A66CC00BD0FAB /* TuyaLinkDeviceBindTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6795619B289A66CC00BD0FAB /* TuyaLinkDeviceBindTableViewController.swift */; };
+		6795619E289A6AED00BD0FAB /* QRCodeScanerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6795619D289A6AED00BD0FAB /* QRCodeScanerViewController.swift */; };
 		AF00605D25EC968A001462B8 /* TimeZoneTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF00605C25EC968A001462B8 /* TimeZoneTableViewController.swift */; };
 		AF00606125ECBF3A001462B8 /* TemperatureUnitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF00606025ECBF3A001462B8 /* TemperatureUnitTableViewController.swift */; };
 		AF00606725EE638D001462B8 /* BLEModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF00606625EE638D001462B8 /* BLEModeViewController.swift */; };
@@ -71,6 +77,14 @@
 
 /* Begin PBXFileReference section */
 		207E8BAF216CF8ED00C5937A /* Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig"; path = "Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		6719AB9028A202B5000588E7 /* TextViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewTableViewCell.swift; sourceTree = "<group>"; };
+		6719AB9228A208CB000588E7 /* TuyaLinkDeviceControlController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuyaLinkDeviceControlController.swift; sourceTree = "<group>"; };
+		6719AB9428A208DF000588E7 /* TuyaLinkActionMsgSendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuyaLinkActionMsgSendController.swift; sourceTree = "<group>"; };
+		6795618F289A55C000BD0FAB /* TuyaAppSDKSample-iOS-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TuyaAppSDKSample-iOS-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		67956197289A626300BD0FAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TuyaLinkBind.storyboard; sourceTree = "<group>"; };
+		6795619A289A626500BD0FAB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TuyaLinkBind.strings"; sourceTree = "<group>"; };
+		6795619B289A66CC00BD0FAB /* TuyaLinkDeviceBindTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuyaLinkDeviceBindTableViewController.swift; sourceTree = "<group>"; };
+		6795619D289A6AED00BD0FAB /* QRCodeScanerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScanerViewController.swift; sourceTree = "<group>"; };
 		98A631D49E2E0E816D32C2CC /* libPods-TuyaAppSDKSample-iOS-Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TuyaAppSDKSample-iOS-Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF00605C25EC968A001462B8 /* TimeZoneTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneTableViewController.swift; sourceTree = "<group>"; };
 		AF00606025ECBF3A001462B8 /* TemperatureUnitTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureUnitTableViewController.swift; sourceTree = "<group>"; };
@@ -140,7 +154,6 @@
 		AF60B8A325BC1F6E00E18F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "TuyaAppSDKSample-iOS-Swift/StoryBoard/zh-Hans.lproj/HomeList.strings"; sourceTree = "<group>"; };
 		AF60B8C125BEBA1600E18F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		AF60B8C425BEBA1600E18F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		AF60B93625BFEEF200E18F6F /* TuyaAppSDKSample-iOS-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TuyaAppSDKSample-iOS-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		AF96112325B17F38000971CC /* DeviceListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListTableViewController.swift; sourceTree = "<group>"; };
 		AF96129825B58CE1000971CC /* DeviceControlTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceControlTableViewController.swift; sourceTree = "<group>"; };
 		AF96129C25B5ACE6000971CC /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
@@ -183,6 +196,7 @@
 				AF00606D25EE6B30001462B8 /* ZigbeeGatewayViewController.swift */,
 				AF00607125EE6C79001462B8 /* ZigbeeSubdeviceTableViewController.swift */,
 				AF00607525EE6D33001462B8 /* ChooseGatewayTableViewController.swift */,
+				6795619B289A66CC00BD0FAB /* TuyaLinkDeviceBindTableViewController.swift */,
 			);
 			path = "Device Network Configuration";
 			sourceTree = "<group>";
@@ -232,7 +246,7 @@
 				AF5531ED25A5992800E13562 /* Info.plist */,
 				AF60B8C325BEBA1600E18F6F /* Localizable.strings */,
 				AF60B8C025BEBA1600E18F6F /* InfoPlist.strings */,
-				AF60B93625BFEEF200E18F6F /* TuyaAppSDKSample-iOS-Swift-Bridging-Header.h */,
+				6795618F289A55C000BD0FAB /* TuyaAppSDKSample-iOS-Swift-Bridging-Header.h */,
 			);
 			path = "TuyaAppSDKSample-iOS-Swift";
 			sourceTree = "<group>";
@@ -256,6 +270,7 @@
 				AF5E66D625F77DE9001D3C15 /* ZigbeeGateway.storyboard */,
 				AF5E66DA25F77E14001D3C15 /* ZigbeeSubdevice.storyboard */,
 				AF3B498F25B8095800286C4A /* DeviceList.storyboard */,
+				67956198289A626300BD0FAB /* TuyaLinkBind.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -294,6 +309,7 @@
 				AF3A25A325A8426D003EB9FF /* UIButtonExtension.swift */,
 				AF3A25B125A99E02003EB9FF /* UIViewControllerExtension.swift */,
 				AFBB5BBE25B95BBA006BDDD7 /* NotificationName.swift */,
+				6795619D289A6AED00BD0FAB /* QRCodeScanerViewController.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -306,6 +322,8 @@
 				AF96112325B17F38000971CC /* DeviceListTableViewController.swift */,
 				AF96129825B58CE1000971CC /* DeviceControlTableViewController.swift */,
 				AF05ECC525CB968500C84AF6 /* DeviceDetailTableViewController.swift */,
+				6719AB9228A208CB000588E7 /* TuyaLinkDeviceControlController.swift */,
+				6719AB9428A208DF000588E7 /* TuyaLinkActionMsgSendController.swift */,
 			);
 			path = "Device Management";
 			sourceTree = "<group>";
@@ -319,6 +337,7 @@
 				AF9612F525B6C80E000971CC /* EnumTableViewCell.swift */,
 				AF96133B25B7085D000971CC /* StringTableViewCell.swift */,
 				AF96133F25B708AE000971CC /* LabelTableViewCell.swift */,
+				6719AB9028A202B5000588E7 /* TextViewTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -366,6 +385,7 @@
 				TargetAttributes = {
 					AF5531DB25A5992500E13562 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1340;
 					};
 				};
 			};
@@ -397,6 +417,7 @@
 				AF5E66DC25F77E14001D3C15 /* ZigbeeSubdevice.storyboard in Resources */,
 				AF5E66D425F77DA7001D3C15 /* DualMode.storyboard in Resources */,
 				AF3B498C25B8093600286C4A /* APMode.storyboard in Resources */,
+				67956196289A626300BD0FAB /* TuyaLinkBind.storyboard in Resources */,
 				AF5E2F4125A5A08600DAF14E /* Login.storyboard in Resources */,
 				AF5E2F4025A5A08600DAF14E /* Main.storyboard in Resources */,
 				AF60B8C225BEBA1600E18F6F /* InfoPlist.strings in Resources */,
@@ -487,20 +508,24 @@
 				AF00606B25EE6A41001462B8 /* DualModeTableViewController.swift in Sources */,
 				AFBB5BC225B95F3C006BDDD7 /* DeviceStatusBehaveCell.swift in Sources */,
 				AFBB5BBF25B95BBA006BDDD7 /* NotificationName.swift in Sources */,
+				6719AB9128A202B5000588E7 /* TextViewTableViewCell.swift in Sources */,
 				AF96112425B17F38000971CC /* DeviceListTableViewController.swift in Sources */,
 				AF00607225EE6C79001462B8 /* ZigbeeSubdeviceTableViewController.swift in Sources */,
 				AF3A259C25A835AE003EB9FF /* MainViewController.swift in Sources */,
 				AF3A25A425A8426D003EB9FF /* UIButtonExtension.swift in Sources */,
 				AF96134025B708AE000971CC /* LabelTableViewCell.swift in Sources */,
 				AF00606E25EE6B30001462B8 /* ZigbeeGatewayViewController.swift in Sources */,
+				6795619C289A66CC00BD0FAB /* TuyaLinkDeviceBindTableViewController.swift in Sources */,
 				AF3A25D025AECFCF003EB9FF /* HomeDetailTableViewController.swift in Sources */,
 				AF3A25BD25AD9AE1003EB9FF /* NewHomeTableViewController.swift in Sources */,
 				AF05ECC625CB968500C84AF6 /* DeviceDetailTableViewController.swift in Sources */,
+				6719AB9528A208DF000588E7 /* TuyaLinkActionMsgSendController.swift in Sources */,
 				AF21C20625B0400F00D52FBA /* EZModeTableViewController.swift in Sources */,
 				AF3A25AA25A98A77003EB9FF /* ResetPasswordTableViewController.swift in Sources */,
 				AF3A25A725A844DA003EB9FF /* LoginTableViewController.swift in Sources */,
 				AF5E2F5225A5D60B00DAF14E /* Alert.swift in Sources */,
 				AF3A25B925AD7CC1003EB9FF /* UserInformationTableViewController.swift in Sources */,
+				6719AB9328A208CC000588E7 /* TuyaLinkDeviceControlController.swift in Sources */,
 				AF3A25C125AE904C003EB9FF /* Home.swift in Sources */,
 				AF5E2F4825A5A51B00DAF14E /* TuyaSmartMainTableViewController.swift in Sources */,
 				AF3B498025B7D6C000286C4A /* DeviceControlCell.swift in Sources */,
@@ -520,6 +545,7 @@
 				AF96129D25B5ACE6000971CC /* SwitchTableViewCell.swift in Sources */,
 				AF5531E225A5992500E13562 /* SceneDelegate.swift in Sources */,
 				AF96133C25B7085D000971CC /* StringTableViewCell.swift in Sources */,
+				6795619E289A6AED00BD0FAB /* QRCodeScanerViewController.swift in Sources */,
 				AF3A25C925AE9F9A003EB9FF /* HomeListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,6 +553,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		67956198289A626300BD0FAB /* TuyaLinkBind.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67956197289A626300BD0FAB /* Base */,
+				6795619A289A626500BD0FAB /* zh-Hans */,
+			);
+			name = TuyaLinkBind.storyboard;
+			sourceTree = "<group>";
+		};
 		AF21C1FD25B03D6000D52FBA /* SwitchHome.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -820,6 +855,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AF5BA9M96;
@@ -851,6 +887,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dasautoooo.SDK-Sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TuyaAppSDKSample-iOS-Swift/TuyaAppSDKSample-iOS-Swift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -862,6 +899,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AF5BA9M96;

@@ -8,30 +8,38 @@ import Foundation
 import TuyaSmartDeviceKit
 
 enum DeviceControlCell: String {
-    case switchCell = "device-switch-cell"
-    case sliderCell = "device-slider-cell"
-    case enumCell = "device-enum-cell"
-    case stringCell = "device-string-cell"
-    case labelCell = "device-label-cell"
+    case switchCell   = "device-switch-cell"
+    case sliderCell   = "device-slider-cell"
+    case enumCell     = "device-enum-cell"
+    case stringCell   = "device-string-cell"
+    case labelCell    = "device-label-cell"
+    case textviewCell = "device-textview-cell"
+    
+    static func cellIdentifier(with typeStr: String?) -> Self {
+        switch typeStr{
+        case "bool":
+            return .switchCell
+        case "enum":
+            return .enumCell
+        case "value":
+            return .sliderCell
+        case "bitmap":
+            return .labelCell
+        case "string":
+            return .stringCell
+        case "raw":
+            return .stringCell
+        case "array":
+            return .textviewCell
+        case "struct":
+            return .textviewCell
+        default:
+            return .labelCell
+        }
+    }
     
     static func cellIdentifier(with schema: TuyaSmartSchemaModel) -> Self {
         let type = schema.type == "obj" ? schema.property.type : schema.type
-        
-        switch type {
-        case "bool":
-            return Self.switchCell
-        case "enum":
-            return Self.enumCell
-        case "value":
-            return Self.sliderCell
-        case "bitmap":
-            return Self.labelCell
-        case "string":
-            return Self.stringCell
-        case "raw":
-            return Self.stringCell
-        default:
-            return Self.labelCell
-        }
+        return cellIdentifier(with: type)
     }
 }
