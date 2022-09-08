@@ -4,6 +4,17 @@ This sample demonstrates the use of Tuya iOS Smart Life App SDK to build an IoT 
 
 <img src="https://github.com/tuya/tuya-home-ios-sdk-sample-swift/raw/main/snapshot.png" alt="Tuya Smart app" width="300"/>
 
+## Self-developed Smart Life App Service
+Self-Developed Smart Life App is one of Tuya’s IoT app development solutions. This solution provides the services that enable connections between the app and the cloud. It also supports a full range of services and capabilities that customers can use to independently develop mobile apps. The Smart Life App SDK used in this sample is included in the Self-developed Smart Life App Service.
+
+Self-Developed Smart Life App is classified into the **Trial** and **Official** editions:
+
+- **Self-Developed App Trial**: provided for a free trial. It supports up to 100,000 cloud API calls per month and up to 20 registered end users in total.
+
+- **Self-Developed App Official**: provided for commercial use and costs $5,000/year (¥33,500/year) for the initial subscription and $2,000/year (¥13,500/year) for subsequent annual renewal. It is supplied with the Custom Domain Name service and up to 100 million cloud API calls per month.
+
+For more information, please check the [Pricing](https://developer.tuya.com/en/docs/app-development/app-sdk-price?id=Kbu0tcr2cbx3o).
+
 ## Prerequisites
 * Xcode 12.0 and later
 * iOS 12 and later
@@ -45,14 +56,3 @@ struct AppKey {
 
 ## References
 For more information about Tuya iOS HomeSDK, see [App SDK](https://developer.tuya.com/en/docs/app-development).
-
-## Self-developed Smart Life App Service
-Self-Developed Smart Life App is one of Tuya’s IoT app development solutions. This solution provides the services that enable connections between the app and the cloud. It also supports a full range of services and capabilities that customers can use to independently develop mobile apps. The Smart Life App SDK used in this sample is included in the Self-developed Smart Life App Service.
-
-Self-Developed Smart Life App is classified into the **Trial** and **Official** editions:
-
-- **Self-Developed App Trial**: provided for a free trial. It supports up to 100,000 cloud API calls per month and up to 20 registered end users in total.
-
-- **Self-Developed App Official**: provided for commercial use and costs $5,000/year (¥33,500/year) for the initial subscription and $2,000/year (¥13,500/year) for subsequent annual renewal. It is supplied with the Custom Domain Name service and up to 100 million cloud API calls per month.
-
-For more information, please check the [Pricing](https://developer.tuya.com/en/docs/app-development/app-sdk-price?id=Kbu0tcr2cbx3o).
