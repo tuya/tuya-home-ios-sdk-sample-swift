@@ -1,8 +1,8 @@
 //
 //  QRCodeScanerViewController.swift
-//  TuyaAppSDKSample-iOS-Swift
+//  ThingAppSDKSample-iOS-Swift
 //
-//  Copyright (c) 2014-2022 Tuya Inc. (https://developer.tuya.com/)
+//  Copyright (c) 2014-2022 Thing Inc. (https://developer.tuya.com/)
 
 import UIKit
 import SGQRCode

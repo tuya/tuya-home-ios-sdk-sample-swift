@@ -1,13 +1,13 @@
 //
-//  TuyaAppSDKSample-iOS-Swift-Bridging-Header.h
-//  TuyaAppSDKSample-iOS-Swift
+//  ThingAppSDKSample-iOS-Swift-Bridging-Header.h
+//  ThingAppSDKSample-iOS-Swift
 //
-//  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
+//  Copyright (c) 2014-2021 Thing Inc. (https://developer.tuya.com/)
 
-#ifndef TuyaAppSDKSample_iOS_Swift_Bridging_Header_h
-#define TuyaAppSDKSample_iOS_Swift_Bridging_Header_h
+#ifndef ThingAppSDKSample_iOS_Swift_Bridging_Header_h
+#define ThingAppSDKSample_iOS_Swift_Bridging_Header_h
 
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <SGQRCode/SGQRCode.h>
 
-#endif /* TuyaAppSDKSample_iOS_Swift_Bridging_Header_h */
+#endif /* ThingAppSDKSample_iOS_Swift_Bridging_Header_h */

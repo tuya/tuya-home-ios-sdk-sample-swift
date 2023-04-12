@@ -1,11 +1,11 @@
 //
 //  SceneDelegate.swift
-//  TuyaAppSDKSample-iOS-Swift
+//  ThingAppSDKSample-iOS-Swift
 //
-//  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
+//  Copyright (c) 2014-2021 Thing Inc. (https://developer.tuya.com/)
 
 import UIKit
-import TuyaSmartBaseKit
+import ThingSmartBaseKit
 
 @available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -21,9 +21,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             self.window = UIWindow(windowScene: windowScene)
             
-            if TuyaSmartUser.sharedInstance().isLogin {
+            if ThingSmartUser.sharedInstance().isLogin {
                 // User has already logged, launch the app with the main view controller.
-                let storyboard = UIStoryboard(name: "TuyaSmartMain", bundle: nil)
+                let storyboard = UIStoryboard(name: "ThingSmartMain", bundle: nil)
                 let vc = storyboard.instantiateInitialViewController()
                 window?.rootViewController = vc
                 window?.makeKeyAndVisible()

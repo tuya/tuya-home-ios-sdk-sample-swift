@@ -1,11 +1,11 @@
 //
 //  RegisterTableViewController.swift
-//  TuyaAppSDKSample-iOS-Swift
+//  ThingAppSDKSample-iOS-Swift
 //
-//  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
+//  Copyright (c) 2014-2021 Thing Inc. (https://developer.tuya.com/)
 
 import UIKit
-import TuyaSmartBaseKit
+import ThingSmartBaseKit
 
 class RegisterTableViewController: UITableViewController {
     
@@ -51,7 +51,7 @@ class RegisterTableViewController: UITableViewController {
         
         switch type {
         case .email:
-            TuyaSmartUser.sharedInstance().sendVerifyCode(byRegisterEmail: countryCode, email: account) {  [weak self] in
+            ThingSmartUser.sharedInstance().sendVerifyCode(byRegisterEmail: countryCode, email: account) {  [weak self] in
                 guard let self = self else { return }
                 Alert.showBasicAlert(on: self, with: NSLocalizedString("Verification Code Sent Successfully", comment: ""), message: NSLocalizedString("Please check your email for the code.", comment: ""))
                 
@@ -62,7 +62,7 @@ class RegisterTableViewController: UITableViewController {
             }
 
         case .phone:
-            TuyaSmartUser.sharedInstance().sendVerifyCode(withUserName: account, region: nil, countryCode: countryCode, type: 1) {
+            ThingSmartUser.sharedInstance().sendVerifyCode(withUserName: account, region: nil, countryCode: countryCode, type: 1) {
                 [weak self] in
                 guard let self = self else { return }
                 Alert.showBasicAlert(on: self, with: NSLocalizedString("Verification Code Sent Successfully", comment: ""), message: NSLocalizedString("Please check your message for the code.", comment: ""))
@@ -82,7 +82,7 @@ class RegisterTableViewController: UITableViewController {
         
         switch type {
         case .email:
-            TuyaSmartUser.sharedInstance().register(byEmail: countryCode, email: account, password: password, code: verificationCode) { [weak self] in
+            ThingSmartUser.sharedInstance().register(byEmail: countryCode, email: account, password: password, code: verificationCode) { [weak self] in
                 guard let self = self else { return }
                 
                 let action = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default) { _ in
@@ -96,7 +96,7 @@ class RegisterTableViewController: UITableViewController {
                 Alert.showBasicAlert(on: self, with: NSLocalizedString("Failed to Register", comment: ""), message: errorMessage)
             }
         case .phone:
-            TuyaSmartUser.sharedInstance().register(byPhone: countryCode, phoneNumber: account, password: password, code: verificationCode) { [weak self] in
+            ThingSmartUser.sharedInstance().register(byPhone: countryCode, phoneNumber: account, password: password, code: verificationCode) { [weak self] in
                 guard let self = self else { return }
                 
                 let action = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default) { _ in

@@ -1,11 +1,11 @@
 //
 //  DualModeTableViewController.swift
-//  TuyaAppSDKSample-iOS-Swift
+//  ThingAppSDKSample-iOS-Swift
 //
-//  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
+//  Copyright (c) 2014-2021 Thing Inc. (https://developer.tuya.com/)
 
 import UIKit
-import TuyaSmartBLEKit
+import ThingSmartBLEKit
 
 class DualModeTableViewController: UITableViewController {
     
@@ -23,10 +23,10 @@ class DualModeTableViewController: UITableViewController {
     }
 
     @IBAction func searchTapped(_ sender: UIBarButtonItem) {
-        TuyaSmartBLEManager.sharedInstance().delegate = self
+        ThingSmartBLEManager.sharedInstance().delegate = self
         
         // Start finding un-paired BLE devices, it's the same process as single BLE mode.
-        TuyaSmartBLEManager.sharedInstance().startListening(true)
+        ThingSmartBLEManager.sharedInstance().startListening(true)
         
         SVProgressHUD.show(withStatus: NSLocalizedString("Searching", comment: ""))
         
@@ -38,41 +38,41 @@ class DualModeTableViewController: UITableViewController {
             SVProgressHUD.dismiss()
         }
         
-        TuyaSmartBLEManager.sharedInstance().delegate = nil
-        TuyaSmartBLEManager.sharedInstance().stopListening(true)
+        ThingSmartBLEManager.sharedInstance().delegate = nil
+        ThingSmartBLEManager.sharedInstance().stopListening(true)
         
-        TuyaSmartBLEWifiActivator.sharedInstance().bleWifiDelegate = nil
-        TuyaSmartBLEWifiActivator.sharedInstance().stopDiscover()
+        ThingSmartBLEWifiActivator.sharedInstance().bleWifiDelegate = nil
+        ThingSmartBLEWifiActivator.sharedInstance().stopDiscover()
     }
 }
 
-extension DualModeTableViewController: TuyaSmartBLEManagerDelegate {
+extension DualModeTableViewController: ThingSmartBLEManagerDelegate {
     
     // When the BLE detector finds one un-paired BLE device, this delegate method will be called.
-    func didDiscoveryDevice(withDeviceInfo deviceInfo: TYBLEAdvModel) {
+    func didDiscoveryDevice(withDeviceInfo deviceInfo: ThingBLEAdvModel) {
         guard let homeID = Home.current?.homeId else {
             SVProgressHUD.showError(withStatus: NSLocalizedString("No Home Selected", comment: ""))
             return
         }
         
         let bleType = deviceInfo.bleType
-        if bleType == TYSmartBLETypeUnknow ||
-            bleType == TYSmartBLETypeBLE ||
-            bleType == TYSmartBLETypeBLESecurity ||
-            bleType == TYSmartBLETypeBLEPlus ||
-            bleType == TYSmartBLETypeBLEZigbee ||
-            bleType == TYSmartBLETypeBLEBeacon {
+        if bleType == ThingSmartBLETypeUnknow ||
+            bleType == ThingSmartBLETypeBLE ||
+            bleType == ThingSmartBLETypeBLESecurity ||
+            bleType == ThingSmartBLETypeBLEPlus ||
+            bleType == ThingSmartBLETypeBLEZigbee ||
+            bleType == ThingSmartBLETypeBLEBeacon {
             print("Please use BLE to pair: %@", deviceInfo.uuid ?? "")
             return
         }
         
         SVProgressHUD.show(withStatus: NSLocalizedString("Sending Data to the Device", comment: "Sending Data to the BLE Device"))
         
-        // Found a BLE device, then try to config that using TuyaSmartBLEWifiActivator.
+        // Found a BLE device, then try to config that using ThingSmartBLEWifiActivator.
         
-        TuyaSmartBLEWifiActivator.sharedInstance().bleWifiDelegate = self
+        ThingSmartBLEWifiActivator.sharedInstance().bleWifiDelegate = self
         
-        TuyaSmartBLEWifiActivator.sharedInstance().startConfigBLEWifiDevice(withUUID: deviceInfo.uuid, homeId: homeID, productId: deviceInfo.productId, ssid: ssidTextField.text ?? "", password: passwordTextField.text ?? "", timeout: 100) {
+        ThingSmartBLEWifiActivator.sharedInstance().startConfigBLEWifiDevice(withUUID: deviceInfo.uuid, homeId: homeID, productId: deviceInfo.productId, ssid: ssidTextField.text ?? "", password: passwordTextField.text ?? "", timeout: 100) {
             SVProgressHUD.show(withStatus: NSLocalizedString("Configuring", comment: ""))
         } failure: {
             SVProgressHUD.showError(withStatus: NSLocalizedString("Failed to Send Data to the Device", comment: ""))
@@ -81,10 +81,10 @@ extension DualModeTableViewController: TuyaSmartBLEManagerDelegate {
     }
 }
 
-extension DualModeTableViewController: TuyaSmartBLEWifiActivatorDelegate {
+extension DualModeTableViewController: ThingSmartBLEWifiActivatorDelegate {
     
     // When the device connected to the router and activate itself successfully to the cloud, this delegate method will be called.
-    func bleWifiActivator(_ activator: TuyaSmartBLEWifiActivator, didReceiveBLEWifiConfigDevice deviceModel: TuyaSmartDeviceModel?, error: Error?) {
+    func bleWifiActivator(_ activator: ThingSmartBLEWifiActivator, didReceiveBLEWifiConfigDevice deviceModel: ThingSmartDeviceModel?, error: Error?) {
         
         guard error == nil,
               let deviceModel = deviceModel else {

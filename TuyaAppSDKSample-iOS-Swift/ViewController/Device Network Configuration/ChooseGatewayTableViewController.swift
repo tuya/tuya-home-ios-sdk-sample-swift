@@ -1,24 +1,24 @@
 //
 //  ChooseGatewayTableViewController.swift
-//  TuyaAppSDKSample-iOS-Swift
+//  ThingAppSDKSample-iOS-Swift
 //
-//  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
+//  Copyright (c) 2014-2021 Thing Inc. (https://developer.tuya.com/)
 
 import UIKit
-import TuyaSmartDeviceKit
+import ThingSmartDeviceKit
 
 protocol ZigbeeGatewayPayload {
-    func didFinishSelecting(_ gateway: TuyaSmartDeviceModel?)
+    func didFinishSelecting(_ gateway: ThingSmartDeviceModel?)
 }
 
 class ChooseGatewayTableViewController: UITableViewController {
     
     // MARK: - Property
-    var gatewayList: [TuyaSmartDeviceModel] = []
-    var home: TuyaSmartHome?
+    var gatewayList: [ThingSmartDeviceModel] = []
+    var home: ThingSmartHome?
     var delegate: ZigbeeGatewayPayload?
     
-    var selectedGateway: TuyaSmartDeviceModel?
+    var selectedGateway: ThingSmartDeviceModel?
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -40,10 +40,10 @@ class ChooseGatewayTableViewController: UITableViewController {
     // MARK: - Private method
     private func getGatewayList() {
         if Home.current != nil {
-            home = TuyaSmartHome(homeId: Home.current!.homeId)
+            home = ThingSmartHome(homeId: Home.current!.homeId)
             
             guard let list = home?.deviceList else { return }
-            gatewayList = list.filter { $0.deviceType == TuyaSmartDeviceModelTypeZigbeeGateway }
+            gatewayList = list.filter { $0.deviceType == ThingSmartDeviceModelTypeZigbeeGateway }
             
             tableView.reloadData()
         }

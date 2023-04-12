@@ -1,11 +1,11 @@
 //
 //  ResetPasswordTableViewController.swift
-//  TuyaAppSDKSample-iOS-Swift
+//  ThingAppSDKSample-iOS-Swift
 //
-//  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
+//  Copyright (c) 2014-2021 Thing Inc. (https://developer.tuya.com/)
 
 import UIKit
-import TuyaSmartBaseKit
+import ThingSmartBaseKit
 
 class ResetPasswordTableViewController: UITableViewController {
     
@@ -30,7 +30,7 @@ class ResetPasswordTableViewController: UITableViewController {
         let account = accountTextField.text ?? ""
         
         if account.contains("@") {
-            TuyaSmartUser.sharedInstance().sendVerifyCode(byEmail: countryCode, email: account) { [weak self] in
+            ThingSmartUser.sharedInstance().sendVerifyCode(byEmail: countryCode, email: account) { [weak self] in
                 guard let self = self else { return }
                 Alert.showBasicAlert(on: self, with: NSLocalizedString(NSLocalizedString("Failed to Login", comment: ""), comment: ""), message: NSLocalizedString("Please check your email for the code.", comment: ""))
                 
@@ -41,7 +41,7 @@ class ResetPasswordTableViewController: UITableViewController {
             }
 
         } else {
-            TuyaSmartUser.sharedInstance().sendVerifyCode(withUserName: account, region: nil, countryCode: countryCode, type: 2) {
+            ThingSmartUser.sharedInstance().sendVerifyCode(withUserName: account, region: nil, countryCode: countryCode, type: 2) {
                 [weak self] in
                 guard let self = self else { return }
                 Alert.showBasicAlert(on: self, with: NSLocalizedString("Verification Code Sent Successfully", comment: ""), message: NSLocalizedString("Please check your message for the code.", comment: ""))
@@ -62,7 +62,7 @@ class ResetPasswordTableViewController: UITableViewController {
         let verificationCode = verificationCodeTextField.text ?? ""
         
         if account.contains("@") {
-            TuyaSmartUser.sharedInstance().resetPassword(byEmail: countryCode, email: account, newPassword: password, code: verificationCode) { [weak self] in
+            ThingSmartUser.sharedInstance().resetPassword(byEmail: countryCode, email: account, newPassword: password, code: verificationCode) { [weak self] in
                 guard let self = self else { return }
                 Alert.showBasicAlert(on: self, with: NSLocalizedString("Password Reset Successfully", comment: ""), message: NSLocalizedString("Please navigate back.", comment: ""))
             } failure: { [weak self] (error) in
@@ -72,7 +72,7 @@ class ResetPasswordTableViewController: UITableViewController {
             }
 
         } else {
-            TuyaSmartUser.sharedInstance().resetPassword(byPhone: countryCode, phoneNumber: account, newPassword: password, code: verificationCode) { [weak self] in
+            ThingSmartUser.sharedInstance().resetPassword(byPhone: countryCode, phoneNumber: account, newPassword: password, code: verificationCode) { [weak self] in
                 guard let self = self else { return }
                 Alert.showBasicAlert(on: self, with: NSLocalizedString("Password Reset Successfully", comment: ""), message: NSLocalizedString("Password Reset Successfully", comment: ""))
                 

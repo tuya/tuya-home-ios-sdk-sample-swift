@@ -1,11 +1,11 @@
 //
 //  TemperatureUnitTableViewController.swift
-//  TuyaAppSDKSample-iOS-Swift
+//  ThingAppSDKSample-iOS-Swift
 //
-//  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
+//  Copyright (c) 2014-2021 Thing Inc. (https://developer.tuya.com/)
 
 import UIKit
-import TuyaSmartBaseKit
+import ThingSmartBaseKit
 
 class TemperatureUnitTableViewController: UITableViewController {
     
@@ -15,9 +15,9 @@ class TemperatureUnitTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if TuyaSmartUser.sharedInstance().tempUnit == 1 {
+        if ThingSmartUser.sharedInstance().tempUnit == 1 {
             celsiusCell.accessoryType = .checkmark
-        } else if TuyaSmartUser.sharedInstance().tempUnit == 2 {
+        } else if ThingSmartUser.sharedInstance().tempUnit == 2 {
             fahrenheitCell.accessoryType = .checkmark
         }
     }
@@ -34,7 +34,7 @@ class TemperatureUnitTableViewController: UITableViewController {
             fahrenheitCell.accessoryType = .checkmark
         }
         
-        TuyaSmartUser.sharedInstance().updateTempUnit(withTempUnit: indexPath.row + 1) {
+        ThingSmartUser.sharedInstance().updateTempUnit(withTempUnit: indexPath.row + 1) {
             
         } failure: { [weak self] (error) in
             guard let self = self else { return }

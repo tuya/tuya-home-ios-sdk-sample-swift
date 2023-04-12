@@ -1,12 +1,12 @@
 //
 //  EditHomeTableViewController.swift
-//  TuyaAppSDKSample-iOS-Swift
+//  ThingAppSDKSample-iOS-Swift
 //
-//  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
+//  Copyright (c) 2014-2021 Thing Inc. (https://developer.tuya.com/)
 
 import UIKit
 import CoreLocation
-import TuyaSmartDeviceKit
+import ThingSmartDeviceKit
 
 class EditHomeTableViewController: UITableViewController {
     
@@ -15,7 +15,7 @@ class EditHomeTableViewController: UITableViewController {
     @IBOutlet weak var cityTextField: UITextField!
     
     // MARK: - Property
-    var home: TuyaSmartHome?
+    var home: ThingSmartHome?
     let locationManager = CLLocationManager()
     var latitude: CLLocationDegrees = 0
     var longitude: CLLocationDegrees = 0

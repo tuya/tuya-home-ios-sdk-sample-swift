@@ -1,19 +1,19 @@
 //
 //  Home.swift
-//  TuyaAppSDKSample-iOS-Swift
+//  ThingAppSDKSample-iOS-Swift
 //
-//  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
+//  Copyright (c) 2014-2021 Thing Inc. (https://developer.tuya.com/)
 
 import Foundation
-import TuyaSmartDeviceKit
+import ThingSmartDeviceKit
 
 struct Home {
-    static var current: TuyaSmartHomeModel? {
+    static var current: ThingSmartHomeModel? {
         get {
             let defaults = UserDefaults.standard
             guard let homeID = defaults.string(forKey: "CurrentHome") else { return nil }
             guard let id = Int64(homeID)  else { return nil }
-            return TuyaSmartHome.init(homeId: id)?.homeModel
+            return ThingSmartHome.init(homeId: id)?.homeModel
         }
         set {
             let defaults = UserDefaults.standard

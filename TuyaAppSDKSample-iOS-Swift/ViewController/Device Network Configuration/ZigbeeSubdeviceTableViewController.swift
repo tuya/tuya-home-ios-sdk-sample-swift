@@ -1,12 +1,12 @@
 //
 //  ZigbeeSubdeviceTableViewController.swift
-//  TuyaAppSDKSample-iOS-Swift
+//  ThingAppSDKSample-iOS-Swift
 //
-//  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
+//  Copyright (c) 2014-2021 Thing Inc. (https://developer.tuya.com/)
 
 import UIKit
-import TuyaSmartDeviceKit
-import TuyaSmartActivatorKit
+import ThingSmartDeviceKit
+import ThingSmartActivatorKit
 
 class ZigbeeSubdeviceTableViewController: UITableViewController {
     
@@ -14,7 +14,7 @@ class ZigbeeSubdeviceTableViewController: UITableViewController {
     @IBOutlet weak var gatewayNameLabel: UILabel!
     
     // MARK: - Property
-    var gateway: TuyaSmartDeviceModel?
+    var gateway: ThingSmartDeviceModel?
     private var isSuccess = false
 
     // MARK: - Lifecycle
@@ -35,8 +35,8 @@ class ZigbeeSubdeviceTableViewController: UITableViewController {
         if !isSuccess {
             SVProgressHUD.dismiss()
         }
-        TuyaSmartActivator.sharedInstance()?.delegate = nil
-        TuyaSmartActivator.sharedInstance()?.stopActiveSubDevice(withGwId: deviceID)
+        ThingSmartActivator.sharedInstance()?.delegate = nil
+        ThingSmartActivator.sharedInstance()?.stopActiveSubDevice(withGwId: deviceID)
     }
     
     // MARK: - Navigation
@@ -58,14 +58,14 @@ class ZigbeeSubdeviceTableViewController: UITableViewController {
         
         SVProgressHUD.show(withStatus: NSLocalizedString("Configuring", comment: ""))
         
-        TuyaSmartActivator.sharedInstance()?.delegate = self
+        ThingSmartActivator.sharedInstance()?.delegate = self
         
-        TuyaSmartActivator.sharedInstance()?.activeSubDevice(withGwId: gateway.devId, timeout: 100)
+        ThingSmartActivator.sharedInstance()?.activeSubDevice(withGwId: gateway.devId, timeout: 100)
     }
 }
 
-extension ZigbeeSubdeviceTableViewController: TuyaSmartActivatorDelegate {
-    func activator(_ activator: TuyaSmartActivator!, didReceiveDevice deviceModel: TuyaSmartDeviceModel!, error: Error!) {
+extension ZigbeeSubdeviceTableViewController: ThingSmartActivatorDelegate {
+    func activator(_ activator: ThingSmartActivator!, didReceiveDevice deviceModel: ThingSmartDeviceModel!, error: Error!) {
         if deviceModel != nil && error == nil {
             // Success
             let name = deviceModel.name ?? NSLocalizedString("Unknown Name", comment: "Unknown name device.")
@@ -84,7 +84,7 @@ extension ZigbeeSubdeviceTableViewController: TuyaSmartActivatorDelegate {
 }
 
 extension ZigbeeSubdeviceTableViewController: ZigbeeGatewayPayload {
-    func didFinishSelecting(_ gateway: TuyaSmartDeviceModel?) {
+    func didFinishSelecting(_ gateway: ThingSmartDeviceModel?) {
         self.gateway = gateway
     }
 }

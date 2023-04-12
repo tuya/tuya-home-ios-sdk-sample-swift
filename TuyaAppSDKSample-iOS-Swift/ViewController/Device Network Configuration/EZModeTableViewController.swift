@@ -1,11 +1,11 @@
 //
 //  EZModeTableViewController.swift
-//  TuyaAppSDKSample-iOS-Swift
+//  ThingAppSDKSample-iOS-Swift
 //
-//  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
+//  Copyright (c) 2014-2021 Thing Inc. (https://developer.tuya.com/)
 
 import UIKit
-import TuyaSmartActivatorKit
+import ThingSmartActivatorKit
 
 class EZModeTableViewController: UITableViewController {
     // MARK: - IBOutlet
@@ -37,7 +37,7 @@ class EZModeTableViewController: UITableViewController {
         guard let homeID = Home.current?.homeId else { return }
         SVProgressHUD.show(withStatus: NSLocalizedString("Requesting for Token", comment: ""))
         
-        TuyaSmartActivator.sharedInstance()?.getTokenWithHomeId(homeID, success: { [weak self] (token) in
+        ThingSmartActivator.sharedInstance()?.getTokenWithHomeId(homeID, success: { [weak self] (token) in
             guard let self = self else { return }
             self.token = token ?? ""
             self.startConfiguration(with: self.token)
@@ -52,22 +52,22 @@ class EZModeTableViewController: UITableViewController {
         
         let ssid = ssidTextField.text ?? ""
         let password = passwordTextField.text ?? ""
-        TuyaSmartActivator.sharedInstance()?.delegate = self
-        TuyaSmartActivator.sharedInstance()?.startConfigWiFi(.EZ, ssid: ssid, password: password, token: token, timeout: 100)
+        ThingSmartActivator.sharedInstance()?.delegate = self
+        ThingSmartActivator.sharedInstance()?.startConfigWiFi(.EZ, ssid: ssid, password: password, token: token, timeout: 100)
     }
     
     private func stopConfigWifi() {
         if !isSuccess {
             SVProgressHUD.dismiss()
         }
-        TuyaSmartActivator.sharedInstance()?.delegate = nil
-        TuyaSmartActivator.sharedInstance()?.stopConfigWiFi()
+        ThingSmartActivator.sharedInstance()?.delegate = nil
+        ThingSmartActivator.sharedInstance()?.stopConfigWiFi()
     }
     
 }
 
-extension EZModeTableViewController: TuyaSmartActivatorDelegate {
-    func activator(_ activator: TuyaSmartActivator!, didReceiveDevice deviceModel: TuyaSmartDeviceModel!, error: Error!) {
+extension EZModeTableViewController: ThingSmartActivatorDelegate {
+    func activator(_ activator: ThingSmartActivator!, didReceiveDevice deviceModel: ThingSmartDeviceModel!, error: Error!) {
         if deviceModel != nil && error == nil {
             // Success
             let name = deviceModel.name ?? NSLocalizedString("Unknown Name", comment: "Unknown name device.")

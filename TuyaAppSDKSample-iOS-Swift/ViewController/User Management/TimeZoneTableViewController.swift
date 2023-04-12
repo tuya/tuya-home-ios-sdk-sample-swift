@@ -1,11 +1,11 @@
 //
 //  TimeZoneTableViewController.swift
-//  TuyaAppSDKSample-iOS-Swift
+//  ThingAppSDKSample-iOS-Swift
 //
-//  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
+//  Copyright (c) 2014-2021 Thing Inc. (https://developer.tuya.com/)
 
 import UIKit
-import TuyaSmartBaseKit
+import ThingSmartBaseKit
 
 class TimeZoneTableViewController: UITableViewController {
     
@@ -32,7 +32,7 @@ class TimeZoneTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "time-zone-cell")!
         cell.textLabel?.text = timeZoneIdentifier
         
-        if TuyaSmartUser.sharedInstance().timezoneId == timeZoneIdentifier {
+        if ThingSmartUser.sharedInstance().timezoneId == timeZoneIdentifier {
             cell.accessoryType = .checkmark
         } else {
             cell.accessoryType = .none
@@ -53,7 +53,7 @@ class TimeZoneTableViewController: UITableViewController {
         let cell = tableView.cellForRow(at: indexPath)
         cell?.accessoryType = .checkmark
         
-        TuyaSmartUser.sharedInstance().updateTimeZone(withTimeZoneId: selectedTimeZone) {
+        ThingSmartUser.sharedInstance().updateTimeZone(withTimeZoneId: selectedTimeZone) {
             
         } failure: { [weak self] (error) in
             guard let self = self else { return }

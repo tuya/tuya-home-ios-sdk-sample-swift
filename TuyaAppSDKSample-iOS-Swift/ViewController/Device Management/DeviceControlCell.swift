@@ -1,11 +1,11 @@
 //
 //  DeviceControlCell.swift
-//  TuyaAppSDKSample-iOS-Swift
+//  ThingAppSDKSample-iOS-Swift
 //
-//  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
+//  Copyright (c) 2014-2021 Thing Inc. (https://developer.tuya.com/)
 
 import Foundation
-import TuyaSmartDeviceKit
+import ThingSmartDeviceKit
 
 enum DeviceControlCell: String {
     case switchCell   = "device-switch-cell"
@@ -38,7 +38,7 @@ enum DeviceControlCell: String {
         }
     }
     
-    static func cellIdentifier(with schema: TuyaSmartSchemaModel) -> Self {
+    static func cellIdentifier(with schema: ThingSmartSchemaModel) -> Self {
         let type = schema.type == "obj" ? schema.property.type : schema.type
         return cellIdentifier(with: type)
     }

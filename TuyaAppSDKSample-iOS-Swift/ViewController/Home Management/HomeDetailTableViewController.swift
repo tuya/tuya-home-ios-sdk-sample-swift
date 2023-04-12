@@ -1,11 +1,11 @@
 //
 //  HomeDetailTableViewController.swift
-//  TuyaAppSDKSample-iOS-Swift
+//  ThingAppSDKSample-iOS-Swift
 //
-//  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
+//  Copyright (c) 2014-2021 Thing Inc. (https://developer.tuya.com/)
 
 import UIKit
-import TuyaSmartDeviceKit
+import ThingSmartDeviceKit
 
 class HomeDetailTableViewController: UITableViewController {
     
@@ -19,8 +19,8 @@ class HomeDetailTableViewController: UITableViewController {
     
     
     // MARK: - Property
-    var homeModel: TuyaSmartHomeModel?
-    var home: TuyaSmartHome?
+    var homeModel: ThingSmartHomeModel?
+    var home: ThingSmartHome?
 
     //MARK: - Lifecycle
     override func viewWillAppear(_ animated: Bool) {
@@ -28,7 +28,7 @@ class HomeDetailTableViewController: UITableViewController {
         
         guard let model = homeModel else { return }
         
-        home = TuyaSmartHome(homeId: model.homeId)
+        home = ThingSmartHome(homeId: model.homeId)
         
         homeIDLabel.text = String(model.homeId)
         homeNameLabel.text = model.name

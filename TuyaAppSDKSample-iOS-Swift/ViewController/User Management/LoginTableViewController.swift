@@ -1,11 +1,11 @@
 //
 //  LoginTableViewController.swift
-//  TuyaAppSDKSample-iOS-Swift
+//  ThingAppSDKSample-iOS-Swift
 //
-//  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
+//  Copyright (c) 2014-2021 Thing Inc. (https://developer.tuya.com/)
 
 import UIKit
-import TuyaSmartBaseKit
+import ThingSmartBaseKit
 
 class LoginTableViewController: UITableViewController {
     // MARK: - IBOutlet
@@ -24,7 +24,7 @@ class LoginTableViewController: UITableViewController {
     @IBAction func loginTapped(_ sender: UIButton) {
         let account = accountTextField.text ?? ""
         
-        // Simply examine weather the account is an email address of a phone number. Tuya SDK will handle the validation.
+        // Simply examine weather the account is an email address of a phone number. Thing SDK will handle the validation.
         if account.contains("@") {
             login(by: .email)
         } else {
@@ -40,11 +40,11 @@ class LoginTableViewController: UITableViewController {
         
         switch type {
         case .email:
-            TuyaSmartUser.sharedInstance().login(byEmail: countryCode,
+            ThingSmartUser.sharedInstance().login(byEmail: countryCode,
                                                  email: account,
                                                  password: password) { [weak self] in
                 guard let self = self else { return }
-                let storyboard = UIStoryboard(name: "TuyaSmartMain", bundle: nil)
+                let storyboard = UIStoryboard(name: "ThingSmartMain", bundle: nil)
                 let vc = storyboard.instantiateInitialViewController()
                 self.window?.rootViewController = vc
 
@@ -54,9 +54,9 @@ class LoginTableViewController: UITableViewController {
             }
 
         case .phone:
-            TuyaSmartUser.sharedInstance().login(byPhone: countryCode, phoneNumber: account, password: password) { [weak self] in
+            ThingSmartUser.sharedInstance().login(byPhone: countryCode, phoneNumber: account, password: password) { [weak self] in
                 guard let self = self else { return }
-                let storyboard = UIStoryboard(name: "TuyaSmartMain", bundle: nil)
+                let storyboard = UIStoryboard(name: "ThingSmartMain", bundle: nil)
                 let vc = storyboard.instantiateInitialViewController()
                 self.window?.rootViewController = vc
                 

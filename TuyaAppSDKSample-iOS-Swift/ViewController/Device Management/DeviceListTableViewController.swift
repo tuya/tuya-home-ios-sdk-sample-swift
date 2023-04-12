@@ -1,22 +1,22 @@
 //
 //  DeviceListTableViewController.swift
-//  TuyaAppSDKSample-iOS-Swift
+//  ThingAppSDKSample-iOS-Swift
 //
-//  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
+//  Copyright (c) 2014-2021 Thing Inc. (https://developer.tuya.com/)
 
 import UIKit
-import TuyaSmartDeviceKit
+import ThingSmartDeviceKit
 
 class DeviceListTableViewController: UITableViewController {
     // MARK: - Property
-    private var home: TuyaSmartHome?
+    private var home: ThingSmartHome?
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         if Home.current != nil {
-            home = TuyaSmartHome(homeId: Home.current!.homeId)
+            home = ThingSmartHome(homeId: Home.current!.homeId)
             home?.delegate = self
             updateHomeDetail()
         }
@@ -46,15 +46,15 @@ class DeviceListTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         
         guard let deviceID = home?.deviceList[indexPath.row].devId else { return }
-        guard let device = TuyaSmartDevice(deviceId: deviceID) else { return }
+        guard let device = ThingSmartDevice(deviceId: deviceID) else { return }
         
         let storyboard = UIStoryboard(name: "DeviceList", bundle: nil)
         let isSupportThingModel = device.deviceModel.isSupportThingModelDevice()
-        let identifier = isSupportThingModel ? "TuyaLinkDeviceControlController" : "DeviceControlTableViewController"
+        let identifier = isSupportThingModel ? "ThingLinkDeviceControlController" : "DeviceControlTableViewController"
         
         let vc = storyboard.instantiateViewController(withIdentifier: identifier)
         if isSupportThingModel {
-            jumpTuyaLinkDeviceControl(vc as! TuyaLinkDeviceControlController, device: device)
+            jumpTuyaLinkDeviceControl(vc as! ThingLinkDeviceControlController, device: device)
         } else {
             jumpNormalDeviceControl(vc as! DeviceControlTableViewController, device: device)
         }
@@ -71,7 +71,7 @@ class DeviceListTableViewController: UITableViewController {
         })
     }
     
-    private func jumpTuyaLinkDeviceControl(_ vc: TuyaLinkDeviceControlController, device: TuyaSmartDevice) {
+    private func jumpTuyaLinkDeviceControl(_ vc: ThingLinkDeviceControlController, device: ThingSmartDevice) {
         let goTuyaLinkControl = { () -> Void in
             vc.device = device
             self.navigationController?.pushViewController(vc, animated: true)
@@ -90,31 +90,31 @@ class DeviceListTableViewController: UITableViewController {
         }
     }
     
-    private func jumpNormalDeviceControl(_ vc: DeviceControlTableViewController, device: TuyaSmartDevice) {
+    private func jumpNormalDeviceControl(_ vc: DeviceControlTableViewController, device: ThingSmartDevice) {
         vc.device = device
         navigationController?.pushViewController(vc, animated: true)
     }
 
 }
 
-extension DeviceListTableViewController: TuyaSmartHomeDelegate{
-    func homeDidUpdateInfo(_ home: TuyaSmartHome!) {
+extension DeviceListTableViewController: ThingSmartHomeDelegate{
+    func homeDidUpdateInfo(_ home: ThingSmartHome!) {
         tableView.reloadData()
     }
     
-    func home(_ home: TuyaSmartHome!, didAddDeivice device: TuyaSmartDeviceModel!) {
+    func home(_ home: ThingSmartHome!, didAddDeivice device: ThingSmartDeviceModel!) {
         tableView.reloadData()
     }
     
-    func home(_ home: TuyaSmartHome!, didRemoveDeivice devId: String!) {
+    func home(_ home: ThingSmartHome!, didRemoveDeivice devId: String!) {
         tableView.reloadData()
     }
     
-    func home(_ home: TuyaSmartHome!, deviceInfoUpdate device: TuyaSmartDeviceModel!) {
+    func home(_ home: ThingSmartHome!, deviceInfoUpdate device: ThingSmartDeviceModel!) {
         tableView.reloadData()
     }
     
-    func home(_ home: TuyaSmartHome!, device: TuyaSmartDeviceModel!, dpsUpdate dps: [AnyHashable : Any]!) {
+    func home(_ home: ThingSmartHome!, device: ThingSmartDeviceModel!, dpsUpdate dps: [AnyHashable : Any]!) {
         tableView.reloadData()
     }
 }

@@ -1,11 +1,11 @@
 //
 //  DeviceDetailTableViewController.swift
-//  TuyaAppSDKSample-iOS-Swift
+//  ThingAppSDKSample-iOS-Swift
 //
-//  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
+//  Copyright (c) 2014-2021 Thing Inc. (https://developer.tuya.com/)
 
 import UIKit
-import TuyaSmartDeviceKit
+import ThingSmartDeviceKit
 
 class DeviceDetailTableViewController: UITableViewController {
     
@@ -16,7 +16,7 @@ class DeviceDetailTableViewController: UITableViewController {
     @IBOutlet weak var removeDeviceButton: UIButton!
     
     // MARK: - Property
-    var device: TuyaSmartDevice?
+    var device: ThingSmartDevice?
 
     // MARK: - Lifecycle
     override func viewDidLoad() {

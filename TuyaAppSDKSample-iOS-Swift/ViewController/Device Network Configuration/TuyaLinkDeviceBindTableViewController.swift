@@ -1,24 +1,24 @@
 //
-//  TuyaLinkDeviceBindTableViewController.swift
-//  TuyaAppSDKSample-iOS-Swift
+//  ThingLinkDeviceBindTableViewController.swift
+//  ThingAppSDKSample-iOS-Swift
 //
-//  Copyright (c) 2014-2022 Tuya Inc. (https://developer.tuya.com/)
+//  Copyright (c) 2014-2022 Thing Inc. (https://developer.tuya.com/)
 
 import UIKit
-import TuyaSmartActivatorKit
-import TuyaSmartDeviceKit
+import ThingSmartActivatorKit
+import ThingSmartDeviceKit
 
-class TuyaLinkDeviceBindTableViewController: UITableViewController {
+class ThingLinkDeviceBindTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "TuyaLink Bind"
+        title = "ThingLink Bind"
     }
     
     func bindTuyaLink(qrcode codeStr: String?) -> Void {
         let homeId = Home.current?.homeId
         SVProgressHUD.show()
-        let act = TuyaSmartTuyaLinkActivator.init()
+        let act = ThingSmartTuyaLinkActivator.init()
         act.bindTuyaLinkDevice(withQRCode: codeStr ?? "", homeId: homeId ?? 0) { device in
             SVProgressHUD.show(withStatus: "Bind Success. \n devId: \(device.devId ?? "") \n name: \(device.name ?? "")")
         } failure: { error in

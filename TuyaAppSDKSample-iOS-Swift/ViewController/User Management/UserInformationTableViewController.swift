@@ -1,12 +1,12 @@
 //
 //  UserInformationTableViewController.swift
-//  TuyaAppSDKSample-iOS-Swift
+//  ThingAppSDKSample-iOS-Swift
 //
-//  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
+//  Copyright (c) 2014-2021 Thing Inc. (https://developer.tuya.com/)
 
 import UIKit
 import CoreLocation
-import TuyaSmartBaseKit
+import ThingSmartBaseKit
 
 class UserInformationTableViewController: UITableViewController {
     // MARK: IBOutlet
@@ -26,12 +26,12 @@ class UserInformationTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        userNameLabel.text = TuyaSmartUser.sharedInstance().userName
-        phoneNumberLabel.text = TuyaSmartUser.sharedInstance().phoneNumber
-        emailAddressLabel.text = TuyaSmartUser.sharedInstance().email
-        countryCodeLabel.text = TuyaSmartUser.sharedInstance().countryCode
-        timeZoneLabel.text = TuyaSmartUser.sharedInstance().timezoneId
-        unitLabel.text = TuyaSmartUser.sharedInstance().tempUnit == 1 ? NSLocalizedString("Celsius", comment: "") : NSLocalizedString("Fahrenheit", comment: "")
+        userNameLabel.text = ThingSmartUser.sharedInstance().userName
+        phoneNumberLabel.text = ThingSmartUser.sharedInstance().phoneNumber
+        emailAddressLabel.text = ThingSmartUser.sharedInstance().email
+        countryCodeLabel.text = ThingSmartUser.sharedInstance().countryCode
+        timeZoneLabel.text = ThingSmartUser.sharedInstance().timezoneId
+        unitLabel.text = ThingSmartUser.sharedInstance().tempUnit == 1 ? NSLocalizedString("Celsius", comment: "") : NSLocalizedString("Fahrenheit", comment: "")
     }
     
     // MARK: - IBAction
@@ -52,7 +52,7 @@ class UserInformationTableViewController: UITableViewController {
         
         let deactivateAction = UIAlertAction(title: NSLocalizedString("Deactivate", comment: "Confirm deactivate."), style: .destructive) { [weak self] (action) in
             guard let self = self else { return }
-            TuyaSmartUser.sharedInstance().cancelAccount {
+            ThingSmartUser.sharedInstance().cancelAccount {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = storyboard.instantiateInitialViewController()
                 self.window?.rootViewController = vc
@@ -80,7 +80,7 @@ class UserInformationTableViewController: UITableViewController {
 extension UserInformationTableViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = manager.location?.coordinate else { return }
-        TuyaSmartSDK.sharedInstance().updateLatitude(location.latitude, longitude: location.longitude)
+        ThingSmartSDK.sharedInstance().updateLatitude(location.latitude, longitude: location.longitude)
         Alert.showBasicAlert(on: self, with: "Update Successfully", message: "")
     }
 }

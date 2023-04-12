@@ -1,11 +1,11 @@
 //
 //  BLEModeViewController.swift
-//  TuyaAppSDKSample-iOS-Swift
+//  ThingAppSDKSample-iOS-Swift
 //
-//  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
+//  Copyright (c) 2014-2021 Thing Inc. (https://developer.tuya.com/)
 
 import UIKit
-import TuyaSmartBLEKit
+import ThingSmartBLEKit
 
 class BLEModeViewController: UIViewController {
 
@@ -21,10 +21,10 @@ class BLEModeViewController: UIViewController {
    
     // MARK: - IBAction
     @IBAction func searchTapped(_ sender: UIBarButtonItem) {
-        TuyaSmartBLEManager.sharedInstance().delegate = self
+        ThingSmartBLEManager.sharedInstance().delegate = self
         
         // Start finding un-paired BLE devices.
-        TuyaSmartBLEManager.sharedInstance().startListening(true)
+        ThingSmartBLEManager.sharedInstance().startListening(true)
         
         SVProgressHUD.show(withStatus: NSLocalizedString("Searching", comment: ""))
     }
@@ -35,28 +35,28 @@ class BLEModeViewController: UIViewController {
             SVProgressHUD.dismiss()
         }
 
-        TuyaSmartBLEManager.sharedInstance().delegate = nil
-        TuyaSmartBLEManager.sharedInstance().stopListening(true)
+        ThingSmartBLEManager.sharedInstance().delegate = nil
+        ThingSmartBLEManager.sharedInstance().stopListening(true)
     }
 
 }
 
-// MARK: - TuyaSmartBLEManagerDelegate
-extension BLEModeViewController: TuyaSmartBLEManagerDelegate {
+// MARK: - ThingSmartBLEManagerDelegate
+extension BLEModeViewController: ThingSmartBLEManagerDelegate {
     
     // When the BLE detector finds one un-paired BLE device, this delegate method will be called.
-    func didDiscoveryDevice(withDeviceInfo deviceInfo: TYBLEAdvModel) {
+    func didDiscoveryDevice(withDeviceInfo deviceInfo: ThingBLEAdvModel) {
         guard let homeID = Home.current?.homeId else {
             SVProgressHUD.showError(withStatus: NSLocalizedString("No Home Selected", comment: ""))
             return
         }
         
         let bleType = deviceInfo.bleType
-        if bleType == TYSmartBLETypeBLEWifi ||
-            bleType == TYSmartBLETypeBLEWifiSecurity ||
-            bleType == TYSmartBLETypeBLEWifiPlugPlay ||
-            bleType == TYSmartBLETypeBLEWifiPriorBLE ||
-            bleType == TYSmartBLETypeBLELTESecurity {
+        if bleType == ThingSmartBLETypeBLEWifi ||
+            bleType == ThingSmartBLETypeBLEWifiSecurity ||
+            bleType == ThingSmartBLETypeBLEWifiPlugPlay ||
+            bleType == ThingSmartBLETypeBLEWifiPriorBLE ||
+            bleType == ThingSmartBLETypeBLELTESecurity {
             print("Please use Dual Mode to pair: %@", deviceInfo.uuid ?? "")
             return
         }
@@ -64,7 +64,7 @@ extension BLEModeViewController: TuyaSmartBLEManagerDelegate {
         SVProgressHUD.show(withStatus: NSLocalizedString("Activating", comment: "Active BLE."))
         
         // Trying to active the single BLE device.
-        TuyaSmartBLEManager.sharedInstance().activeBLE(deviceInfo, homeId: homeID) { model in
+        ThingSmartBLEManager.sharedInstance().activeBLE(deviceInfo, homeId: homeID) { model in
             let name = model.name ?? NSLocalizedString("Unknown Name", comment: "Unknown name device.")
             SVProgressHUD.showSuccess(withStatus: NSLocalizedString("Successfully Added \(name)", comment: "Successfully added one device."))
             self.isSuccess = true

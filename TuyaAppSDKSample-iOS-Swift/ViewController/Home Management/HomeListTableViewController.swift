@@ -1,17 +1,17 @@
 //
 //  HomeListTableViewController.swift
-//  TuyaAppSDKSample-iOS-Swift
+//  ThingAppSDKSample-iOS-Swift
 //
-//  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
+//  Copyright (c) 2014-2021 Thing Inc. (https://developer.tuya.com/)
 
 import UIKit
-import TuyaSmartDeviceKit
+import ThingSmartDeviceKit
 
 class HomeListTableViewController: UITableViewController {
     
     // MARK: - Property
-    private let homeManager = TuyaSmartHomeManager()
-    private var homeList = [TuyaSmartHomeModel]()
+    private let homeManager = ThingSmartHomeManager()
+    private var homeList = [ThingSmartHomeModel]()
 
     // MARK: - Lifecycle
     override func viewWillAppear(_ animated: Bool) {
@@ -62,7 +62,7 @@ class HomeListTableViewController: UITableViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "show-home-detail" else { return }
-        guard let model = sender as? TuyaSmartHomeModel else { return }
+        guard let model = sender as? ThingSmartHomeModel else { return }
         
         let destinationVC = segue.destination as! HomeDetailTableViewController
         destinationVC.homeModel = model

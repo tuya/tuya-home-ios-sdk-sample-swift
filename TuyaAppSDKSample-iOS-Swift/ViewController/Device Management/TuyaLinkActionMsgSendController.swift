@@ -1,15 +1,15 @@
 //
-//  TuyaLinkActionMsgSendController.swift
-//  TuyaAppSDKSample-iOS-Swift
+//  ThingLinkActionMsgSendController.swift
+//  ThingAppSDKSample-iOS-Swift
 //
-//  Copyright (c) 2014-2022 Tuya Inc. (https://developer.tuya.com/)
+//  Copyright (c) 2014-2022 Thing Inc. (https://developer.tuya.com/)
 
 import UIKit
-import TuyaSmartDeviceKit
+import ThingSmartDeviceKit
 
-class TuyaLinkActionMsgSendController: UITableViewController {
+class ThingLinkActionMsgSendController: UITableViewController {
 
-    public var action: TuyaSmartThingAction?
+    public var action: ThingSmartThingAction?
     public var callback: ((_ dict: [String: Any]?) -> Void)?
     
     private var payload: [String: Any] = [:]
@@ -44,7 +44,7 @@ class TuyaLinkActionMsgSendController: UITableViewController {
               let params = inputs[indexPath.row] as? [String: Any],
               let code = params["code"] as? String,
               let spec = params["typeSpec"] as? [String: Any],
-              let typeSpec = TuyaSmartSchemaPropertyModel.yy_model(with:  spec)
+              let typeSpec = ThingSmartSchemaPropertyModel.yy_model(with:  spec)
         else { return defaultCell }
         
         let cellIdentifier = DeviceControlCell.cellIdentifier(with: typeSpec.type ?? "")

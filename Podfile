@@ -1,4 +1,4 @@
-source 'https://cdn.cocoapods.org/'
+source 'https://github.com/CocoaPods/Specs'
 source 'https://github.com/tuya/TuyaPublicSpecs.git'
 source 'https://github.com/tuya/tuya-pod-specs.git'
 
@@ -9,7 +9,7 @@ target 'TuyaAppSDKSample-iOS-Swift' do
   pod 'SVProgressHUD'
   pod 'SGQRCode', '~> 4.1.0'
 
-  pod 'TuyaSmartHomeKit', '>= 4.0.0'
+  pod 'ThingSmartHomeKit', '~> 5.0.0'
 
 end
 

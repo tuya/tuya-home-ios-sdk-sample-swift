@@ -1,17 +1,17 @@
 //
 //  DeviceControlTableViewController.swift
-//  TuyaAppSDKSample-iOS-Swift
+//  ThingAppSDKSample-iOS-Swift
 //
-//  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
+//  Copyright (c) 2014-2021 Thing Inc. (https://developer.tuya.com/)
 
 import UIKit
 import NotificationCenter
-import TuyaSmartDeviceKit
+import ThingSmartDeviceKit
 
 class DeviceControlTableViewController: UITableViewController {
 
     // MARK: - Property
-    var device: TuyaSmartDevice?
+    var device: ThingSmartDevice?
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -212,18 +212,18 @@ class DeviceControlTableViewController: UITableViewController {
 
 }
 
-extension DeviceControlTableViewController: TuyaSmartDeviceDelegate {
-    func deviceInfoUpdate(_ device: TuyaSmartDevice) {
+extension DeviceControlTableViewController: ThingSmartDeviceDelegate {
+    func deviceInfoUpdate(_ device: ThingSmartDevice) {
         detectDeviceAvailability()
         tableView.reloadData()
     }
     
-    func deviceRemoved(_ device: TuyaSmartDevice) {
+    func deviceRemoved(_ device: ThingSmartDevice) {
         NotificationCenter.default.post(name: .deviceOffline, object: nil)
         SVProgressHUD.showError(withStatus: NSLocalizedString("The device has been removed.", comment: ""))
     }
     
-    func device(_ device: TuyaSmartDevice, dpsUpdate dps: [AnyHashable : Any]) {
+    func device(_ device: ThingSmartDevice, dpsUpdate dps: [AnyHashable : Any]) {
         detectDeviceAvailability()
         tableView.reloadData()
     }

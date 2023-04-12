@@ -1,19 +1,19 @@
 //
-//  TuyaSmartMainTableViewController.swift
-//  TuyaAppSDKSample-iOS-Swift
+//  ThingSmartMainTableViewController.swift
+//  ThingAppSDKSample-iOS-Swift
 //
-//  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
+//  Copyright (c) 2014-2021 Thing Inc. (https://developer.tuya.com/)
 
 import UIKit
-import TuyaSmartDeviceKit
+import ThingSmartDeviceKit
 
-class TuyaSmartMainTableViewController: UITableViewController {
+class ThingSmartMainTableViewController: UITableViewController {
     // MARK: - IBOutlet
     @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var currentHomeLabel: UILabel!
     
     // MARK: - Property
-    let homeManager = TuyaSmartHomeManager()
+    let homeManager = ThingSmartHomeManager()
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -49,7 +49,7 @@ class TuyaSmartMainTableViewController: UITableViewController {
         let alertViewController = UIAlertController(title: nil, message: NSLocalizedString("You're going to log out this account.", comment: "User tapped the logout button."), preferredStyle: .actionSheet)
         let logoutAction = UIAlertAction(title: NSLocalizedString("Logout", comment: "Confirm logout."), style: .destructive) { [weak self] (action) in
             guard let self = self else { return }
-            TuyaSmartUser.sharedInstance().loginOut {
+            ThingSmartUser.sharedInstance().loginOut {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = storyboard.instantiateInitialViewController()
                 self.window?.rootViewController = vc

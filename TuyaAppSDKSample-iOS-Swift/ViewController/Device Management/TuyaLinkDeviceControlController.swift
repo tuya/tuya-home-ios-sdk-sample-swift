@@ -1,18 +1,18 @@
 //
-//  TuyaLinkDeviceControlController.swift
-//  TuyaAppSDKSample-iOS-Swift
+//  ThingLinkDeviceControlController.swift
+//  ThingAppSDKSample-iOS-Swift
 //
-//  Copyright (c) 2014-2022 Tuya Inc. (https://developer.tuya.com/)
+//  Copyright (c) 2014-2022 Thing Inc. (https://developer.tuya.com/)
 
 import UIKit
 import NotificationCenter
-import TuyaSmartDeviceKit
+import ThingSmartDeviceKit
 import YYModel
 
-class TuyaLinkDeviceControlController: UITableViewController {
+class ThingLinkDeviceControlController: UITableViewController {
 
     // MARK: - Property
-    var device: TuyaSmartDevice?
+    var device: ThingSmartDevice?
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -116,7 +116,7 @@ class TuyaLinkDeviceControlController: UITableViewController {
         if indexPath.section == 0 {
             let properties = service.properties
             let property = properties[indexPath.row]
-            let typeSpec = TuyaSmartSchemaPropertyModel.yy_model(with: property.typeSpec)
+            let typeSpec = ThingSmartSchemaPropertyModel.yy_model(with: property.typeSpec)
             
             let cellIdentifier = DeviceControlCell.cellIdentifier(with: typeSpec?.type ?? "")
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier.rawValue)!
@@ -245,7 +245,7 @@ class TuyaLinkDeviceControlController: UITableViewController {
             let action = actions[indexPath.row]
             
             let storyboard = UIStoryboard(name: "DeviceList", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "TuyaLinkActionMsgSendController") as! TuyaLinkActionMsgSendController
+            let vc = storyboard.instantiateViewController(withIdentifier: "ThingLinkActionMsgSendController") as! ThingLinkActionMsgSendController
             vc.action = action
             vc.callback = { [weak self] payload in
                 guard let payload = payload,
@@ -261,18 +261,18 @@ class TuyaLinkDeviceControlController: UITableViewController {
     }
 }
 
-extension TuyaLinkDeviceControlController: TuyaSmartDeviceDelegate {
-    func deviceInfoUpdate(_ device: TuyaSmartDevice) {
+extension ThingLinkDeviceControlController: ThingSmartDeviceDelegate {
+    func deviceInfoUpdate(_ device: ThingSmartDevice) {
         detectDeviceAvailability()
         tableView.reloadData()
     }
     
-    func deviceRemoved(_ device: TuyaSmartDevice) {
+    func deviceRemoved(_ device: ThingSmartDevice) {
         NotificationCenter.default.post(name: .deviceOffline, object: nil)
         SVProgressHUD.showError(withStatus: NSLocalizedString("The device has been removed.", comment: ""))
     }
     
-    func device(_ device: TuyaSmartDevice, didReceiveThingMessageWith thingMessageType: TuyaSmartThingMessageType, payload: [AnyHashable : Any]) {
+    func device(_ device: ThingSmartDevice, didReceiveThingMessageWith thingMessageType: ThingSmartThingMessageType, payload: [AnyHashable : Any]) {
         switch thingMessageType {
         case .property:
             detectDeviceAvailability()
@@ -294,7 +294,7 @@ extension TuyaLinkDeviceControlController: TuyaSmartDeviceDelegate {
         }
     }
     
-    func device(_ device: TuyaSmartDevice, dpsUpdate dps: [AnyHashable : Any]) {
+    func device(_ device: ThingSmartDevice, dpsUpdate dps: [AnyHashable : Any]) {
         print("---dps update: \(dps)")
     }
 }

@@ -1,23 +1,23 @@
 //
 //  AppDelegate.swift
-//  TuyaAppSDKSample-iOS-Swift
+//  ThingAppSDKSample-iOS-Swift
 //
-//  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
+//  Copyright (c) 2014-2021 Thing Inc. (https://developer.tuya.com/)
 
 import UIKit
-import TuyaSmartBaseKit
+import ThingSmartBaseKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Initialize TuyaSmartSDK
-        TuyaSmartSDK.sharedInstance().start(withAppKey: AppKey.appKey, secretKey: AppKey.secretKey)
+        // Initialize ThingSmartSDK
+        ThingSmartSDK.sharedInstance().start(withAppKey: AppKey.appKey, secretKey: AppKey.secretKey)
         
         // Enable debug mode, which allows you to see logs.
         #if DEBUG
-        TuyaSmartSDK.sharedInstance().debugMode = true
+        ThingSmartSDK.sharedInstance().debugMode = true
         #endif
         
         SVProgressHUD.setDefaultStyle(.dark)
@@ -27,9 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if #available(iOS 13.0, *) {
             // Will go into scene delegate
         } else {
-            if TuyaSmartUser.sharedInstance().isLogin {
+            if ThingSmartUser.sharedInstance().isLogin {
                 // User has already logged, launch the app with the main view controller.
-                let storyboard = UIStoryboard(name: "TuyaSmartMain", bundle: nil)
+                let storyboard = UIStoryboard(name: "ThingSmartMain", bundle: nil)
                 let vc = storyboard.instantiateInitialViewController()
                 window?.rootViewController = vc
                 window?.makeKeyAndVisible()
