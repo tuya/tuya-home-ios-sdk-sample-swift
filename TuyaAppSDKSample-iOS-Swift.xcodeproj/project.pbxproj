@@ -29,7 +29,7 @@
 		AF3A25A425A8426D003EB9FF /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A25A325A8426D003EB9FF /* UIButtonExtension.swift */; };
 		AF3A25A725A844DA003EB9FF /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A25A625A844DA003EB9FF /* LoginTableViewController.swift */; };
 		AF3A25AA25A98A77003EB9FF /* ResetPasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A25A925A98A77003EB9FF /* ResetPasswordTableViewController.swift */; };
-		AF3A25AE25A99555003EB9FF /* TuyaSmartMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3A25AC25A99555003EB9FF /* TuyaSmartMain.storyboard */; };
+		AF3A25AE25A99555003EB9FF /* ThingSmartMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3A25AC25A99555003EB9FF /* ThingSmartMain.storyboard */; };
 		AF3A25B225A99E02003EB9FF /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A25B125A99E02003EB9FF /* UIViewControllerExtension.swift */; };
 		AF3A25B525A9ADD6003EB9FF /* AccountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A25B425A9ADD6003EB9FF /* AccountType.swift */; };
 		AF3A25B925AD7CC1003EB9FF /* UserInformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A25B825AD7CC1003EB9FF /* UserInformationTableViewController.swift */; };
@@ -46,7 +46,6 @@
 		AF5531E225A5992500E13562 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5531E125A5992500E13562 /* SceneDelegate.swift */; };
 		AF5531E925A5992800E13562 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF5531E825A5992800E13562 /* Assets.xcassets */; };
 		AF55320D25A59BE800E13562 /* AppKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF55320C25A59BE800E13562 /* AppKey.swift */; };
-		AF5E2F3125A59FE600DAF14E /* t_s.bmp in Resources */ = {isa = PBXBuildFile; fileRef = AF5E2F3025A59FE600DAF14E /* t_s.bmp */; };
 		AF5E2F3E25A5A08600DAF14E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5E2F3425A5A08600DAF14E /* LaunchScreen.storyboard */; };
 		AF5E2F3F25A5A08600DAF14E /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5E2F3625A5A08600DAF14E /* Register.storyboard */; };
 		AF5E2F4025A5A08600DAF14E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5E2F3825A5A08600DAF14E /* Main.storyboard */; };
@@ -102,7 +101,7 @@
 		AF3A25A325A8426D003EB9FF /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		AF3A25A625A844DA003EB9FF /* LoginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		AF3A25A925A98A77003EB9FF /* ResetPasswordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordTableViewController.swift; sourceTree = "<group>"; };
-		AF3A25AD25A99555003EB9FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TuyaSmartMain.storyboard; sourceTree = "<group>"; };
+		AF3A25AD25A99555003EB9FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ThingSmartMain.storyboard; sourceTree = "<group>"; };
 		AF3A25B125A99E02003EB9FF /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		AF3A25B425A9ADD6003EB9FF /* AccountType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountType.swift; sourceTree = "<group>"; };
 		AF3A25B825AD7CC1003EB9FF /* UserInformationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationTableViewController.swift; sourceTree = "<group>"; };
@@ -121,7 +120,6 @@
 		AF5531E825A5992800E13562 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF5531ED25A5992800E13562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF55320C25A59BE800E13562 /* AppKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppKey.swift; sourceTree = "<group>"; };
-		AF5E2F3025A59FE600DAF14E /* t_s.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = t_s.bmp; sourceTree = "<group>"; };
 		AF5E2F3525A5A08600DAF14E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF5E2F3725A5A08600DAF14E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Register.storyboard; sourceTree = "<group>"; };
 		AF5E2F3925A5A08600DAF14E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -139,7 +137,7 @@
 		AF5E66FB25F873FB001D3C15 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/DualMode.strings"; sourceTree = "<group>"; };
 		AF5E66FD25F87470001D3C15 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/ZigbeeGateway.strings"; sourceTree = "<group>"; };
 		AF5E66FF25F87495001D3C15 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/ZigbeeSubdevice.strings"; sourceTree = "<group>"; };
-		AF5E670225F87563001D3C15 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TuyaSmartMain.strings"; sourceTree = "<group>"; };
+		AF5E670225F87563001D3C15 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/ThingSmartMain.strings"; sourceTree = "<group>"; };
 		AF5E670525F87944001D3C15 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/UserInformation.strings"; sourceTree = "<group>"; };
 		AF60B88B25BBC1F600E18F6F /* APModeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APModeTableViewController.swift; sourceTree = "<group>"; };
 		AF60B88F25BC1F0400E18F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -235,7 +233,6 @@
 		AF5531DE25A5992500E13562 /* TuyaAppSDKSample-iOS-Swift */ = {
 			isa = PBXGroup;
 			children = (
-				AF5E2F3025A59FE600DAF14E /* t_s.bmp */,
 				AF55320C25A59BE800E13562 /* AppKey.swift */,
 				AF5531DF25A5992500E13562 /* AppDelegate.swift */,
 				AF5531E125A5992500E13562 /* SceneDelegate.swift */,
@@ -254,7 +251,7 @@
 		AF5E2F3325A5A08600DAF14E /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
-				AF3A25AC25A99555003EB9FF /* TuyaSmartMain.storyboard */,
+				AF3A25AC25A99555003EB9FF /* ThingSmartMain.storyboard */,
 				AF5E2F3425A5A08600DAF14E /* LaunchScreen.storyboard */,
 				AF5E2F3625A5A08600DAF14E /* Register.storyboard */,
 				AF5E2F3825A5A08600DAF14E /* Main.storyboard */,
@@ -362,8 +359,8 @@
 				AF5531D825A5992500E13562 /* Sources */,
 				AF5531D925A5992500E13562 /* Frameworks */,
 				AF5531DA25A5992500E13562 /* Resources */,
-				121D07C97DDC35545C17097B /* [CP] Embed Pods Frameworks */,
 				6E5A55F369AA0968BCF6376C /* [CP] Copy Pods Resources */,
+				C7EC5A28E342989EDBF2E9AB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -424,14 +421,13 @@
 				AF5531E925A5992800E13562 /* Assets.xcassets in Resources */,
 				AF21C1FF25B03D6000D52FBA /* SwitchHome.storyboard in Resources */,
 				AF60B89825BC1F5600E18F6F /* NewHome.storyboard in Resources */,
-				AF5E2F3125A59FE600DAF14E /* t_s.bmp in Resources */,
 				AF5E66CF25F77D6B001D3C15 /* BLE.storyboard in Resources */,
 				AF5E2F3E25A5A08600DAF14E /* LaunchScreen.storyboard in Resources */,
 				AF5E2F3F25A5A08600DAF14E /* Register.storyboard in Resources */,
 				AF3B498725B808D700286C4A /* EZMode.storyboard in Resources */,
 				AF60B89E25BC1F6700E18F6F /* HomeList.storyboard in Resources */,
 				AF60B8C525BEBA1600E18F6F /* Localizable.strings in Resources */,
-				AF3A25AE25A99555003EB9FF /* TuyaSmartMain.storyboard in Resources */,
+				AF3A25AE25A99555003EB9FF /* ThingSmartMain.storyboard in Resources */,
 				AF5E66D825F77DE9001D3C15 /* ZigbeeGateway.storyboard in Resources */,
 				AF5E2F4225A5A08600DAF14E /* UserInformation.storyboard in Resources */,
 			);
@@ -440,23 +436,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		121D07C97DDC35545C17097B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6E5A55F369AA0968BCF6376C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -494,6 +473,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7EC5A28E342989EDBF2E9AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -571,13 +567,13 @@
 			name = SwitchHome.storyboard;
 			sourceTree = "<group>";
 		};
-		AF3A25AC25A99555003EB9FF /* TuyaSmartMain.storyboard */ = {
+		AF3A25AC25A99555003EB9FF /* ThingSmartMain.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AF3A25AD25A99555003EB9FF /* Base */,
 				AF5E670225F87563001D3C15 /* zh-Hans */,
 			);
-			name = TuyaSmartMain.storyboard;
+			name = ThingSmartMain.storyboard;
 			sourceTree = "<group>";
 		};
 		AF3B498525B808D700286C4A /* EZMode.storyboard */ = {
@@ -858,7 +854,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7AF5BA9M96;
+				DEVELOPMENT_TEAM = 94JFPTRDN5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -884,7 +880,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dasautoooo.SDK-Sample";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thingclips.test1001;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TuyaAppSDKSample-iOS-Swift/TuyaAppSDKSample-iOS-Swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -902,7 +898,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7AF5BA9M96;
+				DEVELOPMENT_TEAM = 94JFPTRDN5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -928,7 +924,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dasautoooo.SDK-Sample";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thingclips.test1001;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TuyaAppSDKSample-iOS-Swift/TuyaAppSDKSample-iOS-Swift-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
