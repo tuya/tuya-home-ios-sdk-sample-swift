@@ -15,11 +15,11 @@ class ThingLinkDeviceBindTableViewController: UITableViewController {
         title = "ThingLink Bind"
     }
     
-    func bindTuyaLink(qrcode codeStr: String?) -> Void {
+    func bindThingLink(qrcode codeStr: String?) -> Void {
         let homeId = Home.current?.homeId
         SVProgressHUD.show()
-        let act = ThingSmartTuyaLinkActivator.init()
-        act.bindTuyaLinkDevice(withQRCode: codeStr ?? "", homeId: homeId ?? 0) { device in
+        let act = ThingSmartThingLinkActivator.init()
+        act.bindThingLinkDevice(withQRCode: codeStr ?? "", homeId: homeId ?? 0) { device in
             SVProgressHUD.show(withStatus: "Bind Success. \n devId: \(device.devId ?? "") \n name: \(device.name ?? "")")
         } failure: { error in
             SVProgressHUD.showError(withStatus: "Bind Failure. (\(error?.localizedDescription ?? ""))")
@@ -29,7 +29,7 @@ class ThingLinkDeviceBindTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = QRCodeScanerViewController()
         vc.scanCallback = { [weak self] codeStr in
-            self?.bindTuyaLink(qrcode: codeStr)
+            self?.bindThingLink(qrcode: codeStr)
         }
         navigationController?.pushViewController(vc, animated: true)
     }

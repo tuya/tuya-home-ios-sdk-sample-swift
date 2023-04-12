@@ -54,7 +54,7 @@ class DeviceListTableViewController: UITableViewController {
         
         let vc = storyboard.instantiateViewController(withIdentifier: identifier)
         if isSupportThingModel {
-            jumpTuyaLinkDeviceControl(vc as! ThingLinkDeviceControlController, device: device)
+            jumpThingLinkDeviceControl(vc as! ThingLinkDeviceControlController, device: device)
         } else {
             jumpNormalDeviceControl(vc as! DeviceControlTableViewController, device: device)
         }
@@ -71,19 +71,19 @@ class DeviceListTableViewController: UITableViewController {
         })
     }
     
-    private func jumpTuyaLinkDeviceControl(_ vc: ThingLinkDeviceControlController, device: ThingSmartDevice) {
-        let goTuyaLinkControl = { () -> Void in
+    private func jumpThingLinkDeviceControl(_ vc: ThingLinkDeviceControlController, device: ThingSmartDevice) {
+        let goThingLinkControl = { () -> Void in
             vc.device = device
             self.navigationController?.pushViewController(vc, animated: true)
         }
         
         if let _ = device.deviceModel.thingModel {
-            goTuyaLinkControl()
+            goThingLinkControl()
         } else {
             SVProgressHUD.show(withStatus: NSLocalizedString("Fetching Thing Model", comment: ""))
             device.getThingModel { _ in
                 SVProgressHUD.dismiss()
-                goTuyaLinkControl()
+                goThingLinkControl()
             } failure: { error in
                 SVProgressHUD.showError(withStatus: NSLocalizedString("Failed to Fetch Thing Model", comment: ""))
             }
