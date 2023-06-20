@@ -7,9 +7,9 @@ This sample demonstrates the use of Tuya iOS Smart Life App SDK to build an IoT 
 ## Self-developed Smart Life App Service
 Self-Developed Smart Life App is one of Tuya’s IoT app development solutions. This solution provides the services that enable connections between the app and the cloud. It also supports a full range of services and capabilities that customers can use to independently develop mobile apps. The Smart Life App SDK used in this sample is included in the Self-developed Smart Life App Service.
 
-Self-Developed Smart Life App is classified into the **Trial** and **Official** editions:
+Self-Developed Smart Life App is classified into the **Development** and **Official** editions:
 
-- **Self-Developed App Trial**: provided for a free trial. It supports up to 100,000 cloud API calls per month and up to 20 registered end users in total.
+- **Self-Developed App Development**: provided for a free trial. It supports up to 1 million cloud API calls per month and up to 100 registered end users in total.
 
 - **Self-Developed App Official**: provided for commercial use and costs $5,000/year (¥33,500/year) for the initial subscription and $2,000/year (¥13,500/year) for subsequent annual renewal. It is supplied with the Custom Domain Name service and up to 100 million cloud API calls per month.
 
@@ -18,7 +18,6 @@ For more information, please check the [Pricing](https://developer.tuya.com/en/d
 ## Prerequisites
 * Xcode 12.0 and later
 * iOS 12 and later
-
 
 ## Use the sample
 1. The Tuya iOS Smart Life App SDK is distributed through [CocoaPods](http://cocoapods.org/) and other dependencies in this sample. Make sure that you have installed CocoaPods. If not, run the following command to install CocoaPods first:
@@ -34,12 +33,7 @@ pod setup
 pod install
 ```
 
-3. This sample requires you to have a pair of keys and a security image from the [Tuya IoT Platform](https://developer.tuya.com/), and register a developer account if you don't have one. Then, perform the following steps:
-	1. Log in to the [Tuya IoT platform](https://iot.tuya.com). In the left-side navigation pane, choose **App** > **SDK Development**.
-	2. Click **Create** to create an app.
-	3. Fill in the required information. Make sure that you enter the valid Bundle ID. It cannot be changed afterward.
-	4. You can find the AppKey, AppSecret, and security image under the **Obtain Key** tag.
-
+3. This sample requires you to have a pair of keys from [Tuya IoT Platform](https://developer.tuya.com/), and register a developer account if you don't have one. For more details, please check this tutorial: [Preparation](https://developer.tuya.com/en/docs/app-development/preparation?id=Ka69nt983bhh5)
 4. Open the `TuyaAppSDKSample-iOS-Swift.xcworkspace` pod generated for you.
 5. Fill in the AppKey and AppSecret in the **AppKey.swift** file.
 
@@ -50,9 +44,9 @@ struct AppKey {
 }
 ```
 
-6. Download the security image, rename it to `t_s.bmp`, and then drag it to the workspace to be at the same level as `Info.plist`.
-
 **Note**: The bundle ID, AppKey, AppSecret, and security image must be the same as your app on the [Tuya IoT Platform](https://iot.tuya.com). Otherwise, the sample cannot request the API.
+
+For more details, please check this tutorial [Fast Integration with Smart Life App SDK for iOS](https://developer.tuya.com/en/docs/app-development/integrate-sdk?id=Ka5d52ewngdoi).
 
 ## References
 For more information about Tuya iOS HomeSDK, see [App SDK](https://developer.tuya.com/en/docs/app-development).
