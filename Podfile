@@ -9,7 +9,7 @@ target 'TuyaAppSDKSample-iOS-Swift' do
   pod 'SVProgressHUD'
   pod 'SGQRCode', '~> 4.1.0'
 
-  pod 'ThingSmartHomeKit', '~> 5.0.0'
+  pod 'ThingSmartHomeKit', '~> 5.1.0'
 
 end
 
