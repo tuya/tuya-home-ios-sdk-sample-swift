@@ -51,3 +51,6 @@
 
 /* Class = "UILabel"; text = "Dual Mode"; ObjectID = "fqQ-64-Gnu"; */
 "fqQ-64-Gnu.text" = "蓝牙 Wi-Fi 双模";
+
+/* Class = "UITableViewSection"; headerTitle = "Function List"; ObjectID = "icw-f7-zdu"; */
+"icw-f7-zdu.text" = "功能列表";

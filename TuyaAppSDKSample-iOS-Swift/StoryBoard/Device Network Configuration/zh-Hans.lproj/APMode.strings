@@ -1,0 +1,15 @@
+
+/* Class = "UINavigationItem"; title = "AP Mode"; ObjectID = "81o-gw-8kr"; */
+"81o-gw-8kr.title" = "AP Mode";
+
+/* Class = "UIBarButtonItem"; title = "Search"; ObjectID = "OAK-a3-sHb"; */
+"OAK-a3-sHb.title" = "Search";
+
+/* Class = "UILabel"; text = "AP Mode, also known as hotspot mode. The mobile phone connects the smart device’s hotspot, and the two parties establish a Socket connection to exchange data through the agreed port.\n\nLet the device in pairing mode, then switch iPhone’s Wi-Fi to the device’s hotspot. Type in the SSID and password of which Wi-Fi you want the device connect to, then tap Search."; ObjectID = "dvh-mM-pJw"; */
+"dvh-mM-pJw.text" = "AP Mode, also known as hotspot mode. The mobile phone connects the smart device’s hotspot, and the two parties establish a Socket connection to exchange data through the agreed port.\n\nLet the device in pairing mode, then switch iPhone’s Wi-Fi to the device’s hotspot. Type in the SSID and password of which Wi-Fi you want the device connect to, then tap Search.";
+
+/* Class = "UITextField"; placeholder = "Wi-Fi SSID"; ObjectID = "ojp-Zp-meh"; */
+"ojp-Zp-meh.placeholder" = "Wi-Fi SSID";
+
+/* Class = "UITextField"; placeholder = "Wi-Fi Password"; ObjectID = "xJ6-Pd-Dol"; */
+"xJ6-Pd-Dol.placeholder" = "Wi-Fi Password";

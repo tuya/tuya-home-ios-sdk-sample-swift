@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KHA-Xo-514">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--BEEZ Mode-->
+        <scene sceneID="WUy-jo-FAx">
+            <objects>
+                <tableViewController id="KHA-Xo-514" userLabel="BEEZ Mode" customClass="BEEZModeTableViewController" customModule="TuyaAppSDKSample_iOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="EUH-wF-jCw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <sections>
+                            <tableViewSection id="6qK-2n-jaJ">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="04p-NG-Zdn">
+                                        <rect key="frame" x="20" y="18" width="353" height="52.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="04p-NG-Zdn" id="NPT-OH-99D">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="52.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Wi-Fi SSID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SJg-VP-sjB">
+                                                    <rect key="frame" x="20" y="4" width="313" height="44.333333333333336"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="MSc-km-0fz"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SJg-VP-sjB" firstAttribute="leading" secondItem="NPT-OH-99D" secondAttribute="leading" constant="20" symbolic="YES" id="EqT-gP-j5W"/>
+                                                <constraint firstItem="SJg-VP-sjB" firstAttribute="top" secondItem="NPT-OH-99D" secondAttribute="top" constant="4" id="Xqt-xP-wrh"/>
+                                                <constraint firstAttribute="trailing" secondItem="SJg-VP-sjB" secondAttribute="trailing" constant="20" symbolic="YES" id="wHY-0n-qtb"/>
+                                                <constraint firstAttribute="bottom" secondItem="SJg-VP-sjB" secondAttribute="bottom" constant="4" id="zqG-4c-4ER"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="7qE-4Y-Woo">
+                                        <rect key="frame" x="20" y="70.333332061767578" width="353" height="52.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7qE-4Y-Woo" id="zw1-yA-oD3">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="52.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Wi-Fi Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gaL-bj-Ucd">
+                                                    <rect key="frame" x="20" y="4" width="313" height="44.333333333333336"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="Qae-Wd-8aV"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gaL-bj-Ucd" firstAttribute="leading" secondItem="zw1-yA-oD3" secondAttribute="leading" constant="20" symbolic="YES" id="0qT-lG-dFk"/>
+                                                <constraint firstAttribute="trailing" secondItem="gaL-bj-Ucd" secondAttribute="trailing" constant="20" symbolic="YES" id="X8N-Ps-kru"/>
+                                                <constraint firstAttribute="bottom" secondItem="gaL-bj-Ucd" secondAttribute="bottom" constant="4" id="YDz-a5-y3V"/>
+                                                <constraint firstItem="gaL-bj-Ucd" firstAttribute="top" secondItem="zw1-yA-oD3" secondAttribute="top" constant="4" id="nK6-7M-Qbx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="KHA-Xo-514" id="77b-rX-e0z"/>
+                            <outlet property="delegate" destination="KHA-Xo-514" id="0y6-p6-oK4"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="EZ Mode" id="vjO-pK-I6z">
+                        <barButtonItem key="rightBarButtonItem" title="Search" id="Ezj-r0-ap6">
+                            <connections>
+                                <action selector="searchTapped:" destination="KHA-Xo-514" id="RIr-jd-1RY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="passwordTextField" destination="gaL-bj-Ucd" id="dh9-TQ-XAk"/>
+                        <outlet property="ssidTextField" destination="SJg-VP-sjB" id="Bih-1o-GSC"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gGT-eE-qE1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1629" y="254"/>
+        </scene>
+    </scenes>
+</document>
