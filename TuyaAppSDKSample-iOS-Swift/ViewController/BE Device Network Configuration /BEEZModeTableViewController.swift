@@ -95,16 +95,20 @@ extension BEEZModeTableViewController: ThingSmartActivatorSearchDelegate {
         }
         
         if (device != nil) {
-            // Success
-            let name = device?.name ?? NSLocalizedString("Unknown Name", comment: "Unknown name device.")
-            SVProgressHUD.showSuccess(withStatus: NSLocalizedString("Successfully Added \(name)", comment: "Successfully added one device."))
-            isSuccess = true
-            navigationController?.popViewController(animated: true)
+            if device?.step == ThingActivatorStep.found {
+                // device find
+            }
         }
     }
     
     func activatorService(_ service: ThingSmartActivatorSearchProtocol, activatorType type: ThingSmartActivatorTypeModel, didUpdateDevice device: ThingSmartActivatorDeviceModel) {
-        
+        if device.step == ThingActivatorStep.intialized {
+            // Success
+            let name = device.name
+            SVProgressHUD.showSuccess(withStatus: NSLocalizedString("Successfully Added \(name)", comment: "Successfully added one device."))
+            isSuccess = true
+            navigationController?.popViewController(animated: true)
+        }
     }
 
 }

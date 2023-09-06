@@ -16,8 +16,8 @@
 /* Class = "UITableViewSection"; headerTitle = "User Management"; ObjectID = "llS-dv-ZAG"; */
 "llS-dv-ZAG.headerTitle" = "用户管理";
 
-/* Class = "UITableViewSection"; headerTitle = "Device Network Configuration"; ObjectID = "Lww-IN-i6Q"; */
-"Lww-IN-i6Q.headerTitle" = "设备网络配置";
+/* Class = "UITableViewSection"; headerTitle = "Device Network Configuration"; ObjectID = "icw-f7-zdu"; */
+"icw-f7-zdu.headerTitle" = "设备网络配置";
 
 /* Class = "UILabel"; text = "Device List"; ObjectID = "Sc8-6Q-jjJ"; */
 "Sc8-6Q-jjJ.text" = "设备列表";

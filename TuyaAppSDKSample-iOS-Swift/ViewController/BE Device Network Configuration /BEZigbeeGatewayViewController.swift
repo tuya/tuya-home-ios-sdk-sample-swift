@@ -85,7 +85,7 @@ extension BEZigbeeGatewayViewController: UITableViewDelegate,UITableViewDataSour
             typeModel.token = token ?? ""
             let deviceModel = deviceList[indexPath.row]
             discovery.startActive(typeModel, deviceList: [deviceModel])
-            SVProgressHUD.show(withStatus: NSLocalizedString("Activating", comment: "Active BLE."))
+            SVProgressHUD.show(withStatus: NSLocalizedString("Activating", comment: "Active Zigbee gateway."))
         }, failure: { (error) in
             let errorMessage = error?.localizedDescription ?? ""
             SVProgressHUD.showError(withStatus: errorMessage)

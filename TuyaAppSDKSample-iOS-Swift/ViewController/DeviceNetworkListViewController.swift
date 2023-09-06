@@ -6,7 +6,8 @@
 
 import UIKit
 
-class FunctionListViewController: UITableViewController {
+
+class DeviceNetworkListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Function List"

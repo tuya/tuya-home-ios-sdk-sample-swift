@@ -18,20 +18,21 @@ class BEZigbeeSubdeviceTableViewController: UITableViewController {
     var gateway: ThingSmartDeviceModel?
     private var isSuccess = false
     var deviceList:[ThingSmartActivatorDeviceModel] = []
+    
+    private var typeModel: ThingSmartActivatorTypeSubDeviceModel = {
+        let type = ThingSmartActivatorTypeSubDeviceModel()
+        type.type = ThingSmartActivatorType.subDevice
+        type.typeName = NSStringFromThingSmartActivatorType(ThingSmartActivatorType.subDevice)
+        type.timeout = 120
+        return type
+    }()
+    
     lazy var discovery: ThingSmartActivatorDiscovery = {
         let discovery = ThingSmartActivatorDiscovery()
         discovery.register(withActivatorList: [self.typeModel])
         discovery.setupDelegate(self)
         discovery.loadConfig()
         return discovery
-    }()
-    
-    private lazy var typeModel: ThingSmartActivatorTypeSubDeviceModel = {
-        let type = ThingSmartActivatorTypeSubDeviceModel()
-        type.type = ThingSmartActivatorType.subDevice
-        type.typeName = NSStringFromThingSmartActivatorType(ThingSmartActivatorType.subDevice)
-        type.timeout = 120
-        return type
     }()
 
     // MARK: - Lifecycle

@@ -122,6 +122,8 @@ extension BEDualModeTableViewController: ThingSmartActivatorSearchDelegate {
 extension BEDualModeTableViewController: ThingSmartActivatorActiveDelegate {
     func activatorService(_ service: ThingSmartActivatorActiveProtocol, activatorType type: ThingSmartActivatorTypeModel, didReceiveDevices devices: [ThingSmartActivatorDeviceModel]?, error errorModel: ThingSmartActivatorErrorModel?) {
         if (errorModel != nil) {
+            let code = errorModel?.error.code 
+            
             SVProgressHUD.showError(withStatus: NSLocalizedString("Failed to Activate BLE Device", comment: ""))
             return
         }

@@ -15,20 +15,20 @@ class BETuyaLinkDeviceBindTableViewController: UITableViewController {
         title = "ThingLink Bind"
     }
     
+    private var typeModel: ThingSmartActivatorTypeThingLinkModel = {
+        let type = ThingSmartActivatorTypeThingLinkModel()
+        type.type = ThingSmartActivatorType.thingLink
+        type.typeName = NSStringFromThingSmartActivatorType(ThingSmartActivatorType.thingLink)
+        type.timeout = 120
+        return type
+    }()
+    
     lazy var discovery: ThingSmartActivatorDiscovery = {
         let discovery = ThingSmartActivatorDiscovery()
         discovery.register(withActivatorList: [self.typeModel])
         discovery.setupDelegate(self)
         discovery.loadConfig()
         return discovery
-    }()
-    
-    private lazy var typeModel: ThingSmartActivatorTypeThingLinkModel = {
-        let type = ThingSmartActivatorTypeThingLinkModel()
-        type.type = ThingSmartActivatorType.thingLink
-        type.typeName = NSStringFromThingSmartActivatorType(ThingSmartActivatorType.thingLink)
-        type.timeout = 120
-        return type
     }()
     
     func bindThingLink(qrcode codeStr: String?) -> Void {
