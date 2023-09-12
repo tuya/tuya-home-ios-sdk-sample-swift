@@ -14,22 +14,26 @@ class BEBLEModeViewController: UIViewController {
     @IBOutlet weak var tableview: UITableView!
     var isSuccess = false
     var deviceList:[ThingSmartActivatorDeviceModel] = []
+    
+    private var typeModel: ThingSmartActivatorTypeBleModel = {
+        let type = ThingSmartActivatorTypeBleModel()
+        type.type = ThingSmartActivatorType.ble
+        type.typeName = NSStringFromThingSmartActivatorType(ThingSmartActivatorType.ble)
+        type.timeout = 120
+        if let currentHome = Home.current {
+            type.spaceId = currentHome.homeId
+        } else {
+            assert((Home.current != nil),"Home cannot be nil, need to create a Home")
+        }
+        return type
+    }()
+    
     lazy var discovery: ThingSmartActivatorDiscovery = {
         let discovery = ThingSmartActivatorDiscovery()
         discovery.register(withActivatorList: [self.typeModel])
         discovery.setupDelegate(self)
         discovery.loadConfig()
-        discovery.currentSpaceId(Home.current!.homeId)
         return discovery
-    }()
-    
-    private lazy var typeModel: ThingSmartActivatorTypeBleModel = {
-        let type = ThingSmartActivatorTypeBleModel()
-        type.type = ThingSmartActivatorType.ble
-        type.typeName = NSStringFromThingSmartActivatorType(ThingSmartActivatorType.ble)
-        type.timeout = 120
-        type.spaceId = Home.current!.homeId
-        return type
     }()
     
     // MARK: - Lifecycle
@@ -43,6 +47,8 @@ class BEBLEModeViewController: UIViewController {
     @IBAction func searchTapped(_ sender: UIBarButtonItem) {
         
         // Start finding un-paired BLE devices.
+        guard let homeID = Home.current?.homeId else { return }
+        discovery.currentSpaceId(homeID)
         discovery.startSearch([self.typeModel])
         SVProgressHUD.show(withStatus: NSLocalizedString("Searching", comment: ""))
     }
@@ -94,17 +100,23 @@ extension BEBLEModeViewController: UITableViewDelegate,UITableViewDataSource {
 // MARK: - ThingSmartActivatorSearchDelegate
 extension BEBLEModeViewController: ThingSmartActivatorSearchDelegate {
     func activatorService(_ service: ThingSmartActivatorSearchProtocol, activatorType type: ThingSmartActivatorTypeModel, didFindDevice device: ThingSmartActivatorDeviceModel?, error errorModel: ThingSmartActivatorErrorModel?) {
-        
-        if (device != nil) {
-            if device?.deviceModelType == ThingSearchDeviceModelTypeBleWifi {
-                print("Please use Dual Mode to pair: %@", device?.uniqueID ?? "")
+
+        if let device = device {
+            if device.deviceModelType == ThingSearchDeviceModelTypeBleWifi {
+                print("Please use Dual Mode to pair: %@", device.uniqueID)
                 return
             }
+            
+            SVProgressHUD.dismiss()
+            deviceList.append(device)
+            tableview.reloadData()
         }
         
-        SVProgressHUD.dismiss()
-        deviceList.append(device!)
-        tableview.reloadData()
+        if let errorModel = errorModel {
+            // Error
+            SVProgressHUD.showError(withStatus: errorModel.error.localizedDescription)
+        }
+
     }
     
     func activatorService(_ service: ThingSmartActivatorSearchProtocol, activatorType type: ThingSmartActivatorTypeModel, didUpdateDevice device: ThingSmartActivatorDeviceModel) {

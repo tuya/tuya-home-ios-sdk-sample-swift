@@ -232,6 +232,8 @@
 		9813B69A2AA5DED7001646C0 /* Device Network Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				9813B6972AA5DEC8001646C0 /* BE FunctionList.storyboard */,
+				9813B6C42AA717FD001646C0 /* FunctionList.storyboard */,
 				9813B6A32AA71592001646C0 /* APMode.storyboard */,
 				9813B6AB2AA71592001646C0 /* BLE.storyboard */,
 				9813B6A72AA71592001646C0 /* DualMode.storyboard */,
@@ -332,10 +334,8 @@
 		AF5E2F3325A5A08600DAF14E /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
-				9813B6C42AA717FD001646C0 /* FunctionList.storyboard */,
 				9813B69A2AA5DED7001646C0 /* Device Network Configuration */,
 				AF3A25AC25A99555003EB9FF /* ThingSmartMain.storyboard */,
-				9813B6972AA5DEC8001646C0 /* BE FunctionList.storyboard */,
 				AF5E2F3425A5A08600DAF14E /* LaunchScreen.storyboard */,
 				AF5E2F3625A5A08600DAF14E /* Register.storyboard */,
 				AF5E2F3825A5A08600DAF14E /* Main.storyboard */,

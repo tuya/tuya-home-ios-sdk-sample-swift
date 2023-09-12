@@ -29,7 +29,6 @@ class BEAPModeTableViewController: UITableViewController {
         type.type = ThingSmartActivatorType.AP
         type.typeName = NSStringFromThingSmartActivatorType(ThingSmartActivatorType.AP)
         type.timeout = 120
-        type.spaceId = Home.current!.homeId
         return type
     }()
     
@@ -66,12 +65,13 @@ class BEAPModeTableViewController: UITableViewController {
     
     private func startConfiguration() {
         SVProgressHUD.show(withStatus: NSLocalizedString("Configuring", comment: ""))
-        
+        guard let homeID = Home.current?.homeId else { return }
         let ssid = ssidTextField.text ?? ""
         let password = passwordTextField.text ?? ""
         typeModel.ssid = ssid
         typeModel.password = password
         typeModel.token = self.token
+        typeModel.spaceId = homeID
         discovery .startSearch([typeModel])
     }
     

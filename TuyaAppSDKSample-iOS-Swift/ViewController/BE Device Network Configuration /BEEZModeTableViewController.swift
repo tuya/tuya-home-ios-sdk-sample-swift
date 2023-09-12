@@ -8,6 +8,75 @@ import UIKit
 import ThingSmartActivatorKit
 import ThingSmartActivatorDiscoveryManager
 
+class MatterModeConfigurationVC: UITableViewController {
+
+    private var token: String = ""
+    var deviceList:[ThingSmartActivatorDeviceModel] = []
+
+    private var typeModel: ThingSmartActivatorTypeMatterModel = {
+        let type = ThingSmartActivatorTypeMatterModel()
+        type.type = ThingSmartActivatorType.matter
+        type.typeName = NSStringFromThingSmartActivatorType(ThingSmartActivatorType.matter)
+        type.timeout = 120
+        return type
+    }()
+
+
+    lazy var discovery: ThingSmartActivatorDiscovery = {
+        let discovery = ThingSmartActivatorDiscovery()
+        discovery.register(withActivatorList: [self.typeModel])
+        discovery.setupDelegate(self)
+        discovery.loadConfig()
+        return discovery
+    }()
+
+    private func startSearch() {
+        guard let homeID = Home.current?.homeId else { return }
+        typeModel.spaceId = homeID
+        discovery.startSearch([self.typeModel])
+    }
+    
+}
+
+extension MatterModeConfigurationVC: ThingSmartActivatorSearchDelegate {
+    func activatorService(_ service: ThingSmartActivatorSearchProtocol, activatorType type: ThingSmartActivatorTypeModel, didFindDevice device: ThingSmartActivatorDeviceModel?, error errorModel: ThingSmartActivatorErrorModel?) {
+        
+        if let device = device {
+            SVProgressHUD.dismiss()
+            discovery.startActive(typeModel, deviceList: [device])
+            SVProgressHUD.show(withStatus: NSLocalizedString("Activating", comment: "Active homekit device ."))
+        }
+    }
+    
+    func activatorService(_ service: ThingSmartActivatorSearchProtocol, activatorType type: ThingSmartActivatorTypeModel, didUpdateDevice device: ThingSmartActivatorDeviceModel) {
+        
+    }
+}
+
+extension MatterModeConfigurationVC: ThingSmartActivatorDeviceExpandDelegate {
+    func matterDeviceDiscoveryed(_ isThingDevice: Bool, deviceType: ThingMatterDeviceType) {
+        
+    }
+}
+
+
+
+extension MatterModeConfigurationVC: ThingSmartActivatorActiveDelegate {
+    func activatorService(_ service: ThingSmartActivatorActiveProtocol, activatorType type: ThingSmartActivatorTypeModel, didReceiveDevices devices: [ThingSmartActivatorDeviceModel]?, error errorModel: ThingSmartActivatorErrorModel?) {
+        if (errorModel != nil) {
+            SVProgressHUD.showError(withStatus: NSLocalizedString("Failed to Activate homekit Device", comment: ""))
+            return
+        }
+        
+        if (devices!.count > 0) {
+            let deviceModel = devices?.first
+            let name = deviceModel?.name ?? NSLocalizedString("Unknown Name", comment: "Unknown name device.")
+            SVProgressHUD.showSuccess(withStatus: NSLocalizedString("Successfully Added \(name)", comment: "Successfully added one device."))
+        }
+    }
+    
+}
+
 class BEEZModeTableViewController: UITableViewController {
     // MARK: - IBOutlet
     @IBOutlet weak var ssidTextField: UITextField!
@@ -29,7 +98,6 @@ class BEEZModeTableViewController: UITableViewController {
         type.type = ThingSmartActivatorType.ezSearch
         type.typeName = NSStringFromThingSmartActivatorType(ThingSmartActivatorType.ezSearch)
         type.timeout = 120
-        type.spaceId = Home.current!.homeId
         return type
     }()
     
@@ -66,12 +134,13 @@ class BEEZModeTableViewController: UITableViewController {
      
     private func startConfiguration(with token: String) {
         SVProgressHUD.show(withStatus: NSLocalizedString("Configuring", comment: ""))
-        
+        guard let homeID = Home.current?.homeId else { return }
         let ssid = ssidTextField.text ?? ""
         let password = passwordTextField.text ?? ""
-        typeModel.ssid = ssid;
-        typeModel.password = password;
-        typeModel.token = self.token;
+        typeModel.ssid = ssid
+        typeModel.password = password
+        typeModel.token = self.token
+        typeModel.spaceId = homeID
         discovery.startSearch([typeModel])
     }
     

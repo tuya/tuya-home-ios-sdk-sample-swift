@@ -15,21 +15,26 @@ class BEZigbeeGatewayViewController: UIViewController {
     private var isSuccess = false
     @IBOutlet weak var tableview: UITableView!
     var deviceList:[ThingSmartActivatorDeviceModel] = []
+    
+    private var typeModel: ThingSmartActivatorTypeWiredModel = {
+        let type = ThingSmartActivatorTypeWiredModel()
+        type.type = ThingSmartActivatorType.wired
+        type.typeName = NSStringFromThingSmartActivatorType(ThingSmartActivatorType.wired)
+        type.timeout = 120
+        if let currentHome = Home.current {
+            type.spaceId = currentHome.homeId
+        } else {
+            assert((Home.current != nil),"Home cannot be nil, need to create a Home")
+        }
+        return type
+    }()
+    
     lazy var discovery: ThingSmartActivatorDiscovery = {
         let discovery = ThingSmartActivatorDiscovery()
         discovery.register(withActivatorList: [self.typeModel])
         discovery.setupDelegate(self)
         discovery.loadConfig()
         return discovery
-    }()
-    
-    private lazy var typeModel: ThingSmartActivatorTypeWiredModel = {
-        let type = ThingSmartActivatorTypeWiredModel()
-        type.type = ThingSmartActivatorType.wired
-        type.typeName = NSStringFromThingSmartActivatorType(ThingSmartActivatorType.wired)
-        type.timeout = 120
-        type.spaceId = Home.current!.homeId
-        return type
     }()
     
     // MARK: - Lifecycle

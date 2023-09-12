@@ -20,7 +20,11 @@ class BEDualModeTableViewController: UIViewController {
         discovery.register(withActivatorList: [self.typeModel])
         discovery.setupDelegate(self)
         discovery.loadConfig()
-        discovery.currentSpaceId(Home.current!.homeId)
+        if let currentHome = Home.current {
+            discovery.currentSpaceId(currentHome.homeId)
+        } else {
+            assert((Home.current != nil),"Home cannot be nil, need to create a Home")
+        }
         return discovery
     }()
     
@@ -29,7 +33,11 @@ class BEDualModeTableViewController: UIViewController {
         type.type = ThingSmartActivatorType.ble
         type.typeName = NSStringFromThingSmartActivatorType(ThingSmartActivatorType.ble)
         type.timeout = 120
-        type.spaceId = Home.current!.homeId
+        if let currentHome = Home.current {
+            type.spaceId = currentHome.homeId
+        } else {
+            assert((Home.current != nil),"Home cannot be nil, need to create a Home")
+        }
         return type
     }()
     
@@ -100,16 +108,20 @@ extension BEDualModeTableViewController: UITableViewDelegate,UITableViewDataSour
 extension BEDualModeTableViewController: ThingSmartActivatorSearchDelegate {
     func activatorService(_ service: ThingSmartActivatorSearchProtocol, activatorType type: ThingSmartActivatorTypeModel, didFindDevice device: ThingSmartActivatorDeviceModel?, error errorModel: ThingSmartActivatorErrorModel?) {
         
-        if (device != nil) {
-            if device?.deviceModelType == ThingSearchDeviceModelTypeBle {
-                print("Please use BLE to pair: %@", device?.uniqueID ?? "")
+        if let device = device {
+            if device.deviceModelType == ThingSearchDeviceModelTypeBle {
+                print("Please use Dual Mode to pair: %@", device.uniqueID)
+                SVProgressHUD.dismiss()
                 return
             }
+            
+            if device.deviceModelType == ThingSearchDeviceModelTypeBleWifi {
+                deviceList.append(device)
+                tableview.reloadData()
+            }
+
+            SVProgressHUD.dismiss()
         }
-        
-        SVProgressHUD.dismiss()
-        deviceList.append(device!)
-        tableview.reloadData()
     }
     
     func activatorService(_ service: ThingSmartActivatorSearchProtocol, activatorType type: ThingSmartActivatorTypeModel, didUpdateDevice device: ThingSmartActivatorDeviceModel) {
@@ -121,15 +133,15 @@ extension BEDualModeTableViewController: ThingSmartActivatorSearchDelegate {
 // MARK: - ThingSmartActivatorSearchDelegate
 extension BEDualModeTableViewController: ThingSmartActivatorActiveDelegate {
     func activatorService(_ service: ThingSmartActivatorActiveProtocol, activatorType type: ThingSmartActivatorTypeModel, didReceiveDevices devices: [ThingSmartActivatorDeviceModel]?, error errorModel: ThingSmartActivatorErrorModel?) {
-        if (errorModel != nil) {
-            let code = errorModel?.error.code 
+        if let errorModel = errorModel {
+            let code = errorModel.error
             
             SVProgressHUD.showError(withStatus: NSLocalizedString("Failed to Activate BLE Device", comment: ""))
             return
         }
         
-        if (devices!.count > 0) {
-            let device = devices?.first
+        if let devices = devices {
+            let device = devices.first
             var successDevice: ThingSmartActivatorDeviceModel?
 
             self.deviceList.forEach { obj in
@@ -140,7 +152,6 @@ extension BEDualModeTableViewController: ThingSmartActivatorActiveDelegate {
             
             successDevice?.deviceStatus = ThingSearchDeviceStatusNetwork
             tableview.reloadData()
-            
         }
     }
 }
