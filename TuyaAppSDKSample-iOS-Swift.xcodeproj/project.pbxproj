@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		054B35842AB1662000EEE353 /* Cardcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054B35832AB1662000EEE353 /* Cardcell.swift */; };
+		054B358B2AB2F54E00EEE353 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 054B35892AB2F54D00EEE353 /* iconfont.ttf */; };
+		054B358C2AB2F54E00EEE353 /* iconfont.json in Resources */ = {isa = PBXBuildFile; fileRef = 054B358A2AB2F54E00EEE353 /* iconfont.json */; };
 		10F4AAB953F4FBCFFBD0F199 /* libPods-TuyaAppSDKSample-iOS-Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A631D49E2E0E816D32C2CC /* libPods-TuyaAppSDKSample-iOS-Swift.a */; };
 		6719AB9128A202B5000588E7 /* TextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6719AB9028A202B5000588E7 /* TextViewTableViewCell.swift */; };
 		6719AB9328A208CC000588E7 /* TuyaLinkDeviceControlController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6719AB9228A208CB000588E7 /* TuyaLinkDeviceControlController.swift */; };
@@ -75,6 +78,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		054B35822AB15B6D00EEE353 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		054B35832AB1662000EEE353 /* Cardcell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardcell.swift; sourceTree = "<group>"; };
+		054B35892AB2F54D00EEE353 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
+		054B358A2AB2F54E00EEE353 /* iconfont.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = iconfont.json; sourceTree = "<group>"; };
 		207E8BAF216CF8ED00C5937A /* Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig"; path = "Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		6719AB9028A202B5000588E7 /* TextViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewTableViewCell.swift; sourceTree = "<group>"; };
 		6719AB9228A208CB000588E7 /* TuyaLinkDeviceControlController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuyaLinkDeviceControlController.swift; sourceTree = "<group>"; };
@@ -215,6 +222,7 @@
 		AF5531D325A5992500E13562 = {
 			isa = PBXGroup;
 			children = (
+				054B35822AB15B6D00EEE353 /* Podfile */,
 				AF5531DE25A5992500E13562 /* TuyaAppSDKSample-iOS-Swift */,
 				AF5531DD25A5992500E13562 /* Products */,
 				BD36B163EF3854B6423E5580 /* Pods */,
@@ -233,6 +241,8 @@
 		AF5531DE25A5992500E13562 /* TuyaAppSDKSample-iOS-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				054B358A2AB2F54E00EEE353 /* iconfont.json */,
+				054B35892AB2F54D00EEE353 /* iconfont.ttf */,
 				AF55320C25A59BE800E13562 /* AppKey.swift */,
 				AF5531DF25A5992500E13562 /* AppDelegate.swift */,
 				AF5531E125A5992500E13562 /* SceneDelegate.swift */,
@@ -335,6 +345,7 @@
 				AF96133B25B7085D000971CC /* StringTableViewCell.swift */,
 				AF96133F25B708AE000971CC /* LabelTableViewCell.swift */,
 				6719AB9028A202B5000588E7 /* TextViewTableViewCell.swift */,
+				054B35832AB1662000EEE353 /* Cardcell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -412,6 +423,7 @@
 			files = (
 				AF3B499125B8095800286C4A /* DeviceList.storyboard in Resources */,
 				AF5E66DC25F77E14001D3C15 /* ZigbeeSubdevice.storyboard in Resources */,
+				054B358B2AB2F54E00EEE353 /* iconfont.ttf in Resources */,
 				AF5E66D425F77DA7001D3C15 /* DualMode.storyboard in Resources */,
 				AF3B498C25B8093600286C4A /* APMode.storyboard in Resources */,
 				67956196289A626300BD0FAB /* TuyaLinkBind.storyboard in Resources */,
@@ -430,6 +442,7 @@
 				AF3A25AE25A99555003EB9FF /* ThingSmartMain.storyboard in Resources */,
 				AF5E66D825F77DE9001D3C15 /* ZigbeeGateway.storyboard in Resources */,
 				AF5E2F4225A5A08600DAF14E /* UserInformation.storyboard in Resources */,
+				054B358C2AB2F54E00EEE353 /* iconfont.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +556,7 @@
 				AF96133C25B7085D000971CC /* StringTableViewCell.swift in Sources */,
 				6795619E289A6AED00BD0FAB /* QRCodeScanerViewController.swift in Sources */,
 				AF3A25C925AE9F9A003EB9FF /* HomeListTableViewController.swift in Sources */,
+				054B35842AB1662000EEE353 /* Cardcell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

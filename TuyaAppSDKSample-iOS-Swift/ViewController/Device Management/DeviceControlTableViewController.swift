@@ -12,6 +12,7 @@ class DeviceControlTableViewController: UITableViewController {
 
     // MARK: - Property
     var device: ThingSmartDevice?
+    var targetSchemaModel : ThingSmartSchemaModel? //查看特定的DP
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -78,6 +79,9 @@ class DeviceControlTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if (targetSchemaModel != nil) {
+            return 1
+        }
         return device?.deviceModel.schemaArray?.count ?? 0
     }
     
@@ -85,7 +89,7 @@ class DeviceControlTableViewController: UITableViewController {
         let defaultCell = UITableViewCell(style: .default, reuseIdentifier: nil)
         guard let device = device else { return defaultCell }
         
-        let schema = device.deviceModel.schemaArray[indexPath.row]
+        let schema = targetSchemaModel != nil ? targetSchemaModel! : device.deviceModel.schemaArray[indexPath.row]
         let dps = device.deviceModel.dps
         var isReadOnly = false
         let cellIdentifier = DeviceControlCell.cellIdentifier(with: schema)
