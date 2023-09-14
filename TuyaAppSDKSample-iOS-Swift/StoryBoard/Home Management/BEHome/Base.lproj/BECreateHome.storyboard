@@ -30,7 +30,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="11u-71-zbW"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
@@ -54,7 +54,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="c52-2C-EqM"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>

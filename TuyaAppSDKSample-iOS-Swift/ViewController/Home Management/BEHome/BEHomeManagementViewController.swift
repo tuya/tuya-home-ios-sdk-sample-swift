@@ -12,10 +12,18 @@ class BEHomeManagementViewController : UITableViewController {
     @IBOutlet weak var currentHomeName: UILabel!
     
     override func viewDidLoad() {
-        ThingSmartFamilyBiz.sharedInstance().loadCurrentFamily()
+        ThingSmartFamilyBiz.sharedInstance().getFamilyList { _ in
+            ThingSmartFamilyBiz.sharedInstance().loadCurrentFamily()
+        } failure: { error in
+            
+        }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        currentHomeName.text = ThingSmartFamilyBiz.sharedInstance().getCurrentFamily()?.name ?? "未选择"
+    override func viewDidAppear(_ animated: Bool) {
+        if let home = ThingSmartFamilyBiz.sharedInstance().getCurrentFamily() {
+            currentHomeName.text = home.name
+        } else {
+            currentHomeName.text = "未选择"
+        }
     }
 }

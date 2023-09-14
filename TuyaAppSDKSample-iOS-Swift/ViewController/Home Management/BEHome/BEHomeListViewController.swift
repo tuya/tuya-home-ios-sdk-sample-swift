@@ -11,9 +11,23 @@ class BEHomeListViewController : UITableViewController {
     var homes : [ThingSmartHomeModel] = []
     
     override func viewDidLoad() {
-         ThingSmartFamilyBiz.sharedInstance().getFamilyList(success: { homeList in
-             self.homes = homeList ?? []
-             self.tableView.reloadData()
+        ThingSmartFamilyBiz.sharedInstance().getFamilyList(success: { [weak self] homeList in
+            guard let self = self else {return}
+            if let homeList = homeList {
+                for home in homeList {
+                    switch home.dealStatus {
+                    case .accept :
+                        self.homes.append(home)
+                    case .pending:
+                        print("pending")
+                    case .reject:
+                        print("reject")
+                    @unknown default:
+                        fatalError()
+                    }
+                }
+            }
+            self.tableView.reloadData()
         }, failure: nil)
     }
     

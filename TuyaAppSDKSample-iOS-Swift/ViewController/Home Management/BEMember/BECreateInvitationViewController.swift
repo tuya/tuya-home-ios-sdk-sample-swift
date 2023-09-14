@@ -24,6 +24,8 @@ class BECreateInvitationViewController : UITableViewController {
             } failure: { error in
                 
             }
+        } else {
+            Alert.showBasicAlert(on: self, with: "Failed to Create Invitation", message: "No Home")
         }
     }
 }

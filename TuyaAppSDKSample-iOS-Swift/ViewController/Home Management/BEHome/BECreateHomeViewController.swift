@@ -27,14 +27,16 @@ class BECreateHomeViewController : UITableViewController {
         requestModel.latitude = latitude
         requestModel.longitude = longitude
         
-        ThingSmartFamilyBiz.sharedInstance().addFamily(with: requestModel) { homeId in
+        ThingSmartFamilyBiz.sharedInstance().addFamily(with: requestModel) {[weak self] homeId in
+            guard let self = self else { return }
             let action = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default) { [weak self] _ in
                 guard let self = self else { return }
                 self.navigationController?.popViewController(animated: true)
             }
             
             Alert.showBasicAlert(on: self, with: NSLocalizedString("Success", comment: ""), message: NSLocalizedString("Successfully added new home.", comment: ""), actions: [action])
-        } failure: { error in
+        } failure: {[weak self] error in
+            guard let self = self else { return }
             let errorMessage = error?.localizedDescription ?? ""
             Alert.showBasicAlert(on: self, with: NSLocalizedString("Failed to Add New Home", comment: ""), message: errorMessage)
         }

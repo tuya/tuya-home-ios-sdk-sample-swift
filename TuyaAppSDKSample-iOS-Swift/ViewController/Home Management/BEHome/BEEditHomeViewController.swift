@@ -14,14 +14,18 @@ class BEEditHomeViewController : UITableViewController {
     @IBOutlet weak var latitudeLabel : UITextField!
     @IBOutlet weak var longitudeLabel : UITextField!
     
-    let currentHome : ThingSmartHomeModel = ThingSmartFamilyBiz.sharedInstance().getCurrentFamily()
+    let currentHome : ThingSmartHomeModel? = ThingSmartFamilyBiz.sharedInstance().getCurrentFamily()
     
     
     override func viewWillAppear(_ animated: Bool) {
-        nameLabel.text = currentHome.name
-        cityLabel.text = currentHome.geoName
-        latitudeLabel.text = "\(currentHome.latitude)"
-        longitudeLabel.text = "\(currentHome.longitude)"
+        if let model = currentHome {
+            nameLabel.text = model.name
+            cityLabel.text = model.geoName
+            latitudeLabel.text = "\(model.latitude)"
+            longitudeLabel.text = "\(model.longitude)"
+        } else {
+            Alert.showBasicAlert(on: self, with: "No Home", message: "")
+        }
     }
     
     @IBAction func tapSave() {
@@ -31,7 +35,7 @@ class BEEditHomeViewController : UITableViewController {
         requestModel.latitude = Double(latitudeLabel.text ?? "") ?? 0
         requestModel.longitude = Double(longitudeLabel.text ?? "") ?? 0
         
-        ThingSmartFamilyBiz.sharedInstance().updateFamily(withHomeId: currentHome.homeId, model: requestModel) {
+        ThingSmartFamilyBiz.sharedInstance().updateFamily(withHomeId: currentHome!.homeId, model: requestModel) {
             
             let action = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default) { [weak self] _ in
                 guard let self = self else { return }
