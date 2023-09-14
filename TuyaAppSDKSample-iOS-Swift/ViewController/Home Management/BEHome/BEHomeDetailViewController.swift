@@ -16,9 +16,23 @@ class BEHomeDetailViewController : UITableViewController {
     @IBOutlet weak var weatherLabel : UILabel!
     @IBOutlet weak var tempLabel : UILabel!
     
+    override func viewDidLoad() {
+        ThingSmartFamilyBiz.sharedInstance().addObserver(self)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setupUI()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "BEShowEditHome" else { return }
 
+        let destinationVC = segue.destination as! BEEditHomeViewController
+        destinationVC.home = homeModel
+    }
+    
+    func setupUI() {
         homeIdLabel.text = String(homeModel!.homeId)
         homeNameLabel.text = homeModel?.name ?? ""
         homeCityLabel.text = homeModel?.geoName ?? ""
@@ -31,6 +45,15 @@ class BEHomeDetailViewController : UITableViewController {
             guard let self = self else { return }
             let errorMessage = error?.localizedDescription ?? ""
             Alert.showBasicAlert(on: self, with: NSLocalizedString("Failed to Fetch Weather", comment: ""), message: errorMessage)
+        }
+    }
+}
+
+extension BEHomeDetailViewController : ThingSmartFamilyBizDelegate {
+    func familyBiz(_ familyBiz: ThingSmartFamilyBiz!, didUpdateHome homeModel: ThingSmartHomeModel!) {
+        if let home = homeModel {
+            self.homeModel = home
+            setupUI()
         }
     }
 }

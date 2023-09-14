@@ -43,4 +43,12 @@ class BERoomDetailViewController : UITableViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "BEShowEditRoom" else { return }
+
+        let destinationVC = segue.destination as! BEEditRoomViewController
+        destinationVC.room = room
+        destinationVC.homeId = currentHome?.homeId ?? 0
+    }
 }

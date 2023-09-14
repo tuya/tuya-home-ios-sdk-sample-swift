@@ -57,7 +57,7 @@
                         <sections>
                             <tableViewSection id="xWN-ep-kGr">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="BkV-i7-91W" detailTextLabel="pqC-PE-mFO" style="IBUITableViewCellStyleValue1" id="s6s-h6-GFZ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="BkV-i7-91W" detailTextLabel="pqC-PE-mFO" style="IBUITableViewCellStyleValue1" id="s6s-h6-GFZ">
                                         <rect key="frame" x="20" y="18" width="353" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s6s-h6-GFZ" id="wrJ-eo-QhD">
@@ -81,7 +81,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="1hN-nv-vX4" detailTextLabel="4vs-XG-1EH" style="IBUITableViewCellStyleValue1" id="XEU-9W-H7V">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="1hN-nv-vX4" detailTextLabel="4vs-XG-1EH" style="IBUITableViewCellStyleValue1" id="XEU-9W-H7V">
                                         <rect key="frame" x="20" y="61.666667938232422" width="353" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XEU-9W-H7V" id="kYQ-HM-ffH">
@@ -130,7 +130,15 @@
                             <outlet property="delegate" destination="q6k-gI-5iL" id="TXN-eJ-9Cd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Room Detail" id="xQo-aG-PVP"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Room Detail" id="QLA-0n-N9R">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="bU6-rh-fVf">
+                            <connections>
+                                <segue destination="PfV-hL-dvE" kind="show" identifier="BEShowEditRoom" id="tQs-cn-5sG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="roomIdLabel" destination="pqC-PE-mFO" id="L0I-M3-7WF"/>
                         <outlet property="roomNameLabel" destination="4vs-XG-1EH" id="xL2-9u-cVk"/>
@@ -139,6 +147,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YQk-CI-gJl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="738" y="-142"/>
+        </scene>
+        <!--Edit Room-->
+        <scene sceneID="gFw-EL-wEh">
+            <objects>
+                <tableViewController id="PfV-hL-dvE" customClass="BEEditRoomViewController" customModule="TuyaAppSDKSample_iOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="FcP-Qp-8bf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <sections>
+                            <tableViewSection id="K0K-ZZ-2WW">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="D8U-6R-LXq">
+                                        <rect key="frame" x="20" y="18" width="353" height="52.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D8U-6R-LXq" id="S4U-kk-mTU">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="52.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Room Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="71A-U3-loL">
+                                                    <rect key="frame" x="20" y="4" width="313" height="44.333333333333336"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="Gyy-w4-tlZ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="71A-U3-loL" firstAttribute="top" secondItem="S4U-kk-mTU" secondAttribute="top" constant="4" id="3j7-Je-nv4"/>
+                                                <constraint firstItem="71A-U3-loL" firstAttribute="leading" secondItem="S4U-kk-mTU" secondAttribute="leading" constant="20" id="OrU-Fd-fLZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="71A-U3-loL" secondAttribute="trailing" constant="20" symbolic="YES" id="nB4-vF-7f7"/>
+                                                <constraint firstAttribute="bottom" secondItem="71A-U3-loL" secondAttribute="bottom" constant="4" id="oMg-A9-mjC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="PfV-hL-dvE" id="bRz-HF-h08"/>
+                            <outlet property="delegate" destination="PfV-hL-dvE" id="ecn-qv-TiL"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Edit Room" id="o7H-Zk-hIS">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="4xg-03-q7C">
+                            <connections>
+                                <action selector="tapSave" destination="PfV-hL-dvE" id="1vr-Ty-IVc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="roomField" destination="71A-U3-loL" id="NhJ-t3-YIo"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nq0-vm-3dH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1752" y="-142"/>
         </scene>
     </scenes>
     <resources>

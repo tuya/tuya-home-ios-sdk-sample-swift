@@ -10,7 +10,8 @@ import ThingSmartFamilyBizKit
 class BEHomeListViewController : UITableViewController {
     var homes : [ThingSmartHomeModel] = []
     
-    override func viewDidLoad() {
+    override func viewWillAppear(_ animated: Bool) {
+        homes = []
         ThingSmartFamilyBiz.sharedInstance().getFamilyList(success: { [weak self] homeList in
             guard let self = self else {return}
             if let homeList = homeList {

@@ -55,7 +55,10 @@ class BEMemberDetailViewController : UITableViewController {
         }
     }
     
-    func tapEdit() {
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "BEShowEditMember" else { return }
+
+        let destinationVC = segue.destination as! BEEditMemberViewController
+        destinationVC.member = member
     }
 }

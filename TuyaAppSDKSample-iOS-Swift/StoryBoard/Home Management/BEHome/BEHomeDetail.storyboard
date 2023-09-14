@@ -145,6 +145,15 @@
                             <outlet property="delegate" destination="FTE-FT-cLX" id="Wzx-ZH-FZP"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Home Detail" id="cB6-jG-zpu">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="zyJ-8d-zPo">
+                            <connections>
+                                <segue destination="dam-bF-dgX" kind="show" identifier="BEShowEditHome" id="7rx-5X-WG6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="homeCityLabel" destination="Tl3-BY-E50" id="RJw-SH-Eci"/>
                         <outlet property="homeIdLabel" destination="1oV-sB-zgf" id="w8G-YL-kPO"/>
@@ -156,6 +165,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qsn-PO-K6j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="104" y="-183"/>
+        </scene>
+        <!--BEEditHome-->
+        <scene sceneID="xfl-Ec-Nbp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BEEditHome" id="dam-bF-dgX" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="M63-kV-9Sj"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="udc-lH-EEQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="878" y="-203"/>
         </scene>
     </scenes>
 </document>
