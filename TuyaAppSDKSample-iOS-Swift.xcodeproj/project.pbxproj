@@ -29,6 +29,9 @@
 		82B55A522AB1E4FF00FBE30B /* BEInvitationList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B55A512AB1E4FF00FBE30B /* BEInvitationList.storyboard */; };
 		82B55A542AB1E56800FBE30B /* BEInvitationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B55A532AB1E56800FBE30B /* BEInvitationListViewController.swift */; };
 		82B55A562AB1EA0500FBE30B /* BEInvitationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B55A552AB1EA0500FBE30B /* BEInvitationDetailViewController.swift */; };
+		82B55B872AB2E5BD00FBE30B /* BE FunctionList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B55B832AB2E5BD00FBE30B /* BE FunctionList.storyboard */; };
+		82B55B882AB2E5BD00FBE30B /* FunctionList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B55B852AB2E5BD00FBE30B /* FunctionList.storyboard */; };
+		82B55B8C2AB2E5E400FBE30B /* BEMemberList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B55B8B2AB2E5E400FBE30B /* BEMemberList.storyboard */; };
 		82FBA9732AB1618C00822B41 /* BEHomeList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA9722AB1618C00822B41 /* BEHomeList.storyboard */; };
 		82FBA9752AB1663C00822B41 /* BEHomeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FBA9742AB1663C00822B41 /* BEHomeListViewController.swift */; };
 		82FBA9772AB186AD00822B41 /* BECurrentHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA9762AB186AD00822B41 /* BECurrentHome.storyboard */; };
@@ -39,7 +42,6 @@
 		82FBA9832AB1A75B00822B41 /* BEDeleteHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FBA9822AB1A75B00822B41 /* BEDeleteHomeViewController.swift */; };
 		82FBA9892AB1BA7F00822B41 /* BEEditHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA9882AB1BA7F00822B41 /* BEEditHome.storyboard */; };
 		82FBA98B2AB1BACD00822B41 /* BEEditHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FBA98A2AB1BACD00822B41 /* BEEditHomeViewController.swift */; };
-		9813B6952AA5DEC8001646C0 /* BE FunctionList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9813B6972AA5DEC8001646C0 /* BE FunctionList.storyboard */; };
 		9813B6A02AA5E234001646C0 /* DeviceNetworkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9813B69F2AA5E234001646C0 /* DeviceNetworkListViewController.swift */; };
 		9813B6AF2AA71593001646C0 /* TuyaLinkBind.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9813B6A12AA71592001646C0 /* TuyaLinkBind.storyboard */; };
 		9813B6B02AA71593001646C0 /* APMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9813B6A32AA71592001646C0 /* APMode.storyboard */; };
@@ -48,7 +50,6 @@
 		9813B6B32AA71593001646C0 /* EZMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9813B6A92AA71592001646C0 /* EZMode.storyboard */; };
 		9813B6B42AA71593001646C0 /* BLE.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9813B6AB2AA71592001646C0 /* BLE.storyboard */; };
 		9813B6B52AA71593001646C0 /* ZigbeeGateway.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9813B6AD2AA71592001646C0 /* ZigbeeGateway.storyboard */; };
-		9813B6C62AA717FD001646C0 /* FunctionList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9813B6C42AA717FD001646C0 /* FunctionList.storyboard */; };
 		9813B6D22AA719E0001646C0 /* ZigbeeSubdeviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9813B6CA2AA719E0001646C0 /* ZigbeeSubdeviceTableViewController.swift */; };
 		9813B6D32AA719E0001646C0 /* EZModeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9813B6CB2AA719E0001646C0 /* EZModeTableViewController.swift */; };
 		9813B6D42AA719E0001646C0 /* BLEModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9813B6CC2AA719E0001646C0 /* BLEModeViewController.swift */; };
@@ -140,6 +141,11 @@
 		82B55A512AB1E4FF00FBE30B /* BEInvitationList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BEInvitationList.storyboard; sourceTree = "<group>"; };
 		82B55A532AB1E56800FBE30B /* BEInvitationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEInvitationListViewController.swift; sourceTree = "<group>"; };
 		82B55A552AB1EA0500FBE30B /* BEInvitationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEInvitationDetailViewController.swift; sourceTree = "<group>"; };
+		82B55B842AB2E5BD00FBE30B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/BE FunctionList.storyboard"; sourceTree = "<group>"; };
+		82B55B862AB2E5BD00FBE30B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FunctionList.storyboard; sourceTree = "<group>"; };
+		82B55B892AB2E5C600FBE30B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BE FunctionList.strings"; sourceTree = "<group>"; };
+		82B55B8A2AB2E5CA00FBE30B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/FunctionList.strings"; sourceTree = "<group>"; };
+		82B55B8B2AB2E5E400FBE30B /* BEMemberList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BEMemberList.storyboard; sourceTree = "<group>"; };
 		82FBA9722AB1618C00822B41 /* BEHomeList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BEHomeList.storyboard; sourceTree = "<group>"; };
 		82FBA9742AB1663C00822B41 /* BEHomeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEHomeListViewController.swift; sourceTree = "<group>"; };
 		82FBA9762AB186AD00822B41 /* BECurrentHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BECurrentHome.storyboard; sourceTree = "<group>"; };
@@ -150,8 +156,6 @@
 		82FBA9822AB1A75B00822B41 /* BEDeleteHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEDeleteHomeViewController.swift; sourceTree = "<group>"; };
 		82FBA9882AB1BA7F00822B41 /* BEEditHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BEEditHome.storyboard; sourceTree = "<group>"; };
 		82FBA98A2AB1BACD00822B41 /* BEEditHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEEditHomeViewController.swift; sourceTree = "<group>"; };
-		9813B6962AA5DEC8001646C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/BE FunctionList.storyboard"; sourceTree = "<group>"; };
-		9813B6992AA5DECA001646C0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BE FunctionList.strings"; sourceTree = "<group>"; };
 		9813B69F2AA5E234001646C0 /* DeviceNetworkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceNetworkListViewController.swift; sourceTree = "<group>"; };
 		9813B6A22AA71592001646C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TuyaLinkBind.storyboard; sourceTree = "<group>"; };
 		9813B6A42AA71592001646C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/APMode.storyboard; sourceTree = "<group>"; };
@@ -167,8 +171,6 @@
 		9813B6BF2AA715B4001646C0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TuyaLinkBind.strings"; sourceTree = "<group>"; };
 		9813B6C12AA715B7001646C0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/ZigbeeGateway.strings"; sourceTree = "<group>"; };
 		9813B6C32AA715B9001646C0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/ZigbeeSubdevice.strings"; sourceTree = "<group>"; };
-		9813B6C52AA717FD001646C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FunctionList.storyboard; sourceTree = "<group>"; };
-		9813B6C82AA71803001646C0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/FunctionList.strings"; sourceTree = "<group>"; };
 		9813B6CA2AA719E0001646C0 /* ZigbeeSubdeviceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZigbeeSubdeviceTableViewController.swift; sourceTree = "<group>"; };
 		9813B6CB2AA719E0001646C0 /* EZModeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EZModeTableViewController.swift; sourceTree = "<group>"; };
 		9813B6CC2AA719E0001646C0 /* BLEModeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEModeViewController.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 		82B55A4A2AB1E1AC00FBE30B /* BEMember */ = {
 			isa = PBXGroup;
 			children = (
+				82B55B8B2AB2E5E400FBE30B /* BEMemberList.storyboard */,
 				82B55A4B2AB1E20400FBE30B /* BECreateInvitation.storyboard */,
 				82B55A512AB1E4FF00FBE30B /* BEInvitationList.storyboard */,
 			);
@@ -341,6 +344,8 @@
 		9813B69A2AA5DED7001646C0 /* Device Network Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				82B55B832AB2E5BD00FBE30B /* BE FunctionList.storyboard */,
+				82B55B852AB2E5BD00FBE30B /* FunctionList.storyboard */,
 				9813B6A32AA71592001646C0 /* APMode.storyboard */,
 				9813B6AB2AA71592001646C0 /* BLE.storyboard */,
 				9813B6A72AA71592001646C0 /* DualMode.storyboard */,
@@ -445,10 +450,8 @@
 			isa = PBXGroup;
 			children = (
 				825900BD2AA963E80017D14C /* Home Management */,
-				9813B6C42AA717FD001646C0 /* FunctionList.storyboard */,
 				9813B69A2AA5DED7001646C0 /* Device Network Configuration */,
 				AF3A25AC25A99555003EB9FF /* ThingSmartMain.storyboard */,
-				9813B6972AA5DEC8001646C0 /* BE FunctionList.storyboard */,
 				AF5E2F3425A5A08600DAF14E /* LaunchScreen.storyboard */,
 				AF5E2F3625A5A08600DAF14E /* Register.storyboard */,
 				AF5E2F3825A5A08600DAF14E /* Main.storyboard */,
@@ -605,8 +608,10 @@
 				82B55A4C2AB1E20400FBE30B /* BECreateInvitation.storyboard in Resources */,
 				AF5E66DC25F77E14001D3C15 /* BEZigbeeSubdevice.storyboard in Resources */,
 				9813B6B02AA71593001646C0 /* APMode.storyboard in Resources */,
+				82B55B8C2AB2E5E400FBE30B /* BEMemberList.storyboard in Resources */,
 				AF5E66D425F77DA7001D3C15 /* BEDualMode.storyboard in Resources */,
 				AF3B498C25B8093600286C4A /* BEAPMode.storyboard in Resources */,
+				82B55B882AB2E5BD00FBE30B /* FunctionList.storyboard in Resources */,
 				67956196289A626300BD0FAB /* BETuyaLinkBind.storyboard in Resources */,
 				AF5E2F4125A5A08600DAF14E /* Login.storyboard in Resources */,
 				823969872AB068A400BA2394 /* BECreateHome.storyboard in Resources */,
@@ -616,6 +621,7 @@
 				AF60B8C225BEBA1600E18F6F /* InfoPlist.strings in Resources */,
 				9813B6B12AA71593001646C0 /* ZigbeeSubdevice.storyboard in Resources */,
 				AF5531E925A5992800E13562 /* Assets.xcassets in Resources */,
+				82B55B872AB2E5BD00FBE30B /* BE FunctionList.storyboard in Resources */,
 				9813B6B32AA71593001646C0 /* EZMode.storyboard in Resources */,
 				9813B6AF2AA71593001646C0 /* TuyaLinkBind.storyboard in Resources */,
 				82FBA9732AB1618C00822B41 /* BEHomeList.storyboard in Resources */,
@@ -625,14 +631,12 @@
 				AF5E2F3E25A5A08600DAF14E /* LaunchScreen.storyboard in Resources */,
 				9813B6B22AA71593001646C0 /* DualMode.storyboard in Resources */,
 				AF5E2F3F25A5A08600DAF14E /* Register.storyboard in Resources */,
-				9813B6952AA5DEC8001646C0 /* BE FunctionList.storyboard in Resources */,
 				82FBA9812AB1A74B00822B41 /* BEDeleteHome.storyboard in Resources */,
 				AF3B498725B808D700286C4A /* BEEZMode.storyboard in Resources */,
 				82B55A452AB1DC6900FBE30B /* BEJoinHome.storyboard in Resources */,
 				82FBA9772AB186AD00822B41 /* BECurrentHome.storyboard in Resources */,
 				9813B6B42AA71593001646C0 /* BLE.storyboard in Resources */,
 				823969782AB05D0300BA2394 /* BEHomeManagement.storyboard in Resources */,
-				9813B6C62AA717FD001646C0 /* FunctionList.storyboard in Resources */,
 				82B55A522AB1E4FF00FBE30B /* BEInvitationList.storyboard in Resources */,
 				82FBA97D2AB1904F00822B41 /* BEHomeDetail.storyboard in Resources */,
 				AF60B8C525BEBA1600E18F6F /* Localizable.strings in Resources */,
@@ -822,13 +826,22 @@
 			name = HomeManagement.storyboard;
 			sourceTree = "<group>";
 		};
-		9813B6972AA5DEC8001646C0 /* BE FunctionList.storyboard */ = {
+		82B55B832AB2E5BD00FBE30B /* BE FunctionList.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9813B6962AA5DEC8001646C0 /* Base */,
-				9813B6992AA5DECA001646C0 /* zh-Hans */,
+				82B55B842AB2E5BD00FBE30B /* Base */,
+				82B55B892AB2E5C600FBE30B /* zh-Hans */,
 			);
 			name = "BE FunctionList.storyboard";
+			sourceTree = "<group>";
+		};
+		82B55B852AB2E5BD00FBE30B /* FunctionList.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82B55B862AB2E5BD00FBE30B /* Base */,
+				82B55B8A2AB2E5CA00FBE30B /* zh-Hans */,
+			);
+			name = FunctionList.storyboard;
 			sourceTree = "<group>";
 		};
 		9813B6A12AA71592001646C0 /* TuyaLinkBind.storyboard */ = {
@@ -892,15 +905,6 @@
 				9813B6C12AA715B7001646C0 /* zh-Hans */,
 			);
 			name = ZigbeeGateway.storyboard;
-			sourceTree = "<group>";
-		};
-		9813B6C42AA717FD001646C0 /* FunctionList.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9813B6C52AA717FD001646C0 /* Base */,
-				9813B6C82AA71803001646C0 /* zh-Hans */,
-			);
-			name = FunctionList.storyboard;
 			sourceTree = "<group>";
 		};
 		AF21C1FD25B03D6000D52FBA /* SwitchHome.storyboard */ = {

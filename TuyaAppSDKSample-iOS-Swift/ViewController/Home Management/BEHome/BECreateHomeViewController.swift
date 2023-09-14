@@ -40,7 +40,7 @@ class BECreateHomeViewController : UITableViewController {
         }
     }
     
-    @IBAction func autoGetCity(_ sender: Any) {
+    func autoGetCity() {
         ThingSmartFamilyBiz.sharedInstance().getCityInfo(latitude, longitude: longitude) {[weak self] cityModel in
             guard let self = self else {return}
             self.homeCity.text = (cityModel?.province ?? "") + " " + (cityModel?.city ?? "") + " " + (cityModel?.area ?? "")
@@ -59,6 +59,12 @@ class BECreateHomeViewController : UITableViewController {
             locationManager.startUpdatingLocation()
         } else {
             Alert.showBasicAlert(on: self, with: NSLocalizedString("Cannot Access Location", comment: ""), message: NSLocalizedString("Please make sure if the location access is enabled for the app.", comment: ""))
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0, indexPath.row == 2 {
+            autoGetCity()
         }
     }
 }

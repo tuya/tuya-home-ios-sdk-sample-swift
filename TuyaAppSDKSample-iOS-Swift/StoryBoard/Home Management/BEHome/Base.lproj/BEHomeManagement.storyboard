@@ -188,22 +188,15 @@
                                             <segue destination="ybl-a4-CUb" kind="show" id="fdC-bc-i5N"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="9GA-t0-xgW" detailTextLabel="wbT-a4-gzJ" style="IBUITableViewCellStyleValue1" id="Rpe-2h-Nk4">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="9GA-t0-xgW" style="IBUITableViewCellStyleDefault" id="Rpe-2h-Nk4">
                                         <rect key="frame" x="20" y="460.66667366027832" width="353" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rpe-2h-Nk4" id="bhS-zh-Cgn">
                                             <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Current Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9GA-t0-xgW">
-                                                    <rect key="frame" x="20.000000000000007" y="11.999999999999998" width="107.66666666666667" height="20.333333333333332"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wbT-a4-gzJ">
-                                                    <rect key="frame" x="271" y="11.999999999999998" width="43.666666666666664" height="20.333333333333332"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Member List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9GA-t0-xgW">
+                                                    <rect key="frame" x="20" y="0.0" width="294.66666666666669" height="43.666667938232422"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -211,6 +204,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="EGl-0Q-v2T" kind="show" id="08j-mf-XX3"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="x2i-YB-8xS" style="IBUITableViewCellStyleDefault" id="fjj-s2-hg0">
                                         <rect key="frame" x="20" y="504.33334159851074" width="353" height="43.666667938232422"/>
@@ -349,6 +345,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IuE-NS-Gd7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1466" y="146"/>
+        </scene>
+        <!--BEMemberList-->
+        <scene sceneID="ONd-1K-Myt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BEMemberList" id="EGl-0Q-v2T" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="S5L-n5-Ku3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CoZ-TK-I6x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1484" y="201"/>
         </scene>
         <!--BECreateHome-->
         <scene sceneID="i5Q-5y-LtE">
