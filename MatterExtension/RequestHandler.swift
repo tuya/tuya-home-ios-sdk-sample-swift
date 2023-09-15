@@ -13,7 +13,7 @@ class RequestHandler: MatterAddDeviceExtensionRequestHandler {
     
     override init() {
         super.init()
-        ThingMatterExtensionSupport.shared.setMatterConfigKey(configKey: "group.com.hjj.test")
+        ThingMatterExtensionSupport.shared.setMatterConfigKey(configKey: "your group id")
     }
     
     override func validateDeviceCredential(_ deviceCredential: MatterAddDeviceExtensionRequestHandler.DeviceCredential) async throws {

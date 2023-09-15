@@ -23,6 +23,9 @@ target 'TuyaAppSDKSample-iOS-Swift' do
   pod 'ThingFamilyAPI', '1.3.1'
   pod 'ThingActivatorRequestSkt', '0.2.2'
   pod 'ThingSmartMatterKit', '5.5.0-rc.1'
+  
+  pod 'ThingSmartFamilyBizKit', '1.8.1'
+    pod 'ThingSmartDeviceKit', '5.4.3'
 end
 
 target 'MatterExtension' do

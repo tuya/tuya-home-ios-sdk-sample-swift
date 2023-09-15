@@ -10,39 +10,15 @@ import ThingSmartDeviceKit
 class ThingSmartMainTableViewController: UITableViewController {
     // MARK: - IBOutlet
     @IBOutlet weak var logoutButton: UIButton!
-    @IBOutlet weak var currentHomeLabel: UILabel!
-    
-    // MARK: - Property
-    let homeManager = ThingSmartHomeManager()
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        initiateCurrentHome()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        currentHomeLabel.text = Home.current?.name ?? NSLocalizedString("No Selection", comment: "User hasn't select a current home.")
-        
-        if #available(iOS 13.0, *) {
-            currentHomeLabel.textColor = .secondaryLabel
-        } else {
-            currentHomeLabel.textColor = .systemGray
-        }
     }
-    
-    // MARK: - Private Method
-    private func initiateCurrentHome() {
-        homeManager.getHomeList { (homeModels) in
-            Home.current = homeModels?.first
-        } failure: { (error) in
-            
-        }
-    }
-    
     
     // MARK: - IBAction
     @IBAction func logoutTapped(_ sender: UIButton) {

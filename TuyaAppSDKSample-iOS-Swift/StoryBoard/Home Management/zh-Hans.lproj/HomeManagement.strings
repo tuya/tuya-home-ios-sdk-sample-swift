@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "Home List"; ObjectID = "NC7-aR-Vcn"; */
+"NC7-aR-Vcn.text" = "家庭列表";
+
+/* Class = "UITableViewSection"; headerTitle = "Home Management"; ObjectID = "Nqu-nD-dv6"; */
+"Nqu-nD-dv6.headerTitle" = "家庭管理";
+
+/* Class = "UILabel"; text = "Current Home"; ObjectID = "OWj-5s-1DJ"; */
+"OWj-5s-1DJ.text" = "当前家庭";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "koB-ew-4FA"; */
+"koB-ew-4FA.text" = "详情";
+
+/* Class = "UILabel"; text = "New Home"; ObjectID = "nOi-Ey-VC6"; */
+"nOi-Ey-VC6.text" = "创建家庭";

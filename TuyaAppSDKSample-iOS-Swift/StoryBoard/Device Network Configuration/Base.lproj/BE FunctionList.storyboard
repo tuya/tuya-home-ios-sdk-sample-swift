@@ -174,7 +174,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="FbR-Og-lls" kind="show" id="VcR-1g-kKg"/>
+                                            <segue destination="FbR-Og-lls" kind="show" id="iaf-r6-zgY"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -253,10 +253,10 @@
         <!--BEMatter-->
         <scene sceneID="Jth-zM-q2H">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MCb-oo-qVj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="BEMatter" id="FbR-Og-lls" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="P9M-sa-2uY"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MCb-oo-qVj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1390" y="228"/>
         </scene>

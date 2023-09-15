@@ -7,18 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01CE54C4B42103DA38D13558 /* libPods-MatterExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC365C6FEA4300F49F53CE7 /* libPods-MatterExtension.a */; };
-		0FFD6D602AB00A4F002AAD8E /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD6D5F2AB00A4F002AAD8E /* RequestHandler.swift */; };
-		0FFD6D642AB00A4F002AAD8E /* MatterExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0FFD6D5D2AB00A4F002AAD8E /* MatterExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		0FFD6D6C2AB03D5E002AAD8E /* BEMatterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD6D6B2AB03D5E002AAD8E /* BEMatterViewController.swift */; };
-		0FFD6D6D2AB03F75002AAD8E /* BEMatter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FFD6D6F2AB03F75002AAD8E /* BEMatter.storyboard */; };
+		0FF096B82AB3F137003C6BDA /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF096B72AB3F137003C6BDA /* RequestHandler.swift */; };
+		0FF096BC2AB3F137003C6BDA /* MatterExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0FF096B52AB3F137003C6BDA /* MatterExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0FF096C42AB3F1EB003C6BDA /* BEMatter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF096C22AB3F1EB003C6BDA /* BEMatter.storyboard */; };
+		0FF096C62AB3F6F9003C6BDA /* BEMatterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF096C52AB3F6F9003C6BDA /* BEMatterViewController.swift */; };
 		10F4AAB953F4FBCFFBD0F199 /* libPods-TuyaAppSDKSample-iOS-Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A631D49E2E0E816D32C2CC /* libPods-TuyaAppSDKSample-iOS-Swift.a */; };
 		6719AB9128A202B5000588E7 /* TextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6719AB9028A202B5000588E7 /* TextViewTableViewCell.swift */; };
 		6719AB9328A208CC000588E7 /* TuyaLinkDeviceControlController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6719AB9228A208CB000588E7 /* TuyaLinkDeviceControlController.swift */; };
 		6719AB9528A208DF000588E7 /* TuyaLinkActionMsgSendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6719AB9428A208DF000588E7 /* TuyaLinkActionMsgSendController.swift */; };
 		67956196289A626300BD0FAB /* BETuyaLinkBind.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67956198289A626300BD0FAB /* BETuyaLinkBind.storyboard */; };
 		6795619E289A6AED00BD0FAB /* QRCodeScanerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6795619D289A6AED00BD0FAB /* QRCodeScanerViewController.swift */; };
-		9813B6952AA5DEC8001646C0 /* BE FunctionList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9813B6972AA5DEC8001646C0 /* BE FunctionList.storyboard */; };
+		8239696B2AB05B3400BA2394 /* NewHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF60B89A25BC1F5600E18F6F /* NewHome.storyboard */; };
+		8239696C2AB05B4400BA2394 /* SwitchHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF21C1FD25B03D6000D52FBA /* SwitchHome.storyboard */; };
+		823969702AB05C5400BA2394 /* HomeList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8239696E2AB05C5400BA2394 /* HomeList.storyboard */; };
+		823969782AB05D0300BA2394 /* BEHomeManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8239697A2AB05D0300BA2394 /* BEHomeManagement.storyboard */; };
+		8239697E2AB060CF00BA2394 /* BEHomeManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8239697D2AB060CF00BA2394 /* BEHomeManagementViewController.swift */; };
+		823969872AB068A400BA2394 /* BECreateHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 823969892AB068A400BA2394 /* BECreateHome.storyboard */; };
+		8239698F2AB06A2700BA2394 /* BECreateHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8239698E2AB06A2700BA2394 /* BECreateHomeViewController.swift */; };
+		825225B62AA9770300E05943 /* HomeManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 825225B82AA9770300E05943 /* HomeManagement.storyboard */; };
+		825900C32AA9665F0017D14C /* ThingSmartHomeManagementListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825900C22AA9665F0017D14C /* ThingSmartHomeManagementListViewController.swift */; };
+		82B55A452AB1DC6900FBE30B /* BEJoinHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B55A442AB1DC6900FBE30B /* BEJoinHome.storyboard */; };
+		82B55A472AB1DD4D00FBE30B /* BEJoinHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B55A462AB1DD4D00FBE30B /* BEJoinHomeViewController.swift */; };
+		82B55A4C2AB1E20400FBE30B /* BECreateInvitation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B55A4B2AB1E20400FBE30B /* BECreateInvitation.storyboard */; };
+		82B55A502AB1E2B500FBE30B /* BECreateInvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B55A4F2AB1E2B500FBE30B /* BECreateInvitationViewController.swift */; };
+		82B55A522AB1E4FF00FBE30B /* BEInvitationList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B55A512AB1E4FF00FBE30B /* BEInvitationList.storyboard */; };
+		82B55A542AB1E56800FBE30B /* BEInvitationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B55A532AB1E56800FBE30B /* BEInvitationListViewController.swift */; };
+		82B55A562AB1EA0500FBE30B /* BEInvitationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B55A552AB1EA0500FBE30B /* BEInvitationDetailViewController.swift */; };
+		82B55B872AB2E5BD00FBE30B /* BE FunctionList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B55B832AB2E5BD00FBE30B /* BE FunctionList.storyboard */; };
+		82B55B882AB2E5BD00FBE30B /* FunctionList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B55B852AB2E5BD00FBE30B /* FunctionList.storyboard */; };
+		82B55B8C2AB2E5E400FBE30B /* BEMemberList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B55B8B2AB2E5E400FBE30B /* BEMemberList.storyboard */; };
+		82B55B8E2AB2E6B300FBE30B /* BEMemberListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B55B8D2AB2E6B300FBE30B /* BEMemberListViewController.swift */; };
+		82B55B902AB2E88D00FBE30B /* BEMemberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B55B8F2AB2E88D00FBE30B /* BEMemberDetailViewController.swift */; };
+		82B55B922AB2EF4C00FBE30B /* BEAddMember.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B55B912AB2EF4C00FBE30B /* BEAddMember.storyboard */; };
+		82B55B942AB2EF9600FBE30B /* BEAddMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B55B932AB2EF9600FBE30B /* BEAddMemberViewController.swift */; };
+		82B55B962AB2FE0700FBE30B /* BEInvitedHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B55B952AB2FE0700FBE30B /* BEInvitedHome.storyboard */; };
+		82B55B982AB2FE3D00FBE30B /* BEInvitedHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B55B972AB2FE3D00FBE30B /* BEInvitedHomeViewController.swift */; };
+		82B55B9B2AB3073400FBE30B /* BERoomList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B55B9A2AB3073400FBE30B /* BERoomList.storyboard */; };
+		82B55B9E2AB3079100FBE30B /* BERoomListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B55B9D2AB3079100FBE30B /* BERoomListViewController.swift */; };
+		82B55BA02AB3093900FBE30B /* BEAddRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B55B9F2AB3093900FBE30B /* BEAddRoom.storyboard */; };
+		82B55BA22AB30A0A00FBE30B /* BEAddRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B55BA12AB30A0A00FBE30B /* BEAddRoomViewController.swift */; };
+		82B55BA42AB30CD600FBE30B /* BERoomDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B55BA32AB30CD600FBE30B /* BERoomDetailViewController.swift */; };
+		82B55BA62AB311DF00FBE30B /* BECreateDefaultHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B55BA52AB311DF00FBE30B /* BECreateDefaultHome.storyboard */; };
+		82B55BA82AB3128600FBE30B /* BECreateDefaultHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B55BA72AB3128600FBE30B /* BECreateDefaultHomeViewController.swift */; };
+		82B55BAA2AB3172300FBE30B /* BERecommendRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B55BA92AB3172300FBE30B /* BERecommendRoom.storyboard */; };
+		82B55BAC2AB3174600FBE30B /* BERecommendRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B55BAB2AB3174600FBE30B /* BERecommendRoomViewController.swift */; };
+		82B55BAE2AB3271C00FBE30B /* BEEditRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B55BAD2AB3271C00FBE30B /* BEEditRoomViewController.swift */; };
+		82B55BB02AB32AD600FBE30B /* BEEditMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B55BAF2AB32AD600FBE30B /* BEEditMemberViewController.swift */; };
+		82FBA9732AB1618C00822B41 /* BEHomeList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA9722AB1618C00822B41 /* BEHomeList.storyboard */; };
+		82FBA9752AB1663C00822B41 /* BEHomeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FBA9742AB1663C00822B41 /* BEHomeListViewController.swift */; };
+		82FBA9772AB186AD00822B41 /* BECurrentHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA9762AB186AD00822B41 /* BECurrentHome.storyboard */; };
+		82FBA97B2AB1886300822B41 /* BECurrentHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FBA97A2AB1886300822B41 /* BECurrentHomeViewController.swift */; };
+		82FBA97D2AB1904F00822B41 /* BEHomeDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA97C2AB1904F00822B41 /* BEHomeDetail.storyboard */; };
+		82FBA97F2AB1921C00822B41 /* BEHomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FBA97E2AB1921C00822B41 /* BEHomeDetailViewController.swift */; };
+		82FBA9812AB1A74B00822B41 /* BEDeleteHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA9802AB1A74B00822B41 /* BEDeleteHome.storyboard */; };
+		82FBA9832AB1A75B00822B41 /* BEDeleteHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FBA9822AB1A75B00822B41 /* BEDeleteHomeViewController.swift */; };
+		82FBA9892AB1BA7F00822B41 /* BEEditHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA9882AB1BA7F00822B41 /* BEEditHome.storyboard */; };
+		82FBA98B2AB1BACD00822B41 /* BEEditHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FBA98A2AB1BACD00822B41 /* BEEditHomeViewController.swift */; };
+		8E25562B8FA40D6BB23FDDBF /* libPods-MatterExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F29A1BBA5069B0258E6DB4 /* libPods-MatterExtension.a */; };
 		9813B6A02AA5E234001646C0 /* DeviceNetworkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9813B69F2AA5E234001646C0 /* DeviceNetworkListViewController.swift */; };
 		9813B6AF2AA71593001646C0 /* TuyaLinkBind.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9813B6A12AA71592001646C0 /* TuyaLinkBind.storyboard */; };
 		9813B6B02AA71593001646C0 /* APMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9813B6A32AA71592001646C0 /* APMode.storyboard */; };
@@ -27,7 +72,6 @@
 		9813B6B32AA71593001646C0 /* EZMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9813B6A92AA71592001646C0 /* EZMode.storyboard */; };
 		9813B6B42AA71593001646C0 /* BLE.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9813B6AB2AA71592001646C0 /* BLE.storyboard */; };
 		9813B6B52AA71593001646C0 /* ZigbeeGateway.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9813B6AD2AA71592001646C0 /* ZigbeeGateway.storyboard */; };
-		9813B6C62AA717FD001646C0 /* FunctionList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9813B6C42AA717FD001646C0 /* FunctionList.storyboard */; };
 		9813B6D22AA719E0001646C0 /* ZigbeeSubdeviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9813B6CA2AA719E0001646C0 /* ZigbeeSubdeviceTableViewController.swift */; };
 		9813B6D32AA719E0001646C0 /* EZModeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9813B6CB2AA719E0001646C0 /* EZModeTableViewController.swift */; };
 		9813B6D42AA719E0001646C0 /* BLEModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9813B6CC2AA719E0001646C0 /* BLEModeViewController.swift */; };
@@ -45,7 +89,6 @@
 		AF00607225EE6C79001462B8 /* BEZigbeeSubdeviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF00607125EE6C79001462B8 /* BEZigbeeSubdeviceTableViewController.swift */; };
 		AF00607625EE6D33001462B8 /* BEChooseGatewayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF00607525EE6D33001462B8 /* BEChooseGatewayTableViewController.swift */; };
 		AF05ECC625CB968500C84AF6 /* DeviceDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF05ECC525CB968500C84AF6 /* DeviceDetailTableViewController.swift */; };
-		AF21C1FF25B03D6000D52FBA /* SwitchHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF21C1FD25B03D6000D52FBA /* SwitchHome.storyboard */; };
 		AF21C20625B0400F00D52FBA /* BEEZModeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21C20525B0400F00D52FBA /* BEEZModeTableViewController.swift */; };
 		AF37DBB425AEE842000EB0FD /* EditHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37DBB325AEE842000EB0FD /* EditHomeTableViewController.swift */; };
 		AF3A259C25A835AE003EB9FF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A259B25A835AE003EB9FF /* MainViewController.swift */; };
@@ -82,8 +125,6 @@
 		AF5E66D825F77DE9001D3C15 /* BEZigbeeGateway.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5E66D625F77DE9001D3C15 /* BEZigbeeGateway.storyboard */; };
 		AF5E66DC25F77E14001D3C15 /* BEZigbeeSubdevice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5E66DA25F77E14001D3C15 /* BEZigbeeSubdevice.storyboard */; };
 		AF60B88C25BBC1F600E18F6F /* BEAPModeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60B88B25BBC1F600E18F6F /* BEAPModeTableViewController.swift */; };
-		AF60B89825BC1F5600E18F6F /* NewHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF60B89A25BC1F5600E18F6F /* NewHome.storyboard */; };
-		AF60B89E25BC1F6700E18F6F /* HomeList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF60B8A025BC1F6700E18F6F /* HomeList.storyboard */; };
 		AF60B8C225BEBA1600E18F6F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF60B8C025BEBA1600E18F6F /* InfoPlist.strings */; };
 		AF60B8C525BEBA1600E18F6F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF60B8C325BEBA1600E18F6F /* Localizable.strings */; };
 		AF96112425B17F38000971CC /* DeviceListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF96112325B17F38000971CC /* DeviceListTableViewController.swift */; };
@@ -98,23 +139,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0FFD6D622AB00A4F002AAD8E /* PBXContainerItemProxy */ = {
+		0FF096BA2AB3F137003C6BDA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AF5531D425A5992500E13562 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0FFD6D5C2AB00A4F002AAD8E;
+			remoteGlobalIDString = 0FF096B42AB3F137003C6BDA;
 			remoteInfo = MatterExtension;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		0FFD6D682AB00A4F002AAD8E /* Embed Foundation Extensions */ = {
+		0FF096C02AB3F137003C6BDA /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				0FFD6D642AB00A4F002AAD8E /* MatterExtension.appex in Embed Foundation Extensions */,
+				0FF096BC2AB3F137003C6BDA /* MatterExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,15 +163,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0CC365C6FEA4300F49F53CE7 /* libPods-MatterExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MatterExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FFD6D5D2AB00A4F002AAD8E /* MatterExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MatterExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FFD6D5F2AB00A4F002AAD8E /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
-		0FFD6D612AB00A4F002AAD8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0FFD6D6B2AB03D5E002AAD8E /* BEMatterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEMatterViewController.swift; sourceTree = "<group>"; };
-		0FFD6D762AB03FE0002AAD8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BEMatter.storyboard; sourceTree = "<group>"; };
-		0FFD6D782AB03FEA002AAD8E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BEMatter.strings"; sourceTree = "<group>"; };
-		0FFD6E682AB096AF002AAD8E /* TuyaAppSDKSample-iOS-Swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "TuyaAppSDKSample-iOS-Swift.entitlements"; sourceTree = "<group>"; };
-		0FFD6E692AB09735002AAD8E /* MatterExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MatterExtension.entitlements; sourceTree = "<group>"; };
+		0FF096B02AB3F120003C6BDA /* TuyaAppSDKSample-iOS-Swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "TuyaAppSDKSample-iOS-Swift.entitlements"; sourceTree = "<group>"; };
+		0FF096B52AB3F137003C6BDA /* MatterExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MatterExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FF096B72AB3F137003C6BDA /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
+		0FF096B92AB3F137003C6BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FF096C12AB3F13E003C6BDA /* MatterExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MatterExtension.entitlements; sourceTree = "<group>"; };
+		0FF096C32AB3F1EB003C6BDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BEMatter.storyboard; sourceTree = "<group>"; };
+		0FF096C52AB3F6F9003C6BDA /* BEMatterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BEMatterViewController.swift; path = "TuyaAppSDKSample-iOS-Swift/ViewController/BE Device Network Configuration /BEMatterViewController.swift"; sourceTree = SOURCE_ROOT; };
 		207E8BAF216CF8ED00C5937A /* Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig"; path = "Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		6719AB9028A202B5000588E7 /* TextViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewTableViewCell.swift; sourceTree = "<group>"; };
 		6719AB9228A208CB000588E7 /* TuyaLinkDeviceControlController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuyaLinkDeviceControlController.swift; sourceTree = "<group>"; };
@@ -139,9 +178,55 @@
 		67956197289A626300BD0FAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BETuyaLinkBind.storyboard; sourceTree = "<group>"; };
 		6795619A289A626500BD0FAB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BETuyaLinkBind.strings"; sourceTree = "<group>"; };
 		6795619D289A6AED00BD0FAB /* QRCodeScanerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScanerViewController.swift; sourceTree = "<group>"; };
-		6EC014CB2C295A38CA35072F /* Pods-MatterExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatterExtension.debug.xcconfig"; path = "Target Support Files/Pods-MatterExtension/Pods-MatterExtension.debug.xcconfig"; sourceTree = "<group>"; };
-		9813B6962AA5DEC8001646C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/BE FunctionList.storyboard"; sourceTree = "<group>"; };
-		9813B6992AA5DECA001646C0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BE FunctionList.strings"; sourceTree = "<group>"; };
+		8239696F2AB05C5400BA2394 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeList.storyboard; sourceTree = "<group>"; };
+		823969752AB05C7400BA2394 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/HomeList.strings"; sourceTree = "<group>"; };
+		823969792AB05D0300BA2394 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BEHomeManagement.storyboard; sourceTree = "<group>"; };
+		8239697D2AB060CF00BA2394 /* BEHomeManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEHomeManagementViewController.swift; sourceTree = "<group>"; };
+		823969882AB068A400BA2394 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BECreateHome.storyboard; sourceTree = "<group>"; };
+		8239698E2AB06A2700BA2394 /* BECreateHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BECreateHomeViewController.swift; sourceTree = "<group>"; };
+		825225B92AA9770F00E05943 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeManagement.storyboard; sourceTree = "<group>"; };
+		825225BD2AA9774D00E05943 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/HomeManagement.strings"; sourceTree = "<group>"; };
+		825900C22AA9665F0017D14C /* ThingSmartHomeManagementListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingSmartHomeManagementListViewController.swift; sourceTree = "<group>"; };
+		82B55A442AB1DC6900FBE30B /* BEJoinHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BEJoinHome.storyboard; sourceTree = "<group>"; };
+		82B55A462AB1DD4D00FBE30B /* BEJoinHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEJoinHomeViewController.swift; sourceTree = "<group>"; };
+		82B55A4B2AB1E20400FBE30B /* BECreateInvitation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BECreateInvitation.storyboard; sourceTree = "<group>"; };
+		82B55A4F2AB1E2B500FBE30B /* BECreateInvitationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BECreateInvitationViewController.swift; sourceTree = "<group>"; };
+		82B55A512AB1E4FF00FBE30B /* BEInvitationList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BEInvitationList.storyboard; sourceTree = "<group>"; };
+		82B55A532AB1E56800FBE30B /* BEInvitationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEInvitationListViewController.swift; sourceTree = "<group>"; };
+		82B55A552AB1EA0500FBE30B /* BEInvitationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEInvitationDetailViewController.swift; sourceTree = "<group>"; };
+		82B55B842AB2E5BD00FBE30B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/BE FunctionList.storyboard"; sourceTree = "<group>"; };
+		82B55B862AB2E5BD00FBE30B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FunctionList.storyboard; sourceTree = "<group>"; };
+		82B55B892AB2E5C600FBE30B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BE FunctionList.strings"; sourceTree = "<group>"; };
+		82B55B8A2AB2E5CA00FBE30B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/FunctionList.strings"; sourceTree = "<group>"; };
+		82B55B8B2AB2E5E400FBE30B /* BEMemberList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BEMemberList.storyboard; sourceTree = "<group>"; };
+		82B55B8D2AB2E6B300FBE30B /* BEMemberListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEMemberListViewController.swift; sourceTree = "<group>"; };
+		82B55B8F2AB2E88D00FBE30B /* BEMemberDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEMemberDetailViewController.swift; sourceTree = "<group>"; };
+		82B55B912AB2EF4C00FBE30B /* BEAddMember.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BEAddMember.storyboard; sourceTree = "<group>"; };
+		82B55B932AB2EF9600FBE30B /* BEAddMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEAddMemberViewController.swift; sourceTree = "<group>"; };
+		82B55B952AB2FE0700FBE30B /* BEInvitedHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BEInvitedHome.storyboard; sourceTree = "<group>"; };
+		82B55B972AB2FE3D00FBE30B /* BEInvitedHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEInvitedHomeViewController.swift; sourceTree = "<group>"; };
+		82B55B9A2AB3073400FBE30B /* BERoomList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BERoomList.storyboard; sourceTree = "<group>"; };
+		82B55B9D2AB3079100FBE30B /* BERoomListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BERoomListViewController.swift; sourceTree = "<group>"; };
+		82B55B9F2AB3093900FBE30B /* BEAddRoom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BEAddRoom.storyboard; sourceTree = "<group>"; };
+		82B55BA12AB30A0A00FBE30B /* BEAddRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEAddRoomViewController.swift; sourceTree = "<group>"; };
+		82B55BA32AB30CD600FBE30B /* BERoomDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BERoomDetailViewController.swift; sourceTree = "<group>"; };
+		82B55BA52AB311DF00FBE30B /* BECreateDefaultHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BECreateDefaultHome.storyboard; sourceTree = "<group>"; };
+		82B55BA72AB3128600FBE30B /* BECreateDefaultHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BECreateDefaultHomeViewController.swift; sourceTree = "<group>"; };
+		82B55BA92AB3172300FBE30B /* BERecommendRoom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BERecommendRoom.storyboard; sourceTree = "<group>"; };
+		82B55BAB2AB3174600FBE30B /* BERecommendRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BERecommendRoomViewController.swift; sourceTree = "<group>"; };
+		82B55BAD2AB3271C00FBE30B /* BEEditRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEEditRoomViewController.swift; sourceTree = "<group>"; };
+		82B55BAF2AB32AD600FBE30B /* BEEditMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEEditMemberViewController.swift; sourceTree = "<group>"; };
+		82FBA9722AB1618C00822B41 /* BEHomeList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BEHomeList.storyboard; sourceTree = "<group>"; };
+		82FBA9742AB1663C00822B41 /* BEHomeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEHomeListViewController.swift; sourceTree = "<group>"; };
+		82FBA9762AB186AD00822B41 /* BECurrentHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BECurrentHome.storyboard; sourceTree = "<group>"; };
+		82FBA97A2AB1886300822B41 /* BECurrentHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BECurrentHomeViewController.swift; sourceTree = "<group>"; };
+		82FBA97C2AB1904F00822B41 /* BEHomeDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BEHomeDetail.storyboard; sourceTree = "<group>"; };
+		82FBA97E2AB1921C00822B41 /* BEHomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEHomeDetailViewController.swift; sourceTree = "<group>"; };
+		82FBA9802AB1A74B00822B41 /* BEDeleteHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BEDeleteHome.storyboard; sourceTree = "<group>"; };
+		82FBA9822AB1A75B00822B41 /* BEDeleteHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEDeleteHomeViewController.swift; sourceTree = "<group>"; };
+		82FBA9882AB1BA7F00822B41 /* BEEditHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BEEditHome.storyboard; sourceTree = "<group>"; };
+		82FBA98A2AB1BACD00822B41 /* BEEditHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEEditHomeViewController.swift; sourceTree = "<group>"; };
+		85F29A1BBA5069B0258E6DB4 /* libPods-MatterExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MatterExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9813B69F2AA5E234001646C0 /* DeviceNetworkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceNetworkListViewController.swift; sourceTree = "<group>"; };
 		9813B6A22AA71592001646C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TuyaLinkBind.storyboard; sourceTree = "<group>"; };
 		9813B6A42AA71592001646C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/APMode.storyboard; sourceTree = "<group>"; };
@@ -157,8 +242,6 @@
 		9813B6BF2AA715B4001646C0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TuyaLinkBind.strings"; sourceTree = "<group>"; };
 		9813B6C12AA715B7001646C0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/ZigbeeGateway.strings"; sourceTree = "<group>"; };
 		9813B6C32AA715B9001646C0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/ZigbeeSubdevice.strings"; sourceTree = "<group>"; };
-		9813B6C52AA717FD001646C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FunctionList.storyboard; sourceTree = "<group>"; };
-		9813B6C82AA71803001646C0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/FunctionList.strings"; sourceTree = "<group>"; };
 		9813B6CA2AA719E0001646C0 /* ZigbeeSubdeviceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZigbeeSubdeviceTableViewController.swift; sourceTree = "<group>"; };
 		9813B6CB2AA719E0001646C0 /* EZModeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EZModeTableViewController.swift; sourceTree = "<group>"; };
 		9813B6CC2AA719E0001646C0 /* BLEModeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEModeViewController.swift; sourceTree = "<group>"; };
@@ -232,8 +315,6 @@
 		AF60B89525BC1F0500E18F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BEEZMode.strings"; sourceTree = "<group>"; };
 		AF60B89925BC1F5600E18F6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/NewHome.storyboard; sourceTree = "<group>"; };
 		AF60B89D25BC1F5D00E18F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/NewHome.strings"; sourceTree = "<group>"; };
-		AF60B89F25BC1F6700E18F6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TuyaAppSDKSample-iOS-Swift/StoryBoard/Base.lproj/HomeList.storyboard"; sourceTree = "<group>"; };
-		AF60B8A325BC1F6E00E18F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "TuyaAppSDKSample-iOS-Swift/StoryBoard/zh-Hans.lproj/HomeList.strings"; sourceTree = "<group>"; };
 		AF60B8C125BEBA1600E18F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		AF60B8C425BEBA1600E18F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		AF96112325B17F38000971CC /* DeviceListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListTableViewController.swift; sourceTree = "<group>"; };
@@ -246,15 +327,16 @@
 		AFBB5BBE25B95BBA006BDDD7 /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 		AFBB5BC125B95F3C006BDDD7 /* DeviceStatusBehaveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceStatusBehaveCell.swift; sourceTree = "<group>"; };
 		B2A4751A3340941A1C42F4D9 /* Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig"; path = "Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig"; sourceTree = "<group>"; };
-		DC4375DA9D6D6289A8AA10BF /* Pods-MatterExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatterExtension.release.xcconfig"; path = "Target Support Files/Pods-MatterExtension/Pods-MatterExtension.release.xcconfig"; sourceTree = "<group>"; };
+		BDB17C938DDB956362B3B087 /* Pods-MatterExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatterExtension.release.xcconfig"; path = "Target Support Files/Pods-MatterExtension/Pods-MatterExtension.release.xcconfig"; sourceTree = "<group>"; };
+		E6BE6E3ED74D602A6FC346E7 /* Pods-MatterExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatterExtension.debug.xcconfig"; path = "Target Support Files/Pods-MatterExtension/Pods-MatterExtension.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0FFD6D5A2AB00A4F002AAD8E /* Frameworks */ = {
+		0FF096B22AB3F137003C6BDA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01CE54C4B42103DA38D13558 /* libPods-MatterExtension.a in Frameworks */,
+				8E25562B8FA40D6BB23FDDBF /* libPods-MatterExtension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,21 +351,116 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0FFD6D5E2AB00A4F002AAD8E /* MatterExtension */ = {
+		0FF096B62AB3F137003C6BDA /* MatterExtension */ = {
 			isa = PBXGroup;
 			children = (
-				0FFD6E692AB09735002AAD8E /* MatterExtension.entitlements */,
-				0FFD6D5F2AB00A4F002AAD8E /* RequestHandler.swift */,
-				0FFD6D612AB00A4F002AAD8E /* Info.plist */,
+				0FF096C12AB3F13E003C6BDA /* MatterExtension.entitlements */,
+				0FF096B72AB3F137003C6BDA /* RequestHandler.swift */,
+				0FF096B92AB3F137003C6BDA /* Info.plist */,
 			);
 			path = MatterExtension;
+			sourceTree = "<group>";
+		};
+		825900BD2AA963E80017D14C /* Home Management */ = {
+			isa = PBXGroup;
+			children = (
+				82B55B992AB3072300FBE30B /* BERoom */,
+				82B55A4A2AB1E1AC00FBE30B /* BEMember */,
+				82B55A482AB1E11200FBE30B /* BEHome */,
+				8239696E2AB05C5400BA2394 /* HomeList.storyboard */,
+				AF60B89A25BC1F5600E18F6F /* NewHome.storyboard */,
+				AF21C1FD25B03D6000D52FBA /* SwitchHome.storyboard */,
+				825225B82AA9770300E05943 /* HomeManagement.storyboard */,
+			);
+			path = "Home Management";
+			sourceTree = "<group>";
+		};
+		82B55A482AB1E11200FBE30B /* BEHome */ = {
+			isa = PBXGroup;
+			children = (
+				82FBA9882AB1BA7F00822B41 /* BEEditHome.storyboard */,
+				82FBA97C2AB1904F00822B41 /* BEHomeDetail.storyboard */,
+				8239697A2AB05D0300BA2394 /* BEHomeManagement.storyboard */,
+				823969892AB068A400BA2394 /* BECreateHome.storyboard */,
+				82FBA9722AB1618C00822B41 /* BEHomeList.storyboard */,
+				82FBA9762AB186AD00822B41 /* BECurrentHome.storyboard */,
+				82FBA9802AB1A74B00822B41 /* BEDeleteHome.storyboard */,
+				82B55A442AB1DC6900FBE30B /* BEJoinHome.storyboard */,
+				82B55B952AB2FE0700FBE30B /* BEInvitedHome.storyboard */,
+				82B55BA52AB311DF00FBE30B /* BECreateDefaultHome.storyboard */,
+			);
+			path = BEHome;
+			sourceTree = "<group>";
+		};
+		82B55A492AB1E12D00FBE30B /* BEHome */ = {
+			isa = PBXGroup;
+			children = (
+				8239697D2AB060CF00BA2394 /* BEHomeManagementViewController.swift */,
+				8239698E2AB06A2700BA2394 /* BECreateHomeViewController.swift */,
+				82FBA9742AB1663C00822B41 /* BEHomeListViewController.swift */,
+				82FBA97A2AB1886300822B41 /* BECurrentHomeViewController.swift */,
+				82FBA97E2AB1921C00822B41 /* BEHomeDetailViewController.swift */,
+				82FBA9822AB1A75B00822B41 /* BEDeleteHomeViewController.swift */,
+				82FBA98A2AB1BACD00822B41 /* BEEditHomeViewController.swift */,
+				82B55A462AB1DD4D00FBE30B /* BEJoinHomeViewController.swift */,
+				82B55B972AB2FE3D00FBE30B /* BEInvitedHomeViewController.swift */,
+				82B55BA72AB3128600FBE30B /* BECreateDefaultHomeViewController.swift */,
+			);
+			path = BEHome;
+			sourceTree = "<group>";
+		};
+		82B55A4A2AB1E1AC00FBE30B /* BEMember */ = {
+			isa = PBXGroup;
+			children = (
+				82B55B8B2AB2E5E400FBE30B /* BEMemberList.storyboard */,
+				82B55A4B2AB1E20400FBE30B /* BECreateInvitation.storyboard */,
+				82B55A512AB1E4FF00FBE30B /* BEInvitationList.storyboard */,
+				82B55B912AB2EF4C00FBE30B /* BEAddMember.storyboard */,
+			);
+			path = BEMember;
+			sourceTree = "<group>";
+		};
+		82B55A4E2AB1E2A000FBE30B /* BEMember */ = {
+			isa = PBXGroup;
+			children = (
+				82B55A4F2AB1E2B500FBE30B /* BECreateInvitationViewController.swift */,
+				82B55A532AB1E56800FBE30B /* BEInvitationListViewController.swift */,
+				82B55A552AB1EA0500FBE30B /* BEInvitationDetailViewController.swift */,
+				82B55B8D2AB2E6B300FBE30B /* BEMemberListViewController.swift */,
+				82B55B8F2AB2E88D00FBE30B /* BEMemberDetailViewController.swift */,
+				82B55B932AB2EF9600FBE30B /* BEAddMemberViewController.swift */,
+				82B55BAF2AB32AD600FBE30B /* BEEditMemberViewController.swift */,
+			);
+			path = BEMember;
+			sourceTree = "<group>";
+		};
+		82B55B992AB3072300FBE30B /* BERoom */ = {
+			isa = PBXGroup;
+			children = (
+				82B55B9A2AB3073400FBE30B /* BERoomList.storyboard */,
+				82B55B9F2AB3093900FBE30B /* BEAddRoom.storyboard */,
+				82B55BA92AB3172300FBE30B /* BERecommendRoom.storyboard */,
+			);
+			path = BERoom;
+			sourceTree = "<group>";
+		};
+		82B55B9C2AB3078300FBE30B /* BERoom */ = {
+			isa = PBXGroup;
+			children = (
+				82B55B9D2AB3079100FBE30B /* BERoomListViewController.swift */,
+				82B55BA12AB30A0A00FBE30B /* BEAddRoomViewController.swift */,
+				82B55BA32AB30CD600FBE30B /* BERoomDetailViewController.swift */,
+				82B55BAB2AB3174600FBE30B /* BERecommendRoomViewController.swift */,
+				82B55BAD2AB3271C00FBE30B /* BEEditRoomViewController.swift */,
+			);
+			path = BERoom;
 			sourceTree = "<group>";
 		};
 		87E8F60384D829671393D688 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				98A631D49E2E0E816D32C2CC /* libPods-TuyaAppSDKSample-iOS-Swift.a */,
-				0CC365C6FEA4300F49F53CE7 /* libPods-MatterExtension.a */,
+				85F29A1BBA5069B0258E6DB4 /* libPods-MatterExtension.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -291,8 +468,9 @@
 		9813B69A2AA5DED7001646C0 /* Device Network Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				9813B6972AA5DEC8001646C0 /* BE FunctionList.storyboard */,
-				9813B6C42AA717FD001646C0 /* FunctionList.storyboard */,
+				0FF096C22AB3F1EB003C6BDA /* BEMatter.storyboard */,
+				82B55B832AB2E5BD00FBE30B /* BE FunctionList.storyboard */,
+				82B55B852AB2E5BD00FBE30B /* FunctionList.storyboard */,
 				9813B6A32AA71592001646C0 /* APMode.storyboard */,
 				9813B6AB2AA71592001646C0 /* BLE.storyboard */,
 				9813B6A72AA71592001646C0 /* DualMode.storyboard */,
@@ -307,7 +485,6 @@
 				AF5E66D625F77DE9001D3C15 /* BEZigbeeGateway.storyboard */,
 				AF5E66DA25F77E14001D3C15 /* BEZigbeeSubdevice.storyboard */,
 				67956198289A626300BD0FAB /* BETuyaLinkBind.storyboard */,
-				0FFD6D6F2AB03F75002AAD8E /* BEMatter.storyboard */,
 			);
 			path = "Device Network Configuration";
 			sourceTree = "<group>";
@@ -315,6 +492,7 @@
 		9813B6C92AA719A7001646C0 /* Device Network Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				0FF096C52AB3F6F9003C6BDA /* BEMatterViewController.swift */,
 				9813B6CF2AA719E0001646C0 /* APModeTableViewController.swift */,
 				9813B6CC2AA719E0001646C0 /* BLEModeViewController.swift */,
 				9813B6CD2AA719E0001646C0 /* ChooseGatewayTableViewController.swift */,
@@ -338,7 +516,6 @@
 				AF00606D25EE6B30001462B8 /* BEZigbeeGatewayViewController.swift */,
 				AF00607125EE6C79001462B8 /* BEZigbeeSubdeviceTableViewController.swift */,
 				AF00607525EE6D33001462B8 /* BEChooseGatewayTableViewController.swift */,
-				0FFD6D6B2AB03D5E002AAD8E /* BEMatterViewController.swift */,
 			);
 			path = "BE Device Network Configuration ";
 			sourceTree = "<group>";
@@ -346,12 +523,16 @@
 		AF3A25BB25AD9AC3003EB9FF /* Home Management */ = {
 			isa = PBXGroup;
 			children = (
+				82B55B9C2AB3078300FBE30B /* BERoom */,
+				82B55A4E2AB1E2A000FBE30B /* BEMember */,
+				82B55A492AB1E12D00FBE30B /* BEHome */,
 				AF3A25C025AE904C003EB9FF /* Home.swift */,
 				AF3A25BC25AD9AE0003EB9FF /* NewHomeTableViewController.swift */,
 				AF3A25C425AE930E003EB9FF /* SwitchHomeTableViewController.swift */,
 				AF3A25C825AE9F99003EB9FF /* HomeListTableViewController.swift */,
 				AF3A25CF25AECFCF003EB9FF /* HomeDetailTableViewController.swift */,
 				AF37DBB325AEE842000EB0FD /* EditHomeTableViewController.swift */,
+				825900C22AA9665F0017D14C /* ThingSmartHomeManagementListViewController.swift */,
 			);
 			path = "Home Management";
 			sourceTree = "<group>";
@@ -360,7 +541,7 @@
 			isa = PBXGroup;
 			children = (
 				AF5531DE25A5992500E13562 /* TuyaAppSDKSample-iOS-Swift */,
-				0FFD6D5E2AB00A4F002AAD8E /* MatterExtension */,
+				0FF096B62AB3F137003C6BDA /* MatterExtension */,
 				AF5531DD25A5992500E13562 /* Products */,
 				BD36B163EF3854B6423E5580 /* Pods */,
 				87E8F60384D829671393D688 /* Frameworks */,
@@ -371,7 +552,7 @@
 			isa = PBXGroup;
 			children = (
 				AF5531DC25A5992500E13562 /* TuyaAppSDKSample-iOS-Swift.app */,
-				0FFD6D5D2AB00A4F002AAD8E /* MatterExtension.appex */,
+				0FF096B52AB3F137003C6BDA /* MatterExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -379,7 +560,7 @@
 		AF5531DE25A5992500E13562 /* TuyaAppSDKSample-iOS-Swift */ = {
 			isa = PBXGroup;
 			children = (
-				0FFD6E682AB096AF002AAD8E /* TuyaAppSDKSample-iOS-Swift.entitlements */,
+				0FF096B02AB3F120003C6BDA /* TuyaAppSDKSample-iOS-Swift.entitlements */,
 				AF55320C25A59BE800E13562 /* AppKey.swift */,
 				AF5531DF25A5992500E13562 /* AppDelegate.swift */,
 				AF5531E125A5992500E13562 /* SceneDelegate.swift */,
@@ -398,6 +579,7 @@
 		AF5E2F3325A5A08600DAF14E /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
+				825900BD2AA963E80017D14C /* Home Management */,
 				9813B69A2AA5DED7001646C0 /* Device Network Configuration */,
 				AF3A25AC25A99555003EB9FF /* ThingSmartMain.storyboard */,
 				AF5E2F3425A5A08600DAF14E /* LaunchScreen.storyboard */,
@@ -405,9 +587,6 @@
 				AF5E2F3825A5A08600DAF14E /* Main.storyboard */,
 				AF5E2F3A25A5A08600DAF14E /* Login.storyboard */,
 				AF5E2F3C25A5A08600DAF14E /* UserInformation.storyboard */,
-				AF60B89A25BC1F5600E18F6F /* NewHome.storyboard */,
-				AF21C1FD25B03D6000D52FBA /* SwitchHome.storyboard */,
-				AF60B8A025BC1F6700E18F6F /* HomeList.storyboard */,
 				AF3B498F25B8095800286C4A /* DeviceList.storyboard */,
 			);
 			path = StoryBoard;
@@ -487,8 +666,8 @@
 			children = (
 				B2A4751A3340941A1C42F4D9 /* Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig */,
 				207E8BAF216CF8ED00C5937A /* Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig */,
-				6EC014CB2C295A38CA35072F /* Pods-MatterExtension.debug.xcconfig */,
-				DC4375DA9D6D6289A8AA10BF /* Pods-MatterExtension.release.xcconfig */,
+				E6BE6E3ED74D602A6FC346E7 /* Pods-MatterExtension.debug.xcconfig */,
+				BDB17C938DDB956362B3B087 /* Pods-MatterExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -496,14 +675,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0FFD6D5C2AB00A4F002AAD8E /* MatterExtension */ = {
+		0FF096B42AB3F137003C6BDA /* MatterExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0FFD6D652AB00A4F002AAD8E /* Build configuration list for PBXNativeTarget "MatterExtension" */;
+			buildConfigurationList = 0FF096BD2AB3F137003C6BDA /* Build configuration list for PBXNativeTarget "MatterExtension" */;
 			buildPhases = (
-				3E120242CC7E26FFFC100497 /* [CP] Check Pods Manifest.lock */,
-				0FFD6D592AB00A4F002AAD8E /* Sources */,
-				0FFD6D5A2AB00A4F002AAD8E /* Frameworks */,
-				0FFD6D5B2AB00A4F002AAD8E /* Resources */,
+				D50AC71E8F568FCA9A33F30B /* [CP] Check Pods Manifest.lock */,
+				0FF096B12AB3F137003C6BDA /* Sources */,
+				0FF096B22AB3F137003C6BDA /* Frameworks */,
+				0FF096B32AB3F137003C6BDA /* Resources */,
 			);
 			buildRules = (
 			);
@@ -511,7 +690,7 @@
 			);
 			name = MatterExtension;
 			productName = MatterExtension;
-			productReference = 0FFD6D5D2AB00A4F002AAD8E /* MatterExtension.appex */;
+			productReference = 0FF096B52AB3F137003C6BDA /* MatterExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		AF5531DB25A5992500E13562 /* TuyaAppSDKSample-iOS-Swift */ = {
@@ -524,12 +703,12 @@
 				AF5531DA25A5992500E13562 /* Resources */,
 				6E5A55F369AA0968BCF6376C /* [CP] Copy Pods Resources */,
 				C7EC5A28E342989EDBF2E9AB /* [CP] Embed Pods Frameworks */,
-				0FFD6D682AB00A4F002AAD8E /* Embed Foundation Extensions */,
+				0FF096C02AB3F137003C6BDA /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0FFD6D632AB00A4F002AAD8E /* PBXTargetDependency */,
+				0FF096BB2AB3F137003C6BDA /* PBXTargetDependency */,
 			);
 			name = "TuyaAppSDKSample-iOS-Swift";
 			productName = "TuyaAppSDKSample-iOS-Swift";
@@ -545,7 +724,7 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
-					0FFD6D5C2AB00A4F002AAD8E = {
+					0FF096B42AB3F137003C6BDA = {
 						CreatedOnToolsVersion = 14.3;
 					};
 					AF5531DB25A5992500E13562 = {
@@ -569,13 +748,13 @@
 			projectRoot = "";
 			targets = (
 				AF5531DB25A5992500E13562 /* TuyaAppSDKSample-iOS-Swift */,
-				0FFD6D5C2AB00A4F002AAD8E /* MatterExtension */,
+				0FF096B42AB3F137003C6BDA /* MatterExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0FFD6D5B2AB00A4F002AAD8E /* Resources */ = {
+		0FF096B32AB3F137003C6BDA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -586,33 +765,51 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8239696C2AB05B4400BA2394 /* SwitchHome.storyboard in Resources */,
+				8239696B2AB05B3400BA2394 /* NewHome.storyboard in Resources */,
 				AF3B499125B8095800286C4A /* DeviceList.storyboard in Resources */,
+				82B55A4C2AB1E20400FBE30B /* BECreateInvitation.storyboard in Resources */,
+				82B55B9B2AB3073400FBE30B /* BERoomList.storyboard in Resources */,
 				AF5E66DC25F77E14001D3C15 /* BEZigbeeSubdevice.storyboard in Resources */,
 				9813B6B02AA71593001646C0 /* APMode.storyboard in Resources */,
+				82B55B8C2AB2E5E400FBE30B /* BEMemberList.storyboard in Resources */,
 				AF5E66D425F77DA7001D3C15 /* BEDualMode.storyboard in Resources */,
 				AF3B498C25B8093600286C4A /* BEAPMode.storyboard in Resources */,
+				82B55B882AB2E5BD00FBE30B /* FunctionList.storyboard in Resources */,
 				67956196289A626300BD0FAB /* BETuyaLinkBind.storyboard in Resources */,
 				AF5E2F4125A5A08600DAF14E /* Login.storyboard in Resources */,
+				82B55B962AB2FE0700FBE30B /* BEInvitedHome.storyboard in Resources */,
+				82B55BA62AB311DF00FBE30B /* BECreateDefaultHome.storyboard in Resources */,
+				823969872AB068A400BA2394 /* BECreateHome.storyboard in Resources */,
 				9813B6B52AA71593001646C0 /* ZigbeeGateway.storyboard in Resources */,
+				825225B62AA9770300E05943 /* HomeManagement.storyboard in Resources */,
 				AF5E2F4025A5A08600DAF14E /* Main.storyboard in Resources */,
 				AF60B8C225BEBA1600E18F6F /* InfoPlist.strings in Resources */,
 				9813B6B12AA71593001646C0 /* ZigbeeSubdevice.storyboard in Resources */,
 				AF5531E925A5992800E13562 /* Assets.xcassets in Resources */,
-				AF21C1FF25B03D6000D52FBA /* SwitchHome.storyboard in Resources */,
+				82B55B872AB2E5BD00FBE30B /* BE FunctionList.storyboard in Resources */,
 				9813B6B32AA71593001646C0 /* EZMode.storyboard in Resources */,
 				9813B6AF2AA71593001646C0 /* TuyaLinkBind.storyboard in Resources */,
-				AF60B89825BC1F5600E18F6F /* NewHome.storyboard in Resources */,
+				82FBA9732AB1618C00822B41 /* BEHomeList.storyboard in Resources */,
+				823969702AB05C5400BA2394 /* HomeList.storyboard in Resources */,
 				AF5E66CF25F77D6B001D3C15 /* BEBLE.storyboard in Resources */,
+				82FBA9892AB1BA7F00822B41 /* BEEditHome.storyboard in Resources */,
 				AF5E2F3E25A5A08600DAF14E /* LaunchScreen.storyboard in Resources */,
-				0FFD6D6D2AB03F75002AAD8E /* BEMatter.storyboard in Resources */,
+				0FF096C42AB3F1EB003C6BDA /* BEMatter.storyboard in Resources */,
+				82B55B922AB2EF4C00FBE30B /* BEAddMember.storyboard in Resources */,
 				9813B6B22AA71593001646C0 /* DualMode.storyboard in Resources */,
 				AF5E2F3F25A5A08600DAF14E /* Register.storyboard in Resources */,
-				9813B6952AA5DEC8001646C0 /* BE FunctionList.storyboard in Resources */,
+				82FBA9812AB1A74B00822B41 /* BEDeleteHome.storyboard in Resources */,
 				AF3B498725B808D700286C4A /* BEEZMode.storyboard in Resources */,
+				82B55A452AB1DC6900FBE30B /* BEJoinHome.storyboard in Resources */,
+				82FBA9772AB186AD00822B41 /* BECurrentHome.storyboard in Resources */,
+				82B55BAA2AB3172300FBE30B /* BERecommendRoom.storyboard in Resources */,
 				9813B6B42AA71593001646C0 /* BLE.storyboard in Resources */,
-				AF60B89E25BC1F6700E18F6F /* HomeList.storyboard in Resources */,
-				9813B6C62AA717FD001646C0 /* FunctionList.storyboard in Resources */,
+				823969782AB05D0300BA2394 /* BEHomeManagement.storyboard in Resources */,
+				82B55A522AB1E4FF00FBE30B /* BEInvitationList.storyboard in Resources */,
+				82FBA97D2AB1904F00822B41 /* BEHomeDetail.storyboard in Resources */,
 				AF60B8C525BEBA1600E18F6F /* Localizable.strings in Resources */,
+				82B55BA02AB3093900FBE30B /* BEAddRoom.storyboard in Resources */,
 				AF3A25AE25A99555003EB9FF /* ThingSmartMain.storyboard in Resources */,
 				AF5E66D825F77DE9001D3C15 /* BEZigbeeGateway.storyboard in Resources */,
 				AF5E2F4225A5A08600DAF14E /* UserInformation.storyboard in Resources */,
@@ -622,28 +819,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3E120242CC7E26FFFC100497 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MatterExtension-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6E5A55F369AA0968BCF6376C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -700,14 +875,36 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D50AC71E8F568FCA9A33F30B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MatterExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0FFD6D592AB00A4F002AAD8E /* Sources */ = {
+		0FF096B12AB3F137003C6BDA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FFD6D602AB00A4F002AAD8E /* RequestHandler.swift in Sources */,
+				0FF096B82AB3F137003C6BDA /* RequestHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,18 +912,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FFD6D6C2AB03D5E002AAD8E /* BEMatterViewController.swift in Sources */,
+				82B55B9E2AB3079100FBE30B /* BERoomListViewController.swift in Sources */,
+				82FBA97B2AB1886300822B41 /* BECurrentHomeViewController.swift in Sources */,
+				82B55BA42AB30CD600FBE30B /* BERoomDetailViewController.swift in Sources */,
 				AF3A25C525AE930E003EB9FF /* SwitchHomeTableViewController.swift in Sources */,
 				AF96129925B58CE1000971CC /* DeviceControlTableViewController.swift in Sources */,
+				8239697E2AB060CF00BA2394 /* BEHomeManagementViewController.swift in Sources */,
+				82B55BA82AB3128600FBE30B /* BECreateDefaultHomeViewController.swift in Sources */,
 				AF00606B25EE6A41001462B8 /* BEDualModeTableViewController.swift in Sources */,
+				8239698F2AB06A2700BA2394 /* BECreateHomeViewController.swift in Sources */,
 				AFBB5BC225B95F3C006BDDD7 /* DeviceStatusBehaveCell.swift in Sources */,
 				AFBB5BBF25B95BBA006BDDD7 /* NotificationName.swift in Sources */,
 				6719AB9128A202B5000588E7 /* TextViewTableViewCell.swift in Sources */,
 				AF96112425B17F38000971CC /* DeviceListTableViewController.swift in Sources */,
+				82FBA9832AB1A75B00822B41 /* BEDeleteHomeViewController.swift in Sources */,
+				82FBA98B2AB1BACD00822B41 /* BEEditHomeViewController.swift in Sources */,
 				AF00607225EE6C79001462B8 /* BEZigbeeSubdeviceTableViewController.swift in Sources */,
 				AF3A259C25A835AE003EB9FF /* MainViewController.swift in Sources */,
 				AF3A25A425A8426D003EB9FF /* UIButtonExtension.swift in Sources */,
+				0FF096C62AB3F6F9003C6BDA /* BEMatterViewController.swift in Sources */,
 				AF96134025B708AE000971CC /* LabelTableViewCell.swift in Sources */,
+				82B55B8E2AB2E6B300FBE30B /* BEMemberListViewController.swift in Sources */,
 				AF00606E25EE6B30001462B8 /* BEZigbeeGatewayViewController.swift in Sources */,
 				AF3A25D025AECFCF003EB9FF /* HomeDetailTableViewController.swift in Sources */,
 				AF3A25BD25AD9AE1003EB9FF /* NewHomeTableViewController.swift in Sources */,
@@ -740,21 +946,29 @@
 				9813B6D72AA719E0001646C0 /* APModeTableViewController.swift in Sources */,
 				AF5E2F5225A5D60B00DAF14E /* Alert.swift in Sources */,
 				AF3A25B925AD7CC1003EB9FF /* UserInformationTableViewController.swift in Sources */,
+				82B55B982AB2FE3D00FBE30B /* BEInvitedHomeViewController.swift in Sources */,
 				9813B6D62AA719E0001646C0 /* ZigbeeGatewayViewController.swift in Sources */,
+				82B55BAC2AB3174600FBE30B /* BERecommendRoomViewController.swift in Sources */,
 				6719AB9328A208CC000588E7 /* TuyaLinkDeviceControlController.swift in Sources */,
 				AF3A25C125AE904C003EB9FF /* Home.swift in Sources */,
+				82B55A472AB1DD4D00FBE30B /* BEJoinHomeViewController.swift in Sources */,
 				AF5E2F4825A5A51B00DAF14E /* TuyaSmartMainTableViewController.swift in Sources */,
 				AF3B498025B7D6C000286C4A /* DeviceControlCell.swift in Sources */,
 				AF00605D25EC968A001462B8 /* TimeZoneTableViewController.swift in Sources */,
 				9813B6D82AA719E0001646C0 /* DualModeTableViewController.swift in Sources */,
 				AF00606125ECBF3A001462B8 /* TemperatureUnitTableViewController.swift in Sources */,
+				82B55A542AB1E56800FBE30B /* BEInvitationListViewController.swift in Sources */,
 				AF5E2F4D25A5D28A00DAF14E /* RegisterTableViewController.swift in Sources */,
+				82FBA97F2AB1921C00822B41 /* BEHomeDetailViewController.swift in Sources */,
 				9813B6D42AA719E0001646C0 /* BLEModeViewController.swift in Sources */,
+				82B55BA22AB30A0A00FBE30B /* BEAddRoomViewController.swift in Sources */,
+				82B55A502AB1E2B500FBE30B /* BECreateInvitationViewController.swift in Sources */,
 				AF3A25B525A9ADD6003EB9FF /* AccountType.swift in Sources */,
 				AF37DBB425AEE842000EB0FD /* EditHomeTableViewController.swift in Sources */,
 				AF5531E025A5992500E13562 /* AppDelegate.swift in Sources */,
 				AF55320D25A59BE800E13562 /* AppKey.swift in Sources */,
 				9813B6D32AA719E0001646C0 /* EZModeTableViewController.swift in Sources */,
+				82B55B942AB2EF9600FBE30B /* BEAddMemberViewController.swift in Sources */,
 				9813B6D92AA719E0001646C0 /* TuyaLinkDeviceBindTableViewController.swift in Sources */,
 				AF00607625EE6D33001462B8 /* BEChooseGatewayTableViewController.swift in Sources */,
 				9813B6D22AA719E0001646C0 /* ZigbeeSubdeviceTableViewController.swift in Sources */,
@@ -763,8 +977,14 @@
 				9813B6A02AA5E234001646C0 /* DeviceNetworkListViewController.swift in Sources */,
 				AF00606725EE638D001462B8 /* BEBLEModeViewController.swift in Sources */,
 				AF3A25B225A99E02003EB9FF /* UIViewControllerExtension.swift in Sources */,
+				82B55A562AB1EA0500FBE30B /* BEInvitationDetailViewController.swift in Sources */,
+				82B55B902AB2E88D00FBE30B /* BEMemberDetailViewController.swift in Sources */,
+				82B55BB02AB32AD600FBE30B /* BEEditMemberViewController.swift in Sources */,
+				825900C32AA9665F0017D14C /* ThingSmartHomeManagementListViewController.swift in Sources */,
 				AF9612F625B6C80E000971CC /* EnumTableViewCell.swift in Sources */,
+				82B55BAE2AB3271C00FBE30B /* BEEditRoomViewController.swift in Sources */,
 				AF96129D25B5ACE6000971CC /* SwitchTableViewCell.swift in Sources */,
+				82FBA9752AB1663C00822B41 /* BEHomeListViewController.swift in Sources */,
 				AF5531E225A5992500E13562 /* SceneDelegate.swift in Sources */,
 				AF96133C25B7085D000971CC /* StringTableViewCell.swift in Sources */,
 				6795619E289A6AED00BD0FAB /* QRCodeScanerViewController.swift in Sources */,
@@ -775,19 +995,18 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0FFD6D632AB00A4F002AAD8E /* PBXTargetDependency */ = {
+		0FF096BB2AB3F137003C6BDA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0FFD6D5C2AB00A4F002AAD8E /* MatterExtension */;
-			targetProxy = 0FFD6D622AB00A4F002AAD8E /* PBXContainerItemProxy */;
+			target = 0FF096B42AB3F137003C6BDA /* MatterExtension */;
+			targetProxy = 0FF096BA2AB3F137003C6BDA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0FFD6D6F2AB03F75002AAD8E /* BEMatter.storyboard */ = {
+		0FF096C22AB3F1EB003C6BDA /* BEMatter.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0FFD6D762AB03FE0002AAD8E /* Base */,
-				0FFD6D782AB03FEA002AAD8E /* zh-Hans */,
+				0FF096C32AB3F1EB003C6BDA /* Base */,
 			);
 			name = BEMatter.storyboard;
 			sourceTree = "<group>";
@@ -801,13 +1020,56 @@
 			name = BETuyaLinkBind.storyboard;
 			sourceTree = "<group>";
 		};
-		9813B6972AA5DEC8001646C0 /* BE FunctionList.storyboard */ = {
+		8239696E2AB05C5400BA2394 /* HomeList.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9813B6962AA5DEC8001646C0 /* Base */,
-				9813B6992AA5DECA001646C0 /* zh-Hans */,
+				8239696F2AB05C5400BA2394 /* Base */,
+				823969752AB05C7400BA2394 /* zh-Hans */,
+			);
+			name = HomeList.storyboard;
+			sourceTree = "<group>";
+		};
+		8239697A2AB05D0300BA2394 /* BEHomeManagement.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				823969792AB05D0300BA2394 /* Base */,
+			);
+			name = BEHomeManagement.storyboard;
+			sourceTree = "<group>";
+		};
+		823969892AB068A400BA2394 /* BECreateHome.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				823969882AB068A400BA2394 /* Base */,
+			);
+			name = BECreateHome.storyboard;
+			sourceTree = "<group>";
+		};
+		825225B82AA9770300E05943 /* HomeManagement.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				825225B92AA9770F00E05943 /* Base */,
+				825225BD2AA9774D00E05943 /* zh-Hans */,
+			);
+			name = HomeManagement.storyboard;
+			sourceTree = "<group>";
+		};
+		82B55B832AB2E5BD00FBE30B /* BE FunctionList.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82B55B842AB2E5BD00FBE30B /* Base */,
+				82B55B892AB2E5C600FBE30B /* zh-Hans */,
 			);
 			name = "BE FunctionList.storyboard";
+			sourceTree = "<group>";
+		};
+		82B55B852AB2E5BD00FBE30B /* FunctionList.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82B55B862AB2E5BD00FBE30B /* Base */,
+				82B55B8A2AB2E5CA00FBE30B /* zh-Hans */,
+			);
+			name = FunctionList.storyboard;
 			sourceTree = "<group>";
 		};
 		9813B6A12AA71592001646C0 /* TuyaLinkBind.storyboard */ = {
@@ -871,15 +1133,6 @@
 				9813B6C12AA715B7001646C0 /* zh-Hans */,
 			);
 			name = ZigbeeGateway.storyboard;
-			sourceTree = "<group>";
-		};
-		9813B6C42AA717FD001646C0 /* FunctionList.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9813B6C52AA717FD001646C0 /* Base */,
-				9813B6C82AA71803001646C0 /* zh-Hans */,
-			);
-			name = FunctionList.storyboard;
 			sourceTree = "<group>";
 		};
 		AF21C1FD25B03D6000D52FBA /* SwitchHome.storyboard */ = {
@@ -1017,15 +1270,6 @@
 			name = NewHome.storyboard;
 			sourceTree = "<group>";
 		};
-		AF60B8A025BC1F6700E18F6F /* HomeList.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF60B89F25BC1F6700E18F6F /* Base */,
-				AF60B8A325BC1F6E00E18F6F /* zh-Hans */,
-			);
-			name = HomeList.storyboard;
-			sourceTree = SOURCE_ROOT;
-		};
 		AF60B8C025BEBA1600E18F6F /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1045,9 +1289,9 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		0FFD6D662AB00A4F002AAD8E /* Debug */ = {
+		0FF096BE2AB3F137003C6BDA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6EC014CB2C295A38CA35072F /* Pods-MatterExtension.debug.xcconfig */;
+			baseConfigurationReference = E6BE6E3ED74D602A6FC346E7 /* Pods-MatterExtension.debug.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_ENTITLEMENTS = MatterExtension/MatterExtension.entitlements;
@@ -1074,9 +1318,9 @@
 			};
 			name = Debug;
 		};
-		0FFD6D672AB00A4F002AAD8E /* Release */ = {
+		0FF096BF2AB3F137003C6BDA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC4375DA9D6D6289A8AA10BF /* Pods-MatterExtension.release.xcconfig */;
+			baseConfigurationReference = BDB17C938DDB956362B3B087 /* Pods-MatterExtension.release.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_ENTITLEMENTS = MatterExtension/MatterExtension.entitlements;
@@ -1319,11 +1563,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0FFD6D652AB00A4F002AAD8E /* Build configuration list for PBXNativeTarget "MatterExtension" */ = {
+		0FF096BD2AB3F137003C6BDA /* Build configuration list for PBXNativeTarget "MatterExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0FFD6D662AB00A4F002AAD8E /* Debug */,
-				0FFD6D672AB00A4F002AAD8E /* Release */,
+				0FF096BE2AB3F137003C6BDA /* Debug */,
+				0FF096BF2AB3F137003C6BDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
