@@ -150,7 +150,7 @@ class Cardcell: UITableViewCell {
         cellDelegate?.clickCardView(viewModel:viewModel)
     }
     @objc private func clickSwitchView() {
-        guard let dps = viewModel.dpParser.switchDp?.publishCommands(deviceSwitch.isOn) else {
+        guard let dps = viewModel.dpParser.switchDp?.publishSwitchCommands(deviceSwitch.isOn) else {
             return
         }
         cellDelegate?.clickSwitchView(viewModel:viewModel,dps: dps)
