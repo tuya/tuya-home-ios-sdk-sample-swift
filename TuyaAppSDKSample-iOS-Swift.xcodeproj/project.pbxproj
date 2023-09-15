@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01CE54C4B42103DA38D13558 /* libPods-MatterExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC365C6FEA4300F49F53CE7 /* libPods-MatterExtension.a */; };
+		0FFD6D602AB00A4F002AAD8E /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD6D5F2AB00A4F002AAD8E /* RequestHandler.swift */; };
+		0FFD6D642AB00A4F002AAD8E /* MatterExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0FFD6D5D2AB00A4F002AAD8E /* MatterExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0FFD6D6C2AB03D5E002AAD8E /* BEMatterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD6D6B2AB03D5E002AAD8E /* BEMatterViewController.swift */; };
+		0FFD6D6D2AB03F75002AAD8E /* BEMatter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FFD6D6F2AB03F75002AAD8E /* BEMatter.storyboard */; };
 		10F4AAB953F4FBCFFBD0F199 /* libPods-TuyaAppSDKSample-iOS-Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A631D49E2E0E816D32C2CC /* libPods-TuyaAppSDKSample-iOS-Swift.a */; };
 		6719AB9128A202B5000588E7 /* TextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6719AB9028A202B5000588E7 /* TextViewTableViewCell.swift */; };
 		6719AB9328A208CC000588E7 /* TuyaLinkDeviceControlController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6719AB9228A208CB000588E7 /* TuyaLinkDeviceControlController.swift */; };
@@ -92,7 +97,40 @@
 		AFBB5BC225B95F3C006BDDD7 /* DeviceStatusBehaveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB5BC125B95F3C006BDDD7 /* DeviceStatusBehaveCell.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0FFD6D622AB00A4F002AAD8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF5531D425A5992500E13562 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0FFD6D5C2AB00A4F002AAD8E;
+			remoteInfo = MatterExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0FFD6D682AB00A4F002AAD8E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0FFD6D642AB00A4F002AAD8E /* MatterExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0CC365C6FEA4300F49F53CE7 /* libPods-MatterExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MatterExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FFD6D5D2AB00A4F002AAD8E /* MatterExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MatterExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FFD6D5F2AB00A4F002AAD8E /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
+		0FFD6D612AB00A4F002AAD8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FFD6D6B2AB03D5E002AAD8E /* BEMatterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEMatterViewController.swift; sourceTree = "<group>"; };
+		0FFD6D762AB03FE0002AAD8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BEMatter.storyboard; sourceTree = "<group>"; };
+		0FFD6D782AB03FEA002AAD8E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BEMatter.strings"; sourceTree = "<group>"; };
+		0FFD6E682AB096AF002AAD8E /* TuyaAppSDKSample-iOS-Swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "TuyaAppSDKSample-iOS-Swift.entitlements"; sourceTree = "<group>"; };
+		0FFD6E692AB09735002AAD8E /* MatterExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MatterExtension.entitlements; sourceTree = "<group>"; };
 		207E8BAF216CF8ED00C5937A /* Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig"; path = "Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		6719AB9028A202B5000588E7 /* TextViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewTableViewCell.swift; sourceTree = "<group>"; };
 		6719AB9228A208CB000588E7 /* TuyaLinkDeviceControlController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuyaLinkDeviceControlController.swift; sourceTree = "<group>"; };
@@ -101,6 +139,7 @@
 		67956197289A626300BD0FAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BETuyaLinkBind.storyboard; sourceTree = "<group>"; };
 		6795619A289A626500BD0FAB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BETuyaLinkBind.strings"; sourceTree = "<group>"; };
 		6795619D289A6AED00BD0FAB /* QRCodeScanerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScanerViewController.swift; sourceTree = "<group>"; };
+		6EC014CB2C295A38CA35072F /* Pods-MatterExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatterExtension.debug.xcconfig"; path = "Target Support Files/Pods-MatterExtension/Pods-MatterExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		9813B6962AA5DEC8001646C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/BE FunctionList.storyboard"; sourceTree = "<group>"; };
 		9813B6992AA5DECA001646C0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BE FunctionList.strings"; sourceTree = "<group>"; };
 		9813B69F2AA5E234001646C0 /* DeviceNetworkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceNetworkListViewController.swift; sourceTree = "<group>"; };
@@ -207,9 +246,18 @@
 		AFBB5BBE25B95BBA006BDDD7 /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 		AFBB5BC125B95F3C006BDDD7 /* DeviceStatusBehaveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceStatusBehaveCell.swift; sourceTree = "<group>"; };
 		B2A4751A3340941A1C42F4D9 /* Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig"; path = "Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		DC4375DA9D6D6289A8AA10BF /* Pods-MatterExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatterExtension.release.xcconfig"; path = "Target Support Files/Pods-MatterExtension/Pods-MatterExtension.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0FFD6D5A2AB00A4F002AAD8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01CE54C4B42103DA38D13558 /* libPods-MatterExtension.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AF5531D925A5992500E13562 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -221,10 +269,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FFD6D5E2AB00A4F002AAD8E /* MatterExtension */ = {
+			isa = PBXGroup;
+			children = (
+				0FFD6E692AB09735002AAD8E /* MatterExtension.entitlements */,
+				0FFD6D5F2AB00A4F002AAD8E /* RequestHandler.swift */,
+				0FFD6D612AB00A4F002AAD8E /* Info.plist */,
+			);
+			path = MatterExtension;
+			sourceTree = "<group>";
+		};
 		87E8F60384D829671393D688 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				98A631D49E2E0E816D32C2CC /* libPods-TuyaAppSDKSample-iOS-Swift.a */,
+				0CC365C6FEA4300F49F53CE7 /* libPods-MatterExtension.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -248,6 +307,7 @@
 				AF5E66D625F77DE9001D3C15 /* BEZigbeeGateway.storyboard */,
 				AF5E66DA25F77E14001D3C15 /* BEZigbeeSubdevice.storyboard */,
 				67956198289A626300BD0FAB /* BETuyaLinkBind.storyboard */,
+				0FFD6D6F2AB03F75002AAD8E /* BEMatter.storyboard */,
 			);
 			path = "Device Network Configuration";
 			sourceTree = "<group>";
@@ -278,6 +338,7 @@
 				AF00606D25EE6B30001462B8 /* BEZigbeeGatewayViewController.swift */,
 				AF00607125EE6C79001462B8 /* BEZigbeeSubdeviceTableViewController.swift */,
 				AF00607525EE6D33001462B8 /* BEChooseGatewayTableViewController.swift */,
+				0FFD6D6B2AB03D5E002AAD8E /* BEMatterViewController.swift */,
 			);
 			path = "BE Device Network Configuration ";
 			sourceTree = "<group>";
@@ -299,6 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				AF5531DE25A5992500E13562 /* TuyaAppSDKSample-iOS-Swift */,
+				0FFD6D5E2AB00A4F002AAD8E /* MatterExtension */,
 				AF5531DD25A5992500E13562 /* Products */,
 				BD36B163EF3854B6423E5580 /* Pods */,
 				87E8F60384D829671393D688 /* Frameworks */,
@@ -309,6 +371,7 @@
 			isa = PBXGroup;
 			children = (
 				AF5531DC25A5992500E13562 /* TuyaAppSDKSample-iOS-Swift.app */,
+				0FFD6D5D2AB00A4F002AAD8E /* MatterExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -316,6 +379,7 @@
 		AF5531DE25A5992500E13562 /* TuyaAppSDKSample-iOS-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				0FFD6E682AB096AF002AAD8E /* TuyaAppSDKSample-iOS-Swift.entitlements */,
 				AF55320C25A59BE800E13562 /* AppKey.swift */,
 				AF5531DF25A5992500E13562 /* AppDelegate.swift */,
 				AF5531E125A5992500E13562 /* SceneDelegate.swift */,
@@ -423,6 +487,8 @@
 			children = (
 				B2A4751A3340941A1C42F4D9 /* Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig */,
 				207E8BAF216CF8ED00C5937A /* Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig */,
+				6EC014CB2C295A38CA35072F /* Pods-MatterExtension.debug.xcconfig */,
+				DC4375DA9D6D6289A8AA10BF /* Pods-MatterExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -430,6 +496,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0FFD6D5C2AB00A4F002AAD8E /* MatterExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0FFD6D652AB00A4F002AAD8E /* Build configuration list for PBXNativeTarget "MatterExtension" */;
+			buildPhases = (
+				3E120242CC7E26FFFC100497 /* [CP] Check Pods Manifest.lock */,
+				0FFD6D592AB00A4F002AAD8E /* Sources */,
+				0FFD6D5A2AB00A4F002AAD8E /* Frameworks */,
+				0FFD6D5B2AB00A4F002AAD8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MatterExtension;
+			productName = MatterExtension;
+			productReference = 0FFD6D5D2AB00A4F002AAD8E /* MatterExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		AF5531DB25A5992500E13562 /* TuyaAppSDKSample-iOS-Swift */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF5531F025A5992800E13562 /* Build configuration list for PBXNativeTarget "TuyaAppSDKSample-iOS-Swift" */;
@@ -440,10 +524,12 @@
 				AF5531DA25A5992500E13562 /* Resources */,
 				6E5A55F369AA0968BCF6376C /* [CP] Copy Pods Resources */,
 				C7EC5A28E342989EDBF2E9AB /* [CP] Embed Pods Frameworks */,
+				0FFD6D682AB00A4F002AAD8E /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0FFD6D632AB00A4F002AAD8E /* PBXTargetDependency */,
 			);
 			name = "TuyaAppSDKSample-iOS-Swift";
 			productName = "TuyaAppSDKSample-iOS-Swift";
@@ -456,9 +542,12 @@
 		AF5531D425A5992500E13562 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1230;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
+					0FFD6D5C2AB00A4F002AAD8E = {
+						CreatedOnToolsVersion = 14.3;
+					};
 					AF5531DB25A5992500E13562 = {
 						CreatedOnToolsVersion = 12.3;
 						LastSwiftMigration = 1340;
@@ -480,11 +569,19 @@
 			projectRoot = "";
 			targets = (
 				AF5531DB25A5992500E13562 /* TuyaAppSDKSample-iOS-Swift */,
+				0FFD6D5C2AB00A4F002AAD8E /* MatterExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0FFD6D5B2AB00A4F002AAD8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AF5531DA25A5992500E13562 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -507,6 +604,7 @@
 				AF60B89825BC1F5600E18F6F /* NewHome.storyboard in Resources */,
 				AF5E66CF25F77D6B001D3C15 /* BEBLE.storyboard in Resources */,
 				AF5E2F3E25A5A08600DAF14E /* LaunchScreen.storyboard in Resources */,
+				0FFD6D6D2AB03F75002AAD8E /* BEMatter.storyboard in Resources */,
 				9813B6B22AA71593001646C0 /* DualMode.storyboard in Resources */,
 				AF5E2F3F25A5A08600DAF14E /* Register.storyboard in Resources */,
 				9813B6952AA5DEC8001646C0 /* BE FunctionList.storyboard in Resources */,
@@ -524,6 +622,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3E120242CC7E26FFFC100497 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MatterExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6E5A55F369AA0968BCF6376C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -583,10 +703,19 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0FFD6D592AB00A4F002AAD8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FFD6D602AB00A4F002AAD8E /* RequestHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AF5531D825A5992500E13562 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FFD6D6C2AB03D5E002AAD8E /* BEMatterViewController.swift in Sources */,
 				AF3A25C525AE930E003EB9FF /* SwitchHomeTableViewController.swift in Sources */,
 				AF96129925B58CE1000971CC /* DeviceControlTableViewController.swift in Sources */,
 				AF00606B25EE6A41001462B8 /* BEDualModeTableViewController.swift in Sources */,
@@ -645,7 +774,24 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0FFD6D632AB00A4F002AAD8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0FFD6D5C2AB00A4F002AAD8E /* MatterExtension */;
+			targetProxy = 0FFD6D622AB00A4F002AAD8E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		0FFD6D6F2AB03F75002AAD8E /* BEMatter.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0FFD6D762AB03FE0002AAD8E /* Base */,
+				0FFD6D782AB03FEA002AAD8E /* zh-Hans */,
+			);
+			name = BEMatter.storyboard;
+			sourceTree = "<group>";
+		};
 		67956198289A626300BD0FAB /* BETuyaLinkBind.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -899,6 +1045,64 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0FFD6D662AB00A4F002AAD8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EC014CB2C295A38CA35072F /* Pods-MatterExtension.debug.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = MatterExtension/MatterExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DWPHVGUZ22;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MatterExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MatterExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hjj.test.MatterExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0FFD6D672AB00A4F002AAD8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC4375DA9D6D6289A8AA10BF /* Pods-MatterExtension.release.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = MatterExtension/MatterExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DWPHVGUZ22;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MatterExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MatterExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hjj.test.MatterExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		AF5531EE25A5992800E13562 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1027,12 +1231,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B2A4751A3340941A1C42F4D9 /* Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = "TuyaAppSDKSample-iOS-Swift/TuyaAppSDKSample-iOS-Swift.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 94JFPTRDN5;
+				DEVELOPMENT_TEAM = DWPHVGUZ22;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1071,12 +1276,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 207E8BAF216CF8ED00C5937A /* Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = "TuyaAppSDKSample-iOS-Swift/TuyaAppSDKSample-iOS-Swift.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 94JFPTRDN5;
+				DEVELOPMENT_TEAM = DWPHVGUZ22;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1113,6 +1319,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0FFD6D652AB00A4F002AAD8E /* Build configuration list for PBXNativeTarget "MatterExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FFD6D662AB00A4F002AAD8E /* Debug */,
+				0FFD6D672AB00A4F002AAD8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AF5531D725A5992500E13562 /* Build configuration list for PBXProject "TuyaAppSDKSample-iOS-Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -6,6 +6,7 @@
 
 import UIKit
 import ThingSmartBaseKit
+import ThingSmartMatterKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Initialize ThingSmartSDK
         ThingSmartSDK.sharedInstance().start(withAppKey: AppKey.appKey, secretKey: AppKey.secretKey)
+        
+        // Set your Matter Group ID
+        ThingSmartMatterActivatorConfig.setMatterKey("your_group_id")
         
         // Enable debug mode, which allows you to see logs.
         #if DEBUG

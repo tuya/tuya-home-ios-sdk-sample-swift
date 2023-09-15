@@ -20,3 +20,6 @@
 /* Class = "UILabel"; text = "Dual Mode"; ObjectID = "qka-oG-P6j"; */
 "qka-oG-P6j.text" = "蓝牙 Wi-Fi 双模";
 
+/* Class = "UILabel"; text = "Matter"; ObjectID = "hkz-or-Sdr"; */
+"PfR-RC-Qa4.text" = "Matter 配网"
+

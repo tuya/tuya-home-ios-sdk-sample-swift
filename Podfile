@@ -22,6 +22,12 @@ target 'TuyaAppSDKSample-iOS-Swift' do
   pod 'ThingBluetoothInterface', '1.14.1'
   pod 'ThingFamilyAPI', '1.3.1'
   pod 'ThingActivatorRequestSkt', '0.2.2'
+  pod 'ThingSmartMatterKit', '5.5.0-rc.1'
+end
+
+target 'MatterExtension' do
+
+  pod 'ThingSmartMatterExtensionKit', '5.0.5'
   
 end
 
