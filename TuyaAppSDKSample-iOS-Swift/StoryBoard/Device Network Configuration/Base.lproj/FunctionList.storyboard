@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -137,14 +137,14 @@
                                             <segue destination="Zyy-My-MJ9" kind="show" id="EWr-E5-tye"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="hkz-or-Sdr" style="IBUITableViewCellStyleDefault" id="VXz-8U-0R8">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="jgL-39-qh3" style="IBUITableViewCellStyleDefault" id="JaL-f9-03g">
                                         <rect key="frame" x="20" y="335.33334350585938" width="353" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VXz-8U-0R8" id="k0b-oH-aHN">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JaL-f9-03g" id="64I-1T-iVr">
                                             <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="TuyaLink Bind" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hkz-or-Sdr">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="TuyaLink Bind" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jgL-39-qh3">
                                                     <rect key="frame" x="20" y="0.0" width="294.66666666666669" height="43.666667938232422"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -154,7 +154,27 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="THN-yS-PxI" kind="show" id="0xo-7d-4GP"/>
+                                            <segue destination="THN-yS-PxI" kind="show" id="B2H-0W-PUM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="grF-09-dYO" style="IBUITableViewCellStyleDefault" id="OZW-Rb-EM8">
+                                        <rect key="frame" x="20" y="379.0000114440918" width="353" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OZW-Rb-EM8" id="mKa-2q-UhM">
+                                            <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Matter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="grF-09-dYO">
+                                                    <rect key="frame" x="20" y="0.0" width="294.66666666666669" height="43.666667938232422"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="8Ik-mp-cgi" kind="show" id="VIu-tg-x39"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -173,7 +193,7 @@
         <!--EZMode-->
         <scene sceneID="WdG-41-KNF">
             <objects>
-                <viewControllerPlaceholder storyboardName="BEEZMode" id="CjP-SM-T0O" userLabel="EZMode" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="EZMode" id="CjP-SM-T0O" userLabel="EZMode" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="xW0-fU-LTO"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VtP-aw-0z4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -183,7 +203,7 @@
         <!--APMode-->
         <scene sceneID="hiY-Uy-DeI">
             <objects>
-                <viewControllerPlaceholder storyboardName="BEAPMode" id="sU6-zK-Svx" userLabel="APMode" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="APMode" id="sU6-zK-Svx" userLabel="APMode" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="P9j-D8-35H"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PCG-Wd-kLt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -193,7 +213,7 @@
         <!--BLE-->
         <scene sceneID="aER-X5-65r">
             <objects>
-                <viewControllerPlaceholder storyboardName="BEBLE" id="h5Y-d3-KNB" userLabel="BLE" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="BLE" id="h5Y-d3-KNB" userLabel="BLE" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="2P6-Ue-NWF"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zvk-Aa-I3r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -203,7 +223,7 @@
         <!--DualMode-->
         <scene sceneID="w8N-gi-h1G">
             <objects>
-                <viewControllerPlaceholder storyboardName="BEDualMode" id="tJs-iA-5dC" userLabel="DualMode" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="DualMode" id="tJs-iA-5dC" userLabel="DualMode" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Vnr-G4-z7O"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="839-4m-cLQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -213,7 +233,7 @@
         <!--ZigbeeGateway-->
         <scene sceneID="2cc-dW-vYX">
             <objects>
-                <viewControllerPlaceholder storyboardName="BEZigbeeGateway" id="OOr-T2-BM2" userLabel="ZigbeeGateway" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ZigbeeGateway" id="OOr-T2-BM2" userLabel="ZigbeeGateway" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="s7L-0g-oX4"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebZ-aG-go1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -223,7 +243,7 @@
         <!--ZigbeeSubdevice-->
         <scene sceneID="o3m-r7-Iy1">
             <objects>
-                <viewControllerPlaceholder storyboardName="BEZigbeeSubdevice" id="Zyy-My-MJ9" userLabel="ZigbeeSubdevice" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ZigbeeSubdevice" id="Zyy-My-MJ9" userLabel="ZigbeeSubdevice" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="gs0-PW-wYq"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0he-p9-8RW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -233,12 +253,22 @@
         <!--TuyaLinkBind-->
         <scene sceneID="ork-g0-L7H">
             <objects>
-                <viewControllerPlaceholder storyboardName="BETuyaLinkBind" id="THN-yS-PxI" userLabel="TuyaLinkBind" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="TuyaLinkBind" id="THN-yS-PxI" userLabel="TuyaLinkBind" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="oAr-Ai-Lt3"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qJ7-Vv-47z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1396" y="159"/>
+            <point key="canvasLocation" x="989" y="158"/>
+        </scene>
+        <!--Matter-->
+        <scene sceneID="SCZ-in-Kch">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Matter" id="8Ik-mp-cgi" userLabel="Matter" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="GJ7-oe-4Sd"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oiO-Cm-ahQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="912" y="224"/>
         </scene>
     </scenes>
 </document>

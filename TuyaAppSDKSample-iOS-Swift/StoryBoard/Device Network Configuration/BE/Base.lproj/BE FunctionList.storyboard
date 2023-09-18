@@ -3,14 +3,14 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Device Network List View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <tableViewController id="Y6W-OH-hqX" customClass="DeviceNetworkListViewController" customModule="TuyaAppSDKSample_iOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Y6W-OH-hqX" customClass="BEDeviceNetworkListViewController" customModule="TuyaAppSDKSample_iOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="xQj-tP-JND">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,7 +174,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="FbR-Og-lls" kind="show" id="iaf-r6-zgY"/>
+                                            <segue destination="FbR-Og-lls" kind="show" id="lS4-za-a9N"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -253,12 +253,12 @@
         <!--BEMatter-->
         <scene sceneID="Jth-zM-q2H">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MCb-oo-qVj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="BEMatter" id="FbR-Og-lls" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="P9M-sa-2uY"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MCb-oo-qVj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1390" y="228"/>
+            <point key="canvasLocation" x="915" y="216"/>
         </scene>
         <!--BETuyaLinkBind-->
         <scene sceneID="ork-g0-L7H">

@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -338,7 +338,7 @@
         <!--FunctionList-->
         <scene sceneID="y5Q-Xa-GXi">
             <objects>
-                <viewControllerPlaceholder storyboardName="BE FunctionList" id="fj8-a6-EMt" userLabel="FunctionList" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="FunctionList" id="fj8-a6-EMt" userLabel="FunctionList" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Dds-9c-thX"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6lJ-uP-F3a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

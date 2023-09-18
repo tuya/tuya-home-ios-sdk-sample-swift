@@ -1,5 +1,5 @@
 //
-//  ThingLinkDeviceBindTableViewController.swift
+//  BEMatterTableViewController.swift
 //  ThingAppSDKSample-iOS-Swift
 //
 //  Copyright (c) 2014-2022 Thing Inc. (https://developer.tuya.com/)
@@ -8,11 +8,11 @@ import UIKit
 import ThingSmartActivatorKit
 import ThingSmartDeviceKit
 
-class BETuyaLinkDeviceBindTableViewController: UITableViewController {
+class BEMatterTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "ThingLink Bind"
+        title = "Matter"
     }
     
     private var typeModel: ThingSmartActivatorTypeThingLinkModel = {
@@ -62,7 +62,7 @@ class BETuyaLinkDeviceBindTableViewController: UITableViewController {
 
 }
 
-extension BETuyaLinkDeviceBindTableViewController: ThingSmartActivatorActiveDelegate {
+extension BEMatterTableViewController: ThingSmartActivatorActiveDelegate {
     func activatorService(_ service: ThingSmartActivatorActiveProtocol, activatorType type: ThingSmartActivatorTypeModel, didReceiveDevices devices: [ThingSmartActivatorDeviceModel]?, error errorModel: ThingSmartActivatorErrorModel?) {
         if errorModel != nil {
             SVProgressHUD.showError(withStatus: "Bind Failure. (\(errorModel?.error.localizedDescription ?? ""))")

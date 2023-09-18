@@ -1,5 +1,5 @@
 //
-//  BEMatterViewController.swift
+//  MatterViewController.swift
 //  TuyaAppSDKSample-iOS-Swift
 //
 //  Copyright (c) 2014-2023 Tuya Inc. (https://developer.tuya.com/)
@@ -7,7 +7,7 @@
 import UIKit
 import ThingSmartMatterKit
 
-class BEMatterViewController: UIViewController {
+class MatterViewController: UIViewController {
     
     let tableView = UITableView()
     
@@ -55,7 +55,7 @@ class BEMatterViewController: UIViewController {
     
 }
 
-extension BEMatterViewController : UITableViewDelegate, UITableViewDataSource{
+extension MatterViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(section == 0){
             return 1
@@ -108,7 +108,7 @@ extension BEMatterViewController : UITableViewDelegate, UITableViewDataSource{
     }
 }
 
-extension BEMatterViewController : ThingSmartMatterActivatorDelegate{
+extension MatterViewController : ThingSmartMatterActivatorDelegate{
     func matterDeviceDiscoveryed(_ isThingDevice: Bool, deviceType: ThingSmartMatterDeviceType) {
         print("Discoveryed matter device")
     }

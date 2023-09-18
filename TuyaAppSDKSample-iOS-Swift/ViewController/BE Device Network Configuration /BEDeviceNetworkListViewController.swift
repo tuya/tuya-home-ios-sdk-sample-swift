@@ -1,5 +1,5 @@
 //
-//  BEDeviceNetworkConfigurationVC.swift
+//  BEDeviceNetworkListViewController.swift
 //  TuyaAppSDKSample-iOS-Swift
 //
 //  Copyright (c) 2014-2023 Tuya Inc. (https://developer.tuya.com/)
@@ -7,7 +7,7 @@
 import UIKit
 
 
-class DeviceNetworkListViewController: UITableViewController {
+class BEDeviceNetworkListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Function List"
