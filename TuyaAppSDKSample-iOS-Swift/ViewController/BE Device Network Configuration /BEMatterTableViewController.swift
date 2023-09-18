@@ -10,16 +10,19 @@ import ThingSmartDeviceKit
 
 class BEMatterTableViewController: UITableViewController {
 
+    @IBOutlet weak var ssid: UITextField!
+    @IBOutlet weak var password: UITextField!
+    var deviceTypeModel: ThingMatterDeviceDiscoveriedType?
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Matter"
     }
     
-    private var typeModel: ThingSmartActivatorTypeThingLinkModel = {
-        let type = ThingSmartActivatorTypeThingLinkModel()
-        type.type = ThingSmartActivatorType.thingLink
-        type.typeName = NSStringFromThingSmartActivatorType(ThingSmartActivatorType.thingLink)
-        type.timeout = 120
+    private var typeModel: ThingSmartActivatorTypeMatterModel = {
+        let type = ThingSmartActivatorTypeMatterModel()
+        type.type = ThingSmartActivatorType.matter
+        type.typeName = NSStringFromThingSmartActivatorType(ThingSmartActivatorType.matter)
+        type.timeout = 180
         return type
     }()
     
@@ -36,26 +39,25 @@ class BEMatterTableViewController: UITableViewController {
         return request
     }()
     
-    func bindThingLink(qrcode codeStr: String?) -> Void {
+    func bindMatter(qrcode codeStr: String?) -> Void {
         let homeId = (Home.current?.homeId)!
-        SVProgressHUD.show()
-        let requestDate = ThingActivatorParseQRCodeRequestData()
-        requestDate.code = codeStr ?? ""
-        request.requestParseQRCode(withParam: requestDate) { scanCodeModel in
-            if scanCodeModel.actionName == "device_net_conn_bind_tuyalink" {
-                self.typeModel.uuid = scanCodeModel.actionData?.object(forKey: "uuid") as! String
-                self.typeModel.spaceId = homeId
-                self.discovery.startActive(self.typeModel, deviceList: [])
-            }
-        } failure: { error in
-            
-        }
+        let payload = self.discovery.parseSetupCode(codeStr ?? "")
+        let activator = ThingSmartActivator()
+        activator.getTokenWithHomeId(homeId, success: { [weak self] (token) in
+            guard let self = self else { return }
+            self.typeModel.token = token ?? ""
+            self.typeModel.spaceId = homeId
+            self.discovery.startActive(self.typeModel, deviceList:[payload])
+        }, failure: { (error) in
+            let errorMessage = error?.localizedDescription ?? ""
+            SVProgressHUD.showError(withStatus: errorMessage)
+        })
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = QRCodeScanerViewController()
         vc.scanCallback = { [weak self] codeStr in
-            self?.bindThingLink(qrcode: codeStr)
+            self?.bindMatter(qrcode: codeStr)
         }
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -74,3 +76,39 @@ extension BEMatterTableViewController: ThingSmartActivatorActiveDelegate {
     }
 }
 
+extension BEMatterTableViewController: ThingSmartActivatorDeviceExpandDelegate {
+    func matterDeviceDiscoveryed(_ typeModel: ThingMatterDeviceDiscoveriedType) {
+        deviceTypeModel = typeModel
+    }
+    
+    func matterCommissioningSessionEstablishmentComplete(_ deviceModel: ThingSmartActivatorDeviceModel) {
+        if deviceTypeModel?.deviceType == .wifi {
+            self.typeModel.ssid = ssid.text ?? ""
+            self.typeModel.password = password.text ?? ""
+            self.discovery.continueCommissionDevice(deviceModel, typeModel: self.typeModel)
+        }
+        
+        ///
+        if deviceTypeModel?.deviceType == .thread {
+            self.typeModel.gwDevId = "your gateway id"
+            self.discovery.continueCommissionDevice(deviceModel, typeModel: self.typeModel)
+        }
+        
+    }
+    
+    func matterDeviceAttestation(_ device: UnsafeMutableRawPointer, error: Error) {
+        let alertControl = UIAlertController(title: "Attestation", message: "Should Continue?", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Continue", style: .default) { _ in
+            self.discovery.continueCommissioningDevice(device, ignoreAttestationFailure: true, error: nil)
+        }
+        let canAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+            self.discovery.continueCommissioningDevice(device, ignoreAttestationFailure: false, error: nil)
+        }
+        
+        alertControl.addAction(alertAction)
+        alertControl.addAction(canAction)
+        
+        self.present(alertControl, animated: true)
+    }
+    
+}
