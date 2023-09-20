@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0534EC1B2ABAED1100DD6E7E /* iconfont.json in Resources */ = {isa = PBXBuildFile; fileRef = 0534EC192ABAED1100DD6E7E /* iconfont.json */; };
+		0534EC1C2ABAED1100DD6E7E /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0534EC1A2ABAED1100DD6E7E /* iconfont.ttf */; };
+		0534EC1E2ABAED2800DD6E7E /* Cardcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534EC1D2ABAED2800DD6E7E /* Cardcell.swift */; };
 		0FF096B82AB3F137003C6BDA /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF096B72AB3F137003C6BDA /* RequestHandler.swift */; };
 		0FF096BC2AB3F137003C6BDA /* MatterExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0FF096B52AB3F137003C6BDA /* MatterExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0FF096C42AB3F1EB003C6BDA /* Matter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF096C22AB3F1EB003C6BDA /* Matter.storyboard */; };
@@ -166,6 +169,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0534EC192ABAED1100DD6E7E /* iconfont.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = iconfont.json; sourceTree = "<group>"; };
+		0534EC1A2ABAED1100DD6E7E /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
+		0534EC1D2ABAED2800DD6E7E /* Cardcell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cardcell.swift; sourceTree = "<group>"; };
 		0FF096B02AB3F120003C6BDA /* TuyaAppSDKSample-iOS-Swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "TuyaAppSDKSample-iOS-Swift.entitlements"; sourceTree = "<group>"; };
 		0FF096B52AB3F137003C6BDA /* MatterExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MatterExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FF096B72AB3F137003C6BDA /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
@@ -580,6 +586,8 @@
 		AF5531DE25A5992500E13562 /* TuyaAppSDKSample-iOS-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				0534EC192ABAED1100DD6E7E /* iconfont.json */,
+				0534EC1A2ABAED1100DD6E7E /* iconfont.ttf */,
 				0FF096B02AB3F120003C6BDA /* TuyaAppSDKSample-iOS-Swift.entitlements */,
 				AF55320C25A59BE800E13562 /* AppKey.swift */,
 				AF5531DF25A5992500E13562 /* AppDelegate.swift */,
@@ -669,6 +677,7 @@
 		AF96129B25B5ACC2000971CC /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				0534EC1D2ABAED2800DD6E7E /* Cardcell.swift */,
 				AFBB5BC125B95F3C006BDDD7 /* DeviceStatusBehaveCell.swift */,
 				AF96129C25B5ACE6000971CC /* SwitchTableViewCell.swift */,
 				AF9612F225B6C6ED000971CC /* SliderTableViewCell.swift */,
@@ -804,7 +813,9 @@
 				825225B62AA9770300E05943 /* HomeManagement.storyboard in Resources */,
 				AF5E2F4025A5A08600DAF14E /* Main.storyboard in Resources */,
 				AF60B8C225BEBA1600E18F6F /* InfoPlist.strings in Resources */,
+				0534EC1C2ABAED1100DD6E7E /* iconfont.ttf in Resources */,
 				9813B6B12AA71593001646C0 /* ZigbeeSubdevice.storyboard in Resources */,
+				0534EC1B2ABAED1100DD6E7E /* iconfont.json in Resources */,
 				AF5531E925A5992800E13562 /* Assets.xcassets in Resources */,
 				82B55B872AB2E5BD00FBE30B /* BE FunctionList.storyboard in Resources */,
 				9813B6B32AA71593001646C0 /* EZMode.storyboard in Resources */,
@@ -935,6 +946,7 @@
 				82B55B9E2AB3079100FBE30B /* BERoomListViewController.swift in Sources */,
 				82FBA97B2AB1886300822B41 /* BECurrentHomeViewController.swift in Sources */,
 				82B55BA42AB30CD600FBE30B /* BERoomDetailViewController.swift in Sources */,
+				0534EC1E2ABAED2800DD6E7E /* Cardcell.swift in Sources */,
 				98B4A1EB2AB4620B004D759E /* BEMatterTableViewController.swift in Sources */,
 				AF3A25C525AE930E003EB9FF /* SwitchHomeTableViewController.swift in Sources */,
 				AF96129925B58CE1000971CC /* DeviceControlTableViewController.swift in Sources */,

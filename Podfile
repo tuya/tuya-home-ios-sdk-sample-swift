@@ -26,6 +26,8 @@ target 'TuyaAppSDKSample-iOS-Swift' do
   
   pod 'ThingSmartFamilyBizKit', '1.8.1'
     pod 'ThingSmartDeviceKit', '5.4.3'
+    
+  pod 'ThingSmartDeviceCoreKit', '5.5.0-rc4'
 end
 
 target 'MatterExtension' do
