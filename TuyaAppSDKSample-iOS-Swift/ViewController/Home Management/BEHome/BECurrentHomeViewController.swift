@@ -41,7 +41,7 @@ class BECurrentHomeViewController : UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let currentHomeId = homes[indexPath.row].homeId
-        ThingSmartFamilyBiz.sharedInstance().setCurrentFamily(currentHomeId)
+        ThingSmartFamilyBiz.sharedInstance().setCurrentFamilyId(currentHomeId)
         
         for cell in tableView.visibleCells {
             cell.accessoryType = .none

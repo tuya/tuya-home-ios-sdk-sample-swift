@@ -16,62 +16,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <sections>
-                            <tableViewSection id="7Pf-bX-7ED">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="FIv-iJ-DAn">
-                                        <rect key="frame" x="20" y="18" width="374" height="52.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FIv-iJ-DAn" id="BlQ-q7-2sx">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="52.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Wi-Fi SSID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ojp-Zp-meh">
-                                                    <rect key="frame" x="20" y="4" width="334" height="44.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="44" id="K2S-wD-A2d"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="ojp-Zp-meh" firstAttribute="top" secondItem="BlQ-q7-2sx" secondAttribute="top" constant="4" id="5mC-Ej-Qgg"/>
-                                                <constraint firstAttribute="trailing" secondItem="ojp-Zp-meh" secondAttribute="trailing" constant="20" symbolic="YES" id="6LY-Hf-zkh"/>
-                                                <constraint firstAttribute="bottom" secondItem="ojp-Zp-meh" secondAttribute="bottom" constant="4" id="PCx-tl-v1S"/>
-                                                <constraint firstItem="ojp-Zp-meh" firstAttribute="leading" secondItem="BlQ-q7-2sx" secondAttribute="leading" constant="20" symbolic="YES" id="gWh-0g-SP8"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="WIN-iG-5zP">
-                                        <rect key="frame" x="20" y="70.5" width="374" height="52.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WIN-iG-5zP" id="PRQ-5o-8SK">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="52.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Wi-Fi Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xJ6-Pd-Dol">
-                                                    <rect key="frame" x="20" y="4" width="334" height="44.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="44" id="3gK-jH-OQN"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="xJ6-Pd-Dol" secondAttribute="trailing" constant="20" symbolic="YES" id="3Om-kJ-nc7"/>
-                                                <constraint firstItem="xJ6-Pd-Dol" firstAttribute="leading" secondItem="PRQ-5o-8SK" secondAttribute="leading" constant="20" symbolic="YES" id="Mpj-c0-wJn"/>
-                                                <constraint firstAttribute="bottom" secondItem="xJ6-Pd-Dol" secondAttribute="bottom" constant="4" id="mTk-v5-Ivc"/>
-                                                <constraint firstItem="xJ6-Pd-Dol" firstAttribute="top" secondItem="PRQ-5o-8SK" secondAttribute="top" constant="4" id="sdB-Cc-fOm"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                             <tableViewSection id="cju-tN-Y55">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Rij-RP-6Ws">
-                                        <rect key="frame" x="20" y="159" width="374" height="200.5"/>
+                                        <rect key="frame" x="20" y="18" width="374" height="200.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rij-RP-6Ws" id="Vfw-nV-c6j">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="200.5"/>
@@ -97,6 +45,79 @@ Let the device in pairing mode, then switch iPhone’s Wi-Fi to the device’s h
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="1. Enter  the wifi name  and password" id="7Pf-bX-7ED">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="FIv-iJ-DAn">
+                                        <rect key="frame" x="20" y="274.5" width="374" height="52.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FIv-iJ-DAn" id="BlQ-q7-2sx">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="52.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Wi-Fi SSID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ojp-Zp-meh">
+                                                    <rect key="frame" x="20" y="4" width="334" height="44.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="K2S-wD-A2d"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ojp-Zp-meh" firstAttribute="top" secondItem="BlQ-q7-2sx" secondAttribute="top" constant="4" id="5mC-Ej-Qgg"/>
+                                                <constraint firstAttribute="trailing" secondItem="ojp-Zp-meh" secondAttribute="trailing" constant="20" symbolic="YES" id="6LY-Hf-zkh"/>
+                                                <constraint firstAttribute="bottom" secondItem="ojp-Zp-meh" secondAttribute="bottom" constant="4" id="PCx-tl-v1S"/>
+                                                <constraint firstItem="ojp-Zp-meh" firstAttribute="leading" secondItem="BlQ-q7-2sx" secondAttribute="leading" constant="20" symbolic="YES" id="gWh-0g-SP8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="WIN-iG-5zP">
+                                        <rect key="frame" x="20" y="327" width="374" height="52.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WIN-iG-5zP" id="PRQ-5o-8SK">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="52.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Wi-Fi Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xJ6-Pd-Dol">
+                                                    <rect key="frame" x="20" y="4" width="334" height="44.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="3gK-jH-OQN"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="xJ6-Pd-Dol" secondAttribute="trailing" constant="20" symbolic="YES" id="3Om-kJ-nc7"/>
+                                                <constraint firstItem="xJ6-Pd-Dol" firstAttribute="leading" secondItem="PRQ-5o-8SK" secondAttribute="leading" constant="20" symbolic="YES" id="Mpj-c0-wJn"/>
+                                                <constraint firstAttribute="bottom" secondItem="xJ6-Pd-Dol" secondAttribute="bottom" constant="4" id="mTk-v5-Ivc"/>
+                                                <constraint firstItem="xJ6-Pd-Dol" firstAttribute="top" secondItem="PRQ-5o-8SK" secondAttribute="top" constant="4" id="sdB-Cc-fOm"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="2. Connect the device hotspot and then tap search" id="swE-MN-Zst">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="LBq-xL-hdf">
+                                        <rect key="frame" x="20" y="453.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LBq-xL-hdf" id="Kmj-ZS-Mdo">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connecting Device Hotspot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtQ-lo-7lb">
+                                                    <rect key="frame" x="20" y="11" width="210" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="F64-XI-pW5" id="5RL-Mn-DxP"/>
@@ -117,7 +138,7 @@ Let the device in pairing mode, then switch iPhone’s Wi-Fi to the device’s h
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TDB-5A-ViH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1678" y="247"/>
+            <point key="canvasLocation" x="1676.8115942028987" y="246.42857142857142"/>
         </scene>
     </scenes>
     <resources>

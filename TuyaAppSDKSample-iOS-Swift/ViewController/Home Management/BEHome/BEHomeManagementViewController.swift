@@ -13,7 +13,7 @@ class BEHomeManagementViewController : UITableViewController {
     
     override func viewDidLoad() {
         ThingSmartFamilyBiz.sharedInstance().getFamilyList { _ in
-            ThingSmartFamilyBiz.sharedInstance().loadCurrentFamily()
+            ThingSmartFamilyBiz.sharedInstance().launchCurrentFamily(withAppGroupName: "")
         } failure: { error in
             
         }

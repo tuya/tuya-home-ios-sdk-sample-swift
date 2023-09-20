@@ -65,7 +65,6 @@
 		82FBA9832AB1A75B00822B41 /* BEDeleteHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FBA9822AB1A75B00822B41 /* BEDeleteHomeViewController.swift */; };
 		82FBA9892AB1BA7F00822B41 /* BEEditHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA9882AB1BA7F00822B41 /* BEEditHome.storyboard */; };
 		82FBA98B2AB1BACD00822B41 /* BEEditHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FBA98A2AB1BACD00822B41 /* BEEditHomeViewController.swift */; };
-		8E25562B8FA40D6BB23FDDBF /* libPods-MatterExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F29A1BBA5069B0258E6DB4 /* libPods-MatterExtension.a */; };
 		9813B6A02AA5E234001646C0 /* DeviceNetworkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9813B69F2AA5E234001646C0 /* DeviceNetworkListViewController.swift */; };
 		9813B6AF2AA71593001646C0 /* TuyaLinkBind.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9813B6A12AA71592001646C0 /* TuyaLinkBind.storyboard */; };
 		9813B6B02AA71593001646C0 /* APMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9813B6A32AA71592001646C0 /* APMode.storyboard */; };
@@ -142,6 +141,7 @@
 		AF96134025B708AE000971CC /* LabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF96133F25B708AE000971CC /* LabelTableViewCell.swift */; };
 		AFBB5BBF25B95BBA006BDDD7 /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB5BBE25B95BBA006BDDD7 /* NotificationName.swift */; };
 		AFBB5BC225B95F3C006BDDD7 /* DeviceStatusBehaveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB5BC125B95F3C006BDDD7 /* DeviceStatusBehaveCell.swift */; };
+		ED97D2DDB0B0D535BD4836C0 /* libPods-MatterExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDBAFF21542EFFA18E0B468D /* libPods-MatterExtension.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -234,7 +234,6 @@
 		82FBA9822AB1A75B00822B41 /* BEDeleteHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEDeleteHomeViewController.swift; sourceTree = "<group>"; };
 		82FBA9882AB1BA7F00822B41 /* BEEditHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BEEditHome.storyboard; sourceTree = "<group>"; };
 		82FBA98A2AB1BACD00822B41 /* BEEditHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEEditHomeViewController.swift; sourceTree = "<group>"; };
-		85F29A1BBA5069B0258E6DB4 /* libPods-MatterExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MatterExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9813B69F2AA5E234001646C0 /* DeviceNetworkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceNetworkListViewController.swift; sourceTree = "<group>"; };
 		9813B6A22AA71592001646C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TuyaLinkBind.storyboard; sourceTree = "<group>"; };
 		9813B6A42AA71592001646C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/APMode.storyboard; sourceTree = "<group>"; };
@@ -266,6 +265,7 @@
 		98B4A1F82AB467DA004D759E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Matter.strings"; sourceTree = "<group>"; };
 		98B4A1F92AB46A6C004D759E /* MatterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatterViewController.swift; sourceTree = "<group>"; };
 		98B4A1FB2AB7E4AA004D759E /* BEDeviceNetworkListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BEDeviceNetworkListViewController.swift; sourceTree = "<group>"; };
+		ADF1C57BE833A3E9DD4D8CFD /* Pods-MatterExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatterExtension.debug.xcconfig"; path = "Target Support Files/Pods-MatterExtension/Pods-MatterExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		AF00605C25EC968A001462B8 /* TimeZoneTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneTableViewController.swift; sourceTree = "<group>"; };
 		AF00606025ECBF3A001462B8 /* TemperatureUnitTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureUnitTableViewController.swift; sourceTree = "<group>"; };
 		AF00606625EE638D001462B8 /* BEBLEModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEBLEModeViewController.swift; sourceTree = "<group>"; };
@@ -341,8 +341,8 @@
 		AFBB5BBE25B95BBA006BDDD7 /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 		AFBB5BC125B95F3C006BDDD7 /* DeviceStatusBehaveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceStatusBehaveCell.swift; sourceTree = "<group>"; };
 		B2A4751A3340941A1C42F4D9 /* Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig"; path = "Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig"; sourceTree = "<group>"; };
-		BDB17C938DDB956362B3B087 /* Pods-MatterExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatterExtension.release.xcconfig"; path = "Target Support Files/Pods-MatterExtension/Pods-MatterExtension.release.xcconfig"; sourceTree = "<group>"; };
-		E6BE6E3ED74D602A6FC346E7 /* Pods-MatterExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatterExtension.debug.xcconfig"; path = "Target Support Files/Pods-MatterExtension/Pods-MatterExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		CD69B77163167456846ED615 /* Pods-MatterExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatterExtension.release.xcconfig"; path = "Target Support Files/Pods-MatterExtension/Pods-MatterExtension.release.xcconfig"; sourceTree = "<group>"; };
+		DDBAFF21542EFFA18E0B468D /* libPods-MatterExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MatterExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -350,7 +350,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E25562B8FA40D6BB23FDDBF /* libPods-MatterExtension.a in Frameworks */,
+				ED97D2DDB0B0D535BD4836C0 /* libPods-MatterExtension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,7 +474,7 @@
 			isa = PBXGroup;
 			children = (
 				98A631D49E2E0E816D32C2CC /* libPods-TuyaAppSDKSample-iOS-Swift.a */,
-				85F29A1BBA5069B0258E6DB4 /* libPods-MatterExtension.a */,
+				DDBAFF21542EFFA18E0B468D /* libPods-MatterExtension.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -694,8 +694,8 @@
 			children = (
 				B2A4751A3340941A1C42F4D9 /* Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig */,
 				207E8BAF216CF8ED00C5937A /* Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig */,
-				E6BE6E3ED74D602A6FC346E7 /* Pods-MatterExtension.debug.xcconfig */,
-				BDB17C938DDB956362B3B087 /* Pods-MatterExtension.release.xcconfig */,
+				ADF1C57BE833A3E9DD4D8CFD /* Pods-MatterExtension.debug.xcconfig */,
+				CD69B77163167456846ED615 /* Pods-MatterExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -707,7 +707,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FF096BD2AB3F137003C6BDA /* Build configuration list for PBXNativeTarget "MatterExtension" */;
 			buildPhases = (
-				D50AC71E8F568FCA9A33F30B /* [CP] Check Pods Manifest.lock */,
+				11BDCDF3B66A04C9B8A6ABDD /* [CP] Check Pods Manifest.lock */,
 				0FF096B12AB3F137003C6BDA /* Sources */,
 				0FF096B22AB3F137003C6BDA /* Frameworks */,
 				0FF096B32AB3F137003C6BDA /* Resources */,
@@ -850,6 +850,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		11BDCDF3B66A04C9B8A6ABDD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MatterExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6E5A55F369AA0968BCF6376C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -904,28 +926,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D50AC71E8F568FCA9A33F30B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MatterExtension-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1335,7 +1335,7 @@
 /* Begin XCBuildConfiguration section */
 		0FF096BE2AB3F137003C6BDA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6BE6E3ED74D602A6FC346E7 /* Pods-MatterExtension.debug.xcconfig */;
+			baseConfigurationReference = ADF1C57BE833A3E9DD4D8CFD /* Pods-MatterExtension.debug.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_ENTITLEMENTS = MatterExtension/MatterExtension.entitlements;
@@ -1364,7 +1364,7 @@
 		};
 		0FF096BF2AB3F137003C6BDA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BDB17C938DDB956362B3B087 /* Pods-MatterExtension.release.xcconfig */;
+			baseConfigurationReference = CD69B77163167456846ED615 /* Pods-MatterExtension.release.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_ENTITLEMENTS = MatterExtension/MatterExtension.entitlements;
