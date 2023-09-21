@@ -3,7 +3,7 @@ source 'https://registry.code.tuya-inc.top/tuyaIOS/TYSpecs.git'
 
 source 'https://github.com/tuya/TuyaPublicSpecs.git'
 source 'https://github.com/tuya/tuya-pod-specs.git'
-
+source 'https://registry.code.tuya-inc.top/tuyaIOS/TYReservePublicSpecs.git'
 
 target 'TuyaAppSDKSample-iOS-Swift' do
   use_modular_headers!
@@ -12,6 +12,7 @@ target 'TuyaAppSDKSample-iOS-Swift' do
   pod 'SGQRCode', '~> 4.1.0'
 
 #  pod 'ThingSmartHomeKit', '~> 5.1.0'
+  pod 'ThingSmartBusinessExtensionKit'
 
   pod 'ThingSmartHomeKit', '~> 5.0.0'
   pod 'ThingSmartCryption', :path => '/Users/revive/tuya-home-ios-sdk-sample-objc/ios_core_sdk'

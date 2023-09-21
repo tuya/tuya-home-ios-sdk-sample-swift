@@ -5,7 +5,6 @@
 //  Copyright (c) 2014-2021 Thing Inc. (https://developer.tuya.com/)
 
 import UIKit
-import ThingSmartDeviceKit
 
 class ThingSmartMainTableViewController: UITableViewController {
     // MARK: - IBOutlet
@@ -14,6 +13,7 @@ class ThingSmartMainTableViewController: UITableViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpNavigationItem()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -54,5 +54,16 @@ class ThingSmartMainTableViewController: UITableViewController {
         if indexPath.section == 0 && indexPath.row == 1 {
             logoutButton.sendActions(for: .touchUpInside)
         }
+    }
+    
+    func setUpNavigationItem() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "设备", style: .plain, target: self, action: #selector(device))
+    }
+    
+    @objc func device() {
+        guard let current = Home.current else {return}
+        guard let home = ThingSmartHome(homeId: current.homeId) else {return}
+        let vc = DeviceDetailKitVC(home: home)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

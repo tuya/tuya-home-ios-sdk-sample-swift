@@ -14,6 +14,11 @@
 		0FF096BC2AB3F137003C6BDA /* MatterExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0FF096B52AB3F137003C6BDA /* MatterExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0FF096C42AB3F1EB003C6BDA /* Matter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF096C22AB3F1EB003C6BDA /* Matter.storyboard */; };
 		10F4AAB953F4FBCFFBD0F199 /* libPods-TuyaAppSDKSample-iOS-Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A631D49E2E0E816D32C2CC /* libPods-TuyaAppSDKSample-iOS-Swift.a */; };
+		42D0EFDD2ABC49580021AC7E /* DeviceListBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0EFD82ABC49580021AC7E /* DeviceListBaseVC.swift */; };
+		42D0EFDE2ABC49580021AC7E /* DeviceDetailKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0EFD92ABC49580021AC7E /* DeviceDetailKitVC.swift */; };
+		42D0EFDF2ABC49580021AC7E /* CustomMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0EFDA2ABC49580021AC7E /* CustomMenuModel.swift */; };
+		42D0EFE02ABC49580021AC7E /* DeviceDetailKitTimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0EFDB2ABC49580021AC7E /* DeviceDetailKitTimerVC.swift */; };
+		42D0EFE12ABC49580021AC7E /* DeviceDetailKitInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0EFDC2ABC49580021AC7E /* DeviceDetailKitInfoVC.swift */; };
 		6719AB9128A202B5000588E7 /* TextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6719AB9028A202B5000588E7 /* TextViewTableViewCell.swift */; };
 		6719AB9328A208CC000588E7 /* TuyaLinkDeviceControlController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6719AB9228A208CB000588E7 /* TuyaLinkDeviceControlController.swift */; };
 		6719AB9528A208DF000588E7 /* TuyaLinkActionMsgSendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6719AB9428A208DF000588E7 /* TuyaLinkActionMsgSendController.swift */; };
@@ -179,6 +184,11 @@
 		0FF096C12AB3F13E003C6BDA /* MatterExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MatterExtension.entitlements; sourceTree = "<group>"; };
 		0FF096C32AB3F1EB003C6BDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Matter.storyboard; sourceTree = "<group>"; };
 		207E8BAF216CF8ED00C5937A /* Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig"; path = "Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		42D0EFD82ABC49580021AC7E /* DeviceListBaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceListBaseVC.swift; sourceTree = "<group>"; };
+		42D0EFD92ABC49580021AC7E /* DeviceDetailKitVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDetailKitVC.swift; sourceTree = "<group>"; };
+		42D0EFDA2ABC49580021AC7E /* CustomMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMenuModel.swift; sourceTree = "<group>"; };
+		42D0EFDB2ABC49580021AC7E /* DeviceDetailKitTimerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDetailKitTimerVC.swift; sourceTree = "<group>"; };
+		42D0EFDC2ABC49580021AC7E /* DeviceDetailKitInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDetailKitInfoVC.swift; sourceTree = "<group>"; };
 		6719AB9028A202B5000588E7 /* TextViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewTableViewCell.swift; sourceTree = "<group>"; };
 		6719AB9228A208CB000588E7 /* TuyaLinkDeviceControlController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuyaLinkDeviceControlController.swift; sourceTree = "<group>"; };
 		6719AB9428A208DF000588E7 /* TuyaLinkActionMsgSendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuyaLinkActionMsgSendController.swift; sourceTree = "<group>"; };
@@ -373,6 +383,18 @@
 				0FF096B92AB3F137003C6BDA /* Info.plist */,
 			);
 			path = MatterExtension;
+			sourceTree = "<group>";
+		};
+		42D0EFD72ABC49580021AC7E /* DeviceDetailList */ = {
+			isa = PBXGroup;
+			children = (
+				42D0EFD82ABC49580021AC7E /* DeviceListBaseVC.swift */,
+				42D0EFD92ABC49580021AC7E /* DeviceDetailKitVC.swift */,
+				42D0EFDA2ABC49580021AC7E /* CustomMenuModel.swift */,
+				42D0EFDB2ABC49580021AC7E /* DeviceDetailKitTimerVC.swift */,
+				42D0EFDC2ABC49580021AC7E /* DeviceDetailKitInfoVC.swift */,
+			);
+			path = DeviceDetailList;
 			sourceTree = "<group>";
 		};
 		825900BD2AA963E80017D14C /* Home Management */ = {
@@ -623,6 +645,7 @@
 		AF5E2F4625A5A4F300DAF14E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				42D0EFD72ABC49580021AC7E /* DeviceDetailList */,
 				9813B6C92AA719A7001646C0 /* Device Network Configuration */,
 				AF3A259B25A835AE003EB9FF /* MainViewController.swift */,
 				AF5E2F4725A5A51B00DAF14E /* TuyaSmartMainTableViewController.swift */,
@@ -966,6 +989,7 @@
 				AF96134025B708AE000971CC /* LabelTableViewCell.swift in Sources */,
 				82B55B8E2AB2E6B300FBE30B /* BEMemberListViewController.swift in Sources */,
 				AF00606E25EE6B30001462B8 /* BEZigbeeGatewayViewController.swift in Sources */,
+				42D0EFE12ABC49580021AC7E /* DeviceDetailKitInfoVC.swift in Sources */,
 				AF3A25D025AECFCF003EB9FF /* HomeDetailTableViewController.swift in Sources */,
 				98B4A1FA2AB46A6C004D759E /* MatterViewController.swift in Sources */,
 				AF3A25BD25AD9AE1003EB9FF /* NewHomeTableViewController.swift in Sources */,
@@ -975,6 +999,8 @@
 				6719AB9528A208DF000588E7 /* TuyaLinkActionMsgSendController.swift in Sources */,
 				AF21C20625B0400F00D52FBA /* BEEZModeTableViewController.swift in Sources */,
 				AF3A25AA25A98A77003EB9FF /* ResetPasswordTableViewController.swift in Sources */,
+				42D0EFE02ABC49580021AC7E /* DeviceDetailKitTimerVC.swift in Sources */,
+				42D0EFDD2ABC49580021AC7E /* DeviceListBaseVC.swift in Sources */,
 				AF3A25A725A844DA003EB9FF /* LoginTableViewController.swift in Sources */,
 				9813B6D72AA719E0001646C0 /* APModeTableViewController.swift in Sources */,
 				AF5E2F5225A5D60B00DAF14E /* Alert.swift in Sources */,
@@ -998,6 +1024,7 @@
 				82B55A502AB1E2B500FBE30B /* BECreateInvitationViewController.swift in Sources */,
 				AF3A25B525A9ADD6003EB9FF /* AccountType.swift in Sources */,
 				AF37DBB425AEE842000EB0FD /* EditHomeTableViewController.swift in Sources */,
+				42D0EFDE2ABC49580021AC7E /* DeviceDetailKitVC.swift in Sources */,
 				AF5531E025A5992500E13562 /* AppDelegate.swift in Sources */,
 				AF55320D25A59BE800E13562 /* AppKey.swift in Sources */,
 				9813B6D32AA719E0001646C0 /* EZModeTableViewController.swift in Sources */,
@@ -1018,6 +1045,7 @@
 				AF9612F625B6C80E000971CC /* EnumTableViewCell.swift in Sources */,
 				82B55BAE2AB3271C00FBE30B /* BEEditRoomViewController.swift in Sources */,
 				AF96129D25B5ACE6000971CC /* SwitchTableViewCell.swift in Sources */,
+				42D0EFDF2ABC49580021AC7E /* CustomMenuModel.swift in Sources */,
 				82FBA9752AB1663C00822B41 /* BEHomeListViewController.swift in Sources */,
 				AF5531E225A5992500E13562 /* SceneDelegate.swift in Sources */,
 				AF96133C25B7085D000971CC /* StringTableViewCell.swift in Sources */,
