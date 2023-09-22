@@ -41,8 +41,6 @@ class DeviceListBaseVC: UITableViewController {
         home.delegate = self
         updateHomeDetail()
         self.setUpNavigationItem()
-        ThingSmartBizCore.sharedInstance().registerService(ThingDeviceDetailExternalProtocol.self, withInstance: self)
-//        ThingSmartBizCore.sharedInstance().registerService(ThingFamilyProtocol.self, withInstance: self)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -130,21 +128,5 @@ extension DeviceListBaseVC: ThingSmartHomeDelegate {
     
     func home(_ home: ThingSmartHome!, device: ThingSmartDeviceModel!, dpsUpdate dps: [AnyHashable : Any]!) {
         tableView.reloadData()
-    }
-}
-
-
-extension DeviceListBaseVC: ThingFamilyProtocol {
-    
-    func getCurrentHome() -> ThingSmartHome {
-        return self.home
-    }
-    
-    func currentFamilyId() -> Int64 {
-        return self.home.homeId
-    }
-    
-    func checkAdminAndRightLimit(_ alert: Bool) -> Bool {
-        return true
     }
 }

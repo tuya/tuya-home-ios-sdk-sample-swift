@@ -13,7 +13,6 @@ class ThingSmartMainTableViewController: UITableViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpNavigationItem()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -53,15 +52,13 @@ class ThingSmartMainTableViewController: UITableViewController {
         // Logout button row tapped
         if indexPath.section == 0 && indexPath.row == 1 {
             logoutButton.sendActions(for: .touchUpInside)
+        }else if indexPath.section == 3 && indexPath.row == 1 {
+            self.device()
         }
     }
     
-    func setUpNavigationItem() {
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "设备", style: .plain, target: self, action: #selector(device))
-    }
-    
     @objc func device() {
-        guard let current = Home.current else {return}
+        guard let current = ThingSmartFamilyBiz.sharedInstance().getCurrentFamily() else {return}
         guard let home = ThingSmartHome(homeId: current.homeId) else {return}
         let vc = DeviceDetailKitVC(home: home)
         self.navigationController?.pushViewController(vc, animated: true)

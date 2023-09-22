@@ -46,6 +46,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        (ThingSmartBusinessExtensionConfig.self as AnyObject).loadConfig()
+        
         return true
     }
 

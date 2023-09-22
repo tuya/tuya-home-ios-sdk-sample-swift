@@ -6,7 +6,7 @@
 
 import UIKit
 
-class CustomMenuModel: NSObject, ThingDeviceDetailCustomMenuModel {
+class CustomMenuModel: NSObject {
     var title: String
     var detail: String
     

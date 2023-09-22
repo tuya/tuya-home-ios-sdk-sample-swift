@@ -65,7 +65,7 @@ class DeviceDetailKitVC: DeviceListBaseVC {
         params["devId"] = device.devId! as AnyObject
 
         if (groupType == .bleMesh || groupType == .sigMesh || groupType == .beacon) {
-            let impl = ThingSmartBizCore.sharedInstance().service(of: ThingBusinessGroupProtocol.self) as? ThingBusinessGroupProtocol
+            let impl = ThingModule.service(ofOptionalProtocol: ThingBusinessGroupProtocol.self) as? ThingBusinessGroupProtocol
             let deviceList = impl?.deviceListForCurrentSpace() ?? []
             params["deviceList"] = deviceList as AnyObject
         }
@@ -110,7 +110,7 @@ class DeviceDetailKitVC: DeviceListBaseVC {
         params["groupId"] = group.groupId! as AnyObject
 
         if (groupType == .bleMesh || groupType == .sigMesh || groupType == .beacon) {
-            let impl = ThingSmartBizCore.sharedInstance().service(of: ThingBusinessGroupProtocol.self) as? ThingBusinessGroupProtocol
+            let impl = ThingModule.service(ofOptionalProtocol: ThingBusinessGroupProtocol.self) as? ThingBusinessGroupProtocol
             let deviceList = impl?.deviceListForCurrentSpace() ?? []
             params["deviceList"] = deviceList as AnyObject
         }
@@ -156,7 +156,7 @@ class DeviceDetailKitVC: DeviceListBaseVC {
         params["groupId"] = group.groupId! as AnyObject
 
         if (groupType == .bleMesh || groupType == .sigMesh || groupType == .beacon) {
-            let impl = ThingSmartBizCore.sharedInstance().service(of: ThingBusinessGroupProtocol.self) as? ThingBusinessGroupProtocol
+            let impl = ThingModule.service(ofOptionalProtocol: ThingBusinessGroupProtocol.self) as? ThingBusinessGroupProtocol
             let deviceList = impl?.deviceListForCurrentSpace() ?? []
             params["deviceList"] = deviceList as AnyObject
         }
