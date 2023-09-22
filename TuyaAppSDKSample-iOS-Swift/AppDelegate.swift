@@ -19,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Set your Matter Group ID
         ThingSmartMatterActivatorConfig.setMatterKey("your_group_id")
         
+        // Setup ThingSmartBusinessExtensionKit
+        ThingSmartBusinessExtensionConfig.setupConfig()
+        
         // Enable debug mode, which allows you to see logs.
         #if DEBUG
         ThingSmartSDK.sharedInstance().debugMode = true
