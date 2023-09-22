@@ -75,6 +75,7 @@ extension BEZigbeeGatewayViewController: UITableViewDelegate,UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "zibgeegatewaycell")!
         cell.textLabel?.text = deviceList[indexPath.row].name
         cell.detailTextLabel?.text = deviceList[indexPath.row].deviceStatus == ThingSearchDeviceStatusNetwork ? "Success":"Add";
+        cell.accessoryType = .none
         return cell
     }
     
@@ -96,7 +97,6 @@ extension BEZigbeeGatewayViewController: UITableViewDelegate,UITableViewDataSour
             SVProgressHUD.showError(withStatus: errorMessage)
         })
         
-
         
         tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
         tableView.deselectRow(at: indexPath, animated: true)
@@ -135,6 +135,7 @@ extension BEZigbeeGatewayViewController: ThingSmartActivatorActiveDelegate {
                 }
             }
             
+            SVProgressHUD.dismiss()
             successDevice?.deviceStatus = ThingSearchDeviceStatusNetwork
             tableview.reloadData()
             

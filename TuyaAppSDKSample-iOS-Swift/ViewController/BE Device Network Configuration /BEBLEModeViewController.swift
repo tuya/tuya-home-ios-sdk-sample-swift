@@ -80,6 +80,7 @@ extension BEBLEModeViewController: UITableViewDelegate,UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "activatorDeviceCell")!
         cell.textLabel?.text = deviceList[indexPath.row].name
         cell.detailTextLabel?.text = deviceList[indexPath.row].deviceStatus == ThingSearchDeviceStatusNetwork ? "Success":"Add";
+        cell.accessoryType = .none
         return cell
     }
     
