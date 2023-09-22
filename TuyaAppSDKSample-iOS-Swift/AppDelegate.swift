@@ -49,6 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        // load last current family info
         ThingSmartFamilyBiz.sharedInstance().launchCurrentFamily(withAppGroupName: nil)
         
         return true
