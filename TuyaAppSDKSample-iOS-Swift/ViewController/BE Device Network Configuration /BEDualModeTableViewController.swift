@@ -85,6 +85,7 @@ extension BEDualModeTableViewController: UITableViewDelegate,UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "dualDeviceCell")!
         cell.textLabel?.text = deviceList[indexPath.row].name
         cell.detailTextLabel?.text = deviceList[indexPath.row].deviceStatus == ThingSearchDeviceStatusNetwork ? "Success":"Add";
+        cell.accessoryType = .none
         return cell
     }
     

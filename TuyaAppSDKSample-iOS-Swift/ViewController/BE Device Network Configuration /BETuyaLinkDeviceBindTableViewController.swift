@@ -15,6 +15,11 @@ class BETuyaLinkDeviceBindTableViewController: UITableViewController {
         title = "ThingLink Bind"
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        SVProgressHUD.dismiss()
+    }
+    
     private var typeModel: ThingSmartActivatorTypeThingLinkModel = {
         let type = ThingSmartActivatorTypeThingLinkModel()
         type.type = ThingSmartActivatorType.thingLink
