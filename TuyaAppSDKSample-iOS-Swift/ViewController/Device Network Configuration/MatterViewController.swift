@@ -6,6 +6,7 @@
 
 import UIKit
 import ThingSmartMatterKit
+import ThingSmartActivatorKit
 
 class MatterViewController: UIViewController {
     
@@ -97,7 +98,7 @@ extension MatterViewController : UITableViewDelegate, UITableViewDataSource{
                         ThingSmartMatterActivator.sharedInstance().connectDevice(with: builder, timeout: 200)
                         self?.statusView.text = "Start Activator"
                     } failure: { _ in
-                        
+
                     }
                 }
             }
@@ -168,31 +169,32 @@ extension MatterViewController : ThingSmartMatterActivatorDelegate{
         scrollToBottom()
     }
     
-    func matterCommissioningStatusUpdate(_ status: ThingMatterStatus) {
-        let text = self.statusView.text
-        switch status{
-        case .discovery:
-            self.statusView.text = "\(text ?? "")\nMatter Discoverying!"
-            break
-            
-        case .connecting:
-            self.statusView.text = "\(text ?? "")\nMatter Connectting!"
-            break
-        case .nocSigning:
-            self.statusView.text = "\(text ?? "")\nMatter Noc Signing!"
-            break
-        case .commissioning:
-            self.statusView.text = "\(text ?? "")\nMatter Commissioning!"
-            break
-        case .activing:
-            self.statusView.text = "\(text ?? "")\nMatter Activing!"
-            break
-        @unknown default:
-            break
-        }
-        
-        scrollToBottom()
-    }
+    //5.5.0才有
+//    func matterCommissioningStatusUpdate(_ status: ThingMatterStatus) {
+//        let text = self.statusView.text
+//        switch status{
+//        case .discovery:
+//            self.statusView.text = "\(text ?? "")\nMatter Discoverying!"
+//            break
+//
+//        case .connecting:
+//            self.statusView.text = "\(text ?? "")\nMatter Connectting!"
+//            break
+//        case .nocSigning:
+//            self.statusView.text = "\(text ?? "")\nMatter Noc Signing!"
+//            break
+//        case .commissioning:
+//            self.statusView.text = "\(text ?? "")\nMatter Commissioning!"
+//            break
+//        case .activing:
+//            self.statusView.text = "\(text ?? "")\nMatter Activing!"
+//            break
+//        @unknown default:
+//            break
+//        }
+//
+//        scrollToBottom()
+//    }
     
     private func scrollToBottom(){
         self.statusView.layoutManager.allowsNonContiguousLayout = false;
