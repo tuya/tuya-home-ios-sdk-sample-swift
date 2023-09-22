@@ -95,7 +95,7 @@ extension BEDualModeTableViewController: UITableViewDelegate,UITableViewDataSour
         
         let deviceModel = deviceList[indexPath.row]
         typeModel.ssid = ssidTextField.text ?? ""
-        typeModel.password = ssidTextField.text ?? ""
+        typeModel.password = passwordTextField.text ?? ""
         discovery.startActive(typeModel, deviceList: [deviceModel])
         SVProgressHUD.show(withStatus: NSLocalizedString("Activating", comment: "Active BLE."))
         
@@ -134,7 +134,6 @@ extension BEDualModeTableViewController: ThingSmartActivatorSearchDelegate {
 extension BEDualModeTableViewController: ThingSmartActivatorActiveDelegate {
     func activatorService(_ service: ThingSmartActivatorActiveProtocol, activatorType type: ThingSmartActivatorTypeModel, didReceiveDevices devices: [ThingSmartActivatorDeviceModel]?, error errorModel: ThingSmartActivatorErrorModel?) {
         if let errorModel = errorModel {
-            let code = errorModel.error
             
             SVProgressHUD.showError(withStatus: NSLocalizedString("Failed to Activate BLE Device", comment: ""))
             return

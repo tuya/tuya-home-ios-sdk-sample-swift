@@ -38,10 +38,8 @@ class BEZigbeeSubdeviceTableViewController: UITableViewController {
     // MARK: - Lifecycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let gatewayName = gateway?.name
-        if ((gatewayName) != nil) {
-            gatewayNameLabel.text = gatewayName
-        }
+        
+        gatewayNameLabel.text = gateway?.name
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -87,36 +85,6 @@ class BEZigbeeSubdeviceTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 1
-        } else {
-            return deviceList.count
-        }
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if (indexPath.section == 0) {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "zigbeeDeviceCell")!
-            return cell
-        }
-        else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "zigbeeDeviceCell")!
-            cell.textLabel?.text = deviceList[indexPath.row].name
-            return cell
-        }
-    }
-
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        for cell in tableView.visibleCells {
-            cell.accessoryType = .none
-        }
-    }
 }
 
 extension BEZigbeeSubdeviceTableViewController: ThingSmartActivatorSearchDelegate {
@@ -127,9 +95,6 @@ extension BEZigbeeSubdeviceTableViewController: ThingSmartActivatorSearchDelegat
             SVProgressHUD.showSuccess(withStatus: NSLocalizedString("Successfully Added \(name)", comment: "Successfully added one device."))
             isSuccess = true
             
-            
-//            deviceList.append(device!)
-//            tableView.reloadData()
             SVProgressHUD.dismiss()
         }
         
