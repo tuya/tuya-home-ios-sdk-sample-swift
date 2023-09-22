@@ -49,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
-        (ThingSmartBusinessExtensionConfig.self as AnyObject).loadConfig()
+        ThingSmartFamilyBiz.sharedInstance().launchCurrentFamily(withAppGroupName: nil)
         
         return true
     }
