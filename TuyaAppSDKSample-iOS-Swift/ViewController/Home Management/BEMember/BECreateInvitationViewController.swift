@@ -20,7 +20,7 @@ class BECreateInvitationViewController : UITableViewController {
         if let home = ThingSmartFamilyBiz.sharedInstance().getCurrentFamily() {
             ThingSmartMemberBiz.sharedInstance().createInvitation(withHomeId: home.homeId) {[weak self] resultModel in
                 guard let self = self else {return}
-                self.invitationCodeLabel.text = "Invitation Code : " + resultModel.invitationCode
+                self.invitationCodeLabel.text = resultModel.invitationCode
             } failure: { error in
                 
             }

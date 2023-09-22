@@ -23,7 +23,7 @@ class BEHomeManagementViewController : UITableViewController {
         if let home = ThingSmartFamilyBiz.sharedInstance().getCurrentFamily() {
             currentHomeName.text = home.name
         } else {
-            currentHomeName.text = "未选择"
+            currentHomeName.text = "No Selection"
         }
     }
 }

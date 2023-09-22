@@ -47,6 +47,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="Yvf-UW-nbv">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <gestureRecognizers/>
                         <sections>
                             <tableViewSection id="Qr9-0L-P6L">
                                 <cells>
@@ -65,6 +66,15 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEX-Vh-khG">
+                                                    <rect key="frame" x="283" y="9" width="70" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Edit"/>
+                                                    <connections>
+                                                        <action selector="tapEdit" destination="OK8-Hk-w4g" eventType="touchUpInside" id="BQ6-dU-k0u"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="YOO-2a-IDx" secondAttribute="bottom" constant="4" id="WVg-e3-mkZ"/>
@@ -173,6 +183,7 @@
                     </tableView>
                     <connections>
                         <outlet property="codeLabel" destination="9lm-Lj-A4A" id="eHR-Kw-HSH"/>
+                        <outlet property="editBtn" destination="UEX-Vh-khG" id="aSy-wf-QTE"/>
                         <outlet property="nameField" destination="YOO-2a-IDx" id="tqt-oz-N6n"/>
                         <outlet property="validTimeLabel" destination="OUT-Od-YCq" id="kYU-44-Njy"/>
                     </connections>

@@ -206,10 +206,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <sections>
-                            <tableViewSection id="Ofk-ZR-jTX">
+                            <tableViewSection headerTitle="Member Name" id="Ofk-ZR-jTX">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="FjD-sD-h8u">
-                                        <rect key="frame" x="20" y="18" width="353" height="52.333332061767578"/>
+                                        <rect key="frame" x="20" y="55.333332061767578" width="353" height="52.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FjD-sD-h8u" id="Dec-Fw-2vp">
                                             <rect key="frame" x="0.0" y="0.0" width="353" height="52.333332061767578"/>
@@ -232,8 +232,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Member Role" id="Hef-aH-jgB">
+                                <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Ga8-Pu-ur5">
-                                        <rect key="frame" x="20" y="70.333332061767578" width="353" height="52.333332061767578"/>
+                                        <rect key="frame" x="20" y="163.66666221618652" width="353" height="52.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ga8-Pu-ur5" id="5WV-Dn-o3W">
                                             <rect key="frame" x="0.0" y="0.0" width="353" height="52.333332061767578"/>

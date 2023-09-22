@@ -10,6 +10,7 @@ import ThingSmartFamilyBizKit
 class BEInvitationDetailViewController : UITableViewController {
     var invitation : ThingSmartHomeInvitationRecordModel?
     
+    @IBOutlet weak var editBtn: UIButton!
     @IBOutlet weak var nameField : UITextField!
     @IBOutlet weak var codeLabel : UILabel!
     @IBOutlet weak var validTimeLabel : UILabel!
@@ -20,7 +21,6 @@ class BEInvitationDetailViewController : UITableViewController {
             codeLabel.text = "Invitation Code : " + model.invitationCode
             validTimeLabel.text = "Valid Time : " + String(model.validTime) + " " + "hours"
         }
-        self.nameField.becomeFirstResponder()
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -90,6 +90,16 @@ class BEInvitationDetailViewController : UITableViewController {
                 let errorMessage = error?.localizedDescription ?? ""
                 Alert.showBasicAlert(on: self, with: "Failed to Reinvite Invitation", message:errorMessage , actions: [])
             }
+        }
+    }
+    
+    @IBAction func tapEdit() {
+        if !nameField.isFirstResponder {
+            editBtn.setTitle("Done", for: .normal)
+            nameField.becomeFirstResponder()
+        } else {
+            editBtn.setTitle("Edit", for: .normal)
+            nameField.resignFirstResponder()
         }
     }
 }
