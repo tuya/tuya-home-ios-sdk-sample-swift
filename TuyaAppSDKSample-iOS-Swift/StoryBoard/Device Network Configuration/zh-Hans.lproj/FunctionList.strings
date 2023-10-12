@@ -1,0 +1,24 @@
+
+/* Class = "UITableViewSection"; headerTitle = "Device Network Configuration By Bussiness Extension SDK "; ObjectID = "MiF-sU-GAa"; */
+"MiF-sU-GAa.headerTitle" = "设备网络配置";
+
+/* Class = "UILabel"; text = "AP Mode"; ObjectID = "NYD-o5-VU4"; */
+"NYD-o5-VU4.text" = "AP 模式";
+
+/* Class = "UILabel"; text = "Zigbee Gateway"; ObjectID = "ShP-Dv-qat"; */
+"ShP-Dv-qat.text" = "Zigbee 网关";
+
+/* Class = "UILabel"; text = "EZ Mode"; ObjectID = "ZFz-FY-WZw"; */
+"ZFz-FY-WZw.text" = "EZ 模式";
+
+/* Class = "UILabel"; text = "TuyaLink Bind"; ObjectID = "hkz-or-Sdr"; */
+"hkz-or-Sdr.text" = "TuyaLink 绑定";
+
+/* Class = "UILabel"; text = "Zigbee Subdevice"; ObjectID = "kpZ-Xg-Os4"; */
+"kpZ-Xg-Os4.text" = "Zigbee 子设备";
+
+/* Class = "UILabel"; text = "Dual Mode"; ObjectID = "qka-oG-P6j"; */
+"qka-oG-P6j.text" = "蓝牙 Wi-Fi 双模";
+
+/* Class = "UILabel"; text = "Bluetooth Low Energy"; ObjectID = "wxV-mz-qWi"; */
+"wxV-mz-qWi.text" = "低功耗蓝牙";

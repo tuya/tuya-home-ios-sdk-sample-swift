@@ -5,7 +5,6 @@
 //  Copyright (c) 2014-2022 Thing Inc. (https://developer.tuya.com/)
 
 import UIKit
-import SGQRCode
 
 class QRCodeScanerViewController: UIViewController {
 

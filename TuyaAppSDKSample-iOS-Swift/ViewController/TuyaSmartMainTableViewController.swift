@@ -5,44 +5,19 @@
 //  Copyright (c) 2014-2021 Thing Inc. (https://developer.tuya.com/)
 
 import UIKit
-import ThingSmartDeviceKit
 
 class ThingSmartMainTableViewController: UITableViewController {
     // MARK: - IBOutlet
     @IBOutlet weak var logoutButton: UIButton!
-    @IBOutlet weak var currentHomeLabel: UILabel!
-    
-    // MARK: - Property
-    let homeManager = ThingSmartHomeManager()
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        initiateCurrentHome()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        currentHomeLabel.text = Home.current?.name ?? NSLocalizedString("No Selection", comment: "User hasn't select a current home.")
-        
-        if #available(iOS 13.0, *) {
-            currentHomeLabel.textColor = .secondaryLabel
-        } else {
-            currentHomeLabel.textColor = .systemGray
-        }
     }
-    
-    // MARK: - Private Method
-    private func initiateCurrentHome() {
-        homeManager.getHomeList { (homeModels) in
-            Home.current = homeModels?.first
-        } failure: { (error) in
-            
-        }
-    }
-    
     
     // MARK: - IBAction
     @IBAction func logoutTapped(_ sender: UIButton) {
@@ -77,6 +52,15 @@ class ThingSmartMainTableViewController: UITableViewController {
         // Logout button row tapped
         if indexPath.section == 0 && indexPath.row == 1 {
             logoutButton.sendActions(for: .touchUpInside)
+        }else if indexPath.section == 3 && indexPath.row == 1 {
+            self.device()
         }
+    }
+    
+    @objc func device() {
+        guard let current = ThingSmartFamilyBiz.sharedInstance().getCurrentFamily() else {return}
+        guard let home = ThingSmartHome(homeId: current.homeId) else {return}
+        let vc = DeviceDetailKitVC(home: home)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

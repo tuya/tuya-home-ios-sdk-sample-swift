@@ -22,6 +22,13 @@
 	<true/>
 	<key>NSBluetoothAlwaysUsageDescription</key>
 	<string>For better usage, we will suggest you to give us the permissions to use Bluetooth.</string>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_meshcop._udp</string>
+		<string>_matter._tcp</string>
+		<string>_matterc._udp</string>
+		<string>_matterd._udp</string>
+	</array>
 	<key>NSCameraUsageDescription</key>
 	<string>For better usage, we will suggest you to give us the permissions to use your location</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
@@ -30,6 +37,10 @@
 	<string>For better usage, we will suggest you to give us the permissions to use your location.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>For better usage, we will suggest you to give us the permissions to use your location</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>iconfont.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

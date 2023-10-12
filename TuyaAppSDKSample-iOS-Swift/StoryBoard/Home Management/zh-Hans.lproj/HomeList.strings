@@ -1,0 +1,48 @@
+
+/* Class = "UILabel"; text = "Weather Condition"; ObjectID = "1gJ-xw-lc9"; */
+"1gJ-xw-lc9.text" = "Weather Condition";
+
+/* Class = "UIButton"; normalTitle = "Dismiss"; ObjectID = "HfD-A1-DtT"; */
+"HfD-A1-DtT.normalTitle" = "Dismiss";
+
+/* Class = "UINavigationItem"; title = "Home List"; ObjectID = "IdX-vX-CyC"; */
+"IdX-vX-CyC.title" = "Home List";
+
+/* Class = "UILabel"; text = "City"; ObjectID = "JAY-Is-f72"; */
+"JAY-Is-f72.text" = "City";
+
+/* Class = "UINavigationItem"; title = "Edit Home"; ObjectID = "JGY-xu-dY7"; */
+"JGY-xu-dY7.title" = "Edit Home";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "NZk-b8-J7P"; */
+"NZk-b8-J7P.text" = "Detail";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "ZEM-Ps-kML"; */
+"ZEM-Ps-kML.text" = "Detail";
+
+/* Class = "UITextField"; placeholder = "Home Name"; ObjectID = "by0-Jc-Lwn"; */
+"by0-Jc-Lwn.placeholder" = "Home Name";
+
+/* Class = "UINavigationItem"; title = "Home Detail"; ObjectID = "erY-MS-1Qg"; */
+"erY-MS-1Qg.title" = "Home Detail";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "fxR-8V-mWV"; */
+"fxR-8V-mWV.text" = "Detail";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "gKn-jF-o1l"; */
+"gKn-jF-o1l.text" = "Detail";
+
+/* Class = "UITextField"; placeholder = "City"; ObjectID = "nym-vD-QSw"; */
+"nym-vD-QSw.placeholder" = "City";
+
+/* Class = "UILabel"; text = "Home ID"; ObjectID = "owa-cj-QYx"; */
+"owa-cj-QYx.text" = "Home ID";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "uoq-3u-1L2"; */
+"uoq-3u-1L2.text" = "Detail";
+
+/* Class = "UILabel"; text = "Home Name"; ObjectID = "vSs-NM-ijE"; */
+"vSs-NM-ijE.text" = "Home Name";
+
+/* Class = "UILabel"; text = "Temperature"; ObjectID = "xZG-0n-v5l"; */
+"xZG-0n-v5l.text" = "Temperature";

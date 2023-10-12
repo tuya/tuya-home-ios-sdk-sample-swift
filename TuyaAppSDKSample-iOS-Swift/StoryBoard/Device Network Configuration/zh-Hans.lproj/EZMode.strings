@@ -1,0 +1,12 @@
+
+/* Class = "UIBarButtonItem"; title = "Search"; ObjectID = "Ezj-r0-ap6"; */
+"Ezj-r0-ap6.title" = "Search";
+
+/* Class = "UITextField"; placeholder = "Wi-Fi SSID"; ObjectID = "SJg-VP-sjB"; */
+"SJg-VP-sjB.placeholder" = "Wi-Fi SSID";
+
+/* Class = "UITextField"; placeholder = "Wi-Fi Password"; ObjectID = "gaL-bj-Ucd"; */
+"gaL-bj-Ucd.placeholder" = "Wi-Fi Password";
+
+/* Class = "UINavigationItem"; title = "EZ Mode"; ObjectID = "vjO-pK-I6z"; */
+"vjO-pK-I6z.title" = "EZ Mode";
