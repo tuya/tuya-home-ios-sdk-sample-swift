@@ -6,8 +6,6 @@
 
 import UIKit
 import NotificationCenter
-import ThingSmartDeviceKit
-import YYModel
 
 class ThingLinkDeviceControlController: UITableViewController {
 

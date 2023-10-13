@@ -1,0 +1,9 @@
+
+/* Class = "UINavigationItem"; title = "Bluetooth Low Energy"; ObjectID = "7ad-Ml-1Yx"; */
+"7ad-Ml-1Yx.title" = "Bluetooth Low Energy";
+
+/* Class = "UILabel"; text = "Single-point Bluetooth devices are devices that have a one-to-one connection with a cell phone terminal via Bluetooth, such as Bluetooth bracelets, Bluetooth headsets, Bluetooth speakers, etc. Each device can be connected to a cell phone at the same time, and the number of simultaneous Bluetooth connections per cell phone terminal is currently limited to 6 to 7.\n\nTap Search to pair BLE device."; ObjectID = "B9W-Aw-GZm"; */
+"B9W-Aw-GZm.text" = "Single-point Bluetooth devices are devices that have a one-to-one connection with a cell phone terminal via Bluetooth, such as Bluetooth bracelets, Bluetooth headsets, Bluetooth speakers, etc. Each device can be connected to a cell phone at the same time, and the number of simultaneous Bluetooth connections per cell phone terminal is currently limited to 6 to 7.\n\nTap Search to pair BLE device.";
+
+/* Class = "UIBarButtonItem"; title = "Search"; ObjectID = "FBI-h1-Obm"; */
+"FBI-h1-Obm.title" = "Search";

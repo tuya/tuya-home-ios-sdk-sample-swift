@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eyS-ON-qvR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Matter Table View Controller-->
+        <scene sceneID="vzU-c8-xvj">
+            <objects>
+                <tableViewController id="eyS-ON-qvR" customClass="BEMatterTableViewController" customModule="TuyaAppSDKSample_iOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="QLD-Ju-Hz9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <sections>
+                            <tableViewSection id="B9y-6D-Xip">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="4Hr-aP-h04">
+                                        <rect key="frame" x="20" y="18" width="374" height="43"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Hr-aP-h04" id="mMv-g5-1KU">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan QRCode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHG-wM-rlT">
+                                                    <rect key="frame" x="20" y="11" width="334" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="GHG-wM-rlT" firstAttribute="top" secondItem="mMv-g5-1KU" secondAttribute="topMargin" id="4jN-5g-LVD"/>
+                                                <constraint firstItem="GHG-wM-rlT" firstAttribute="leading" secondItem="mMv-g5-1KU" secondAttribute="leadingMargin" id="5Eg-dN-DP1"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="GHG-wM-rlT" secondAttribute="bottom" id="o9s-MD-v4B"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="GHG-wM-rlT" secondAttribute="trailing" id="xMe-bD-qIW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="WiFi devices require a network router account and password" id="mdb-Bi-CY7">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="znm-mi-cKy">
+                                        <rect key="frame" x="20" y="135" width="374" height="52.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="znm-mi-cKy" id="wfy-Xw-QzT">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="52.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Wi-Fi SSID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UAw-eC-PPu">
+                                                    <rect key="frame" x="20" y="4" width="334" height="44.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="sec-8R-nQC"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="UAw-eC-PPu" secondAttribute="bottom" constant="4" id="A7z-3l-J1U"/>
+                                                <constraint firstItem="UAw-eC-PPu" firstAttribute="leading" secondItem="wfy-Xw-QzT" secondAttribute="leading" constant="20" symbolic="YES" id="Qxo-au-gHp"/>
+                                                <constraint firstAttribute="trailing" secondItem="UAw-eC-PPu" secondAttribute="trailing" constant="20" symbolic="YES" id="T6a-A4-Doy"/>
+                                                <constraint firstItem="UAw-eC-PPu" firstAttribute="top" secondItem="wfy-Xw-QzT" secondAttribute="top" constant="4" id="aKc-Gn-IJi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="adX-ZP-140">
+                                        <rect key="frame" x="20" y="187.5" width="374" height="52.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="adX-ZP-140" id="MnU-OS-pI4">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="52.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Wi-Fi Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nNx-6A-06d">
+                                                    <rect key="frame" x="20" y="4" width="334" height="44.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="ok5-vA-ThA"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="nNx-6A-06d" secondAttribute="trailing" constant="20" symbolic="YES" id="X6Y-rw-CvY"/>
+                                                <constraint firstItem="nNx-6A-06d" firstAttribute="top" secondItem="MnU-OS-pI4" secondAttribute="top" constant="4" id="pWX-On-zGg"/>
+                                                <constraint firstAttribute="bottom" secondItem="nNx-6A-06d" secondAttribute="bottom" constant="4" id="paE-YY-bJR"/>
+                                                <constraint firstItem="nNx-6A-06d" firstAttribute="leading" secondItem="MnU-OS-pI4" secondAttribute="leading" constant="20" symbolic="YES" id="smC-pb-F1g"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="eyS-ON-qvR" id="YqV-YZ-yNk"/>
+                            <outlet property="delegate" destination="eyS-ON-qvR" id="0xL-NO-gYJ"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="password" destination="nNx-6A-06d" id="95t-WB-N95"/>
+                        <outlet property="ssid" destination="UAw-eC-PPu" id="p8b-ea-tJW"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bOZ-Lo-tmi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36" y="55"/>
+        </scene>
+    </scenes>
+</document>

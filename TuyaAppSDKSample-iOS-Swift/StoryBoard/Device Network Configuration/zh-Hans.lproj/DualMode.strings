@@ -1,0 +1,12 @@
+
+/* Class = "UITextField"; placeholder = "Wi-Fi SSID"; ObjectID = "He1-6r-m2q"; */
+"He1-6r-m2q.placeholder" = "Wi-Fi SSID";
+
+/* Class = "UIBarButtonItem"; title = "Search"; ObjectID = "Rfb-CW-92H"; */
+"Rfb-CW-92H.title" = "Search";
+
+/* Class = "UITextField"; placeholder = "Wi-Fi Password"; ObjectID = "cct-J0-Uf2"; */
+"cct-J0-Uf2.placeholder" = "Wi-Fi Password";
+
+/* Class = "UINavigationItem"; title = "Dual Mode"; ObjectID = "tQb-js-EVx"; */
+"tQb-js-EVx.title" = "Dual Mode";

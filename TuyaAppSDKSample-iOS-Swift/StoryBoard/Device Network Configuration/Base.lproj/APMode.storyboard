@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F64-XI-pW5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--AP Mode-->
+        <scene sceneID="qX6-sU-2sR">
+            <objects>
+                <tableViewController id="F64-XI-pW5" customClass="APModeTableViewController" customModule="TuyaAppSDKSample_iOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="jWK-w4-Gqu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <sections>
+                            <tableViewSection id="7Pf-bX-7ED">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="FIv-iJ-DAn">
+                                        <rect key="frame" x="20" y="18" width="374" height="52.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FIv-iJ-DAn" id="BlQ-q7-2sx">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="52.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Wi-Fi SSID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ojp-Zp-meh">
+                                                    <rect key="frame" x="20" y="4" width="334" height="44.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="K2S-wD-A2d"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ojp-Zp-meh" firstAttribute="top" secondItem="BlQ-q7-2sx" secondAttribute="top" constant="4" id="5mC-Ej-Qgg"/>
+                                                <constraint firstAttribute="trailing" secondItem="ojp-Zp-meh" secondAttribute="trailing" constant="20" symbolic="YES" id="6LY-Hf-zkh"/>
+                                                <constraint firstAttribute="bottom" secondItem="ojp-Zp-meh" secondAttribute="bottom" constant="4" id="PCx-tl-v1S"/>
+                                                <constraint firstItem="ojp-Zp-meh" firstAttribute="leading" secondItem="BlQ-q7-2sx" secondAttribute="leading" constant="20" symbolic="YES" id="gWh-0g-SP8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="WIN-iG-5zP">
+                                        <rect key="frame" x="20" y="70.5" width="374" height="52.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WIN-iG-5zP" id="PRQ-5o-8SK">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="52.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Wi-Fi Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xJ6-Pd-Dol">
+                                                    <rect key="frame" x="20" y="4" width="334" height="44.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="3gK-jH-OQN"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="xJ6-Pd-Dol" secondAttribute="trailing" constant="20" symbolic="YES" id="3Om-kJ-nc7"/>
+                                                <constraint firstItem="xJ6-Pd-Dol" firstAttribute="leading" secondItem="PRQ-5o-8SK" secondAttribute="leading" constant="20" symbolic="YES" id="Mpj-c0-wJn"/>
+                                                <constraint firstAttribute="bottom" secondItem="xJ6-Pd-Dol" secondAttribute="bottom" constant="4" id="mTk-v5-Ivc"/>
+                                                <constraint firstItem="xJ6-Pd-Dol" firstAttribute="top" secondItem="PRQ-5o-8SK" secondAttribute="top" constant="4" id="sdB-Cc-fOm"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="cju-tN-Y55">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Rij-RP-6Ws">
+                                        <rect key="frame" x="20" y="159" width="374" height="200.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rij-RP-6Ws" id="Vfw-nV-c6j">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="200.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvh-mM-pJw">
+                                                    <rect key="frame" x="20" y="20" width="334" height="160.5"/>
+                                                    <string key="text">AP Mode, also known as hotspot mode. The mobile phone connects the smart device’s hotspot, and the two parties establish a Socket connection to exchange data through the agreed port.
+
+Let the device in pairing mode, then switch iPhone’s Wi-Fi to the device’s hotspot. Type in the SSID and password of which Wi-Fi you want the device connect to, then tap Search.</string>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dvh-mM-pJw" firstAttribute="top" secondItem="Vfw-nV-c6j" secondAttribute="top" constant="20" symbolic="YES" id="NIC-Ck-L3r"/>
+                                                <constraint firstAttribute="trailing" secondItem="dvh-mM-pJw" secondAttribute="trailing" constant="20" symbolic="YES" id="XOO-ws-SUj"/>
+                                                <constraint firstAttribute="bottom" secondItem="dvh-mM-pJw" secondAttribute="bottom" constant="20" symbolic="YES" id="fQp-Do-lhn"/>
+                                                <constraint firstItem="dvh-mM-pJw" firstAttribute="leading" secondItem="Vfw-nV-c6j" secondAttribute="leading" constant="20" symbolic="YES" id="lHH-vh-UT9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="F64-XI-pW5" id="5RL-Mn-DxP"/>
+                            <outlet property="delegate" destination="F64-XI-pW5" id="C9l-I9-woD"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="AP Mode" id="81o-gw-8kr">
+                        <barButtonItem key="rightBarButtonItem" title="Search" id="OAK-a3-sHb">
+                            <connections>
+                                <action selector="searchTapped:" destination="F64-XI-pW5" id="9CH-Eo-9Kb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="passwordTextField" destination="xJ6-Pd-Dol" id="EvA-rS-fCg"/>
+                        <outlet property="ssidTextField" destination="ojp-Zp-meh" id="WH5-ft-Omb"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TDB-5A-ViH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1678" y="247"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

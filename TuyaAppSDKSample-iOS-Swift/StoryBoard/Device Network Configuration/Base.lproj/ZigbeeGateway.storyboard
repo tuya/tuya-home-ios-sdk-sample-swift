@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LCV-6b-V9c">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Zigbee Gateway-->
+        <scene sceneID="pOh-fT-26t">
+            <objects>
+                <viewController id="LCV-6b-V9c" customClass="ZigbeeGatewayViewController" customModule="TuyaAppSDKSample_iOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="axV-TY-gcE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48s-cQ-bhk">
+                                <rect key="frame" x="18" y="77" width="357" height="51.666666666666657"/>
+                                <string key="text">Let the Zigbee Gateway connect to the router, and make sure iPhone and the gateway are in the same local area network, then tap search. </string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gsy-zQ-XJU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="48s-cQ-bhk" firstAttribute="top" secondItem="gsy-zQ-XJU" secondAttribute="top" constant="18" id="1CF-lU-kwe"/>
+                            <constraint firstItem="48s-cQ-bhk" firstAttribute="centerX" secondItem="axV-TY-gcE" secondAttribute="centerX" id="34u-6S-Xdw"/>
+                            <constraint firstItem="gsy-zQ-XJU" firstAttribute="trailing" secondItem="48s-cQ-bhk" secondAttribute="trailing" constant="18" id="9Fo-M3-h1a"/>
+                            <constraint firstItem="48s-cQ-bhk" firstAttribute="leading" secondItem="gsy-zQ-XJU" secondAttribute="leading" constant="18" id="ATI-Aj-8Lw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Zigbee Gateway" id="dk9-GB-L7N">
+                        <barButtonItem key="rightBarButtonItem" title="Search" id="9c9-bm-Mlc">
+                            <connections>
+                                <action selector="searchTapped:" destination="LCV-6b-V9c" id="Zfh-YN-3pW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pOs-AL-yLd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2503" y="-54"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

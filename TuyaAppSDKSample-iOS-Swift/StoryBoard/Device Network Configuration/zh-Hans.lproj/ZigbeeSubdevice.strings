@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "No Selection"; ObjectID = "7Wa-by-ckD"; */
+"7Wa-by-ckD.text" = "No Selection";
+
+/* Class = "UILabel"; text = "Zigbee Gateway"; ObjectID = "Esf-qK-slK"; */
+"Esf-qK-slK.text" = "Zigbee Gateway";
+
+/* Class = "UINavigationItem"; title = "Choose Gateway"; ObjectID = "ORN-lH-gIv"; */
+"ORN-lH-gIv.title" = "Choose Gateway";
+
+/* Class = "UIBarButtonItem"; title = "Search"; ObjectID = "Va3-zR-Vyb"; */
+"Va3-zR-Vyb.title" = "Search";
+
+/* Class = "UINavigationItem"; title = "Zigbee Subdevice"; ObjectID = "g6R-9l-Rmj"; */
+"g6R-9l-Rmj.title" = "Zigbee Subdevice";
