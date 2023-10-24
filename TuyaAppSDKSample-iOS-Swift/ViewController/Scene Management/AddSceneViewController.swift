@@ -6,10 +6,15 @@
 
 import Foundation
 import ThingSmartSceneCoreKit
+import ThingSmartDeviceCoreKit
 
 class AddSceneViewController: UITableViewController {
     var sceneModel: ThingSmartSceneModel?
     var isEditingScene: Bool = false
+    
+    var actions: [ThingSmartSceneActionModel]? = []
+    var conditions: [ThingSmartSceneConditionModel]? = []
+    var preconditions: [ThingSmartScenePreConditionModel]? = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +22,9 @@ class AddSceneViewController: UITableViewController {
             self.title = "Edit Scene"
             self.isEditingScene = true
             self.fetchSceneDetail(sceneModel: sceneModel)
+            self.actions = sceneModel.actions
+            self.conditions = sceneModel.conditions
+            self.preconditions = sceneModel.preConditions
         } else {
             self.title = "Add Scene"
             sceneModel = ThingSmartSceneModel()
@@ -72,9 +80,9 @@ class AddSceneViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch SectionType(rawValue: section) {
         case .Name, .Match: return 1
-        case .Condition: return sceneModel?.conditions != nil ? sceneModel!.conditions.count + 1 : 1
-        case .Action: return sceneModel?.actions != nil ? sceneModel!.actions.count + 1 : 1
-        case .Precondition: return sceneModel?.preConditions != nil ? sceneModel!.preConditions.count + 1 : 1
+        case .Condition: return conditions != nil ? conditions!.count + 1 : 1
+        case .Action: return actions != nil ? actions!.count + 1 : 1
+        case .Precondition: return preconditions != nil ? preconditions!.count + 1 : 1
         case .none:
             return 0
         }
@@ -170,17 +178,43 @@ class AddSceneViewController: UITableViewController {
     }
     
     func buildDeviceAction() -> Void {
+        guard let deviceModel = ThingSmartDevice(deviceId: "vdevo169804274554735")?.deviceModel else {
+            return
+        }
         
+        ThingSmartSceneManager.sharedInstance().getNewActionDeviceDPList(withDevId: "vdevo169804274554735") { featureModels in
+            let featureModel = featureModels[0]
+            let deviceAction = ThingSmartSceneActionFactory.deviceAction(withFeature: featureModel, devId: deviceModel.devId, deviceName: deviceModel.name)
+        } failure: { error in
+            let errorMessage = error?.localizedDescription ?? ""
+            SVProgressHUD.showError(withStatus: errorMessage)
+        }
     }
+    
     func buildSmartAction() -> Void {
+        let selectTapToRunAction = ThingSmartSceneActionFactory.createTriggerSceneAction(withSceneId: "95DRMY8qcCNJ9q1K", sceneName: "测试呀")
         
+        let automationAction = ThingSmartSceneActionFactory.createSwitchAutoAction(withSceneId: "l7LQXCgId7zPvzNC", sceneName: "测试生效时间段", type: AutoSwitchType(rawValue: 0)!)
+        
+        self.actions?.append(selectTapToRunAction)
+        self.actions?.append(automationAction)
+        
+        self.tableView.reloadData()
     }
+    
     func buildNotificationAction() -> Void {
-        
+        let notificaitonAction = ThingSmartSceneActionFactory.createSendNotificationAction()
+        self.actions?.append(notificaitonAction)
+        self.tableView.reloadData()
     }
+    
     func buildDelayAction() -> Void {
-        
+        let delayAction = ThingSmartSceneActionFactory.createDelayAction(withHours: "0", minutes: "0", seconds: "60")
+        self.actions?.append(delayAction)
+        self.tableView.reloadData()
+
     }
+    
     // MARK: - Condition
     func addCondition() {
         let alertController = UIAlertController(title: "Select Condition", message: "", preferredStyle: .actionSheet)
@@ -211,20 +245,73 @@ class AddSceneViewController: UITableViewController {
         self.present(alertController, animated: true)
     }
     
+    func getCityModel() -> ThingSmartCityModel {
+        let cityModel = ThingSmartCityModel()
+        cityModel.cityId = 5621253
+        cityModel.city = "Hangzhou"
+        return cityModel
+    }
+    
     func buildWeatherCondition() {
+        guard let homeID = Home.current?.homeId else {return}
         
+        let categoryListRequestParams = TSceneConditionCategoryListRequestParams()
+        categoryListRequestParams.showFahrenheit = true
+        categoryListRequestParams.condAbility = 6
+        
+        // Fetch weather condition list
+        ThingSmartSceneManager.sharedInstance().getConditionCategoryListWihtHomeId(homeID, conditionCategoryParams: categoryListRequestParams) { categoryListModel in
+//            let devConditions = categoryListModel?.devConditions
+            let envConditions = categoryListModel?.envConditions
+        
+            if let weatherDPModel = envConditions?[1] {
+                let weatherExpr = ThingSmartSceneConditionExprBuilder.createEnumExpr(withType: weatherDPModel.entitySubId, chooseValue: "comfort", exprType: .whether)
+                let cityModel = self.getCityModel()
+                let weatherCondition = ThingSmartSceneConditionFactory.createWhetherCondition(withCity: cityModel, dpModel: weatherDPModel, exprModel: weatherExpr)!
+
+                self.conditions?.append(weatherCondition)
+                self.tableView.reloadData()
+            }
+        } failure: { error in
+            let errorMessage = error?.localizedDescription ?? ""
+            SVProgressHUD.showError(withStatus: errorMessage)
+        }
     }
+    
     func buildDeviceCondition() {
-        
+        let deviceModel = ThingSmartDevice(deviceId: "vdevo169804274554735")?.deviceModel
+        ThingSmartSceneManager.sharedInstance().getCondicationDeviceDPList(withDevId: "vdevo169804274554735") { dpModels in
+            let dpModel = dpModels[0]
+            dpModel.selectedRow = 0
+            
+            let deviceValueExpr = ThingSmartSceneConditionExprBuilder.createValueExpr(withType: dpModel.entitySubId, operater: "==", chooseValue: 1000, exprType: .device)
+            let deviceCondition = ThingSmartSceneConditionFactory.createDeviceCondition(withDevice: deviceModel, dpModel: dpModel, exprModel: deviceValueExpr)!
+            
+            self.conditions?.append(deviceCondition)
+            self.tableView.reloadData()
+        } failure: { error in
+            let errorMessage = error?.localizedDescription ?? ""
+            SVProgressHUD.showError(withStatus: errorMessage)
+        }
     }
+    
     func buildTimerCondition() {
-        
+        let timeExpr = ThingSmartSceneConditionExprBuilder.createTimerExpr(withTimeZoneId: NSTimeZone.default.identifier, loops: "1111111", date: "20231010", time: "20:30")
+        let timerCondition = ThingSmartSceneConditionFactory.createTimerCondition(with: timeExpr)!
+        self.conditions?.append(timerCondition)
+        self.tableView.reloadData()
     }
+    
     func buildGeofenceCondition() {
-        
+        let geofenceCondition = ThingSmartSceneConditionFactory.createGeoFenceCondition(withGeoType: .reach, geoLati: 30.30288959184809, geoLonti: 120.0640840491766, geoRadius: 100, geoTitle: "HUACE Film")!
+        self.conditions?.append(geofenceCondition)
+        self.tableView.reloadData()
     }
+    
     func buildMemberGoingHomeCondition() {
-        
+        let memberGoingHomeCondition = ThingSmartSceneConditionFactory.memberBackHomeCondition(withDevId: "vdevo155919804483178", entitySubIds: "1,2,3,4,5,6,7", memberIds: "id1,id2,id3", memberNames: "name1,name2,name3")!
+        self.conditions?.append(memberGoingHomeCondition)
+        self.tableView.reloadData()
     }
     
     // MARK: - Precondition
