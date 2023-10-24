@@ -299,23 +299,35 @@ class AddSceneViewController: UITableViewController {
     }
     
     func buildDeviceAction() -> Void {
-        guard let deviceModel = ThingSmartDevice(deviceId: "vdevo169804274554735")?.deviceModel else {
-            return
-        }
-        
-        ThingSmartSceneManager.sharedInstance().getNewActionDeviceDPList(withDevId: "vdevo169804274554735") { featureModels in
-            let featureModel = featureModels[0]
-            if let dpModel = featureModel.dataPoints.first {
-                dpModel.selectedRow = 0
+//        guard let deviceModel = ThingSmartDevice(deviceId: "vdevo169804274554735")?.deviceModel else {
+//            return
+//        }
+//        
+//        ThingSmartSceneManager.sharedInstance().getNewActionDeviceDPList(withDevId: "vdevo169804274554735") { featureModels in
+//            let featureModel = featureModels[0]
+//            if let dpModel = featureModel.dataPoints.first {
+//                dpModel.selectedRow = 0
+//            }
+//            let deviceAction = ThingSmartSceneActionFactory.deviceAction(withFeature: featureModel, devId: deviceModel.devId, deviceName: deviceModel.name)
+//            
+//            self.actions?.append(deviceAction)
+//            self.tableView.reloadData()
+//        } failure: { error in
+//            let errorMessage = error?.localizedDescription ?? ""
+//            SVProgressHUD.showError(withStatus: errorMessage)
+//        }
+        let deviceViewController = SceneDeviceViewController()
+        deviceViewController.deviceType = .Action
+        deviceViewController.selectionCompletion = { [weak self] actionModel in
+            guard let self = self else {
+                return
             }
-            let deviceAction = ThingSmartSceneActionFactory.deviceAction(withFeature: featureModel, devId: deviceModel.devId, deviceName: deviceModel.name)
-            
-            self.actions?.append(deviceAction)
-            self.tableView.reloadData()
-        } failure: { error in
-            let errorMessage = error?.localizedDescription ?? ""
-            SVProgressHUD.showError(withStatus: errorMessage)
+            if actionModel is ThingSmartSceneActionModel {
+                self.actions?.append(actionModel as! ThingSmartSceneActionModel)
+                self.tableView.reloadData()
+            }
         }
+        self.navigationController?.pushViewController(deviceViewController, animated: true)
     }
     
     func buildSmartAction() -> Void {
@@ -406,22 +418,34 @@ class AddSceneViewController: UITableViewController {
     }
     
     func buildDeviceCondition() {
-        let deviceModel = ThingSmartDevice(deviceId: "vdevo169804274554735")?.deviceModel
-        ThingSmartSceneManager.sharedInstance().getCondicationDeviceDPList(withDevId: "vdevo169804274554735") { dpModels in
-            let dpModel = dpModels[0]
-            dpModel.selectedRow = 0
-            
-            let deviceValueExpr = ThingSmartSceneConditionExprBuilder.createValueExpr(withType: dpModel.entitySubId, operater: "==", chooseValue: 1000, exprType: .device)
-            if let deviceCondition = ThingSmartSceneConditionFactory.createDeviceCondition(withDevice: deviceModel, dpModel: dpModel, exprModel: deviceValueExpr) {
-                
-                self.conditions?.append(deviceCondition)
+//        let deviceModel = ThingSmartDevice(deviceId: "vdevo169804274554735")?.deviceModel
+//        ThingSmartSceneManager.sharedInstance().getCondicationDeviceDPList(withDevId: "vdevo169804274554735") { dpModels in
+//            let dpModel = dpModels[0]
+//            dpModel.selectedRow = 0
+//            
+//            let deviceValueExpr = ThingSmartSceneConditionExprBuilder.createValueExpr(withType: dpModel.entitySubId, operater: "==", chooseValue: 1000, exprType: .device)
+//            if let deviceCondition = ThingSmartSceneConditionFactory.createDeviceCondition(withDevice: deviceModel, dpModel: dpModel, exprModel: deviceValueExpr) {
+//                
+//                self.conditions?.append(deviceCondition)
+//                self.tableView.reloadData()
+//            }
+//
+//        } failure: { error in
+//            let errorMessage = error?.localizedDescription ?? ""
+//            SVProgressHUD.showError(withStatus: errorMessage)
+//        }
+        let deviceViewController = SceneDeviceViewController()
+        deviceViewController.deviceType = .Condition
+        deviceViewController.selectionCompletion = { [weak self] conditionModel in
+            guard let self = self else {
+                return
+            }
+            if conditionModel is ThingSmartSceneConditionModel {
+                self.conditions?.append(conditionModel as! ThingSmartSceneConditionModel)
                 self.tableView.reloadData()
             }
-
-        } failure: { error in
-            let errorMessage = error?.localizedDescription ?? ""
-            SVProgressHUD.showError(withStatus: errorMessage)
         }
+        self.navigationController?.pushViewController(deviceViewController, animated: true)
     }
     
     func buildTimerCondition() {
