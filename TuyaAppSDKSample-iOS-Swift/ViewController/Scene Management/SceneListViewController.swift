@@ -86,6 +86,10 @@ class SceneListViewController: UITableViewController {
         let storyboard = UIStoryboard(name: "AddScene", bundle: nil)
         let addSceneVC = storyboard.instantiateViewController(withIdentifier: "AddSceneViewController") as! AddSceneViewController
         addSceneVC.sceneModel = sceneModel
+        addSceneVC.editCompletion = { [weak self] in
+            guard let self = self else { return }
+            self.fetchSceneList()
+        }
         self.navigationController?.pushViewController(addSceneVC, animated: true)
     }
     

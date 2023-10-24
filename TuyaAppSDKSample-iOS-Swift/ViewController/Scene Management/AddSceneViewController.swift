@@ -17,19 +17,24 @@ class AddSceneViewController: UITableViewController {
     var preconditions: [ThingSmartScenePreConditionModel]? = []
     var currentPrecondition: ThingSmartScenePreConditionModel?
     
+    var editCompletion: (()->Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let sceneModel = sceneModel {
+        if let sceneModel = self.sceneModel {
             self.title = "Edit Scene"
             self.isEditingScene = true
             self.fetchSceneDetail(sceneModel: sceneModel)
-            self.actions = sceneModel.actions
-            self.conditions = sceneModel.conditions
-            self.preconditions = sceneModel.preConditions
-            self.currentPrecondition = sceneModel.preConditions.first
+
         } else {
             self.title = "Add Scene"
             sceneModel = ThingSmartSceneModel()
+        }
+        
+        if let _ = self.navigationController {
+            let barItemTitle = self.isEditingScene ? "Edit" : "Add"
+            let rightButton = UIBarButtonItem(title: barItemTitle, style: .plain, target: self, action: #selector(buttonClicked))
+            navigationItem.rightBarButtonItem = rightButton
         }
     }
     
@@ -40,6 +45,12 @@ class AddSceneViewController: UITableViewController {
         ThingSmartSceneManager.sharedInstance().getSceneDetail(withHomeId: homeID, sceneId: sceneModel.sceneId) { [weak self] model in
             SVProgressHUD.dismiss()
             guard let self = self else { return }
+            
+            self.actions = model.actions ?? []
+            self.conditions = model.conditions ?? []
+            self.preconditions = model.preConditions ?? []
+            
+            self.currentPrecondition = model.preConditions?[0]
             self.tableView.reloadData()
         } failure: { error in
             let errorMessage = error?.localizedDescription ?? ""
@@ -48,6 +59,61 @@ class AddSceneViewController: UITableViewController {
     }
     
     // MARK: - Handle
+    @objc func buttonClicked() {
+        guard let homeID = Home.current?.homeId else {
+            SVProgressHUD.showError(withStatus: "HomeID is Empty")
+            return
+        }
+        guard let name = sceneModel?.name, !name.isEmpty else {
+            SVProgressHUD.showError(withStatus: "Name is Empty")
+            return
+        }
+        guard let actions = actions, !actions.isEmpty else {
+            SVProgressHUD.showError(withStatus: "Actions are not be nil")
+            return
+        }
+        
+        if let conditions = conditions, !conditions.isEmpty {
+            self.sceneModel?.conditions = conditions
+            if let precondition = currentPrecondition {
+                sceneModel?.preConditions = [precondition]
+            }
+            sceneModel?.ruleGenre = .auto
+        } else {
+            self.sceneModel?.matchType = .any
+            sceneModel?.ruleGenre = .manual
+        }
+        self.sceneModel?.actions = actions
+
+        let scene = ThingSmartScene(sceneModel: sceneModel)
+        
+        let requestInfo = TSceneRequestInfo()
+        requestInfo.sceneModel = sceneModel!
+        requestInfo.needCleanGidSid = true
+        
+        if self.isEditingScene {
+            SVProgressHUD.show(withStatus: "Editing Scene")
+            scene?.edit(requestInfo, success: { sceneModel in
+                SVProgressHUD.showSuccess(withStatus: "Edit Success")
+                self.navigationController?.popViewController(animated: true)
+                if let editCompletion = self.editCompletion {
+                    editCompletion()
+                }
+            }, failure: { error in
+                let errorMessage = error?.localizedDescription ?? ""
+                SVProgressHUD.showError(withStatus: errorMessage)
+            })
+        } else {
+            SVProgressHUD.show(withStatus: "Adding Scene")
+            ThingSmartScene.add(requestInfo, homeID: homeID) { sceneModel in
+                SVProgressHUD.showSuccess(withStatus: "Add Success")
+                self.navigationController?.popViewController(animated: true)
+            } failure: { error in
+                let errorMessage = error?.localizedDescription ?? ""
+                SVProgressHUD.showError(withStatus: errorMessage)
+            }
+        }
+    }
     
     func changeConditionType() {
         let alertController = UIAlertController(title: "Select Condition Type", message: "", preferredStyle: .actionSheet)
@@ -84,7 +150,7 @@ class AddSceneViewController: UITableViewController {
         case .Name, .Match: return 1
         case .Condition: return conditions != nil ? conditions!.count + 1 : 1
         case .Action: return actions != nil ? actions!.count + 1 : 1
-        case .Precondition: return preconditions != nil ? preconditions!.count + 1 : 1
+        case .Precondition: return currentPrecondition != nil ? 2 : 1
         case .none:
             return 0
         }
@@ -184,10 +250,14 @@ class AddSceneViewController: UITableViewController {
                 return addCell
             }
         case .Precondition:
-            if let preConditions = preconditions, indexPath.row < preConditions.count {
+            if let precondition = currentPrecondition, indexPath.row < 1 {
                 guard let cell = cell as? SceneShowCell else { return cell }
-                let precondtion = preConditions[0]
-                cell.detailLabel.text = String(describing: precondtion.expr)
+                
+                var res = ""
+                for (key, value) in precondition.expr {
+                    res.append("\(key): \(value), ")
+                }
+                cell.detailLabel.text = res
             } else {
                 let addCell = tableView.dequeueReusableCell(withIdentifier: "add-cell", for: indexPath) as! SceneAddCell
                 addCell.onTappedAddCompletion = { [weak self] in
