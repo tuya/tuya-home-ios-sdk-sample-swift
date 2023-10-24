@@ -15,6 +15,7 @@ class AddSceneViewController: UITableViewController {
     var actions: [ThingSmartSceneActionModel]? = []
     var conditions: [ThingSmartSceneConditionModel]? = []
     var preconditions: [ThingSmartScenePreConditionModel]? = []
+    var currentPrecondition: ThingSmartScenePreConditionModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,7 @@ class AddSceneViewController: UITableViewController {
             self.actions = sceneModel.actions
             self.conditions = sceneModel.conditions
             self.preconditions = sceneModel.preConditions
+            self.currentPrecondition = sceneModel.preConditions.first
         } else {
             self.title = "Add Scene"
             sceneModel = ThingSmartSceneModel()
@@ -109,10 +111,45 @@ class AddSceneViewController: UITableViewController {
                 cell.detailLabel.text = sceneModel?.matchType == .all ? "When all conditions are met" : "When either condition is met"
             }
         case .Condition:
-            if let conditions = sceneModel?.conditions, indexPath.row < conditions.count {
-                guard let cell = cell as? SceneShowCell else {
-                    return cell
+            if let conditions = conditions, indexPath.row < conditions.count {
+                guard let cell = cell as? SceneShowCell else { return cell }
+                // condition at indexpath
+                let condition = conditions[indexPath.row]
+                
+                var res = ""
+                for firstElement in condition.expr {
+                    if let dictionaryValue = firstElement as? [String: AnyObject] {
+                        for (key, value) in dictionaryValue {
+                            res.append("\(key): \(value),")
+                        }
+                    }
+                    if let arrayValue = firstElement as? [AnyObject] {
+                        for secondElement in arrayValue {
+                            if let secondArrayValue = secondElement as? [AnyObject] {
+                                for thirdElement in secondArrayValue {
+                                    if let thirdArrayValue = thirdElement as? [AnyObject] {
+                                        for lastElement in thirdArrayValue {
+                                            if let stringElement = lastElement as? String {
+                                                res.append("\(stringElement), ")
+                                            }
+                                        }
+                                    }
+                                    if let stringElement = thirdElement as? String {
+                                        res.append("\(stringElement), ")
+                                    }
+                                }
+                            }
+                            
+                            if let stringElement = secondElement as? String {
+                                res.append("\(stringElement), ")
+                            }
+                        }
+                    }
+                    if let stringElement = firstElement as? String {
+                        res.append("\(stringElement), ")
+                    }
                 }
+                cell.detailLabel.text = "expr: \(res)"
             } else {
                 let addCell = tableView.dequeueReusableCell(withIdentifier: "add-cell", for: indexPath) as! SceneAddCell
                 addCell.onTappedAddCompletion = { [weak self] in
@@ -122,10 +159,22 @@ class AddSceneViewController: UITableViewController {
                 return addCell
             }
         case .Action:
-            if let actions = sceneModel?.actions, indexPath.row < actions.count {
-                guard let cell = cell as? SceneShowCell else {
-                    return cell
+            if let actions = actions, indexPath.row < actions.count {
+                guard let cell = cell as? SceneShowCell else { return cell }
+                let action = actions[indexPath.row]
+                
+                var res = ""
+                if let executorProperty = action.executorProperty {
+                    for (key, value) in executorProperty {
+                        res.append("\(key):")
+                        res.append("\(value), ")
+                    }
                 }
+                if let actionExecutor = action.actionExecutor {
+                    res.append("\(actionExecutor), ")
+                }
+                cell.detailLabel.text = res
+                
             } else {
                 let addCell = tableView.dequeueReusableCell(withIdentifier: "add-cell", for: indexPath) as! SceneAddCell
                 addCell.onTappedAddCompletion = { [weak self] in
@@ -135,8 +184,10 @@ class AddSceneViewController: UITableViewController {
                 return addCell
             }
         case .Precondition:
-            if let preConditions = sceneModel?.preConditions, indexPath.row < preConditions.count {
+            if let preConditions = preconditions, indexPath.row < preConditions.count {
                 guard let cell = cell as? SceneShowCell else { return cell }
+                let precondtion = preConditions[0]
+                cell.detailLabel.text = String(describing: precondtion.expr)
             } else {
                 let addCell = tableView.dequeueReusableCell(withIdentifier: "add-cell", for: indexPath) as! SceneAddCell
                 addCell.onTappedAddCompletion = { [weak self] in
@@ -184,7 +235,13 @@ class AddSceneViewController: UITableViewController {
         
         ThingSmartSceneManager.sharedInstance().getNewActionDeviceDPList(withDevId: "vdevo169804274554735") { featureModels in
             let featureModel = featureModels[0]
+            if let dpModel = featureModel.dataPoints.first {
+                dpModel.selectedRow = 0
+            }
             let deviceAction = ThingSmartSceneActionFactory.deviceAction(withFeature: featureModel, devId: deviceModel.devId, deviceName: deviceModel.name)
+            
+            self.actions?.append(deviceAction)
+            self.tableView.reloadData()
         } failure: { error in
             let errorMessage = error?.localizedDescription ?? ""
             SVProgressHUD.showError(withStatus: errorMessage)
@@ -285,10 +342,12 @@ class AddSceneViewController: UITableViewController {
             dpModel.selectedRow = 0
             
             let deviceValueExpr = ThingSmartSceneConditionExprBuilder.createValueExpr(withType: dpModel.entitySubId, operater: "==", chooseValue: 1000, exprType: .device)
-            let deviceCondition = ThingSmartSceneConditionFactory.createDeviceCondition(withDevice: deviceModel, dpModel: dpModel, exprModel: deviceValueExpr)!
-            
-            self.conditions?.append(deviceCondition)
-            self.tableView.reloadData()
+            if let deviceCondition = ThingSmartSceneConditionFactory.createDeviceCondition(withDevice: deviceModel, dpModel: dpModel, exprModel: deviceValueExpr) {
+                
+                self.conditions?.append(deviceCondition)
+                self.tableView.reloadData()
+            }
+
         } failure: { error in
             let errorMessage = error?.localizedDescription ?? ""
             SVProgressHUD.showError(withStatus: errorMessage)
@@ -341,43 +400,67 @@ class AddSceneViewController: UITableViewController {
     }
     
     func buildAlldayPrecondition() {
+        let preconditionParams = TSmartScenePreconditionParam()
+        preconditionParams.sceneID = currentPrecondition?.scenarioId ?? ""
+        preconditionParams.conditionID = currentPrecondition?.conditionId ?? ""
+        preconditionParams.preconditionType = .allDay
+        preconditionParams.cityId = "5621253"
+        preconditionParams.cityName = "Hangzhou"
+        preconditionParams.loops = "1111111"
+        preconditionParams.timeZoneId = TimeZone.current.identifier
         
+        let alldayPrecondition = ThingSmartScenePreConditionFactory.scenePrecondition(with: preconditionParams)
+        
+        currentPrecondition = alldayPrecondition
+        self.tableView.reloadData()
     }
+    
     func buildDaytimePrecondition() {
+        let preconditionParams = TSmartScenePreconditionParam()
+        preconditionParams.sceneID = currentPrecondition?.scenarioId ?? ""
+        preconditionParams.conditionID = currentPrecondition?.conditionId ?? ""
+        preconditionParams.preconditionType = .daytime
+        preconditionParams.cityId = "5621253"
+        preconditionParams.cityName = "Hangzhou"
+        preconditionParams.loops = "1111111"
+        preconditionParams.timeZoneId = TimeZone.current.identifier
         
+        let daytimePrecondition = ThingSmartScenePreConditionFactory.scenePrecondition(with: preconditionParams)
+        currentPrecondition = daytimePrecondition
+        self.tableView.reloadData()
     }
+    
     func buildNightPrecondition() {
+        let preconditionParams = TSmartScenePreconditionParam()
+        preconditionParams.sceneID = currentPrecondition?.scenarioId ?? ""
+        preconditionParams.conditionID = currentPrecondition?.conditionId ?? ""
+        preconditionParams.preconditionType = .night
+        preconditionParams.cityId = "5621253"
+        preconditionParams.cityName = "Hangzhou"
+        preconditionParams.loops = "1111111"
+        preconditionParams.timeZoneId = TimeZone.current.identifier
         
+        let nightPrecondition = ThingSmartScenePreConditionFactory.scenePrecondition(with: preconditionParams)
+        currentPrecondition = nightPrecondition
+        self.tableView.reloadData()
     }
+    
     func buildCustomPrecondition() {
+        let preconditionParams = TSmartScenePreconditionParam()
+        preconditionParams.sceneID = currentPrecondition?.scenarioId ?? ""
+        preconditionParams.conditionID = currentPrecondition?.conditionId ?? ""
+        preconditionParams.preconditionType = .custom
+        preconditionParams.cityId = "5621253"
+        preconditionParams.cityName = "Hangzhou"
+        preconditionParams.loops = "1111111"
+        preconditionParams.timeZoneId = TimeZone.current.identifier
+        preconditionParams.beginDate = "07:00"
+        preconditionParams.endDate = "20:00"
         
+        let customPrecondition = ThingSmartScenePreConditionFactory.scenePrecondition(with: preconditionParams)
+        currentPrecondition = customPrecondition
+        self.tableView.reloadData()
     }
 }
 
-enum SectionType: Int {
-    case Name = 0
-    case Match
-    case Condition
-    case Action
-    case Precondition
-    
-    func headerTitle() -> String {
-        switch self {
-        case .Name: return "Name"
-        case .Match: return "Condition Type"
-        case .Condition: return "Condition"
-        case .Action: return "Action"
-        case .Precondition: return "Precondition"
-        }
-    }
-    
-    func cellIdentifier()->String {
-        switch self {
-        case .Name: return "name-cell"
-        case .Match: return "type-cell"
-        case .Condition: return "condition-cell"
-        case .Action: return "condition-cell"
-        case .Precondition: return "condition-cell"
-        }
-    }
-}
+
