@@ -13,5 +13,6 @@
 #import <ThingSmartBusinessExtensionKit/ThingSmartBusinessExtensionKit.h>
 #import <ThingSmartMatterKit/ThingSmartMatterKit.h>
 #import <ThingModuleManager/ThingModule.h>
+#import <ThingSmartSceneCoreKit/ThingSmartSceneCoreKit.h>
 
 #endif /* ThingAppSDKSample_iOS_Swift_Bridging_Header_h */
