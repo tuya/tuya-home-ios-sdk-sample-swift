@@ -48,6 +48,10 @@ class DeviceDetailKitVC: DeviceListBaseVC {
                 self.createGroup(with: device)
             }))
             
+            alert.addAction(UIAlertAction(title: "离线提醒", style: .default, handler: { action in
+                let vc = DeviceOfflineReminderVC(deviceId: device.devId)
+                self.navigationController?.pushViewController(vc, animated: true)
+            }))            
         }
         
         alert.addAction(UIAlertAction(title: "取消", style: .cancel))
