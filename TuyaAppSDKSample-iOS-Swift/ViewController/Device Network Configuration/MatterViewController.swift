@@ -92,7 +92,7 @@ extension MatterViewController : UITableViewDelegate, UITableViewDataSource{
             vc.scanCallback = { [weak self] codeStr in
                 let paylaod = ThingSmartMatterActivator.sharedInstance().parseSetupCode(codeStr ?? "")
                 if let p = paylaod{
-                    ThingSmartActivator.sharedInstance().getTokenWithHomeId(Home.current!.homeId) { token in
+                    ThingSmartActivator.sharedInstance()?.getTokenWithHomeId(Home.current!.homeId) { token in
                         guard let t = token else {return}
                         let builder = ThingSmartConnectDeviceBuilder.init(payload: p, spaceId: Home.current!.homeId, token: t)
                         ThingSmartMatterActivator.sharedInstance().connectDevice(with: builder, timeout: 200)
@@ -110,6 +110,14 @@ extension MatterViewController : UITableViewDelegate, UITableViewDataSource{
 }
 
 extension MatterViewController : ThingSmartMatterActivatorDelegate{
+    func matterCommissioningStatusUpdate(_ status: ThingMatterStatus) {
+        
+    }
+    
+    func matterDeviceScannedAvailableWIFIList(_ list: [ThingSmartMatterNetworkScannedModel]) {
+        
+    }
+    
     func matterDeviceDiscoveryed(_ isThingDevice: Bool, deviceType: ThingSmartMatterDeviceType) {
         print("Discoveryed matter device")
     }

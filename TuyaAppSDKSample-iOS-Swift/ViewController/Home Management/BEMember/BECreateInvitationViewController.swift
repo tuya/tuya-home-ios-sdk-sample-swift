@@ -18,7 +18,7 @@ class BECreateInvitationViewController : UITableViewController {
     
     func tapCreate() {
         if let home = ThingSmartFamilyBiz.sharedInstance().getCurrentFamily() {
-            ThingSmartMemberBiz.sharedInstance().createInvitation(withHomeId: home.homeId) {[weak self] resultModel in
+            ThingSmartMemberBiz.sharedInstance().createInvitation(withHomeId: home.homeId, role: .member, roleId: 0) {[weak self] resultModel in
                 guard let self = self else {return}
                 self.invitationCodeLabel.text = resultModel.invitationCode
             } failure: { error in

@@ -14,9 +14,9 @@ class BEDeleteHomeViewController : UITableViewController {
     
     override func viewDidLoad() {
         ThingSmartFamilyBiz.sharedInstance().getFamilyList(success: { homeList in
-            self.homes = homeList ?? []
+            self.homes = homeList
             self.tableView.reloadData()
-       }, failure: nil)
+       }, failure: { error in})
     }
     
     

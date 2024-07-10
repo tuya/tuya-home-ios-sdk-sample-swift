@@ -23,7 +23,7 @@ class BEEditRoomViewController : UITableViewController {
     
     @IBAction func tapSave() {
         roomField.resignFirstResponder()
-        let newRoomName = roomField.text
+        let newRoomName = roomField.text ?? ""
         if let room = room, homeId != 0 {
             ThingSmartRoomBiz.sharedInstance().updateHomeRoom(withName: newRoomName, roomId: room.roomId, homeId: homeId) {[weak self] room in
                 guard let self = self else { return }

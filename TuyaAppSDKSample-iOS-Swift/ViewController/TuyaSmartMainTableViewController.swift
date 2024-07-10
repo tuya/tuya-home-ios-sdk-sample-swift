@@ -53,14 +53,15 @@ class ThingSmartMainTableViewController: UITableViewController {
         if indexPath.section == 0 && indexPath.row == 1 {
             logoutButton.sendActions(for: .touchUpInside)
         }else if indexPath.section == 3 && indexPath.row == 1 {
-            self.device()
+            guard let current = ThingSmartFamilyBiz.sharedInstance().getCurrentFamily() as? ThingSmartHomeModel else {return}
+            guard let home = ThingSmartHome(homeId: current.homeId) else {return}
+            let vc = DeviceDetailKitVC(home: home)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else if indexPath.section == 3 && indexPath.row == 2 {
+            guard let current = ThingSmartFamilyBiz.sharedInstance().getCurrentFamily() as? ThingSmartHomeModel else {return}
+            guard let home = ThingSmartHome(homeId: current.homeId) else {return}
+            let vc = BatchOtaVC(home: home)
+            self.navigationController?.pushViewController(vc, animated: true)
         }
-    }
-    
-    @objc func device() {
-        guard let current = ThingSmartFamilyBiz.sharedInstance().getCurrentFamily() else {return}
-        guard let home = ThingSmartHome(homeId: current.homeId) else {return}
-        let vc = DeviceDetailKitVC(home: home)
-        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -88,7 +88,7 @@ extension APModeTableViewController: ThingSmartActivatorDelegate {
         Alert.showBasicAlert(on: self, with: "SecurityLevelDevice", message: "continue pair? (Please check you phone connected the same Wi-Fi as you Inputed)", actions: [
             UIAlertAction(title: "cancel", style: .cancel),
             UIAlertAction(title: "continue", style: .destructive, handler: { _ in
-                ThingSmartActivator.sharedInstance().continueConfigSecurityLevelDevice()
+                ThingSmartActivator.sharedInstance()?.continueConfigSecurityLevelDevice()
                 SVProgressHUD.show(withStatus: NSLocalizedString("Configuring", comment: ""))
             })
         ])

@@ -13,22 +13,20 @@ class BEInvitedHomeViewController : UITableViewController {
     override func viewDidLoad() {
         ThingSmartFamilyBiz.sharedInstance().getFamilyList(success: { [weak self] homeList in
             guard let self = self else {return}
-            if let homeList = homeList {
-                for home in homeList {
-                    switch home.dealStatus {
-                    case .accept :
-                        print("accept")
-                    case .pending:
-                        self.homes.append(home)
-                    case .reject:
-                        print("reject")
-                    @unknown default:
-                        fatalError()
-                    }
+            for home in homeList {
+                switch home.dealStatus {
+                case .accept :
+                    print("accept")
+                case .pending:
+                    self.homes.append(home)
+                case .reject:
+                    print("reject")
+                @unknown default:
+                    fatalError()
                 }
             }
             self.tableView.reloadData()
-        }, failure: nil)
+        }, failure: { error in})
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

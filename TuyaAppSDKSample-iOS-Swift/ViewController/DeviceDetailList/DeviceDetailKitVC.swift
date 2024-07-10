@@ -51,7 +51,17 @@ class DeviceDetailKitVC: DeviceListBaseVC {
             alert.addAction(UIAlertAction(title: "离线提醒", style: .default, handler: { action in
                 let vc = DeviceOfflineReminderVC(deviceId: device.devId)
                 self.navigationController?.pushViewController(vc, animated: true)
-            }))            
+            }))
+            
+            alert.addAction(UIAlertAction(title: "Wi-Fi备用网络", style: .default, handler: { action in
+                let vc = BackupNetworController(deviceId: device.devId)
+                self.navigationController?.pushViewController(vc, animated: true)
+            }))
+            
+            alert.addAction(UIAlertAction(title: "替换故障网关", style: .default, handler: { action in
+                let vc = GatewayTransferController(deviceId: device.devId)
+                self.navigationController?.pushViewController(vc, animated: true)
+            }))
         }
         
         alert.addAction(UIAlertAction(title: "取消", style: .cancel))

@@ -45,7 +45,7 @@ class BECreateHomeViewController : UITableViewController {
     func autoGetCity() {
         ThingSmartFamilyBiz.sharedInstance().getCityInfo(latitude, longitude: longitude) {[weak self] cityModel in
             guard let self = self else {return}
-            self.homeCity.text = (cityModel?.province ?? "") + " " + (cityModel?.city ?? "") + " " + (cityModel?.area ?? "")
+            self.homeCity.text = (cityModel.province ?? "") + " " + (cityModel.city ?? "") + " " + (cityModel.area ?? "")
         } failure: {[weak self] error in
             guard let self = self else {return}
             Alert.showBasicAlert(on: self, with: "Failed to get city info", message: "")

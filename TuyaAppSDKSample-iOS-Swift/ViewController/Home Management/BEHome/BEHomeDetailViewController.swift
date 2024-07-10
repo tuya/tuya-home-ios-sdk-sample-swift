@@ -39,8 +39,8 @@ class BEHomeDetailViewController : UITableViewController {
         
         ThingSmartFamilyBiz.sharedInstance().getHomeWeatherSketch(withHomeId: homeModel!.homeId) { [weak self] weather in
             guard let self = self else { return }
-            self.weatherLabel.text = weather!.condition
-            self.tempLabel.text = weather!.temp
+            self.weatherLabel.text = weather.condition
+            self.tempLabel.text = weather.temp
         } failure: {[weak self] error in
             guard let self = self else { return }
             let errorMessage = error?.localizedDescription ?? ""
