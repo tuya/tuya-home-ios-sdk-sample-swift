@@ -1,0 +1,498 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "2Ck-Ow-Cah.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"删除\"; ObjectID = \"2Ck-Ow-Cah\";",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete"
+          }
+        }
+      }
+    },
+    "2pR-5w-1Y8.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"通知消息\"; ObjectID = \"2pR-5w-1Y8\";",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notice Message"
+          }
+        }
+      }
+    },
+    "5rx-gn-uQ0.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"5rx-gn-uQ0\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "6PY-4t-hbg.title" : {
+      "comment" : "Class = \"UINavigationItem\"; title = \"DND\"; ObjectID = \"6PY-4t-hbg\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "DND"
+          }
+        }
+      }
+    },
+    "7Lc-fD-h2c.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"短信通知\"; ObjectID = \"7Lc-fD-h2c\";",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SMS Notification"
+          }
+        }
+      }
+    },
+    "8mf-Sg-M6B.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"8mf-Sg-M6B\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "9B2-Or-AuV.headerTitle" : {
+      "comment" : "Class = \"UITableViewSection\"; headerTitle = \"系统\"; ObjectID = \"9B2-Or-AuV\";",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "System"
+          }
+        }
+      }
+    },
+    "9be-Mk-XgH.title" : {
+      "comment" : "Class = \"UINavigationItem\"; title = \"通知\"; ObjectID = \"9be-Mk-XgH\";",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notice"
+          }
+        }
+      }
+    },
+    "09f-3U-Hcj.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"09f-3U-Hcj\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "24m-0E-dIZ.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"消息设置\"; ObjectID = \"24m-0E-dIZ\";",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Message Setting"
+          }
+        }
+      }
+    },
+    "AND-eg-5Lv.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"AND-eg-5Lv\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "bG0-Hy-jf3.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"bG0-Hy-jf3\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "BTi-51-RxB.headerTitle" : {
+      "comment" : "Class = \"UITableViewSection\"; headerTitle = \"短信\"; ObjectID = \"BTi-51-RxB\";",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SMS"
+          }
+        }
+      }
+    },
+    "dfF-TF-OpY.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"家庭消息\"; ObjectID = \"dfF-TF-OpY\";",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Family Message"
+          }
+        }
+      }
+    },
+    "dOe-0H-T1P.title" : {
+      "comment" : "Class = \"UINavigationItem\"; title = \"告警\"; ObjectID = \"dOe-0H-T1P\";",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alarm"
+          }
+        }
+      }
+    },
+    "dpM-Dn-HKO.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"dpM-Dn-HKO\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "E5u-rI-rPW.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"E5u-rI-rPW\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "Eyi-Oh-Bpd.headerTitle" : {
+      "comment" : "Class = \"UITableViewSection\"; headerTitle = \"电话\"; ObjectID = \"Eyi-Oh-Bpd\";",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phone"
+          }
+        }
+      }
+    },
+    "fOO-HO-3Bl.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"告警消息\"; ObjectID = \"fOO-HO-3Bl\";",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alarm Message"
+          }
+        }
+      }
+    },
+    "FUz-qE-a2c.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Save\"; ObjectID = \"FUz-qE-a2c\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Save"
+          }
+        }
+      }
+    },
+    "gi7-eu-Pgc.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Throttle Time\"; ObjectID = \"gi7-eu-Pgc\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Throttle Time"
+          }
+        }
+      }
+    },
+    "gLb-42-vab.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"告警消息\"; ObjectID = \"gLb-42-vab\";",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alarm Message"
+          }
+        }
+      }
+    },
+    "gqc-nH-lCJ.title" : {
+      "comment" : "Class = \"UINavigationItem\"; title = \"消息设置\"; ObjectID = \"gqc-nH-lCJ\";",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Message Setting"
+          }
+        }
+      }
+    },
+    "H6z-7c-Ra3.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"分钟\"; ObjectID = \"H6z-7c-Ra3\";",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "mintue"
+          }
+        }
+      }
+    },
+    "IrT-28-sPb.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"系统通知\"; ObjectID = \"IrT-28-sPb\";",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "System Notification"
+          }
+        }
+      }
+    },
+    "jos-Cl-Dc1.title" : {
+      "comment" : "Class = \"UINavigationItem\"; title = \"DND Detail\"; ObjectID = \"jos-Cl-Dc1\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "DND Detail"
+          }
+        }
+      }
+    },
+    "jtV-eX-BtR.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"jtV-eX-BtR\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "L2a-zS-PPD.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"L2a-zS-PPD\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "li7-p4-NJs.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"免打扰开关\"; ObjectID = \"li7-p4-NJs\";",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DND Switch"
+          }
+        }
+      }
+    },
+    "mm3-ll-iDH.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"免打扰\"; ObjectID = \"mm3-ll-iDH\";",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DND"
+          }
+        }
+      }
+    },
+    "No5-aU-Gn2.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"分钟\"; ObjectID = \"No5-aU-Gn2\";",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "mintue"
+          }
+        }
+      }
+    },
+    "nst-tu-Cs4.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Title\"; ObjectID = \"nst-tu-Cs4\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Title"
+          }
+        }
+      }
+    },
+    "pdL-yu-GB5.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"电话通知\"; ObjectID = \"pdL-yu-GB5\";",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phone Notification"
+          }
+        }
+      }
+    },
+    "qRI-YS-71b.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"分钟\"; ObjectID = \"qRI-YS-71b\";",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "mintue"
+          }
+        }
+      }
+    },
+    "QTa-tS-8gO.title" : {
+      "comment" : "Class = \"UINavigationItem\"; title = \"不重复提醒时间\"; ObjectID = \"QTa-tS-8gO\";",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rhrottle time"
+          }
+        }
+      }
+    },
+    "sGB-aa-5VV.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"家庭消息\"; ObjectID = \"sGB-aa-5VV\";",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Family Message"
+          }
+        }
+      }
+    },
+    "TrF-z0-gG6.title" : {
+      "comment" : "Class = \"UITableViewController\"; title = \"消息管理\"; ObjectID = \"TrF-z0-gG6\";",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Message Management"
+          }
+        }
+      }
+    },
+    "VqV-Hz-FhC.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"通知消息\"; ObjectID = \"VqV-Hz-FhC\";",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notice Message"
+          }
+        }
+      }
+    },
+    "wEl-e9-XCF.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"wEl-e9-XCF\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "WyX-AI-5AW.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Label\"; ObjectID = \"WyX-AI-5AW\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Label"
+          }
+        }
+      }
+    },
+    "Z9g-zN-LaE.title" : {
+      "comment" : "Class = \"UINavigationItem\"; title = \"家庭\"; ObjectID = \"Z9g-zN-LaE\";",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Family"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

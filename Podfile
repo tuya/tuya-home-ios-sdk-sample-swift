@@ -1,5 +1,4 @@
 source 'https://github.com/CocoaPods/Specs'
-source 'https://github.com/tuya/TuyaPublicSpecs.git'
 source 'https://github.com/tuya/tuya-pod-specs.git'
 
 
@@ -15,18 +14,26 @@ target 'TuyaAppSDKSample-iOS-Swift' do
     # ./ios_core_sdk 代表将 `ios_core_sdk.tar.gz` 解压之后所在目录与 `podfile` 同级
     # 若自定义存放目录，可以修改 `path` 为自定义目录层级
   pod 'ThingSmartCryption', :path => './ios_core_sdk'
-  pod 'ThingSmartHomeKit', '~> 5.14.0'
-  pod 'ThingSmartBusinessExtensionKit', '~> 5.14.0'
-  pod 'ThingSmartMatterKit', '~> 5.10.0'
-  pod 'ThingSmartBusinessExtensionKitBLEExtra', '~> 5.14.0'
-  pod 'ThingSmartBusinessExtensionKitMatterExtra', '~> 5.14.0'
 
+  pod 'ThingSmartHomeKit', '~> 5.15.0'
+  pod 'ThingSmartMatterKit', '~> 5.11.0'
+  pod 'ThingSmartMatterExtensionKit', '~> 5.0.0'
+  pod 'ThingSmartAppleDeviceKit', '~> 5.2.0'
+  pod 'ThingSmartCameraKit', '~> 5.15.0'
+  pod 'ThingSmartOutdoorKit', '~> 5.4.0'
+  pod 'ThingSmartSweeperKit', '~> 5.0.0'
+  pod 'ThingSmartLockKit', '~> 5.5.0'
+  
+  pod 'ThingSmartBusinessExtensionKit', '~> 5.15.0'
+  pod 'ThingSmartBusinessExtensionKitBLEExtra','~> 5.15.0'
+  pod 'ThingSmartBusinessExtensionKitMatterExtra','~> 5.15.0'
+  
 end
 
 target 'MatterExtension' do
 
-  pod 'ThingSmartMatterExtensionKit', '~> 5.0.5'
-  
+ pod 'ThingSmartMatterExtensionKit', '~> 5.0.5'
+ 
 end
 
 post_install do |installer|
@@ -42,7 +49,7 @@ post_install do |installer|
         config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
 
         # replace to your teamid
-        config.build_settings["DEVELOPMENT_TEAM"] = "DWPHVGUZ22"
+        # config.build_settings["DEVELOPMENT_TEAM"] = "Your Team"
         
         
       end

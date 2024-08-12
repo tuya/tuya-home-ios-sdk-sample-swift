@@ -1,0 +1,57 @@
+
+/* Class = "UILabel"; text = "Business Extension SDK  "; ObjectID = "AlC-Xq-il6"; */
+"AlC-Xq-il6.text" = "Business Extension SDK  ";
+
+/* Class = "UITableViewSection"; headerTitle = "Scene Management"; ObjectID = "EhC-Dv-OCD"; */
+"EhC-Dv-OCD.headerTitle" = "Scene Management";
+
+/* Class = "UILabel"; text = "Add(Edit) Scene"; ObjectID = "HMc-Gw-uZh"; */
+"HMc-Gw-uZh.text" = "Add(Edit) Scene";
+
+/* Class = "UILabel"; text = "Business Extension SDK"; ObjectID = "Ka9-CH-Kp3"; */
+"Ka9-CH-Kp3.text" = "Business Extension SDK";
+
+/* Class = "UILabel"; text = "Device List"; ObjectID = "Sc8-6Q-jjJ"; */
+"Sc8-6Q-jjJ.text" = "Device List";
+
+/* Class = "UILabel"; text = "Extension Sdk"; ObjectID = "T8e-Zy-rYC"; */
+"T8e-Zy-rYC.text" = "Extension Sdk";
+
+/* Class = "UILabel"; text = "Business Extension SDK"; ObjectID = "WyW-Eb-eoV"; */
+"WyW-Eb-eoV.text" = "Business Extension SDK";
+
+/* Class = "UILabel"; text = "SDK"; ObjectID = "XyH-Gi-i9I"; */
+"XyH-Gi-i9I.text" = "SDK";
+
+/* Class = "UITableViewSection"; headerTitle = "Home Management"; ObjectID = "fDa-sc-eBQ"; */
+"fDa-sc-eBQ.headerTitle" = "Home Management";
+
+/* Class = "UIButton"; normalTitle = "Logout"; ObjectID = "hWi-1l-FSC"; */
+"hWi-1l-FSC.normalTitle" = "Logout";
+
+/* Class = "UITableViewSection"; headerTitle = "Device Network Configuration"; ObjectID = "icw-f7-zdu"; */
+"icw-f7-zdu.headerTitle" = "Device Network Configuration";
+
+/* Class = "UITableViewSection"; headerTitle = "User Management"; ObjectID = "llS-dv-ZAG"; */
+"llS-dv-ZAG.headerTitle" = "User Management";
+
+/* Class = "UITableViewSection"; headerTitle = "Message Management"; ObjectID = "pie-Xa-llP"; */
+"pie-Xa-llP.headerTitle" = "Message Management";
+
+/* Class = "UILabel"; text = "User Information"; ObjectID = "sDU-vp-zT6"; */
+"sDU-vp-zT6.text" = "User Information";
+
+/* Class = "UINavigationItem"; title = "ThingSmart"; ObjectID = "sFB-be-PT7"; */
+"sFB-be-PT7.title" = "ThingSmart";
+
+/* Class = "UILabel"; text = "Scene List"; ObjectID = "vEw-mG-Zjt"; */
+"vEw-mG-Zjt.text" = "Scene List";
+
+/* Class = "UILabel"; text = "Batch OTA"; ObjectID = "w8o-Y0-Chb"; */
+"w8o-Y0-Chb.text" = "Batch OTA";
+
+/* Class = "UITableViewSection"; headerTitle = "Device Management"; ObjectID = "y2h-dz-wG3"; */
+"y2h-dz-wG3.headerTitle" = "Device Management";
+
+/* Class = "UILabel"; text = "SDK "; ObjectID = "y3e-Vx-Sjj"; */
+"y3e-Vx-Sjj.text" = "SDK ";
