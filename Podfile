@@ -16,10 +16,12 @@ target 'TuyaAppSDKSample-iOS-Swift' do
   pod 'ThingSmartCryption', :path => './ios_core_sdk'
 
   pod 'ThingSmartHomeKit', '~> 5.15.0'
+  pod 'ThingSmartHomeKit', '~> 5.16.0'
   pod 'ThingSmartMatterKit', '~> 5.11.0'
   pod 'ThingSmartMatterExtensionKit', '~> 5.0.0'
   pod 'ThingSmartAppleDeviceKit', '~> 5.2.0'
   pod 'ThingSmartCameraKit', '~> 5.15.0'
+  pod 'ThingSmartCameraKit', '~> 5.16.0'
   pod 'ThingSmartOutdoorKit', '~> 5.4.0'
   pod 'ThingSmartSweeperKit', '~> 5.0.0'
   pod 'ThingSmartLockKit', '~> 5.5.0'
@@ -27,6 +29,9 @@ target 'TuyaAppSDKSample-iOS-Swift' do
   pod 'ThingSmartBusinessExtensionKit', '~> 5.15.0'
   pod 'ThingSmartBusinessExtensionKitBLEExtra','~> 5.15.0'
   pod 'ThingSmartBusinessExtensionKitMatterExtra','~> 5.15.0'
+  pod 'ThingSmartBusinessExtensionKit', '~> 5.16.0'
+  pod 'ThingSmartBusinessExtensionKitBLEExtra','~> 5.16.0'
+  pod 'ThingSmartBusinessExtensionKitMatterExtra','~> 5.16.0'
   
 end
 
