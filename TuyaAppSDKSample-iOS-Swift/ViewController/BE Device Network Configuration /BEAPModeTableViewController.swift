@@ -43,6 +43,14 @@ class BEAPModeTableViewController: UITableViewController {
         stopConfigWifi()
     }
 
+    @IBAction func gotoWifiSetting(_ sender: UIButton) {
+        guard let wifiSettingsURL = URL(string: "App-Prefs:root=WIFI") else { return }
+        
+        if UIApplication.shared.canOpenURL(wifiSettingsURL) {
+            UIApplication.shared.open(wifiSettingsURL, options: [:], completionHandler: nil)
+        }
+    }
+    
     // MARK: - IBAction
     @IBAction func searchTapped(_ sender: UIBarButtonItem) {
         startConfiguration()
