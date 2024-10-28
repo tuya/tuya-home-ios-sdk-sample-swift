@@ -43,9 +43,9 @@ end
 # when you see the error:
 # "No profiles for 'com.thingclips.test1001.MatterExtension' were found: Xcode couldn't find any iOS App Development provisioning profiles matching 'com.thingclips.test1001.MatterExtension' or development teams do not support the Matter Allow Setup Payload capability."
 # Resolve it by removing the MatterExtension target and rebuilding the project.
-#target 'MatterExtension' do
+target 'MatterExtension' do
   pod 'ThingSmartMatterExtensionKit', '~> 5.17.0'
-#end
+end
 
 post_install do |installer|
   `cd TuyaAppSDKSample-iOS-Swift; [[ -f AppKey.swift ]] || cp AppKey.swift.default AppKey.swift;`
