@@ -12,7 +12,7 @@ target 'TuyaAppSDKSample-iOS-Swift' do
   # If you use a custom directory, you can modify the path to your custom directory structure
   pod 'ThingSmartCryption', :path => './ios_core_sdk'
   
-  # Basic
+  # [Required] Basic
   pod 'ThingSmartHomeKit', '~> 5.17.0'
   pod 'ThingSmartBusinessExtensionKit', '~> 5.17.0'
   
