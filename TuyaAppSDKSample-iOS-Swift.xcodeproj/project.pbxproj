@@ -65,6 +65,15 @@
 		823969872AB068A400BA2394 /* BECreateHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 823969892AB068A400BA2394 /* BECreateHome.storyboard */; };
 		8239698F2AB06A2700BA2394 /* BECreateHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8239698E2AB06A2700BA2394 /* BECreateHomeViewController.swift */; };
 		825225B62AA9770300E05943 /* HomeManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 825225B82AA9770300E05943 /* HomeManagement.storyboard */; };
+		825795A12CCF84580080E2CE /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825795A02CCF84580080E2CE /* WidgetKit.framework */; };
+		825795A32CCF84580080E2CE /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825795A22CCF84580080E2CE /* SwiftUI.framework */; };
+		825795AE2CCF845A0080E2CE /* TuyaAppSDKWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8257959F2CCF84580080E2CE /* TuyaAppSDKWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		825795C02CCF846C0080E2CE /* TuyaAppSDKWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825795BA2CCF846C0080E2CE /* TuyaAppSDKWidget.swift */; };
+		825795C12CCF846C0080E2CE /* TuyaAppSDKWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825795BC2CCF846C0080E2CE /* TuyaAppSDKWidgetBundle.swift */; };
+		825795C22CCF846C0080E2CE /* TuyaAppSDKWidgetDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825795BD2CCF846C0080E2CE /* TuyaAppSDKWidgetDataManager.swift */; };
+		825795C32CCF846C0080E2CE /* TuyaAppSDKWidgetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825795BE2CCF846C0080E2CE /* TuyaAppSDKWidgetModel.swift */; };
+		825795C42CCF846C0080E2CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 825795B82CCF846C0080E2CE /* Assets.xcassets */; };
+		825795C72CCF881D0080E2CE /* AppKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF55320C25A59BE800E13562 /* AppKey.swift */; };
 		825900C32AA9665F0017D14C /* ThingSmartHomeManagementListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825900C22AA9665F0017D14C /* ThingSmartHomeManagementListViewController.swift */; };
 		82B55A452AB1DC6900FBE30B /* BEJoinHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B55A442AB1DC6900FBE30B /* BEJoinHome.storyboard */; };
 		82B55A472AB1DD4D00FBE30B /* BEJoinHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B55A462AB1DD4D00FBE30B /* BEJoinHomeViewController.swift */; };
@@ -103,6 +112,7 @@
 		82FBA9832AB1A75B00822B41 /* BEDeleteHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FBA9822AB1A75B00822B41 /* BEDeleteHomeViewController.swift */; };
 		82FBA9892AB1BA7F00822B41 /* BEEditHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA9882AB1BA7F00822B41 /* BEEditHome.storyboard */; };
 		82FBA98B2AB1BACD00822B41 /* BEEditHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FBA98A2AB1BACD00822B41 /* BEEditHomeViewController.swift */; };
+		90B256D14D9D33DDD7C2D270 /* libPods-TuyaAppSDKWidgetExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B34D69CC18757CD0BDF6FA0 /* libPods-TuyaAppSDKWidgetExtension.a */; };
 		9813B6A02AA5E234001646C0 /* DeviceNetworkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9813B69F2AA5E234001646C0 /* DeviceNetworkListViewController.swift */; };
 		9813B6AF2AA71593001646C0 /* TuyaLinkBind.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9813B6A12AA71592001646C0 /* TuyaLinkBind.storyboard */; };
 		9813B6B02AA71593001646C0 /* APMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9813B6A32AA71592001646C0 /* APMode.storyboard */; };
@@ -190,6 +200,13 @@
 			remoteGlobalIDString = 0FF096B42AB3F137003C6BDA;
 			remoteInfo = MatterExtension;
 		};
+		825795AC2CCF845A0080E2CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF5531D425A5992500E13562 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8257959E2CCF84580080E2CE;
+			remoteInfo = TuyaAppSDKWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -199,6 +216,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				825795AE2CCF845A0080E2CE /* TuyaAppSDKWidgetExtension.appex in Embed Foundation Extensions */,
 				0FF096BC2AB3F137003C6BDA /* MatterExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
@@ -239,6 +257,8 @@
 		42D0EFDB2ABC49580021AC7E /* DeviceDetailKitTimerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDetailKitTimerVC.swift; sourceTree = "<group>"; };
 		42D0EFDC2ABC49580021AC7E /* DeviceDetailKitInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDetailKitInfoVC.swift; sourceTree = "<group>"; };
 		42F7603F2C3402E90004AF36 /* BatchOtaVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatchOtaVC.swift; sourceTree = "<group>"; };
+		49575867F9B8BE315BE628B1 /* Pods-TuyaAppSDKWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaAppSDKWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-TuyaAppSDKWidgetExtension/Pods-TuyaAppSDKWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
+		5B34D69CC18757CD0BDF6FA0 /* libPods-TuyaAppSDKWidgetExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TuyaAppSDKWidgetExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6719AB9028A202B5000588E7 /* TextViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewTableViewCell.swift; sourceTree = "<group>"; };
 		6719AB9228A208CB000588E7 /* TuyaLinkDeviceControlController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuyaLinkDeviceControlController.swift; sourceTree = "<group>"; };
 		6719AB9428A208DF000588E7 /* TuyaLinkActionMsgSendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuyaLinkActionMsgSendController.swift; sourceTree = "<group>"; };
@@ -270,6 +290,17 @@
 		8239698E2AB06A2700BA2394 /* BECreateHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BECreateHomeViewController.swift; sourceTree = "<group>"; };
 		825225B92AA9770F00E05943 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeManagement.storyboard; sourceTree = "<group>"; };
 		825225BD2AA9774D00E05943 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/HomeManagement.strings"; sourceTree = "<group>"; };
+		8257959F2CCF84580080E2CE /* TuyaAppSDKWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TuyaAppSDKWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		825795A02CCF84580080E2CE /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		825795A22CCF84580080E2CE /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		825795B82CCF846C0080E2CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		825795B92CCF846C0080E2CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		825795BA2CCF846C0080E2CE /* TuyaAppSDKWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuyaAppSDKWidget.swift; sourceTree = "<group>"; };
+		825795BB2CCF846C0080E2CE /* TuyaAppSDKWidget-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TuyaAppSDKWidget-Bridging-Header.h"; sourceTree = "<group>"; };
+		825795BC2CCF846C0080E2CE /* TuyaAppSDKWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuyaAppSDKWidgetBundle.swift; sourceTree = "<group>"; };
+		825795BD2CCF846C0080E2CE /* TuyaAppSDKWidgetDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuyaAppSDKWidgetDataManager.swift; sourceTree = "<group>"; };
+		825795BE2CCF846C0080E2CE /* TuyaAppSDKWidgetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuyaAppSDKWidgetModel.swift; sourceTree = "<group>"; };
+		825795C62CCF848A0080E2CE /* TuyaAppSDKWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TuyaAppSDKWidgetExtension.entitlements; sourceTree = "<group>"; };
 		825900C22AA9665F0017D14C /* ThingSmartHomeManagementListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingSmartHomeManagementListViewController.swift; sourceTree = "<group>"; };
 		82B55A442AB1DC6900FBE30B /* BEJoinHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BEJoinHome.storyboard; sourceTree = "<group>"; };
 		82B55A462AB1DD4D00FBE30B /* BEJoinHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEJoinHomeViewController.swift; sourceTree = "<group>"; };
@@ -417,6 +448,7 @@
 		AFBB5BBE25B95BBA006BDDD7 /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 		AFBB5BC125B95F3C006BDDD7 /* DeviceStatusBehaveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceStatusBehaveCell.swift; sourceTree = "<group>"; };
 		B2A4751A3340941A1C42F4D9 /* Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig"; path = "Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		B3FA5FE076EFA085ED76C4AB /* Pods-TuyaAppSDKWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaAppSDKWidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-TuyaAppSDKWidgetExtension/Pods-TuyaAppSDKWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		CD69B77163167456846ED615 /* Pods-MatterExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatterExtension.release.xcconfig"; path = "Target Support Files/Pods-MatterExtension/Pods-MatterExtension.release.xcconfig"; sourceTree = "<group>"; };
 		DDBAFF21542EFFA18E0B468D /* libPods-MatterExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MatterExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -427,6 +459,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED97D2DDB0B0D535BD4836C0 /* libPods-MatterExtension.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8257959C2CCF84580080E2CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				825795A32CCF84580080E2CE /* SwiftUI.framework in Frameworks */,
+				825795A12CCF84580080E2CE /* WidgetKit.framework in Frameworks */,
+				90B256D14D9D33DDD7C2D270 /* libPods-TuyaAppSDKWidgetExtension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +564,20 @@
 				82090CF12C64B09A00D184CB /* MessageThrottleViewController.swift */,
 			);
 			path = "Message Management";
+			sourceTree = "<group>";
+		};
+		825795BF2CCF846C0080E2CE /* TuyaAppSDKWidget */ = {
+			isa = PBXGroup;
+			children = (
+				825795B82CCF846C0080E2CE /* Assets.xcassets */,
+				825795B92CCF846C0080E2CE /* Info.plist */,
+				825795BA2CCF846C0080E2CE /* TuyaAppSDKWidget.swift */,
+				825795BB2CCF846C0080E2CE /* TuyaAppSDKWidget-Bridging-Header.h */,
+				825795BC2CCF846C0080E2CE /* TuyaAppSDKWidgetBundle.swift */,
+				825795BD2CCF846C0080E2CE /* TuyaAppSDKWidgetDataManager.swift */,
+				825795BE2CCF846C0080E2CE /* TuyaAppSDKWidgetModel.swift */,
+			);
+			path = TuyaAppSDKWidget;
 			sourceTree = "<group>";
 		};
 		825900BD2AA963E80017D14C /* Home Management */ = {
@@ -624,6 +680,9 @@
 			children = (
 				98A631D49E2E0E816D32C2CC /* libPods-TuyaAppSDKSample-iOS-Swift.a */,
 				DDBAFF21542EFFA18E0B468D /* libPods-MatterExtension.a */,
+				825795A02CCF84580080E2CE /* WidgetKit.framework */,
+				825795A22CCF84580080E2CE /* SwiftUI.framework */,
+				5B34D69CC18757CD0BDF6FA0 /* libPods-TuyaAppSDKWidgetExtension.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -715,8 +774,10 @@
 		AF5531D325A5992500E13562 = {
 			isa = PBXGroup;
 			children = (
+				825795C62CCF848A0080E2CE /* TuyaAppSDKWidgetExtension.entitlements */,
 				AF5531DE25A5992500E13562 /* TuyaAppSDKSample-iOS-Swift */,
 				0FF096B62AB3F137003C6BDA /* MatterExtension */,
+				825795BF2CCF846C0080E2CE /* TuyaAppSDKWidget */,
 				AF5531DD25A5992500E13562 /* Products */,
 				BD36B163EF3854B6423E5580 /* Pods */,
 				87E8F60384D829671393D688 /* Frameworks */,
@@ -728,6 +789,7 @@
 			children = (
 				AF5531DC25A5992500E13562 /* TuyaAppSDKSample-iOS-Swift.app */,
 				0FF096B52AB3F137003C6BDA /* MatterExtension.appex */,
+				8257959F2CCF84580080E2CE /* TuyaAppSDKWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -850,6 +912,8 @@
 				207E8BAF216CF8ED00C5937A /* Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig */,
 				ADF1C57BE833A3E9DD4D8CFD /* Pods-MatterExtension.debug.xcconfig */,
 				CD69B77163167456846ED615 /* Pods-MatterExtension.release.xcconfig */,
+				B3FA5FE076EFA085ED76C4AB /* Pods-TuyaAppSDKWidgetExtension.debug.xcconfig */,
+				49575867F9B8BE315BE628B1 /* Pods-TuyaAppSDKWidgetExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -875,6 +939,25 @@
 			productReference = 0FF096B52AB3F137003C6BDA /* MatterExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		8257959E2CCF84580080E2CE /* TuyaAppSDKWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 825795B22CCF845A0080E2CE /* Build configuration list for PBXNativeTarget "TuyaAppSDKWidgetExtension" */;
+			buildPhases = (
+				47B4D4488F3054E651C3DCFD /* [CP] Check Pods Manifest.lock */,
+				8257959B2CCF84580080E2CE /* Sources */,
+				8257959C2CCF84580080E2CE /* Frameworks */,
+				8257959D2CCF84580080E2CE /* Resources */,
+				08CD58E3F9EB1F604047FCE5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TuyaAppSDKWidgetExtension;
+			productName = TuyaAppSDKWidgetExtension;
+			productReference = 8257959F2CCF84580080E2CE /* TuyaAppSDKWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		AF5531DB25A5992500E13562 /* TuyaAppSDKSample-iOS-Swift */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF5531F025A5992800E13562 /* Build configuration list for PBXNativeTarget "TuyaAppSDKSample-iOS-Swift" */;
@@ -891,6 +974,7 @@
 			);
 			dependencies = (
 				0FF096BB2AB3F137003C6BDA /* PBXTargetDependency */,
+				825795AD2CCF845A0080E2CE /* PBXTargetDependency */,
 			);
 			name = "TuyaAppSDKSample-iOS-Swift";
 			productName = "TuyaAppSDKSample-iOS-Swift";
@@ -903,11 +987,14 @@
 		AF5531D425A5992500E13562 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					0FF096B42AB3F137003C6BDA = {
 						CreatedOnToolsVersion = 14.3;
+					};
+					8257959E2CCF84580080E2CE = {
+						CreatedOnToolsVersion = 16.0;
 					};
 					AF5531DB25A5992500E13562 = {
 						CreatedOnToolsVersion = 12.3;
@@ -931,6 +1018,7 @@
 			targets = (
 				AF5531DB25A5992500E13562 /* TuyaAppSDKSample-iOS-Swift */,
 				0FF096B42AB3F137003C6BDA /* MatterExtension */,
+				8257959E2CCF84580080E2CE /* TuyaAppSDKWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -940,6 +1028,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8257959D2CCF84580080E2CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				825795C42CCF846C0080E2CE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1008,6 +1104,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		08CD58E3F9EB1F604047FCE5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKWidgetExtension/Pods-TuyaAppSDKWidgetExtension-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKWidgetExtension/Pods-TuyaAppSDKWidgetExtension-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKWidgetExtension/Pods-TuyaAppSDKWidgetExtension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		11BDCDF3B66A04C9B8A6ABDD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1024,6 +1137,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-MatterExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47B4D4488F3054E651C3DCFD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TuyaAppSDKWidgetExtension-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1094,6 +1229,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FF096B82AB3F137003C6BDA /* RequestHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8257959B2CCF84580080E2CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				825795C02CCF846C0080E2CE /* TuyaAppSDKWidget.swift in Sources */,
+				825795C12CCF846C0080E2CE /* TuyaAppSDKWidgetBundle.swift in Sources */,
+				825795C22CCF846C0080E2CE /* TuyaAppSDKWidgetDataManager.swift in Sources */,
+				825795C32CCF846C0080E2CE /* TuyaAppSDKWidgetModel.swift in Sources */,
+				825795C72CCF881D0080E2CE /* AppKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1225,6 +1372,11 @@
 			isa = PBXTargetDependency;
 			target = 0FF096B42AB3F137003C6BDA /* MatterExtension */;
 			targetProxy = 0FF096BA2AB3F137003C6BDA /* PBXContainerItemProxy */;
+		};
+		825795AD2CCF845A0080E2CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8257959E2CCF84580080E2CE /* TuyaAppSDKWidgetExtension */;
+			targetProxy = 825795AC2CCF845A0080E2CE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1599,6 +1751,79 @@
 			};
 			name = Release;
 		};
+		825795AF2CCF845A0080E2CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3FA5FE076EFA085ED76C4AB /* Pods-TuyaAppSDKWidgetExtension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = TuyaAppSDKWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 94JFPTRDN5;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TuyaAppSDKWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TuyaAppSDKWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thingclips.test1001.TuyaAppSDKWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TuyaAppSDKWidget/TuyaAppSDKWidget-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		825795B02CCF845A0080E2CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49575867F9B8BE315BE628B1 /* Pods-TuyaAppSDKWidgetExtension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = TuyaAppSDKWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 94JFPTRDN5;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TuyaAppSDKWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TuyaAppSDKWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thingclips.test1001.TuyaAppSDKWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TuyaAppSDKWidget/TuyaAppSDKWidget-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		AF5531EE25A5992800E13562 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1820,6 +2045,15 @@
 			buildConfigurations = (
 				0FF096BE2AB3F137003C6BDA /* Debug */,
 				0FF096BF2AB3F137003C6BDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		825795B22CCF845A0080E2CE /* Build configuration list for PBXNativeTarget "TuyaAppSDKWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				825795AF2CCF845A0080E2CE /* Debug */,
+				825795B02CCF845A0080E2CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

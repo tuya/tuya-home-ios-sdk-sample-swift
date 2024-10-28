@@ -1,6 +1,7 @@
 source 'https://github.com/CocoaPods/Specs'
 source 'https://github.com/tuya/tuya-pod-specs.git'
 
+platform :ios, '12.0'
 
 target 'TuyaAppSDKSample-iOS-Swift' do
   use_modular_headers!
@@ -46,6 +47,14 @@ end
 target 'MatterExtension' do
   pod 'ThingSmartMatterExtensionKit', '~> 5.17.0'
 end
+
+target 'TuyaAppSDKWidgetExtension' do
+  pod 'ThingSmartHomeKit', '~> 5.17.0'
+  pod 'ThingSmartBusinessExtensionKit', '~> 5.17.0'
+  pod 'SDWebImage'
+end
+
+
 
 post_install do |installer|
   `cd TuyaAppSDKSample-iOS-Swift; [[ -f AppKey.swift ]] || cp AppKey.swift.default AppKey.swift;`

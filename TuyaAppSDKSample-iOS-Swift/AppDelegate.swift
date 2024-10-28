@@ -14,6 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Initialize ThingSmartSDK
+        
+        /*
+         To run the WidgetKit demo, please complete the following steps:
+         1. Add both "TuyaAppSDKSample-iOS-Swift" and "TuyaAppSDKWidgetExtension" targets to the same App Group.
+         2. Set the App Group ID in ThingSmartSDK.
+        */
+        ThingSmartSDK.sharedInstance().appGroupId = "your group id"
+        
         ThingSmartSDK.sharedInstance().start(withAppKey: AppKey.appKey, secretKey: AppKey.secretKey)
         
         // Set your Matter Group ID
