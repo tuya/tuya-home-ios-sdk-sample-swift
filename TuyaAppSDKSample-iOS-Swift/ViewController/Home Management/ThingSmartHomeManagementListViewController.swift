@@ -29,10 +29,12 @@ class ThingSmartHomeManagementListViewController : UITableViewController {
     
     // MARK: - Private Method
     private func initiateCurrentHome() {
-        homeManager.getHomeList { (homeModels) in
-            Home.current = homeModels?.first
-        } failure: { (error) in
-            
+        if Home.current == nil {
+            homeManager.getHomeList { (homeModels) in
+                Home.current = homeModels?.first
+            } failure: { (error) in
+                
+            }
         }
     }
 }
