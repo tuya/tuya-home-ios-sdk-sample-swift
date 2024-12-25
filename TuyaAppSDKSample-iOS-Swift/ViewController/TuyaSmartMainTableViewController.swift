@@ -60,7 +60,7 @@ class ThingSmartMainTableViewController: UITableViewController {
         }else if indexPath.section == 3 && indexPath.row == 2 {
             guard let current = ThingSmartFamilyBiz.sharedInstance().getCurrentFamily() as? ThingSmartHomeModel else {return}
             guard let home = ThingSmartHome(homeId: current.homeId) else {return}
-            let vc = BatchOtaVC(home: home)
+            let vc = OtaDevicesVc(home: home)
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

@@ -80,5 +80,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        //weburl  https://appScheme.applink.smart321.com/share?link=appScheme://share_link?code=MN54PUQQ
+        guard let webUrl = userActivity.webpageURL else { return false }
+
+        let params = ["activityType": NSUserActivityTypeBrowsingWeb, "webUrl": webUrl.absoluteString]
+        let components = NSURLComponents(string: webUrl.absoluteString)
+
+        guard let items = components?.queryItems else {return false}
+
+        let item = items.first {$0.name == "link"}
+
+        guard let link = item?.value?.removingPercentEncoding else {return false}
+
+        let linkComponents = URLComponents(string: link)
+        guard let linkItems = linkComponents?.queryItems, let host = linkComponents?.host else {return false}
+        
+        if (host == "share_link") {
+            let codeItem = linkItems.first {$0.name == "code"}
+            if codeItem == nil {return false}
+            
+            //show share invate to user
+            //...
+            return true
+        }
+
+        //other logic
+        return true
+    }
 }
 

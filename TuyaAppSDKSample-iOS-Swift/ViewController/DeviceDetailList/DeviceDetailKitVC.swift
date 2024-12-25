@@ -28,6 +28,9 @@ class DeviceDetailKitVC: DeviceListBaseVC {
                 self.deleteGroup(with: group)
             }))
             
+            alert.addAction(UIAlertAction(title: "分享", style: .default, handler: { action in
+                self.share(with: group)
+            }))
                         
         }else{
             if (index >= home.deviceList.count) {return}
@@ -61,6 +64,18 @@ class DeviceDetailKitVC: DeviceListBaseVC {
             alert.addAction(UIAlertAction(title: "替换故障网关", style: .default, handler: { action in
                 let vc = GatewayTransferController(deviceId: device.devId)
                 self.navigationController?.pushViewController(vc, animated: true)
+            }))
+            
+            alert.addAction(UIAlertAction(title: "分享", style: .default, handler: { action in
+                self.share(with: device)
+            }))
+            
+            alert.addAction(UIAlertAction(title: "关联控制", style: .default, handler: { action in
+                self.association(with: device)
+            }))
+            
+            alert.addAction(UIAlertAction(title: "批量ota", style: .default, handler: { action in
+                self.batchOTA(with: device)
             }))
         }
         
@@ -114,6 +129,25 @@ class DeviceDetailKitVC: DeviceListBaseVC {
         })
     }
     
+    func share(with group: ThingSmartGroupModel) {
+        let vc = ShareVC(homeId: group.homeId, resType: .group, resId: group.groupId)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func share(with device: ThingSmartDeviceModel) {
+        let vc = ShareVC(homeId: device.homeId, resType: .device, resId: device.devId)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func association(with device: ThingSmartDeviceModel) {
+        let vc = AssociationControlVC(homeId: device.homeId, deviceId: device.devId)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func batchOTA(with device: ThingSmartDeviceModel) {
+        let vc = BatchOTAVC(homeId: device.homeId, deviceId: device.devId)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     func editGroup(with group: ThingSmartGroupModel) {
         //根据群组id查询群组类型

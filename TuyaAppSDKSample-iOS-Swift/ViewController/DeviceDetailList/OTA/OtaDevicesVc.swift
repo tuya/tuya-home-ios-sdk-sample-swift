@@ -1,12 +1,12 @@
 //
-//  BatchOtaVC.swift
+//  OtaDevicesVc.swift
 //  TuyaAppSDKSample-iOS-Swift
 //
 //  Copyright (c) 2014-2024 Tuya Inc. (https://developer.tuya.com/)
 
 import UIKit
 
-class BatchOtaVC: UITableViewController {
+class OtaDevicesVc: UITableViewController {
     
     var home: ThingSmartHome
     
@@ -108,7 +108,7 @@ class BatchOtaVC: UITableViewController {
     
 }
 
-extension BatchOtaVC: ThingSmartDeviceDelegate {
+extension OtaDevicesVc: ThingSmartDeviceDelegate {
     func device(_ device: ThingSmartDevice, otaUpdateStatusChanged statusModel: ThingSmartFirmwareUpgradeStatusModel) {
         if (statusModel.upgradeStatus == ThingSmartDeviceUpgradeStatusTimeout || statusModel.upgradeStatus == ThingSmartDeviceUpgradeStatusFailure) {
             self.status.updateValue("fail", forKey: device.deviceModel.devId)

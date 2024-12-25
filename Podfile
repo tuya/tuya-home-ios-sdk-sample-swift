@@ -14,25 +14,25 @@ target 'TuyaAppSDKSample-iOS-Swift' do
   pod 'ThingSmartCryption', :path => './ios_core_sdk'
   
   # [Required] Basic
-  pod 'ThingSmartHomeKit', '~> 5.17.0'
-  pod 'ThingSmartBusinessExtensionKit', '~> 5.17.0'
+  pod 'ThingSmartHomeKit', '~> 6.0.0'
+  pod 'ThingSmartBusinessExtensionKit', '~> 6.0.0'
   
   # [Optional] Bluetooth
-  pod 'ThingSmartBusinessExtensionKitBLEExtra','~> 5.17.0'
+  pod 'ThingSmartBusinessExtensionKitBLEExtra','~> 6.0.0'
   
   # [Optional] Matter
-  pod 'ThingSmartMatterKit', '~> 5.17.0'
+  pod 'ThingSmartMatterKit', '~> 5.18.0'
   pod 'ThingSmartMatterExtensionKit', '~> 5.17.0'
-  pod 'ThingSmartBusinessExtensionKitMatterExtra','~> 5.17.0'
+  pod 'ThingSmartBusinessExtensionKitMatterExtra','~> 6.0.0'
   
   # [Optional] HomeKit Device
-  pod 'ThingSmartAppleDeviceKit', '~> 5.17.0'
+  pod 'ThingSmartAppleDeviceKit', '~> 6.0.0'
   
   # [Optional] Special category
-  pod 'ThingSmartCameraKit', '~> 5.17.0'
-  pod 'ThingSmartOutdoorKit', '~> 5.17.0'
-  pod 'ThingSmartSweeperKit', '~> 5.0.0'
-  pod 'ThingSmartLockKit', '~> 5.5.0'
+  pod 'ThingSmartCameraKit', '~> 6.0.0'
+  pod 'ThingSmartOutdoorKit', '~> 6.0.0'
+  pod 'ThingSmartSweeperKit', '~> 5.3.0'
+  pod 'ThingSmartLockKit', '~> 6.0.0'
   
   # The following components are only required for this demo and are not necessary when integrating into your own project.
   pod 'SVProgressHUD'
@@ -49,8 +49,8 @@ target 'MatterExtension' do
 end
 
 target 'TuyaAppSDKWidgetExtension' do
-  pod 'ThingSmartHomeKit', '~> 5.17.0'
-  pod 'ThingSmartBusinessExtensionKit', '~> 5.17.0'
+  pod 'ThingSmartHomeKit', '~> 6.0.0'
+  pod 'ThingSmartBusinessExtensionKit', '~> 6.0.0'
   pod 'SDWebImage'
 end
 
@@ -68,10 +68,6 @@ post_install do |installer|
         config.build_settings["IPHONEOS_DEPLOYMENT_TARGET"] = "11.0"
         config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
 
-        # replace to your teamid
-        # config.build_settings["DEVELOPMENT_TEAM"] = "Your Team"
-        
-        
       end
     end
   end
