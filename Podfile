@@ -31,7 +31,7 @@ target 'TuyaAppSDKSample-iOS-Swift' do
   # [Optional] Special category
   pod 'ThingSmartCameraKit', '~> 6.0.0'
   pod 'ThingSmartOutdoorKit', '~> 6.0.0'
-  pod 'ThingSmartSweeperKit', '~> 5.3.0'
+  pod 'ThingSmartSweeperKit', '~> 6.0.0'
   pod 'ThingSmartLockKit', '~> 6.0.0'
   
   # The following components are only required for this demo and are not necessary when integrating into your own project.
