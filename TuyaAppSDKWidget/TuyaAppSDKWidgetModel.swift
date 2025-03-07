@@ -6,6 +6,7 @@
 
 import Foundation
 import AppIntents
+import UIKit
 
 struct TuyaAppSDKWidgetModel {
     let name : String

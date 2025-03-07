@@ -37,7 +37,7 @@ target 'TuyaAppSDKSample-iOS-Swift' do
   # The following components are only required for this demo and are not necessary when integrating into your own project.
   pod 'SVProgressHUD'
   pod 'SGQRCode', '~> 4.1.0'
-  pod 'SnapKit'
+  pod 'SnapKit', '~> 5.7.0'
 end
 
 
@@ -50,8 +50,7 @@ end
 
 target 'TuyaAppSDKWidgetExtension' do
   pod 'ThingSmartHomeKit', '~> 6.0.0'
-  pod 'ThingSmartBusinessExtensionKit', '~> 6.0.0'
-  pod 'SDWebImage'
+  pod 'SDWebImage', '~> 5.21.0'
 end
 
 
