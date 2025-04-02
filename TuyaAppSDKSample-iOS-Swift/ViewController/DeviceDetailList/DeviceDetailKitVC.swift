@@ -77,12 +77,29 @@ class DeviceDetailKitVC: DeviceListBaseVC {
             alert.addAction(UIAlertAction(title: "批量ota", style: .default, handler: { action in
                 self.batchOTA(with: device)
             }))
+            
+            alert.addAction(UIAlertAction(title: "按键防误触", style: .default, handler: { action in
+                self.antiMisoperation(with: device)
+            }))
+            
+            alert.addAction(UIAlertAction(title: "远程重启", style: .default, handler: { action in
+                self.remoteReboot(with: device)
+            }))
         }
         
         alert.addAction(UIAlertAction(title: "取消", style: .cancel))
         self.present(alert, animated: true)
     }
     
+    func remoteReboot(with device: ThingSmartDeviceModel) {
+        let vc = RemoteLaunchVC(deviceId: device.devId)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func antiMisoperation(with device: ThingSmartDeviceModel) {
+        let vc = DeviceAntiMisoperationVC(deviceId: device.devId)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     var service: ThingGroupServiceProtocol?
     func createGroup(with device: ThingSmartDeviceModel) {

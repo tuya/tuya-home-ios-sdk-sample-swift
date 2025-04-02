@@ -28,6 +28,8 @@
 		23D380392AE671B40012A1B3 /* SceneShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D380382AE671B40012A1B3 /* SceneShowCell.swift */; };
 		23D3803B2AE672A10012A1B3 /* SceneAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3803A2AE672A10012A1B3 /* SceneAddCell.swift */; };
 		345DFE522BBAC5B4001408AC /* DeviceOfflineReminderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345DFE512BBAC5B4001408AC /* DeviceOfflineReminderVC.swift */; };
+		42317F1C2D93D4AB000E65D5 /* RemoteLaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42317F1B2D93D4AB000E65D5 /* RemoteLaunchVC.swift */; };
+		42317F1E2D93D4B8000E65D5 /* DeviceAntiMisoperationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42317F1D2D93D4B8000E65D5 /* DeviceAntiMisoperationVC.swift */; };
 		4248D8C22C7F413C006D33D3 /* ShareRelationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248D8BB2C7F413C006D33D3 /* ShareRelationVC.swift */; };
 		4248D8C32C7F413C006D33D3 /* SharerDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248D8BC2C7F413C006D33D3 /* SharerDetailVC.swift */; };
 		4248D8C42C7F413C006D33D3 /* AddShareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248D8BD2C7F413C006D33D3 /* AddShareVC.swift */; };
@@ -124,6 +126,8 @@
 		82FBA9892AB1BA7F00822B41 /* BEEditHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA9882AB1BA7F00822B41 /* BEEditHome.storyboard */; };
 		82FBA98B2AB1BACD00822B41 /* BEEditHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FBA98A2AB1BACD00822B41 /* BEEditHomeViewController.swift */; };
 		90B256D14D9D33DDD7C2D270 /* libPods-TuyaAppSDKWidgetExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B34D69CC18757CD0BDF6FA0 /* libPods-TuyaAppSDKWidgetExtension.a */; };
+		9811CD652D7ACF8900EDB06F /* BEDualModelPlus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9811CD632D7ACF8900EDB06F /* BEDualModelPlus.storyboard */; };
+		9811CD6A2D7AD9C700EDB06F /* BEDualModePlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B53BA62D79865F0002B024 /* BEDualModePlusViewController.swift */; };
 		9813B6A02AA5E234001646C0 /* DeviceNetworkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9813B69F2AA5E234001646C0 /* DeviceNetworkListViewController.swift */; };
 		9813B6AF2AA71593001646C0 /* TuyaLinkBind.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9813B6A12AA71592001646C0 /* TuyaLinkBind.storyboard */; };
 		9813B6B02AA71593001646C0 /* APMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9813B6A32AA71592001646C0 /* APMode.storyboard */; };
@@ -145,6 +149,7 @@
 		98B4A1EE2AB4622E004D759E /* BEMatter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98B4A1EC2AB4622E004D759E /* BEMatter.storyboard */; };
 		98B4A1FA2AB46A6C004D759E /* MatterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4A1F92AB46A6C004D759E /* MatterViewController.swift */; };
 		98B4A1FC2AB7E4AA004D759E /* BEDeviceNetworkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4A1FB2AB7E4AA004D759E /* BEDeviceNetworkListViewController.swift */; };
+		98B53BAA2D7986BA0002B024 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B53BA92D7986AB0002B024 /* DeviceTableViewCell.swift */; };
 		AF00605D25EC968A001462B8 /* TimeZoneTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF00605C25EC968A001462B8 /* TimeZoneTableViewController.swift */; };
 		AF00606125ECBF3A001462B8 /* TemperatureUnitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF00606025ECBF3A001462B8 /* TemperatureUnitTableViewController.swift */; };
 		AF00606725EE638D001462B8 /* BEBLEModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF00606625EE638D001462B8 /* BEBLEModeViewController.swift */; };
@@ -260,6 +265,8 @@
 		23D380382AE671B40012A1B3 /* SceneShowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneShowCell.swift; sourceTree = "<group>"; };
 		23D3803A2AE672A10012A1B3 /* SceneAddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneAddCell.swift; sourceTree = "<group>"; };
 		345DFE512BBAC5B4001408AC /* DeviceOfflineReminderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceOfflineReminderVC.swift; sourceTree = "<group>"; };
+		42317F1B2D93D4AB000E65D5 /* RemoteLaunchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteLaunchVC.swift; sourceTree = "<group>"; };
+		42317F1D2D93D4B8000E65D5 /* DeviceAntiMisoperationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceAntiMisoperationVC.swift; sourceTree = "<group>"; };
 		4248D8BB2C7F413C006D33D3 /* ShareRelationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareRelationVC.swift; sourceTree = "<group>"; };
 		4248D8BC2C7F413C006D33D3 /* SharerDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharerDetailVC.swift; sourceTree = "<group>"; };
 		4248D8BD2C7F413C006D33D3 /* AddShareVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddShareVC.swift; sourceTree = "<group>"; };
@@ -363,6 +370,9 @@
 		82FBA9822AB1A75B00822B41 /* BEDeleteHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEDeleteHomeViewController.swift; sourceTree = "<group>"; };
 		82FBA9882AB1BA7F00822B41 /* BEEditHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BEEditHome.storyboard; sourceTree = "<group>"; };
 		82FBA98A2AB1BACD00822B41 /* BEEditHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEEditHomeViewController.swift; sourceTree = "<group>"; };
+		9811CD642D7ACF8900EDB06F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BEDualModelPlus.storyboard; sourceTree = "<group>"; };
+		9811CD692D7ACF9C00EDB06F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BEDualModelPlus.strings"; sourceTree = "<group>"; };
+		9811CD6B2D7ADAAE00EDB06F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BEDualModelPlus.strings; sourceTree = "<group>"; };
 		9813B69F2AA5E234001646C0 /* DeviceNetworkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceNetworkListViewController.swift; sourceTree = "<group>"; };
 		9813B6A22AA71592001646C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TuyaLinkBind.storyboard; sourceTree = "<group>"; };
 		9813B6A42AA71592001646C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/APMode.storyboard; sourceTree = "<group>"; };
@@ -394,6 +404,9 @@
 		98B4A1F82AB467DA004D759E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Matter.strings"; sourceTree = "<group>"; };
 		98B4A1F92AB46A6C004D759E /* MatterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatterViewController.swift; sourceTree = "<group>"; };
 		98B4A1FB2AB7E4AA004D759E /* BEDeviceNetworkListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BEDeviceNetworkListViewController.swift; sourceTree = "<group>"; };
+		98B53BA62D79865F0002B024 /* BEDualModePlusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BEDualModePlusViewController.swift; sourceTree = "<group>"; };
+		98B53BA92D7986AB0002B024 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
+		98F9F1632D953B8000EF1F5C /* MatterExtensionDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MatterExtensionDebug.entitlements; sourceTree = "<group>"; };
 		ADF1C57BE833A3E9DD4D8CFD /* Pods-MatterExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatterExtension.debug.xcconfig"; path = "Target Support Files/Pods-MatterExtension/Pods-MatterExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		AF00605C25EC968A001462B8 /* TimeZoneTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneTableViewController.swift; sourceTree = "<group>"; };
 		AF00606025ECBF3A001462B8 /* TemperatureUnitTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureUnitTableViewController.swift; sourceTree = "<group>"; };
@@ -508,6 +521,7 @@
 		0FF096B62AB3F137003C6BDA /* MatterExtension */ = {
 			isa = PBXGroup;
 			children = (
+				98F9F1632D953B8000EF1F5C /* MatterExtensionDebug.entitlements */,
 				0FF096C12AB3F13E003C6BDA /* MatterExtension.entitlements */,
 				0FF096B72AB3F137003C6BDA /* RequestHandler.swift */,
 				0FF096B92AB3F137003C6BDA /* Info.plist */,
@@ -540,6 +554,22 @@
 				23C2FE4D2AE7BAC2004F2E8F /* SceneDPViewController.swift */,
 			);
 			path = "Scene Management";
+			sourceTree = "<group>";
+		};
+		42317F192D93D482000E65D5 /* RemoteReboot */ = {
+			isa = PBXGroup;
+			children = (
+				42317F1B2D93D4AB000E65D5 /* RemoteLaunchVC.swift */,
+			);
+			path = RemoteReboot;
+			sourceTree = "<group>";
+		};
+		42317F1A2D93D48E000E65D5 /* AntiMisoperation */ = {
+			isa = PBXGroup;
+			children = (
+				42317F1D2D93D4B8000E65D5 /* DeviceAntiMisoperationVC.swift */,
+			);
+			path = AntiMisoperation;
 			sourceTree = "<group>";
 		};
 		4248D8BA2C7F413C006D33D3 /* Share */ = {
@@ -618,6 +648,8 @@
 		42D0EFD72ABC49580021AC7E /* DeviceDetailList */ = {
 			isa = PBXGroup;
 			children = (
+				42317F1A2D93D48E000E65D5 /* AntiMisoperation */,
+				42317F192D93D482000E65D5 /* RemoteReboot */,
 				424A9A462D12AD3E002F5193 /* AssociationControl */,
 				424A9A432D12ABDC002F5193 /* Timer */,
 				424A9A422D12ABC5002F5193 /* DeviceInfo */,
@@ -821,6 +853,7 @@
 		98B4A1F62AB462D4004D759E /* BE */ = {
 			isa = PBXGroup;
 			children = (
+				9811CD632D7ACF8900EDB06F /* BEDualModelPlus.storyboard */,
 				AF3B498A25B8093600286C4A /* BEAPMode.storyboard */,
 				AF5E66CD25F77D6B001D3C15 /* BEBLE.storyboard */,
 				67956198289A626300BD0FAB /* BETuyaLinkBind.storyboard */,
@@ -834,9 +867,19 @@
 			path = BE;
 			sourceTree = "<group>";
 		};
+		98B53BA82D7986A30002B024 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				98B53BA92D7986AB0002B024 /* DeviceTableViewCell.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
 		AF21C20425B03FAC00D52FBA /* BE Device Network Configuration  */ = {
 			isa = PBXGroup;
 			children = (
+				98B53BA82D7986A30002B024 /* util */,
+				98B53BA62D79865F0002B024 /* BEDualModePlusViewController.swift */,
 				98B4A1EA2AB4620B004D759E /* BEMatterTableViewController.swift */,
 				98B4A1FB2AB7E4AA004D759E /* BEDeviceNetworkListViewController.swift */,
 				9883F4D22A5FE8A4003202EE /* BETuyaLinkDeviceBindTableViewController.swift */,
@@ -1159,6 +1202,7 @@
 				823969872AB068A400BA2394 /* BECreateHome.storyboard in Resources */,
 				9813B6B52AA71593001646C0 /* ZigbeeGateway.storyboard in Resources */,
 				825225B62AA9770300E05943 /* HomeManagement.storyboard in Resources */,
+				9811CD652D7ACF8900EDB06F /* BEDualModelPlus.storyboard in Resources */,
 				AF5E2F4025A5A08600DAF14E /* Main.storyboard in Resources */,
 				AF60B8C225BEBA1600E18F6F /* InfoPlist.strings in Resources */,
 				0534EC1C2ABAED1100DD6E7E /* iconfont.ttf in Resources */,
@@ -1353,6 +1397,7 @@
 				424A9A4C2D12AD3E002F5193 /* MultiControlVC.swift in Sources */,
 				82B55BA42AB30CD600FBE30B /* BERoomDetailViewController.swift in Sources */,
 				345DFE522BBAC5B4001408AC /* DeviceOfflineReminderVC.swift in Sources */,
+				9811CD6A2D7AD9C700EDB06F /* BEDualModePlusViewController.swift in Sources */,
 				0534EC1E2ABAED2800DD6E7E /* Cardcell.swift in Sources */,
 				98B4A1EB2AB4620B004D759E /* BEMatterTableViewController.swift in Sources */,
 				AF3A25C525AE930E003EB9FF /* SwitchHomeTableViewController.swift in Sources */,
@@ -1390,6 +1435,7 @@
 				AF3A25D025AECFCF003EB9FF /* HomeDetailTableViewController.swift in Sources */,
 				98B4A1FA2AB46A6C004D759E /* MatterViewController.swift in Sources */,
 				AF3A25BD25AD9AE1003EB9FF /* NewHomeTableViewController.swift in Sources */,
+				98B53BAA2D7986BA0002B024 /* DeviceTableViewCell.swift in Sources */,
 				23D3803B2AE672A10012A1B3 /* SceneAddCell.swift in Sources */,
 				82090CF62C64B09A00D184CB /* MessageDNDDetailViewController.swift in Sources */,
 				82090CFA2C64B09A00D184CB /* MessageDNDSettingCell.swift in Sources */,
@@ -1412,6 +1458,7 @@
 				9813B6D72AA719E0001646C0 /* APModeTableViewController.swift in Sources */,
 				AF5E2F5225A5D60B00DAF14E /* Alert.swift in Sources */,
 				23D380392AE671B40012A1B3 /* SceneShowCell.swift in Sources */,
+				42317F1E2D93D4B8000E65D5 /* DeviceAntiMisoperationVC.swift in Sources */,
 				AF3A25B925AD7CC1003EB9FF /* UserInformationTableViewController.swift in Sources */,
 				82B55B982AB2FE3D00FBE30B /* BEInvitedHomeViewController.swift in Sources */,
 				9813B6D62AA719E0001646C0 /* ZigbeeGatewayViewController.swift in Sources */,
@@ -1434,6 +1481,7 @@
 				9813B6D42AA719E0001646C0 /* BLEModeViewController.swift in Sources */,
 				82B55BA22AB30A0A00FBE30B /* BEAddRoomViewController.swift in Sources */,
 				82B55A502AB1E2B500FBE30B /* BECreateInvitationViewController.swift in Sources */,
+				42317F1C2D93D4AB000E65D5 /* RemoteLaunchVC.swift in Sources */,
 				AF3A25B525A9ADD6003EB9FF /* AccountType.swift in Sources */,
 				AF37DBB425AEE842000EB0FD /* EditHomeTableViewController.swift in Sources */,
 				42D0EFDE2ABC49580021AC7E /* DeviceDetailKitVC.swift in Sources */,
@@ -1573,6 +1621,16 @@
 				82B55B8A2AB2E5CA00FBE30B /* zh-Hans */,
 			);
 			name = FunctionList.storyboard;
+			sourceTree = "<group>";
+		};
+		9811CD632D7ACF8900EDB06F /* BEDualModelPlus.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9811CD642D7ACF8900EDB06F /* Base */,
+				9811CD692D7ACF9C00EDB06F /* zh-Hans */,
+				9811CD6B2D7ADAAE00EDB06F /* en */,
+			);
+			name = BEDualModelPlus.storyboard;
 			sourceTree = "<group>";
 		};
 		9813B6A12AA71592001646C0 /* TuyaLinkBind.storyboard */ = {
@@ -1806,7 +1864,7 @@
 			baseConfigurationReference = ADF1C57BE833A3E9DD4D8CFD /* Pods-MatterExtension.debug.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_ENTITLEMENTS = MatterExtension/MatterExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MatterExtension/MatterExtensionDebug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 94JFPTRDN5;
@@ -1821,7 +1879,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.thingclips.test1001.MatterExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thingclips.test1001.SDKmMatterExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;

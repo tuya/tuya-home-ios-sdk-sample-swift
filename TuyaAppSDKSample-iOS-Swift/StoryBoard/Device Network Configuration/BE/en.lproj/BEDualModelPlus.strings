@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Scan QRCode"; ObjectID = "GHG-wM-rlT"; */
+"GHG-wM-rlT.text" = "Scan QRCode";
+
+/* Class = "UITextField"; placeholder = "Wi-Fi SSID"; ObjectID = "UAw-eC-PPu"; */
+"UAw-eC-PPu.placeholder" = "Wi-Fi SSID";
+
+/* Class = "UITableViewSection"; headerTitle = "WiFi devices require a network router account and password"; ObjectID = "mdb-Bi-CY7"; */
+"mdb-Bi-CY7.headerTitle" = "WiFi devices require a network router account and password";
+
+/* Class = "UITextField"; placeholder = "Wi-Fi Password"; ObjectID = "nNx-6A-06d"; */
+"nNx-6A-06d.placeholder" = "Wi-Fi Password";

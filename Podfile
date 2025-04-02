@@ -1,7 +1,9 @@
-source 'https://github.com/CocoaPods/Specs'
+source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/tuya/tuya-pod-specs.git'
 
+
 platform :ios, '12.0'
+
 
 target 'TuyaAppSDKSample-iOS-Swift' do
   use_modular_headers!
@@ -14,25 +16,25 @@ target 'TuyaAppSDKSample-iOS-Swift' do
   pod 'ThingSmartCryption', :path => './ios_core_sdk'
   
   # [Required] Basic
-  pod 'ThingSmartHomeKit', '~> 6.0.0'
-  pod 'ThingSmartBusinessExtensionKit', '~> 6.0.0'
+  pod 'ThingSmartHomeKit', '~> 6.2.0'
+  pod 'ThingSmartBusinessExtensionKit', '~> 6.2.0'
   
   # [Optional] Bluetooth
-  pod 'ThingSmartBusinessExtensionKitBLEExtra','~> 6.0.0'
+  pod 'ThingSmartBusinessExtensionKitBLEExtra','~> 6.2.0'
   
   # [Optional] Matter
-  pod 'ThingSmartMatterKit', '~> 5.18.0'
+  pod 'ThingSmartMatterKit', '~> 5.20.0'
   pod 'ThingSmartMatterExtensionKit', '~> 5.17.0'
-  pod 'ThingSmartBusinessExtensionKitMatterExtra','~> 6.0.0'
+  pod 'ThingSmartBusinessExtensionKitMatterExtra','~> 6.2.0'
   
   # [Optional] HomeKit Device
-  pod 'ThingSmartAppleDeviceKit', '~> 6.0.0'
+  pod 'ThingSmartAppleDeviceKit', '~> 6.2.0'
   
   # [Optional] Special category
-  pod 'ThingSmartCameraKit', '~> 6.0.0'
-  pod 'ThingSmartOutdoorKit', '~> 6.0.0'
-  pod 'ThingSmartSweeperKit', '~> 6.0.0'
-  pod 'ThingSmartLockKit', '~> 6.0.0'
+  pod 'ThingSmartCameraKit', '~> 6.2.0'
+  pod 'ThingSmartOutdoorKit', '~> 6.2.0'
+  pod 'ThingSmartSweeperKit', '~> 6.2.0'
+  pod 'ThingSmartLockKit', '~> 6.2.0'
   
   # The following components are only required for this demo and are not necessary when integrating into your own project.
   pod 'SVProgressHUD'
@@ -49,8 +51,8 @@ target 'MatterExtension' do
 end
 
 target 'TuyaAppSDKWidgetExtension' do
-  pod 'ThingSmartHomeKit', '~> 6.0.0'
-  pod 'SDWebImage', '~> 5.21.0'
+ pod 'ThingSmartHomeKit', '~> 6.2.0'
+ pod 'SDWebImage', '~> 5.21.0'
 end
 
 
