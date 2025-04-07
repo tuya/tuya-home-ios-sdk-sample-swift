@@ -82,5 +82,6 @@ extension UserInformationTableViewController: CLLocationManagerDelegate {
         guard let location = manager.location?.coordinate else { return }
         ThingSmartSDK.sharedInstance().updateLatitude(location.latitude, longitude: location.longitude)
         Alert.showBasicAlert(on: self, with: "Update Successfully", message: "")
+        locationManager.stopUpdatingLocation();
     }
 }
