@@ -17,12 +17,7 @@ class TuyaAppSDKWidgetDataManager {
          * Init SDK, must set app group id
          */
         ThingSmartSDK.sharedInstance().appGroupId = "your group id"
-#if DEBUG
-        ThingSmartSDK.sharedInstance().debugMode = true
-        ThingSmartSDK.sharedInstance().env = ThingEnv.prepare
-#else
         ThingSmartSDK.sharedInstance().env = ThingEnv.release
-#endif
         ThingSmartSDK.sharedInstance().start(withAppKey: AppKey.appKey, secretKey: AppKey.secretKey)
     }
     
