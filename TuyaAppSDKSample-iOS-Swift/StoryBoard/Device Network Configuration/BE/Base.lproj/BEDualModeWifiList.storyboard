@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="abc-def-ghi">
+            <objects>
+                <navigationController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nav-bar-id">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="main-vc-id" kind="relationship" relationship="rootViewController" id="root-segue-id"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="first-responder-1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-710" y="4"/>
+        </scene>
+        <!--Dual Mode WiFi List-->
+        <scene sceneID="main-scene-id">
+            <objects>
+                <viewController storyboardIdentifier="BEDualModeWifiListTableViewController" id="main-vc-id" customClass="BEDualModeWifiListTableViewController" customModule="TuyaAppSDKSample_iOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="main-view-id">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="table-view-id">
+                                <rect key="frame" x="0.0" y="103" width="393" height="581"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="cell-title" detailTextLabel="cell-detail" style="IBUITableViewCellStyleSubtitle" id="cell-id">
+                                        <rect key="frame" x="0.0" y="55.333332061767578" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cell-id" id="cell-content-id">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cell-title">
+                                                    <rect key="frame" x="20" y="6.0000000000000009" width="25" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cell-detail">
+                                                    <rect key="frame" x="19.999999999999996" y="22.333333333333336" width="43.666666666666664" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="main-vc-id" id="datasource-connection"/>
+                                    <outlet property="delegate" destination="main-vc-id" id="delegate-connection"/>
+                                </connections>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="WiFi Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="password-field-id">
+                                <rect key="frame" x="20" y="704" width="353" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="connect-button-id">
+                                <rect key="frame" x="20" y="758" width="353" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Connect"/>
+                                <connections>
+                                    <action selector="connectButtonTapped:" destination="main-vc-id" eventType="touchUpInside" id="connect-action"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="safe-area-id"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="safe-area-id" firstAttribute="trailing" secondItem="connect-button-id" secondAttribute="trailing" constant="20" id="constraint-1"/>
+                            <constraint firstItem="password-field-id" firstAttribute="top" secondItem="table-view-id" secondAttribute="bottom" constant="20" id="constraint-10"/>
+                            <constraint firstItem="password-field-id" firstAttribute="leading" secondItem="safe-area-id" secondAttribute="leading" constant="20" id="constraint-2"/>
+                            <constraint firstItem="safe-area-id" firstAttribute="trailing" secondItem="password-field-id" secondAttribute="trailing" constant="20" id="constraint-3"/>
+                            <constraint firstItem="connect-button-id" firstAttribute="top" secondItem="password-field-id" secondAttribute="bottom" constant="20" id="constraint-4"/>
+                            <constraint firstItem="connect-button-id" firstAttribute="leading" secondItem="safe-area-id" secondAttribute="leading" constant="20" id="constraint-5"/>
+                            <constraint firstItem="safe-area-id" firstAttribute="bottom" secondItem="connect-button-id" secondAttribute="bottom" constant="25" id="constraint-6"/>
+                            <constraint firstItem="table-view-id" firstAttribute="leading" secondItem="safe-area-id" secondAttribute="leading" id="constraint-7"/>
+                            <constraint firstItem="safe-area-id" firstAttribute="trailing" secondItem="table-view-id" secondAttribute="trailing" id="constraint-8"/>
+                            <constraint firstItem="table-view-id" firstAttribute="top" secondItem="safe-area-id" secondAttribute="top" id="constraint-9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dual Mode WiFi List" id="nav-item-id"/>
+                    <connections>
+                        <outlet property="connectButton" destination="connect-button-id" id="connect-button-outlet"/>
+                        <outlet property="passwordTextField" destination="password-field-id" id="password-field-outlet"/>
+                        <outlet property="tableView" destination="table-view-id" id="table-view-outlet"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="second-responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

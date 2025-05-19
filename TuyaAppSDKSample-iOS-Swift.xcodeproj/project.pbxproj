@@ -27,6 +27,8 @@
 		23D380372AE671A40012A1B3 /* SceneTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D380362AE671A40012A1B3 /* SceneTypeCell.swift */; };
 		23D380392AE671B40012A1B3 /* SceneShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D380382AE671B40012A1B3 /* SceneShowCell.swift */; };
 		23D3803B2AE672A10012A1B3 /* SceneAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3803A2AE672A10012A1B3 /* SceneAddCell.swift */; };
+		3369313E2DDB1CBE0077BF78 /* BEDualModeWifiList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3369313C2DDB1CBE0077BF78 /* BEDualModeWifiList.storyboard */; };
+		33A43D5A2DDB1D7800C3CE31 /* BEDualModeWifiListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A43D592DDB1D7800C3CE31 /* BEDualModeWifiListTableViewController.swift */; };
 		345DFE522BBAC5B4001408AC /* DeviceOfflineReminderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345DFE512BBAC5B4001408AC /* DeviceOfflineReminderVC.swift */; };
 		42317F1C2D93D4AB000E65D5 /* RemoteLaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42317F1B2D93D4AB000E65D5 /* RemoteLaunchVC.swift */; };
 		42317F1E2D93D4B8000E65D5 /* DeviceAntiMisoperationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42317F1D2D93D4B8000E65D5 /* DeviceAntiMisoperationVC.swift */; };
@@ -264,6 +266,8 @@
 		23D380362AE671A40012A1B3 /* SceneTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneTypeCell.swift; sourceTree = "<group>"; };
 		23D380382AE671B40012A1B3 /* SceneShowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneShowCell.swift; sourceTree = "<group>"; };
 		23D3803A2AE672A10012A1B3 /* SceneAddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneAddCell.swift; sourceTree = "<group>"; };
+		3369313D2DDB1CBE0077BF78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BEDualModeWifiList.storyboard; sourceTree = "<group>"; };
+		33A43D592DDB1D7800C3CE31 /* BEDualModeWifiListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEDualModeWifiListTableViewController.swift; sourceTree = "<group>"; };
 		345DFE512BBAC5B4001408AC /* DeviceOfflineReminderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceOfflineReminderVC.swift; sourceTree = "<group>"; };
 		42317F1B2D93D4AB000E65D5 /* RemoteLaunchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteLaunchVC.swift; sourceTree = "<group>"; };
 		42317F1D2D93D4B8000E65D5 /* DeviceAntiMisoperationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceAntiMisoperationVC.swift; sourceTree = "<group>"; };
@@ -853,6 +857,7 @@
 		98B4A1F62AB462D4004D759E /* BE */ = {
 			isa = PBXGroup;
 			children = (
+				3369313C2DDB1CBE0077BF78 /* BEDualModeWifiList.storyboard */,
 				9811CD632D7ACF8900EDB06F /* BEDualModelPlus.storyboard */,
 				AF3B498A25B8093600286C4A /* BEAPMode.storyboard */,
 				AF5E66CD25F77D6B001D3C15 /* BEBLE.storyboard */,
@@ -878,6 +883,7 @@
 		AF21C20425B03FAC00D52FBA /* BE Device Network Configuration  */ = {
 			isa = PBXGroup;
 			children = (
+				33A43D592DDB1D7800C3CE31 /* BEDualModeWifiListTableViewController.swift */,
 				98B53BA82D7986A30002B024 /* util */,
 				98B53BA62D79865F0002B024 /* BEDualModePlusViewController.swift */,
 				98B4A1EA2AB4620B004D759E /* BEMatterTableViewController.swift */,
@@ -1203,6 +1209,7 @@
 				9813B6B52AA71593001646C0 /* ZigbeeGateway.storyboard in Resources */,
 				825225B62AA9770300E05943 /* HomeManagement.storyboard in Resources */,
 				9811CD652D7ACF8900EDB06F /* BEDualModelPlus.storyboard in Resources */,
+				3369313E2DDB1CBE0077BF78 /* BEDualModeWifiList.storyboard in Resources */,
 				AF5E2F4025A5A08600DAF14E /* Main.storyboard in Resources */,
 				AF60B8C225BEBA1600E18F6F /* InfoPlist.strings in Resources */,
 				0534EC1C2ABAED1100DD6E7E /* iconfont.ttf in Resources */,
@@ -1421,6 +1428,7 @@
 				426271CA2BDF2E7E00DF0384 /* GatewayTransferController.swift in Sources */,
 				82FBA98B2AB1BACD00822B41 /* BEEditHomeViewController.swift in Sources */,
 				AF00607225EE6C79001462B8 /* BEZigbeeSubdeviceTableViewController.swift in Sources */,
+				33A43D5A2DDB1D7800C3CE31 /* BEDualModeWifiListTableViewController.swift in Sources */,
 				AF3A259C25A835AE003EB9FF /* MainViewController.swift in Sources */,
 				AF3A25A425A8426D003EB9FF /* UIButtonExtension.swift in Sources */,
 				82090CF92C64B09A00D184CB /* MessageDNDRepeatCell.swift in Sources */,
@@ -1544,6 +1552,14 @@
 				98B4A1F82AB467DA004D759E /* zh-Hans */,
 			);
 			name = Matter.storyboard;
+			sourceTree = "<group>";
+		};
+		3369313C2DDB1CBE0077BF78 /* BEDualModeWifiList.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3369313D2DDB1CBE0077BF78 /* Base */,
+			);
+			name = BEDualModeWifiList.storyboard;
 			sourceTree = "<group>";
 		};
 		67956198289A626300BD0FAB /* BETuyaLinkBind.storyboard */ = {

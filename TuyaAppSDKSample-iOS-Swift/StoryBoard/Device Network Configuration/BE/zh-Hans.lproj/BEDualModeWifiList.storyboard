@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <navigationController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ief-a0-LHa">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="abc-def-ghi" kind="relationship" relationship="rootViewController" id="jkl-mno-pqr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="stu-vwx-yz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-710" y="4"/>
+        </scene>
+        <!--Dual Mode WiFi List-->
+        <scene sceneID="abc-def-ghi">
+            <objects>
+                <viewController storyboardIdentifier="BEDualModeWifiListTableViewController" id="abc-def-ghi" customClass="BEDualModeWifiListTableViewController" customModule="TuyaAppSDKSample_iOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hgP-7h-WdC">
+                                <rect key="frame" x="0.0" y="103" width="393" height="615"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="abc-123-def" detailTextLabel="ghi-456-jkl" style="IBUITableViewCellStyleValue1" id="mno-789-pqr">
+                                        <rect key="frame" x="0.0" y="55.333332061767578" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mno-789-pqr" id="stu-012-vwx">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="abc-123-def">
+                                                    <rect key="frame" x="20" y="12" width="33" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ghi-456-jkl">
+                                                    <rect key="frame" x="329" y="12" width="44" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="abc-def-ghi" id="gNc-Nh-dg6"/>
+                                    <outlet property="delegate" destination="abc-def-ghi" id="WQf-ch-JgE"/>
+                                </connections>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="WiFi Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vWg-dh-hgf">
+                                <rect key="frame" x="20" y="738" width="353" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bK5-h8-e5e">
+                                <rect key="frame" x="20" y="792" width="353" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Connect"/>
+                                <connections>
+                                    <action selector="connectButtonTapped:" destination="abc-def-ghi" eventType="touchUpInside" id="hgf-Nh-dg7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bK5-h8-e5e" secondAttribute="trailing" constant="20" id="0gh-Nh-dg7"/>
+                            <constraint firstItem="vWg-dh-hgf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="1gh-Nh-dg7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="vWg-dh-hgf" secondAttribute="trailing" constant="20" id="2gh-Nh-dg7"/>
+                            <constraint firstItem="bK5-h8-e5e" firstAttribute="top" secondItem="vWg-dh-hgf" secondAttribute="bottom" constant="20" id="3gh-Nh-dg7"/>
+                            <constraint firstItem="bK5-h8-e5e" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="4gh-Nh-dg7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="bK5-h8-e5e" secondAttribute="bottom" constant="25" id="5gh-Nh-dg7"/>
+                            <constraint firstItem="hgP-7h-WdC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="6gh-Nh-dg7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hgP-7h-WdC" secondAttribute="trailing" id="7gh-Nh-dg7"/>
+                            <constraint firstItem="hgP-7h-WdC" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="8gh-Nh-dg7"/>
+                            <constraint firstItem="vWg-dh-hgf" firstAttribute="top" secondItem="hgP-7h-WdC" secondAttribute="bottom" constant="20" id="9gh-Nh-dg7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dual Mode WiFi List" id="xyz-345-abc"/>
+                    <connections>
+                        <outlet property="connectButton" destination="bK5-h8-e5e" id="abc-Nh-dg7"/>
+                        <outlet property="passwordTextField" destination="vWg-dh-hgf" id="def-Nh-dg7"/>
+                        <outlet property="tableView" destination="hgP-7h-WdC" id="ghi-Nh-dg7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jkl-678-mno" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
