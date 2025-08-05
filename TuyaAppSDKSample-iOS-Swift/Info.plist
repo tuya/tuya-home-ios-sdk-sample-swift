@@ -31,12 +31,16 @@
 	</array>
 	<key>NSCameraUsageDescription</key>
 	<string>For better usage, we will suggest you to give us the permissions to use your location</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>For better usage, we will suggest you to give us the permissions to use your local network</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>For better usage, we will suggest you to give us the permissions to use your location.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>For better usage, we will suggest you to give us the permissions to use your location.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>For better usage, we will suggest you to give us the permissions to use your location</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>For better usage, we will suggest you to give us the permissions to use your microphone</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>iconfont.ttf</string>

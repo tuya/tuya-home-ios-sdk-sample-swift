@@ -54,8 +54,15 @@
 		6719AB9128A202B5000588E7 /* TextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6719AB9028A202B5000588E7 /* TextViewTableViewCell.swift */; };
 		6719AB9328A208CC000588E7 /* TuyaLinkDeviceControlController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6719AB9228A208CB000588E7 /* TuyaLinkDeviceControlController.swift */; };
 		6719AB9528A208DF000588E7 /* TuyaLinkActionMsgSendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6719AB9428A208DF000588E7 /* TuyaLinkActionMsgSendController.swift */; };
+		677DF0DB2E3C6716006759F9 /* AIStreamMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677DF0DA2E3C6716006759F9 /* AIStreamMainController.swift */; };
+		677DF0DD2E3C8AEF006759F9 /* SelectDeviceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677DF0DC2E3C8AEF006759F9 /* SelectDeviceVC.swift */; };
+		677DF0F22E3CA1C5006759F9 /* StreamChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677DF0EE2E3CA1C5006759F9 /* StreamChatController.swift */; };
+		677DF0F32E3CA1C5006759F9 /* StreamChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677DF0EF2E3CA1C5006759F9 /* StreamChatMessageCell.swift */; };
+		677DF2372E3CB199006759F9 /* StreamActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677DF2352E3CB199006759F9 /* StreamActionView.swift */; };
+		677DF2382E3CB199006759F9 /* StreamActionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 677DF2362E3CB199006759F9 /* StreamActionView.xib */; };
 		67956196289A626300BD0FAB /* BETuyaLinkBind.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67956198289A626300BD0FAB /* BETuyaLinkBind.storyboard */; };
 		6795619E289A6AED00BD0FAB /* QRCodeScanerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6795619D289A6AED00BD0FAB /* QRCodeScanerViewController.swift */; };
+		67DE7BF02E3C64C30008BA16 /* AIStream.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67DE7BEF2E3C64C30008BA16 /* AIStream.storyboard */; };
 		82090CE22C64B08700D184CB /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82090CDE2C64B08700D184CB /* Message.storyboard */; };
 		82090CE32C64B08700D184CB /* Message.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 82090CE02C64B08700D184CB /* Message.xcstrings */; };
 		82090CF32C64B09A00D184CB /* MessageAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82090CE42C64B09A00D184CB /* MessageAlarmViewController.swift */; };
@@ -295,10 +302,17 @@
 		6719AB9028A202B5000588E7 /* TextViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewTableViewCell.swift; sourceTree = "<group>"; };
 		6719AB9228A208CB000588E7 /* TuyaLinkDeviceControlController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuyaLinkDeviceControlController.swift; sourceTree = "<group>"; };
 		6719AB9428A208DF000588E7 /* TuyaLinkActionMsgSendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuyaLinkActionMsgSendController.swift; sourceTree = "<group>"; };
+		677DF0DA2E3C6716006759F9 /* AIStreamMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIStreamMainController.swift; sourceTree = "<group>"; };
+		677DF0DC2E3C8AEF006759F9 /* SelectDeviceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDeviceVC.swift; sourceTree = "<group>"; };
+		677DF0EE2E3CA1C5006759F9 /* StreamChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamChatController.swift; sourceTree = "<group>"; };
+		677DF0EF2E3CA1C5006759F9 /* StreamChatMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamChatMessageCell.swift; sourceTree = "<group>"; };
+		677DF2352E3CB199006759F9 /* StreamActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamActionView.swift; sourceTree = "<group>"; };
+		677DF2362E3CB199006759F9 /* StreamActionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StreamActionView.xib; sourceTree = "<group>"; };
 		6795618F289A55C000BD0FAB /* TuyaAppSDKSample-iOS-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TuyaAppSDKSample-iOS-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		67956197289A626300BD0FAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BETuyaLinkBind.storyboard; sourceTree = "<group>"; };
 		6795619A289A626500BD0FAB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BETuyaLinkBind.strings"; sourceTree = "<group>"; };
 		6795619D289A6AED00BD0FAB /* QRCodeScanerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScanerViewController.swift; sourceTree = "<group>"; };
+		67DE7BEF2E3C64C30008BA16 /* AIStream.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AIStream.storyboard; sourceTree = "<group>"; };
 		82090CDD2C64B08700D184CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Message.storyboard; sourceTree = "<group>"; };
 		82090CDF2C64B08700D184CB /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/Message.xcstrings; sourceTree = "<group>"; };
 		82090CE42C64B09A00D184CB /* MessageAlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageAlarmViewController.swift; sourceTree = "<group>"; };
@@ -669,6 +683,35 @@
 			path = DeviceDetailList;
 			sourceTree = "<group>";
 		};
+		677DF0EA2E3CA1AE006759F9 /* AI Chat */ = {
+			isa = PBXGroup;
+			children = (
+				677DF2352E3CB199006759F9 /* StreamActionView.swift */,
+				677DF2362E3CB199006759F9 /* StreamActionView.xib */,
+				677DF0EE2E3CA1C5006759F9 /* StreamChatController.swift */,
+				677DF0EF2E3CA1C5006759F9 /* StreamChatMessageCell.swift */,
+			);
+			path = "AI Chat";
+			sourceTree = "<group>";
+		};
+		67DE7BED2E3C64760008BA16 /* AI Stream */ = {
+			isa = PBXGroup;
+			children = (
+				677DF0EA2E3CA1AE006759F9 /* AI Chat */,
+				677DF0DA2E3C6716006759F9 /* AIStreamMainController.swift */,
+				677DF0DC2E3C8AEF006759F9 /* SelectDeviceVC.swift */,
+			);
+			path = "AI Stream";
+			sourceTree = "<group>";
+		};
+		67DE7BEE2E3C64B20008BA16 /* AI Stream */ = {
+			isa = PBXGroup;
+			children = (
+				67DE7BEF2E3C64C30008BA16 /* AIStream.storyboard */,
+			);
+			path = "AI Stream";
+			sourceTree = "<group>";
+		};
 		82090CE12C64B08700D184CB /* Message Management */ = {
 			isa = PBXGroup;
 			children = (
@@ -964,6 +1007,7 @@
 		AF5E2F3325A5A08600DAF14E /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
+				67DE7BEE2E3C64B20008BA16 /* AI Stream */,
 				82090CE12C64B08700D184CB /* Message Management */,
 				232064B72AE65874006B2E33 /* Scene Management */,
 				825900BD2AA963E80017D14C /* Home Management */,
@@ -982,6 +1026,7 @@
 		AF5E2F4625A5A4F300DAF14E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				67DE7BED2E3C64760008BA16 /* AI Stream */,
 				82090CF22C64B09A00D184CB /* Message Management */,
 				232064BC2AE658B2006B2E33 /* Scene Management */,
 				42D0EFD72ABC49580021AC7E /* DeviceDetailList */,
@@ -1204,6 +1249,7 @@
 				AF5E2F4125A5A08600DAF14E /* Login.storyboard in Resources */,
 				232064BB2AE6588C006B2E33 /* AddScene.storyboard in Resources */,
 				82B55B962AB2FE0700FBE30B /* BEInvitedHome.storyboard in Resources */,
+				677DF2382E3CB199006759F9 /* StreamActionView.xib in Resources */,
 				82B55BA62AB311DF00FBE30B /* BECreateDefaultHome.storyboard in Resources */,
 				823969872AB068A400BA2394 /* BECreateHome.storyboard in Resources */,
 				9813B6B52AA71593001646C0 /* ZigbeeGateway.storyboard in Resources */,
@@ -1216,6 +1262,7 @@
 				9813B6B12AA71593001646C0 /* ZigbeeSubdevice.storyboard in Resources */,
 				0534EC1B2ABAED1100DD6E7E /* iconfont.json in Resources */,
 				AF5531E925A5992800E13562 /* Assets.xcassets in Resources */,
+				67DE7BF02E3C64C30008BA16 /* AIStream.storyboard in Resources */,
 				82B55B872AB2E5BD00FBE30B /* BE FunctionList.storyboard in Resources */,
 				9813B6B32AA71593001646C0 /* EZMode.storyboard in Resources */,
 				9813B6AF2AA71593001646C0 /* TuyaLinkBind.storyboard in Resources */,
@@ -1260,9 +1307,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKWidgetExtension/Pods-TuyaAppSDKWidgetExtension-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKWidgetExtension/Pods-TuyaAppSDKWidgetExtension-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1321,9 +1372,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1360,9 +1415,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1408,10 +1467,12 @@
 				0534EC1E2ABAED2800DD6E7E /* Cardcell.swift in Sources */,
 				98B4A1EB2AB4620B004D759E /* BEMatterTableViewController.swift in Sources */,
 				AF3A25C525AE930E003EB9FF /* SwitchHomeTableViewController.swift in Sources */,
+				677DF0DD2E3C8AEF006759F9 /* SelectDeviceVC.swift in Sources */,
 				AF96129925B58CE1000971CC /* DeviceControlTableViewController.swift in Sources */,
 				8239697E2AB060CF00BA2394 /* BEHomeManagementViewController.swift in Sources */,
 				82B55BA82AB3128600FBE30B /* BECreateDefaultHomeViewController.swift in Sources */,
 				424A9A4A2D12AD3E002F5193 /* DoubleControlVC.swift in Sources */,
+				677DF2372E3CB199006759F9 /* StreamActionView.swift in Sources */,
 				239B586C2AE79C7400F7F2AD /* SceneSectionType.swift in Sources */,
 				82090CFC2C64B09A00D184CB /* MessageDNDViewController.swift in Sources */,
 				AF00606B25EE6A41001462B8 /* BEDualModeTableViewController.swift in Sources */,
@@ -1482,6 +1543,7 @@
 				9813B6D82AA719E0001646C0 /* DualModeTableViewController.swift in Sources */,
 				82090D002C64B09A00D184CB /* MessageThrottleViewController.swift in Sources */,
 				AF00606125ECBF3A001462B8 /* TemperatureUnitTableViewController.swift in Sources */,
+				677DF0DB2E3C6716006759F9 /* AIStreamMainController.swift in Sources */,
 				82B55A542AB1E56800FBE30B /* BEInvitationListViewController.swift in Sources */,
 				23C2FE4A2AE7B204004F2E8F /* SceneDeviceViewController.swift in Sources */,
 				AF5E2F4D25A5D28A00DAF14E /* RegisterTableViewController.swift in Sources */,
@@ -1505,6 +1567,8 @@
 				9813B6D22AA719E0001646C0 /* ZigbeeSubdeviceTableViewController.swift in Sources */,
 				AF60B88C25BBC1F600E18F6F /* BEAPModeTableViewController.swift in Sources */,
 				AF9612F325B6C6ED000971CC /* SliderTableViewCell.swift in Sources */,
+				677DF0F22E3CA1C5006759F9 /* StreamChatController.swift in Sources */,
+				677DF0F32E3CA1C5006759F9 /* StreamChatMessageCell.swift in Sources */,
 				82090CFD2C64B09A00D184CB /* MessageFamilyViewController.swift in Sources */,
 				98B4A1FC2AB7E4AA004D759E /* BEDeviceNetworkListViewController.swift in Sources */,
 				9813B6A02AA5E234001646C0 /* DeviceNetworkListViewController.swift in Sources */,
