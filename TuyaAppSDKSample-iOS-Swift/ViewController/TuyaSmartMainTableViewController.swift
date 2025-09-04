@@ -49,10 +49,15 @@ class ThingSmartMainTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        // Logout button row tapped
         if indexPath.section == 0 && indexPath.row == 1 {
-            logoutButton.sendActions(for: .touchUpInside)
-        }else if indexPath.section == 3 && indexPath.row == 1 {
+            // FaceID Login setting 
+            let vc = FaceIDLoginViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else if indexPath.section == 0 && indexPath.row == 2 {
+            // Logout button row tapped
+            logoutTapped(UIButton())
+        }
+        else if indexPath.section == 3 && indexPath.row == 1 {
             guard let current = ThingSmartFamilyBiz.sharedInstance().getCurrentFamily() as? ThingSmartHomeModel else {return}
             guard let home = ThingSmartHome(homeId: current.homeId) else {return}
             let vc = DeviceDetailKitVC(home: home)

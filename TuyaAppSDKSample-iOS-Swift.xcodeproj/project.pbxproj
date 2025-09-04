@@ -28,6 +28,7 @@
 		23D380392AE671B40012A1B3 /* SceneShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D380382AE671B40012A1B3 /* SceneShowCell.swift */; };
 		23D3803B2AE672A10012A1B3 /* SceneAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3803A2AE672A10012A1B3 /* SceneAddCell.swift */; };
 		3369313E2DDB1CBE0077BF78 /* BEDualModeWifiList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3369313C2DDB1CBE0077BF78 /* BEDualModeWifiList.storyboard */; };
+		338C78402E4DE1B200033147 /* FaceIDLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C783F2E4DE1B200033147 /* FaceIDLoginViewController.swift */; };
 		33A43D5A2DDB1D7800C3CE31 /* BEDualModeWifiListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A43D592DDB1D7800C3CE31 /* BEDualModeWifiListTableViewController.swift */; };
 		345DFE522BBAC5B4001408AC /* DeviceOfflineReminderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345DFE512BBAC5B4001408AC /* DeviceOfflineReminderVC.swift */; };
 		42317F1C2D93D4AB000E65D5 /* RemoteLaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42317F1B2D93D4AB000E65D5 /* RemoteLaunchVC.swift */; };
@@ -274,6 +275,7 @@
 		23D380382AE671B40012A1B3 /* SceneShowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneShowCell.swift; sourceTree = "<group>"; };
 		23D3803A2AE672A10012A1B3 /* SceneAddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneAddCell.swift; sourceTree = "<group>"; };
 		3369313D2DDB1CBE0077BF78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BEDualModeWifiList.storyboard; sourceTree = "<group>"; };
+		338C783F2E4DE1B200033147 /* FaceIDLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceIDLoginViewController.swift; sourceTree = "<group>"; };
 		33A43D592DDB1D7800C3CE31 /* BEDualModeWifiListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEDualModeWifiListTableViewController.swift; sourceTree = "<group>"; };
 		345DFE512BBAC5B4001408AC /* DeviceOfflineReminderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceOfflineReminderVC.swift; sourceTree = "<group>"; };
 		42317F1B2D93D4AB000E65D5 /* RemoteLaunchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteLaunchVC.swift; sourceTree = "<group>"; };
@@ -1051,6 +1053,7 @@
 				AF3A25B825AD7CC1003EB9FF /* UserInformationTableViewController.swift */,
 				AF00605C25EC968A001462B8 /* TimeZoneTableViewController.swift */,
 				AF00606025ECBF3A001462B8 /* TemperatureUnitTableViewController.swift */,
+				338C783F2E4DE1B200033147 /* FaceIDLoginViewController.swift */,
 			);
 			path = "User Management";
 			sourceTree = "<group>";
@@ -1307,13 +1310,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKWidgetExtension/Pods-TuyaAppSDKWidgetExtension-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKWidgetExtension/Pods-TuyaAppSDKWidgetExtension-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1372,13 +1371,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1415,13 +1410,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1573,6 +1564,7 @@
 				98B4A1FC2AB7E4AA004D759E /* BEDeviceNetworkListViewController.swift in Sources */,
 				9813B6A02AA5E234001646C0 /* DeviceNetworkListViewController.swift in Sources */,
 				AF00606725EE638D001462B8 /* BEBLEModeViewController.swift in Sources */,
+				338C78402E4DE1B200033147 /* FaceIDLoginViewController.swift in Sources */,
 				232064C02AE658CB006B2E33 /* AddSceneViewController.swift in Sources */,
 				AF3A25B225A99E02003EB9FF /* UIViewControllerExtension.swift in Sources */,
 				23C2FE4C2AE7B882004F2E8F /* SceneDeviceNode.swift in Sources */,

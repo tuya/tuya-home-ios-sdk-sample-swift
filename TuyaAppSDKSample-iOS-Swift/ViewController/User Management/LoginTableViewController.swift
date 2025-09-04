@@ -6,6 +6,7 @@
 
 import UIKit
 import ThingSmartBaseKit
+import ThingSmartLocalAuthKit
 
 class LoginTableViewController: UITableViewController {
     // MARK: - IBOutlet
@@ -14,6 +15,9 @@ class LoginTableViewController: UITableViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var forgetPasswordButton: UIButton!
+    @IBOutlet weak var faceIDLoginButton: UIButton!
+    
+    private let laContext = ThingBiometricLoginManager()
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -32,6 +36,26 @@ class LoginTableViewController: UITableViewController {
         }
     }
     
+    @IBAction func faceIDLoginTapped(_ sender: UIButton) {
+
+        if self.checkFaceID() {
+            // check faceid info
+            let userInfo = laContext.getBiometricLoginUserAccountInfo()
+            let uid = userInfo.uid
+            laContext.loginByBiometric(withEvaluatePolicy:.deviceOwnerAuthenticationWithBiometrics , localizedReason: "Login com Face ID") { success, result, error in
+                if success {
+                    ThingSmartUser.sharedInstance().reset(userInfo: result as! [AnyHashable : Any], source: 9)
+                    let storyboard = UIStoryboard(name: "ThingSmartMain", bundle: nil)
+                    let vc = storyboard.instantiateInitialViewController()
+                    self.window?.rootViewController = vc
+                }
+            }
+        } else {
+            
+        }
+        
+    }
+    
     // MARK: - Private Method
     private func login(by type: AccountType) {
         let countryCode = countryCodeTextField.text ?? ""
@@ -47,6 +71,9 @@ class LoginTableViewController: UITableViewController {
                 let storyboard = UIStoryboard(name: "ThingSmartMain", bundle: nil)
                 let vc = storyboard.instantiateInitialViewController()
                 self.window?.rootViewController = vc
+                
+                // Login Success, update current Account Infomation
+                UserDefaults.standard.set(ThingSmartUser.sharedInstance().uid, forKey: "com.thing.userInfo")
 
             } failure: { [weak self] (error) in
                 guard let self = self else { return }
@@ -60,12 +87,42 @@ class LoginTableViewController: UITableViewController {
                 let vc = storyboard.instantiateInitialViewController()
                 self.window?.rootViewController = vc
                 
+                // Login Success, update current Account Infomation
+                UserDefaults.standard.set(ThingSmartUser.sharedInstance().uid, forKey: "com.thing.userInfo")
+                
             } failure: { [weak self] (error) in
                 guard let self = self else { return }
                 Alert.showBasicAlert(on: self, with: NSLocalizedString("Failed to Login", comment: ""), message: error?.localizedDescription ?? "")
             }
 
         }
+    }
+    
+    private func checkFaceID() -> Bool {
+        // Check if device can evaluate policy
+        var error: NSError?
+        let canEvaluate = laContext.laContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error)
+        if (!canEvaluate) {
+            return false
+        }
+        
+        let userInfo = laContext.getBiometricLoginUserAccountInfo()
+        let biometricUid = userInfo.uid;
+        let lastUid = UserDefaults.standard.object(forKey: "com.thing.userInfo") as? String
+        if biometricUid == lastUid {
+//            return true
+        } else {
+            return false
+        }
+        
+        do {
+            try laContext.isBiometricLoginEnabled()
+        } catch {
+            Alert.showBasicAlert(on: self, with: NSLocalizedString("FaceID not available", comment: ""), message: error.localizedDescription)
+            return false
+        }
+        
+        return true
     }
     
     // MARK: - Table view data source

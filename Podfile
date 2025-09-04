@@ -19,6 +19,9 @@ target 'TuyaAppSDKSample-iOS-Swift' do
   pod 'ThingSmartHomeKit', '~> 6.7.0'
   pod 'ThingSmartBusinessExtensionKit', '~> 6.7.0'
   
+  # [Optional] BiometricLogin
+  pod 'ThingSmartLocalAuthKit', '~> 6.7.0'
+  
   # [Optional] Bluetooth
   pod 'ThingSmartBusinessExtensionKitBLEExtra','~> 6.7.0'
   

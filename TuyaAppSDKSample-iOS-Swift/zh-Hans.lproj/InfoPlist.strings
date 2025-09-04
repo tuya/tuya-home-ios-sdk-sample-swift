@@ -10,3 +10,4 @@
 /* Privacy - Location When In Use Usage Description */
 "NSLocationWhenInUseUsageDescription" = "为了更好的使用，建议您打开使用您的位置的权限。";
 
+"NSFaceIDUsageDescription" = "This will allow the app to log in using Face ID.";
