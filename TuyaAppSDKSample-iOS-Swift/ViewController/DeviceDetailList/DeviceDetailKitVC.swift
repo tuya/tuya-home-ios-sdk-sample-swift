@@ -85,10 +85,19 @@ class DeviceDetailKitVC: DeviceListBaseVC {
             alert.addAction(UIAlertAction(title: "远程重启", style: .default, handler: { action in
                 self.remoteReboot(with: device)
             }))
+            
+            alert.addAction(UIAlertAction(title: "子设备替换", style: .default, handler: { action in
+                self.subDeviceReplace(with: device)
+            }))
         }
         
         alert.addAction(UIAlertAction(title: "取消", style: .cancel))
         self.present(alert, animated: true)
+    }
+    
+    func subDeviceReplace(with device: ThingSmartDeviceModel) {
+        let vc = SubDeviceReplaceVC(deviceId: device.devId)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func remoteReboot(with device: ThingSmartDeviceModel) {

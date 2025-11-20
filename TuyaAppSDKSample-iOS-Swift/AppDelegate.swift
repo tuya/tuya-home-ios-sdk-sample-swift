@@ -14,7 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Initialize ThingSmartSDK
-        
+
+
+
         /*
          To run the WidgetKit demo, please complete the following steps:
          1. Add both "TuyaAppSDKSample-iOS-Swift" and "TuyaAppSDKWidgetExtension" targets to the same App Group.
@@ -24,6 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         ThingSmartSDK.sharedInstance().start(withAppKey: AppKey.appKey, secretKey: AppKey.secretKey)
         
+        // ScreenIPC Call Manager, if you have a ipc device with screen. It needs to be called before ThingSmartSDK started.
+        DemoCallManager.launchTwowayCallService()
+        // Doorbell Observer. If you have a doorbell device
+        CameraDoorBellManager.shared.addDoorbellObserver()
+
         // Set your Matter Group ID
         ThingSmartMatterActivatorConfig.setMatterKey("your_group_id")
         
@@ -33,9 +40,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Enable debug mode, which allows you to see logs.
         #if DEBUG
         ThingSmartSDK.sharedInstance().debugMode = true
+        ThingSmartCameraSDK.sharedInstance.debugMode = true
         #endif
         
         SVProgressHUD.setDefaultStyle(.dark)
+        SVProgressHUD.setMinimumDismissTimeInterval(2)
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
@@ -110,3 +119,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
+    // 默认只允许竖屏
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        return DemoAppOrientationManager.shared.supportedOrientations
+    }

@@ -53,7 +53,11 @@ class ThingSmartMainTableViewController: UITableViewController {
             // FaceID Login setting 
             let vc = FaceIDLoginViewController()
             self.navigationController?.pushViewController(vc, animated: true)
-        }else if indexPath.section == 0 && indexPath.row == 2 {
+        } else if indexPath.section == 0 && indexPath.row == 2 {
+            // 多端登录管理
+            let vc = MultiDeviceLoginViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else if indexPath.section == 0 && indexPath.row == 3 {
             // Logout button row tapped
             logoutTapped(UIButton())
         }

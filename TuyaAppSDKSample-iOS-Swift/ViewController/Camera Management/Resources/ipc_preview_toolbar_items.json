@@ -1,0 +1,50 @@
+[
+    [{
+        "imagePath": "ty_camera_mic_icon",
+        "title": "ipc_panel_button_speak",
+        "identifier": "talk",
+        "hidden":0
+    }],
+    [{
+        "imagePath": "ty_camera_mic_icon",
+        "title": "ipc_panel_button_video_talk",
+        "identifier": "videoTalk",
+        "hidden":1
+    }],
+    [{
+        "imagePath": "ty_camera_rec_icon",
+        "title": "ipc_panel_button_record",
+        "identifier": "record",
+        "hidden":0
+    }],
+    [{
+        "imagePath": "ty_camera_photo_icon",
+        "title": "ipc_panel_button_screenshot",
+        "identifier": "photo",
+        "hidden":0
+    }],
+    [{
+        "imagePath": "ty_camera_playback_icon",
+        "title": "pps_flashback",
+        "identifier": "playback",
+        "hidden":0
+    }],
+    [{
+        "imagePath": "ty_camera_cloud_icon",
+        "title": "ipc_panel_button_storage",
+        "identifier": "Cloud",
+        "hidden":1
+    }],
+    [{
+        "imagePath": "ty_camera_message",
+        "title": "ipc_panel_button_message",
+        "identifier": "message",
+        "hidden":0
+    }],
+    [{
+        "imagePath": "ty_camera_cloud_icon",
+        "title": "ipc_panel_button_storage_debug",
+        "identifier": "CloudDebug",
+         "hidden":1
+    }]
+]

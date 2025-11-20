@@ -140,6 +140,11 @@ class DeviceListTableViewController: UITableViewController, CardCellDelegate {
     private func jumpDeviceDetail(viewModel: CardCellViewModel, smartDp: ThingSmartDp?) {
         guard let device = viewModel.device else { return }
         
+        
+        if device.deviceModel.isIPCDevice(), CameraPanelEntry.openCameraPanel(withDevId: device.devId) {
+            return
+        }
+
         let storyboard = UIStoryboard(name: "DeviceList", bundle: nil)
         let isSupportThingModel = device.deviceModel.isSupportThingModelDevice()
         let identifier = isSupportThingModel ? "ThingLinkDeviceControlController" : "DeviceControlTableViewController"

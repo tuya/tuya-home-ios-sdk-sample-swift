@@ -1,0 +1,16 @@
+//
+// IPCViewsLocalizable.strings
+// TuyaSmartIPCDemo
+//
+// Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
+
+"action_back" = "Back";
+"loading" = "Loading";
+"load_error" = "Load failed";
+"ty_alert_confirm" = "OK";
+"done" = "Done";
+"cancel" = "Cancel";
+"close" = "Close";
+"Loading..." = "Loading...";
+"Pull to refresh" = "Pull to refresh";
+"Release to refresh" = "Release to refresh";

@@ -1,0 +1,16 @@
+//
+// IPCViewsLocalizable.strings
+// TuyaSmartIPCDemo
+//
+// Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
+
+"action_back" = "返回";
+"loading" = "加载中";
+"load_error" = "加载失败";
+"ty_alert_confirm" = "确定";
+"done" = "完成";
+"cancel" = "取消";
+"close" = "关闭";
+"Loading..." = "加载中...";
+"Pull to refresh" = "下拉刷新";
+"Release to refresh" = "松开刷新";

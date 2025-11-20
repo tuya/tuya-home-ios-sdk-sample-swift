@@ -15,4 +15,6 @@
 #import <ThingModuleManager/ThingModule.h>
 #import <ThingSmartSceneCoreKit/ThingSmartSceneCoreKit.h>
 
+#import <ThingSmartCameraKit/ThingSmartCameraKit.h>
+
 #endif /* ThingAppSDKSample_iOS_Swift_Bridging_Header_h */

@@ -32,9 +32,9 @@
 		<string>_matterd._udp</string>
 	</array>
 	<key>NSCameraUsageDescription</key>
-	<string>For better usage, we will suggest you to give us the permissions to use your location</string>
+	<string>For better usage, we will suggest you to give us the permissions to use your camera.</string>
 	<key>NSLocalNetworkUsageDescription</key>
-	<string>For better usage, we will suggest you to give us the permissions to use your local network</string>
+	<string>For better usage, we will suggest you to give us the permissions to use your local network.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>For better usage, we will suggest you to give us the permissions to use your location.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
@@ -42,7 +42,9 @@
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>For better usage, we will suggest you to give us the permissions to use your location</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>For better usage, we will suggest you to give us the permissions to use your microphone</string>
+	<string>For better usage, we will suggest you to give us the permissions to use microphone.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>For better usage, we will suggest you to give us the permissions to save photo.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>iconfont.ttf</string>
@@ -79,6 +81,8 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
