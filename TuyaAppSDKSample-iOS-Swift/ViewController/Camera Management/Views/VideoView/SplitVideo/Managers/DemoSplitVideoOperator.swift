@@ -15,7 +15,7 @@ class DemoSplitVideoOperator: DemoSplitVideoOperatorProtocol {
     }
 
     func bindVideoViewIndexPairs(_ videoIndexPairs: [ThingSmartVideoViewIndexPair]) -> Bool {
-        cameraDevice?.camera.register?(videoIndexPairs) ?? false
+        cameraDevice?.camera.registerVideoViewIndexPairs?(videoIndexPairs) ?? false
     }
 
     func unbindVideoViewIndexPairs(_ videoIndexPairs: [ThingSmartVideoViewIndexPair]) -> Bool {

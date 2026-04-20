@@ -87,6 +87,12 @@ class StreamChatController: UIViewController {
             make.height.equalTo(135)
         }
         
+        thingsdk_dispatch_async_on_default_global_thread {
+            let config = ThingStreamRecorderExtendConfig.defaultOpus()
+            self.recorder.update(config)
+            self.recorder.initVoiceDetector()
+        }
+        
         // Connect to AI stream server
         connectToStream()
     }
@@ -158,15 +164,16 @@ class StreamChatController: UIViewController {
         params.extParams = [
 //            "miniProgramId": "your_mini_app_id",
             "onlyAsr": false, // only ASR or not
-            "needTts": false // need tts or not
+            "needTts": true // need tts or not
         ];
-
+        
+        let tempPath = NSHomeDirectory().appending("/Documents/")
+        
 //        // Normal: Request the agent token first and then create the session.
 //        //   The `tokenResponse` is valid and reusable for a period of time, if you want create multiple sessions, you can reuse the same token.
 //        client.queryAgentToken(params, success: { [weak self] tokenResponse in
 //            print("Query agentToken success: \(tokenResponse)")
-//            let tempPath = NSHomeDirectory().appending("/Documents/")
-//            self?.client?.createSession(withToken: tokenResponse, bizTag: 0, reuseDataChannel: false, sessionId: nil, cacheBasePath: tempPath, userDatas: []) { [weak self] result, error in
+//            self?.client?.createSession(withToken: tokenResponse, bizTag: 0, reuseDataChannel: false, sessionId: nil, cacheBasePath: tempPath, userData: "") { [weak self] result, error in
 //                if let result = result {
 //                    self?.sessionId = result.sessionID
 //                    self?.tableView.reloadData()
@@ -180,8 +187,10 @@ class StreamChatController: UIViewController {
 //        })
 
 //        // Convenient: Request the agent token to create a session in one function
-//        client.createSession(withQueryParams: params, reuseDataChannel: false, cacheBasePath: nil, userDatas: nil) { result, error in
+//        client.createSession(withQueryParams: params, reuseDataChannel: false, cacheBasePath: tempPath, userData: "") { [weak self] result, error in
 //            if let result = result {
+//                self?.sessionId = result.sessionID
+//                self?.tableView.reloadData()
 //                print("Create success: \(result.sessionID)")
 //            } else {
 //                print("Create fail: \(String(describing: error))")
@@ -195,7 +204,7 @@ class StreamChatController: UIViewController {
         
         eventId = nil
         
-        client.sendEventStart(sessionId, userDatas: nil, success: { [weak self] eventId in
+        client.sendEventStart(sessionId, userData: nil, success: { [weak self] eventId in
             let chatInfo = self?.createChatInfo(eventId)
             chatInfo?.sendContent = "..."
             self?.eventId = eventId
@@ -212,7 +221,7 @@ class StreamChatController: UIViewController {
         guard let client = client, let eventId = eventId, let sessionId = sessionId else { return }
         
         actionView.resetState()
-        client.sendEventEnd(eventId, sessionId: sessionId, userDatas: nil) { result, error in
+        client.sendEventEnd(eventId, sessionId: sessionId, userData: nil) { result, error in
             if !result {
                 print("Failed to send event end: \(String(describing: error))")
             } else {
@@ -235,22 +244,14 @@ class StreamChatController: UIViewController {
         tableView.reloadData()
         
         let model = ThingStreamTextPacketModel.packet(withText: text, sessionID: sessionId, dataChannel: nil)
-        client.sendTextData(model) { [weak self] result, error in
+        client.sendTextData(model) { result, error in
             if !result {
                 if let error = error {
                     failure(error)
                 }
                 return
             }
-            self?.client?.sendEventPayloadsEnd(eventId, sessionId: sessionId, dataChannel: "text", userDatas: nil) { result, error in
-                if !result {
-                    if let error = error {
-                        failure(error)
-                    }
-                    return
-                }
-                sucHandler()
-            }
+            sucHandler()
         }
     }
     
@@ -260,8 +261,9 @@ class StreamChatController: UIViewController {
         
         // first packet must have codecType, channels ....
         // If you already have complete player components, you can use your own.
-        // Note: this demo recorder only supports PCM, mono, 16bit, 16000Hz audio format, so we can hardcode these values.
-        guard let model = ThingStreamAudioPacketModel.packet(withPayload: nil, sessionID: sessionId, dataChannel: nil, streamFlag: .streamStart, codecType: .PCM, channels: .mono, sampleRate: 16000, bitDepth: 16) else { return }
+        // Note: this demo recorder use opus.
+        let model = self.recorder.firstAudioPacket()
+        model.sessionID = sessionId
         client.sendAudioData(model) { [weak self] success, error in
             print("success send audio start: \(String(describing: self?.eventId))")
             if !success {
@@ -279,12 +281,12 @@ class StreamChatController: UIViewController {
         }
     }
     
-    private func sendAudioPacketMiddle(_ voiceData: Data) {
+    private func sendAudioPacketMiddle(_ voicePacket: ThingStreamAudioPacketModel) {
         guard let client = client, let sessionId = sessionId else { return }
         
-        guard let model = ThingStreamAudioPacketModel.packet(withPayload: voiceData, sessionID: sessionId, dataChannel: nil, streamFlag: .streaming) else { return }
-        client.sendAudioData(model) { [weak self] success, error in
-            print("success send audio ing: \(String(describing: self?.eventId)), \(voiceData.count)")
+        voicePacket.sessionID = sessionId
+        client.sendAudioData(voicePacket) { [weak self] success, error in
+            print("success send audio ing: \(String(describing: self?.eventId)), \(voicePacket.payload?.count)")
             if !success {
                 self?.actionView.resetState()
                 self?.recorder.stop()
@@ -293,12 +295,11 @@ class StreamChatController: UIViewController {
     }
     
     private func sendAudioPacketEnd() {
-        guard let client = client, let sessionId = sessionId, let eventId = eventId else { return }
+        guard let client = client, let sessionId = sessionId else { return }
         
         guard let model = ThingStreamAudioPacketModel.packet(withPayload: nil, sessionID: sessionId, dataChannel: nil, streamFlag: .streamEnd) else { return }
         client.sendAudioData(model) { [weak self] success, error in
             print("success send audio end: \(String(describing: self?.eventId))")
-            self?.client?.sendEventPayloadsEnd(eventId, sessionId: sessionId, dataChannel: "audio", userDatas: nil, completion: nil)
             self?.sendEventEnd()
         }
     }
@@ -313,22 +314,14 @@ class StreamChatController: UIViewController {
         
         // send image, this method will copress image to JPEG format
         guard let model = ThingStreamImagePacketModel.packet(with: image, orFilePath: nil, sessionID: sessionId, dataChannel: nil) else { return }
-        client.sendImageData(model, progress: nil) { [weak self] success, error in
+        client.sendImageData(model, progress: nil) { success, error in
             if !success {
                 if let error = error {
                     failure(error)
                 }
                 return
             }
-            self?.client?.sendEventPayloadsEnd(eventId, sessionId: sessionId, dataChannel: "image", userDatas: nil) { success, error in
-                if !success {
-                    if let error = error {
-                        failure(error)
-                    }
-                    return
-                }
-                sucHandler()
-            }
+            sucHandler()
         }
     }
     
@@ -491,6 +484,8 @@ extension StreamChatController: StreamActionViewDelegate {
         case .record:
             // init need almost 300ms ~ 600ms, early init voice detector is recommended.
             // If you already have complete recording components, you can use your own.
+            let config = ThingStreamRecorderExtendConfig.defaultOpus()
+            recorder.update(config)
             recorder.initVoiceDetector()
         case .textInput:
             actionView.textField.becomeFirstResponder()
@@ -682,13 +677,12 @@ extension StreamChatController: ThingSmartStreamClientDelegate {
     
     func streamClientDidReceiveAudio(_ packet: ThingStreamAudioPacketModel) {
         if packet.streamFlag == .streamStart {
-            if packet.codecType != .PCM {
-                print("Unsupported audio codec type: \(packet.codecType)")
+            guard let codec = ThingStreamPlayerSupportAudioCodec(rawValue: UInt(packet.codecType.rawValue)) else {
+                print("not support this audio codec type: \(packet.codecType)")
                 return
             }
             // If you already have complete player components, you can use your own.
-            // Note: this demo player now only supports PCM, mono, 16bit, 16000Hz audio format.
-            player.configSampleRate(packet.sampleRate, channels: packet.channels, bitDepth: UInt32(packet.bitDepth), codecType: .PCM)
+            player.configSampleRate(packet.sampleRate, channels: packet.channels, bitDepth: UInt32(packet.bitDepth), codecType: codec)
             player.play()
         }
         
@@ -703,7 +697,11 @@ extension StreamChatController: ThingSmartStreamClientDelegate {
 extension StreamChatController: ThingStreamRecorderDelegate {
     
     func recorderDidRecVoice(_ voiceData: Data) {
-        sendAudioPacketMiddle(voiceData)
+        // Handle raw pcm voice data
+    }
+    
+    func recorderDidRecVoicePacket(_ packet: ThingStreamAudioPacketModel) {
+        sendAudioPacketMiddle(packet);
     }
     
     func recorderDidHappendedError(_ error: Error) {
