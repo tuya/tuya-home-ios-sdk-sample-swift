@@ -33,8 +33,7 @@ class AIStreamMainController: UITableViewController {
                     SVProgressHUD.showError(withStatus: "Please select a home first.")
                     return
                 }
-                let vc = StreamChatController()
-                vc.homeId = homeId
+                let vc = StreamAppChatController(homeId: homeId)
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         } else if indexPath.section == 1 {
@@ -59,52 +58,53 @@ class AIStreamMainController: UITableViewController {
                     SVProgressHUD.showError(withStatus: "Please select a device first.")
                     return
                 }
-                let vc = StreamChatController()
-                vc.homeId = homeId
-                vc.devId = devId
+                let vc = DeviceAgentChatController(homeId: homeId, devId: devId)
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }
     }
-    
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 0 ? 2 : 3
+        switch section {
+        case 0: return 2
+        case 1: return 3
+        default: return 0
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = indexPath.section
         let row = indexPath.row
         
-        if (section == 0) {
-            if (row == 0) {
+        if section == 0 {
+            if row == 0 {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "home-select-cell")!
                 cell.detailTextLabel?.text = self.home?.name ?? "Select a home"
                 return cell
-            } else if (row == 1) {
+            } else if row == 1 {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "stream-action-cell")!
                 cell.textLabel?.text = "Start AI Chat as App"
                 return cell
             }
-        } else if (section == 1) {
-            if (row == 0) {
+        } else if section == 1 {
+            if row == 0 {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "home-select-cell")!
                 cell.detailTextLabel?.text = self.home?.name ?? "Select a home"
                 return cell
-            } else if (row == 1) {
+            } else if row == 1 {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "device-select-cell")!
                 cell.detailTextLabel?.text = self.device?.name ?? "Select a device"
                 return cell
-            } else if (row == 2) {
+            } else if row == 2 {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "stream-action-cell")!
                 cell.textLabel?.text = "Start AI Chat as Device Agent"
                 return cell
             }
         }
-        
         return UITableViewCell()
     }
 }

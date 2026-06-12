@@ -51,7 +51,7 @@ class RegisterTableViewController: UITableViewController {
         
         switch type {
         case .email:
-            ThingSmartUser.sharedInstance().sendVerifyCode(byRegisterEmail: countryCode, email: account) {  [weak self] in
+            ThingSmartUser.sharedInstance().sendVerifyCode(withUserName: account, countryCode: countryCode, type: 1) {  [weak self] in
                 guard let self = self else { return }
                 Alert.showBasicAlert(on: self, with: NSLocalizedString("Verification Code Sent Successfully", comment: ""), message: NSLocalizedString("Please check your email for the code.", comment: ""))
                 
@@ -62,7 +62,7 @@ class RegisterTableViewController: UITableViewController {
             }
 
         case .phone:
-            ThingSmartUser.sharedInstance().sendVerifyCode(withUserName: account, region: nil, countryCode: countryCode, type: 1) {
+            ThingSmartUser.sharedInstance().sendVerifyCode(withUserName: account, countryCode: countryCode, type: 1) {
                 [weak self] in
                 guard let self = self else { return }
                 Alert.showBasicAlert(on: self, with: NSLocalizedString("Verification Code Sent Successfully", comment: ""), message: NSLocalizedString("Please check your message for the code.", comment: ""))
