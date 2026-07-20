@@ -1,7 +1,8 @@
 source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/tuya/tuya-pod-specs.git'
 
-platform :ios, '12.0'
+
+platform :ios, '13.0'
 
 
 target 'TuyaAppSDKSample-iOS-Swift' do
@@ -15,33 +16,33 @@ target 'TuyaAppSDKSample-iOS-Swift' do
   pod 'ThingSmartCryption', :path => './ios_core_sdk'
   
   # [Required] Basic
-  pod 'ThingSmartHomeKit', '~> 7.5.0'
-  pod 'ThingSmartBusinessExtensionKit', '~> 7.5.0'
+  pod 'ThingSmartHomeKit', '~> 7.8.0'
+  pod 'ThingSmartBusinessExtensionKit', '~> 7.8.0'
   
 
    # [Optional] BiometricLogin
-   pod 'ThingSmartLocalAuthKit', '~> 7.5.0'
+   pod 'ThingSmartLocalAuthKit', '~> 7.8.0'
   
    # [Optional] Bluetooth
-   pod 'ThingSmartBusinessExtensionKitBLEExtra','~> 7.5.0'
+   pod 'ThingSmartBusinessExtensionKitBLEExtra','~> 7.8.0'
   
    # [Optional] Matter
-   pod 'ThingSmartMatterKit', '~> 7.5.0'
-   pod 'ThingSmartMatterExtensionKit', '~> 7.5.0'
-   pod 'ThingSmartBusinessExtensionKitMatterExtra','~> 7.5.0'
+   pod 'ThingSmartMatterKit', '~> 7.8.0'
+   pod 'ThingSmartMatterExtensionKit', '~> 7.8.0'
+   pod 'ThingSmartBusinessExtensionKitMatterExtra','~> 7.8.0'
   
    # [Optional] HomeKit Device
-   pod 'ThingSmartAppleDeviceKit', '~> 7.5.0'
+   pod 'ThingSmartAppleDeviceKit', '~> 7.8.0'
   
    # [Optional] Special category
-   pod 'ThingSmartCameraKit', '~> 7.5.0'
+   pod 'ThingSmartCameraKit', '~> 7.8.0'
    pod 'ThingCameraUIKit'
-   pod 'ThingSmartOutdoorKit', '~> 7.5.0'
-   pod 'ThingSmartSweeperKit', '~> 7.5.0'
-   pod 'ThingSmartLockKit', '~> 7.5.0'
+   pod 'ThingSmartOutdoorKit', '~> 7.8.0'
+   pod 'ThingSmartSweeperKit', '~> 7.8.0'
+   pod 'ThingSmartLockKit', '~> 7.8.0'
 
    # [Optional] AI Stream
-   pod 'ThingSmartBusinessExtensionKitAIStreamExtra', '~> 7.5.0'
+   pod 'ThingSmartBusinessExtensionKitAIStreamExtra', '~> 7.8.0'
   
   # The following components are only required for this demo and are not necessary when integrating into your own project.
   pod 'SVProgressHUD'
@@ -59,7 +60,7 @@ end
 #end
 #
 #target 'TuyaAppSDKWidgetExtension' do
-# pod 'ThingSmartHomeKit', '~> 7.5.0'
+# pod 'ThingSmartHomeKit', '~> 7.8.0'
 # pod 'SDWebImage', '~> 5.21.0'
 #end
 
@@ -74,7 +75,7 @@ post_install do |installer|
       sub_target.build_configurations.each do |config|
 
         config.build_settings['CLANG_WARN_DOCUMENTATION_COMMENTS'] = 'NO'
-        config.build_settings["IPHONEOS_DEPLOYMENT_TARGET"] = "11.0"
+        config.build_settings["IPHONEOS_DEPLOYMENT_TARGET"] = "13.0"
         config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
 
       end

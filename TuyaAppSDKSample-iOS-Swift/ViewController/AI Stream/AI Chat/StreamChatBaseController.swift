@@ -9,6 +9,7 @@ import ThingSmartStreamChannelKit
 import ThingSmartStreamBizKit
 import IQKeyboardManagerSwift
 import SnapKit
+import PhotosUI
 
 /// Base class for AI chat: identity-agnostic AI foundation capabilities
 ///
@@ -109,13 +110,13 @@ class StreamChatBaseController: UIViewController {
 
         player?.stop()
         recorder?.stop()
-        recorder?.destory()
+        recorder?.destroy()
 
         client?.remove(self)
         if let sessionId = sessionId {
             client?.closeSession(sessionId, with: .OK, completion: nil)
         }
-        client?.destory()
+        client?.destroy()
     }
 
     override func viewDidLoad() {
@@ -419,11 +420,12 @@ class StreamChatBaseController: UIViewController {
             }
         }
 
-        if let selectedImage = actionView.selectedImage {
-            sendImage(selectedImage, sucHandler: {
-                print("Image sent successfully")
+        let selectedImages = actionView.selectedImages
+        if !selectedImages.isEmpty {
+            sendImages(selectedImages, sucHandler: {
+                print("Images sent successfully")
             }, failure: { error in
-                print("Failed to send image: \(error)")
+                print("Failed to send images: \(error)")
             })
         }
     }
@@ -452,23 +454,46 @@ class StreamChatBaseController: UIViewController {
     }
 
     // MARK: - Send Image Data Stream
-    private func sendImage(_ image: UIImage, sucHandler: @escaping () -> Void, failure: @escaping (Error) -> Void) {
-        guard let client = client, let sessionId = sessionId, let eventId = eventId else { return }
+    /// Send multiple images sequentially (one image data packet each, success sends the next).
+    /// `sucHandler` is called once after all images are sent; `failure` is called on the first failure.
+    private func sendImages(_ images: [UIImage], sucHandler: @escaping () -> Void, failure: @escaping (Error) -> Void) {
+        guard !images.isEmpty else {
+            sucHandler()
+            return
+        }
 
         let chatInfo = getChatInfoByEventId(eventId)
-        chatInfo?.sendImage = image
+        chatInfo?.sendImages = images
         tableView.reloadData()
 
-        // send image, this method will copress image to JPEG format
-        guard let model = ThingStreamImagePacketModel.packet(with: image, orFilePath: nil, sessionID: sessionId, dataChannel: nil) else { return }
-        client.sendImageData(model, progress: nil) { success, error in
+        sendImage(at: 0, in: images, sucHandler: sucHandler, failure: failure)
+    }
+
+    private func sendImage(at index: Int, in images: [UIImage], sucHandler: @escaping () -> Void, failure: @escaping (Error) -> Void) {
+        guard let client = client, let sessionId = sessionId, let eventId = eventId else { return }
+
+        if index >= images.count {
+            // All images sent successfully
+            sucHandler()
+            return
+        }
+
+        let image = images[index]
+        // send image, this method will compress image to JPEG format
+        guard let model = ThingStreamImagePacketModel.packet(with: image, orFilePath: nil, sessionID: sessionId, dataChannel: nil) else {
+            failure(NSError(domain: "com.thing.demo", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to build image packet"]))
+            return
+        }
+        client.sendImageData(model, progress: nil) { [weak self] success, error in
             if !success {
                 if let error = error {
                     failure(error)
+                } else {
+                    failure(NSError(domain: "com.thing.demo", code: -1, userInfo: [NSLocalizedDescriptionKey: "Send image failed"]))
                 }
                 return
             }
-            sucHandler()
+            self?.sendImage(at: index + 1, in: images, sucHandler: sucHandler, failure: failure)
         }
     }
 
@@ -609,12 +634,21 @@ extension StreamChatBaseController: StreamActionViewDelegate {
 
     // MARK: Pick Image
     func streamActionViewDidClickPickImage() {
+        // Block both camera and album when the limit is already reached
+        let maxCount = actionView.maxImageCount
+        if actionView.selectedImages.count >= maxCount {
+            let alert = UIAlertController(title: "Notice", message: "You can select up to \(maxCount) images", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alert, animated: true)
+            return
+        }
+
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         actionSheet.addAction(UIAlertAction(title: "Take Photo", style: .default) { [weak self] _ in
             self?.presentImagePicker(with: .camera)
         })
         actionSheet.addAction(UIAlertAction(title: "Choose Photo", style: .default) { [weak self] _ in
-            self?.presentImagePicker(with: .photoLibrary)
+            self?.presentPhotoLibraryPicker()
         })
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         present(actionSheet, animated: true)
@@ -634,6 +668,32 @@ extension StreamChatBaseController: StreamActionViewDelegate {
         picker.allowsEditing = true
         picker.delegate = self
         present(picker, animated: true)
+    }
+
+    /// Photo library multi-select via PHPicker (iOS 14+). Limits the selection to the remaining
+    /// number of images that can still be added before reaching `maxImageCount`.
+    /// Falls back to the single-select UIImagePickerController on older systems.
+    private func presentPhotoLibraryPicker() {
+        let maxCount = actionView.maxImageCount
+        let selected = actionView.selectedImages.count
+        let remaining = max(0, maxCount - selected)
+        if remaining == 0 {
+            let alert = UIAlertController(title: "Notice", message: "You can select up to \(maxCount) images", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alert, animated: true)
+            return
+        }
+
+        if #available(iOS 14.0, *) {
+            var config = PHPickerConfiguration()
+            config.filter = .images
+            config.selectionLimit = remaining
+            let picker = PHPickerViewController(configuration: config)
+            picker.delegate = self
+            present(picker, animated: true)
+        } else {
+            presentImagePicker(with: .photoLibrary)
+        }
     }
 
     // MARK: Switch Action
@@ -704,29 +764,34 @@ extension StreamChatBaseController: StreamActionViewDelegate {
 
     // MARK: Send Text Action
     func streamActionViewDidClickSendContent(_ content: String) {
-        let image = actionView.selectedImage
+        let images = actionView.selectedImages
+        let hasImage = !images.isEmpty
+        let hasText = !content.isEmpty
 
         // If any step in the send pipeline fails: show the error, remove the local placeholder message, and restore the input bar to its pre-send state
         let handleSendFailure: (String, Error, String?) -> Void = { [weak self] stage, error, eventId in
             print("Failed to \(stage): \(error)")
             guard let self = self else { return }
             self.removeChatInfo(eventId: eventId)
-            self.actionView.restoreAfterSendFailure(content: content, image: image)
+            self.actionView.restoreAfterSendFailure(content: content, images: images)
             SVProgressHUD.showError(withStatus: "Send failed\n\(error.localizedDescription)")
         }
 
         sendEventStart(success: { [weak self] eventId in
-            self?.sendText(content, sucHandler: {
-                if image == nil { // Only has text content, send EventEnd directly
-                    self?.sendEventEnd()
-                }
-            }, failure: { error in
-                handleSendFailure("send text", error, eventId)
-            })
+            // Send text first (if any), then images (if any); after the last media block succeeds send EventEnd.
+            if hasText {
+                self?.sendText(content, sucHandler: {
+                    if !hasImage { // Only has text content, send EventEnd directly
+                        self?.sendEventEnd()
+                    }
+                }, failure: { error in
+                    handleSendFailure("send text", error, eventId)
+                })
+            }
 
-            guard let image = image else { return }
-            // Has a picture, wait picture sent and then send `EventEnd`.
-            self?.sendImage(image, sucHandler: {
+            guard hasImage else { return }
+            // Has image(s): wait for all images to be sent, then send `EventEnd`.
+            self?.sendImages(images, sucHandler: {
                 self?.sendEventEnd()
             }, failure: { error in
                 handleSendFailure("send image", error, eventId)
@@ -746,12 +811,40 @@ extension StreamChatBaseController: UIImagePickerControllerDelegate, UINavigatio
             selectedImage = info[.originalImage] as? UIImage
         }
         picker.dismiss(animated: true) { [weak self] in
-            self?.actionView.showSelectedImage(selectedImage)
+            if let image = selectedImage {
+                self?.actionView.addSelectedImage(image)
+            }
         }
     }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true)
+    }
+}
+
+// MARK: - PHPickerViewControllerDelegate
+@available(iOS 14.0, *)
+extension StreamChatBaseController: PHPickerViewControllerDelegate {
+
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        picker.dismiss(animated: true)
+        guard !results.isEmpty else { return }
+
+        // PHPicker loads each result asynchronously; collect them and add as they arrive.
+        let maxCount = actionView.maxImageCount
+        for result in results {
+            let provider = result.itemProvider
+            guard provider.canLoadObject(ofClass: UIImage.self) else { continue }
+            provider.loadObject(ofClass: UIImage.self) { [weak self] object, _ in
+                guard let image = object as? UIImage else { return }
+                DispatchQueue.main.async {
+                    guard let self = self else { return }
+                    // Re-check the limit at add time, since results load out of order
+                    guard self.actionView.selectedImages.count < maxCount else { return }
+                    self.actionView.addSelectedImage(image)
+                }
+            }
+        }
     }
 }
 
@@ -847,6 +940,29 @@ extension StreamChatBaseController: ThingSmartStreamClientDelegate {
         // refresh message list
         NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(scrollToBottom), object: nil)
         perform(#selector(scrollToBottom), with: nil, afterDelay: 0.1)
+    }
+
+    // MARK: - Receive Image Data Stream
+    func streamClientDidReceiveImage(_ packet: ThingStreamImagePacketModel) {
+        // Associate the received image with the current event's message.
+        guard let eventId = eventId, let info = getChatInfoByEventId(eventId) else { return }
+
+        // One packet is one complete image. Prefer filePath, fall back to the raw payload.
+        var image: UIImage?
+        if let filePath = packet.filePath, !filePath.isEmpty {
+            image = UIImage(contentsOfFile: filePath)
+        }
+        if image == nil, let data = packet.payload, !data.isEmpty {
+            image = UIImage(data: data)
+        }
+        guard let image = image else { return }
+
+        info.recvImages.append(image)
+
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
+            self?.scrollToBottom()
+        }
     }
 
     func streamClientDidReceiveAudio(_ packet: ThingStreamAudioPacketModel) {

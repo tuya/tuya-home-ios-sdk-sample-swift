@@ -69,19 +69,20 @@
                         <viewLayoutGuide key="safeArea" id="zcn-f5-EKh"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="j1E-LC-MNv" firstAttribute="top" secondItem="X8G-2C-1Px" secondAttribute="top" constant="184" id="4I5-lL-0G1"/>
+                            <constraint firstItem="ghf-3n-h0D" firstAttribute="top" secondItem="zcn-f5-EKh" secondAttribute="top" constant="16" id="4I5-lL-0G1"/>
                             <constraint firstItem="zcn-f5-EKh" firstAttribute="trailing" secondItem="ghf-3n-h0D" secondAttribute="trailing" constant="24" id="7Fe-ES-Tnb"/>
                             <constraint firstItem="Rdd-fR-mb0" firstAttribute="leading" secondItem="zcn-f5-EKh" secondAttribute="leading" constant="9" id="AxS-Vh-OBE"/>
                             <constraint firstItem="j1E-LC-MNv" firstAttribute="centerX" secondItem="Rdd-fR-mb0" secondAttribute="centerX" id="EWj-d2-iCf"/>
                             <constraint firstItem="j1E-LC-MNv" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ghf-3n-h0D" secondAttribute="trailing" id="Gxb-F8-um3"/>
                             <constraint firstItem="ghf-3n-h0D" firstAttribute="leading" secondItem="zcn-f5-EKh" secondAttribute="leading" constant="23" id="Hnw-rw-DcJ"/>
-                            <constraint firstItem="j1E-LC-MNv" firstAttribute="top" secondItem="ghf-3n-h0D" secondAttribute="bottom" constant="26" id="KSn-iL-MGp"/>
-                            <constraint firstItem="Rdd-fR-mb0" firstAttribute="top" secondItem="j1E-LC-MNv" secondAttribute="bottom" constant="32" id="PyX-TU-ryo"/>
+                            <constraint firstItem="j1E-LC-MNv" firstAttribute="top" secondItem="ghf-3n-h0D" secondAttribute="bottom" constant="16" id="KSn-iL-MGp"/>
+                            <constraint firstItem="Rdd-fR-mb0" firstAttribute="top" secondItem="j1E-LC-MNv" secondAttribute="bottom" constant="24" id="PyX-TU-ryo"/>
                             <constraint firstItem="j1E-LC-MNv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ghf-3n-h0D" secondAttribute="leading" id="WxH-bg-0tb"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Rdd-fR-mb0" secondAttribute="bottom" id="baV-9i-WXp"/>
+                            <constraint firstItem="zcn-f5-EKh" firstAttribute="bottom" secondItem="Rdd-fR-mb0" secondAttribute="bottom" id="baV-9i-WXp"/>
                             <constraint firstItem="ghf-3n-h0D" firstAttribute="leading" secondItem="j1E-LC-MNv" secondAttribute="leading" id="cke-mQ-Tdp"/>
                             <constraint firstItem="j1E-LC-MNv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zcn-f5-EKh" secondAttribute="leading" id="gdw-Fc-POr"/>
                             <constraint firstItem="zcn-f5-EKh" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="j1E-LC-MNv" secondAttribute="trailing" id="r6r-ib-za6"/>
+                            <constraint firstItem="zcn-f5-EKh" firstAttribute="trailing" secondItem="Rdd-fR-mb0" secondAttribute="trailing" constant="9" id="tbl-trailing"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="WiFi Info" id="jt3-FC-zP6">

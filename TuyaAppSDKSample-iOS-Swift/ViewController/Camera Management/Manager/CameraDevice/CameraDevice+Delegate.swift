@@ -412,7 +412,7 @@ extension CameraDevice: ThingSmartCameraDelegate {
         _ camera: (any ThingSmartCameraType)!,
         resolutionDidChangeWith videoExtInfo: (any ThingSmartVideoExtInfo)!
     ) {
-        if videoExtInfo.videoIndex == -1 {
+        if videoExtInfo.videoIndex == UInt.max {
             allInnerDelegates().forEach { delegate in
                 delegate.camera?(
                     camera,

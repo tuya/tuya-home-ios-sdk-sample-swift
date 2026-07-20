@@ -18,20 +18,23 @@ protocol StreamActionViewDelegate: AnyObject {
     func streamActionViewDidClickSwitchActionType(_ actionType: StreamActionBtnType)
 }
 
-/// Chat input bar (ChatGPT-style, built in code)
+/// Chat input bar
 ///
-/// Text mode: [+] [(image thumbnail) + text field + mic] [right button]
-///   - + presents camera/photo picker; the selected image is inserted inside the input container (one only, with an X to delete)
+/// Text mode: [+] [(image thumbnails) + text field + mic] [right button]
+///   - + presents camera/photo picker; selected images are inserted inside the input container (up to `maxImageCount`, each with an X to delete)
+///   - Thumbnails are laid out horizontally in a scrollable row (no line wrapping)
 ///   - Mic sits at the right inside the text field; tapping it starts recording immediately
 ///   - Right button: hidden when empty; up-arrow to send when there is text/image; stop square to interrupt while waiting for the AI reply
 /// Recording mode: [stop recording] [amplitude waveform]
-///   - Images are not allowed while recording (starting a recording clears the selected image)
+///   - Images are not allowed while recording (starting a recording clears the selected images)
 ///   - Stop sends the recording (not an interrupt); after stopping, return to text mode and the right button becomes the interrupt square
 class StreamActionView: UIView {
 
     // MARK: - Public Properties
     weak var delegate: StreamActionViewDelegate?
-    var selectedImage: UIImage?
+    /// Maximum number of images the user can pick before sending.
+    let maxImageCount = 5
+    private(set) var selectedImages: [UIImage] = []
     private(set) var isRecording: Bool = false
     /// Waiting for the AI reply (right button shows the interrupt square)
     private(set) var isWaitingReply: Bool = false
@@ -44,8 +47,8 @@ class StreamActionView: UIView {
     private let middleContainer = UIView()
     private let contentStack = UIStackView()
     private let previewRow = UIView()
-    private let previewImageView = UIImageView()
-    private let previewDeleteButton = UIButton(type: .system)
+    private let previewScrollView = UIScrollView()
+    private var previewThumbViews: [UIView] = [] // reused thumbnail wrappers (one per selected image)
     private let micButton = UIButton(type: .system)
     private let waveformView = StreamWaveformView()
     private let rightButton = UIButton(type: .system)
@@ -53,6 +56,11 @@ class StreamActionView: UIView {
     private let symbolConfig = UIImage.SymbolConfiguration(pointSize: 17, weight: .medium)
     /// Soft red used for stop-recording / delete-image
     private let softRed = UIColor(red: 0.92, green: 0.34, blue: 0.30, alpha: 1)
+
+    /// Thumbnail edge length and spacing used in the input preview row
+    private let kPreviewThumbSize: CGFloat = 64
+    private let kPreviewThumbSpacing: CGFloat = 8
+    private let kPreviewDeleteSize: CGFloat = 22
 
     // MARK: - Initialization
     override init(frame: CGRect) {
@@ -123,32 +131,19 @@ class StreamActionView: UIView {
         middleContainer.backgroundColor = .tertiarySystemFill
         middleContainer.layer.cornerRadius = 20
 
-        // Image preview: thumbnail inserted inside the input container, with an X delete button at the top-right
-        previewImageView.contentMode = .scaleAspectFill
-        previewImageView.clipsToBounds = true
-        previewImageView.layer.cornerRadius = 10
-        previewImageView.translatesAutoresizingMaskIntoConstraints = false
-
-        previewDeleteButton.setImage(UIImage(systemName: "xmark", withConfiguration: UIImage.SymbolConfiguration(pointSize: 11, weight: .bold)), for: .normal)
-        previewDeleteButton.tintColor = .white
-        previewDeleteButton.backgroundColor = softRed
-        previewDeleteButton.layer.cornerRadius = 11
-        previewDeleteButton.translatesAutoresizingMaskIntoConstraints = false
-        previewDeleteButton.addTarget(self, action: #selector(clickDeleteImage), for: .touchUpInside)
-
-        previewRow.addSubview(previewImageView)
-        previewRow.addSubview(previewDeleteButton)
+        // Image preview row: a horizontal scroll view holding thumbnails (each with an X delete button).
+        // Thumbnails are laid out in a single scrollable row (no line wrapping). Everything is kept INSIDE
+        // the scroll view's bounds (clipsToBounds stays on) so the row never overflows the input container
+        // and overlaps the text field. The delete-badge is positioned fully within the thumbnail, not overflowing.
+        previewScrollView.showsHorizontalScrollIndicator = false
+        previewScrollView.translatesAutoresizingMaskIntoConstraints = false
+        previewRow.addSubview(previewScrollView)
         NSLayoutConstraint.activate([
-            previewImageView.leadingAnchor.constraint(equalTo: previewRow.leadingAnchor, constant: 2),
-            previewImageView.topAnchor.constraint(equalTo: previewRow.topAnchor, constant: 6),
-            previewImageView.bottomAnchor.constraint(equalTo: previewRow.bottomAnchor, constant: -2),
-            previewImageView.widthAnchor.constraint(equalToConstant: 64),
-            previewImageView.heightAnchor.constraint(equalToConstant: 64),
-
-            previewDeleteButton.centerXAnchor.constraint(equalTo: previewImageView.trailingAnchor, constant: -4),
-            previewDeleteButton.centerYAnchor.constraint(equalTo: previewImageView.topAnchor, constant: 4),
-            previewDeleteButton.widthAnchor.constraint(equalToConstant: 22),
-            previewDeleteButton.heightAnchor.constraint(equalToConstant: 22),
+            previewRow.heightAnchor.constraint(equalToConstant: kPreviewThumbSize + 12),
+            previewScrollView.leadingAnchor.constraint(equalTo: previewRow.leadingAnchor, constant: 2),
+            previewScrollView.trailingAnchor.constraint(equalTo: previewRow.trailingAnchor, constant: -2),
+            previewScrollView.topAnchor.constraint(equalTo: previewRow.topAnchor, constant: 6),
+            previewScrollView.bottomAnchor.constraint(equalTo: previewRow.bottomAnchor, constant: -6),
         ])
 
         // Input row: text field + mic button at the right inside the field
@@ -198,9 +193,19 @@ class StreamActionView: UIView {
     }
 
     // MARK: - Public Methods
-    func showSelectedImage(_ image: UIImage?) {
-        selectedImage = image
-        previewImageView.image = image
+
+    /// Add one picked image to the preview (ignored if the limit has been reached).
+    func addSelectedImage(_ image: UIImage) {
+        guard selectedImages.count < maxImageCount else { return }
+        selectedImages.append(image)
+        refreshPreview()
+        applyState()
+    }
+
+    /// Replace all selected images at once (used when restoring state after a failed send).
+    func setSelectedImages(_ images: [UIImage]) {
+        selectedImages = Array(images.prefix(maxImageCount))
+        refreshPreview()
         applyState()
     }
 
@@ -219,8 +224,8 @@ class StreamActionView: UIView {
         isRecording = false
         textField.isEnabled = true
         textField.text = ""
-        selectedImage = nil
-        previewImageView.image = nil
+        selectedImages = []
+        refreshPreview()
         applyState()
     }
 
@@ -230,17 +235,82 @@ class StreamActionView: UIView {
         applyState()
     }
 
-    /// Send failed: clear the waiting state and restore the pre-send text/image back into the input bar
-    func restoreAfterSendFailure(content: String, image: UIImage?) {
+    /// Send failed: clear the waiting state and restore the pre-send text/images back into the input bar
+    func restoreAfterSendFailure(content: String, images: [UIImage]) {
         isWaitingReply = false
         textField.text = content
-        showSelectedImage(image)
+        setSelectedImages(images)
     }
 
     /// Recording amplitude array (0~1); redraws the whole waveform in place; must be called on the main thread
     func updateRecordingLevels(_ levels: [CGFloat]) {
         guard isRecording else { return }
         waveformView.update(levels)
+    }
+
+    // MARK: - Preview Refresh
+
+    /// Rebuild the thumbnail row from `selectedImages`. Thumbnail wrappers are created/reused to avoid rebuilding
+    /// the whole subview tree on every change.
+    private func refreshPreview() {
+        // Ensure enough reusable thumbnail wrappers exist
+        while previewThumbViews.count < selectedImages.count {
+            let wrapper = UIView()
+            // The wrapper is positioned by manual frame inside the scroll view, so keep
+            // translatesAutoresizingMaskIntoConstraints = true (default). Setting it to false would make
+            // Auto Layout reset the frame (back to zero) on the next layout pass, hiding the
+            // thumbnails and disabling the delete buttons.
+            let imageView = UIImageView()
+            imageView.contentMode = .scaleAspectFill
+            imageView.clipsToBounds = true
+            imageView.layer.cornerRadius = 10
+            imageView.translatesAutoresizingMaskIntoConstraints = false
+            wrapper.addSubview(imageView)
+
+            let deleteButton = UIButton(type: .system)
+            deleteButton.setImage(UIImage(systemName: "xmark", withConfiguration: UIImage.SymbolConfiguration(pointSize: 11, weight: .bold)), for: .normal)
+            deleteButton.tintColor = .white
+            deleteButton.backgroundColor = softRed
+            deleteButton.layer.cornerRadius = kPreviewDeleteSize / 2
+            deleteButton.translatesAutoresizingMaskIntoConstraints = false
+            deleteButton.addTarget(self, action: #selector(clickDeleteImage(_:)), for: .touchUpInside)
+            wrapper.addSubview(deleteButton)
+
+            NSLayoutConstraint.activate([
+                imageView.leadingAnchor.constraint(equalTo: wrapper.leadingAnchor),
+                imageView.topAnchor.constraint(equalTo: wrapper.topAnchor),
+                imageView.bottomAnchor.constraint(equalTo: wrapper.bottomAnchor),
+                imageView.widthAnchor.constraint(equalToConstant: kPreviewThumbSize),
+                imageView.heightAnchor.constraint(equalToConstant: kPreviewThumbSize),
+                // Keep the delete-badge fully INSIDE the thumbnail so it is never clipped by the
+                // scroll view (which stays clipsToBounds). Center at half the badge size from each edge.
+                deleteButton.trailingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: -3),
+                deleteButton.topAnchor.constraint(equalTo: imageView.topAnchor, constant: 3),
+                deleteButton.widthAnchor.constraint(equalToConstant: kPreviewDeleteSize),
+                deleteButton.heightAnchor.constraint(equalToConstant: kPreviewDeleteSize),
+            ])
+            // Wrapper frame is assigned in the layout loop below (manual frame inside the scroll view).
+            previewScrollView.addSubview(wrapper)
+            previewThumbViews.append(wrapper)
+        }
+
+        let count = selectedImages.count
+        let contentWidth = CGFloat(count) * kPreviewThumbSize + CGFloat(max(0, count - 1)) * kPreviewThumbSpacing
+        previewScrollView.contentSize = CGSize(width: contentWidth, height: kPreviewThumbSize)
+
+        for (i, wrapper) in previewThumbViews.enumerated() {
+            if i < count {
+                wrapper.isHidden = false
+                let imageView = wrapper.subviews.compactMap { $0 as? UIImageView }.first
+                imageView?.image = selectedImages[i]
+                let deleteButton = wrapper.subviews.compactMap { $0 as? UIButton }.first
+                deleteButton?.tag = i // index of the image to delete
+                let x = CGFloat(i) * (kPreviewThumbSize + kPreviewThumbSpacing)
+                wrapper.frame = CGRect(x: x, y: 0, width: kPreviewThumbSize, height: kPreviewThumbSize)
+            } else {
+                wrapper.isHidden = true
+            }
+        }
     }
 
     // MARK: - Actions
@@ -269,7 +339,7 @@ class StreamActionView: UIView {
     @objc private func clickMicButton() {
         guard !isRecording, !isWaitingReply else { return }
         // Images are not allowed while recording; clear before starting
-        showSelectedImage(nil)
+        setSelectedImages([])
         endEditing(true)
         isRecording = true
         waveformView.reset()
@@ -287,16 +357,21 @@ class StreamActionView: UIView {
 
     private func sendText() {
         let content = textField.text ?? ""
-        guard !content.isEmpty || selectedImage != nil else { return }
+        guard !content.isEmpty || !selectedImages.isEmpty else { return }
         endEditing(true)
         isWaitingReply = true
         applyState()
         delegate?.streamActionViewDidClickSendContent(content)
     }
 
-    @objc private func clickDeleteImage() {
+    /// Delete the thumbnail whose delete button was tapped (button.tag holds the image index)
+    @objc private func clickDeleteImage(_ sender: UIButton) {
         guard !isRecording else { return }
-        showSelectedImage(nil)
+        let index = sender.tag
+        guard selectedImages.indices.contains(index) else { return }
+        selectedImages.remove(at: index)
+        refreshPreview()
+        applyState()
     }
 
     @objc private func textFieldDidChange(_ textField: UITextField) {
@@ -306,7 +381,7 @@ class StreamActionView: UIView {
     // MARK: - State
 
     private var hasContent: Bool {
-        return !(textField.text ?? "").isEmpty || selectedImage != nil
+        return !(textField.text ?? "").isEmpty || !selectedImages.isEmpty
     }
 
     /// Refresh the whole UI based on isRecording / isWaitingReply / input content
@@ -325,7 +400,7 @@ class StreamActionView: UIView {
         // Middle: input content (text mode) / amplitude waveform (recording mode)
         contentStack.isHidden = isRecording
         waveformView.isHidden = !isRecording
-        previewRow.isHidden = (selectedImage == nil) || isRecording
+        previewRow.isHidden = selectedImages.isEmpty || isRecording
         textField.isEnabled = !isRecording
 
         // Right button: interrupt square (waiting for reply) / up-arrow to send (has content) / hidden

@@ -44,6 +44,11 @@ class BEDualModeTableViewController: UIViewController {
     // MARK: - Property
     private var isSuccess = false
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationItem.largeTitleDisplayMode = .never
+    }
+
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
