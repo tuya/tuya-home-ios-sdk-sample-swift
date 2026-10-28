@@ -16,33 +16,33 @@ target 'TuyaAppSDKSample-iOS-Swift' do
   pod 'ThingSmartCryption', :path => './ios_core_sdk'
   
   # [Required] Basic
-  pod 'ThingSmartHomeKit', '~> 7.8.0'
-  pod 'ThingSmartBusinessExtensionKit', '~> 7.8.0'
+  pod 'ThingSmartHomeKit', '~> 7.11.0'
+  pod 'ThingSmartBusinessExtensionKit', '~> 7.11.0'
   
 
    # [Optional] BiometricLogin
-   pod 'ThingSmartLocalAuthKit', '~> 7.8.0'
+   pod 'ThingSmartLocalAuthKit', '~> 7.11.0'
   
    # [Optional] Bluetooth
-   pod 'ThingSmartBusinessExtensionKitBLEExtra','~> 7.8.0'
+   pod 'ThingSmartBusinessExtensionKitBLEExtra','~> 7.11.0'
   
    # [Optional] Matter
-   pod 'ThingSmartMatterKit', '~> 7.8.0'
-   pod 'ThingSmartMatterExtensionKit', '~> 7.8.0'
-   pod 'ThingSmartBusinessExtensionKitMatterExtra','~> 7.8.0'
+   pod 'ThingSmartMatterKit', '~> 7.11.0'
+   pod 'ThingSmartMatterExtensionKit', '~> 7.11.0'
+   pod 'ThingSmartBusinessExtensionKitMatterExtra','~> 7.11.0'
   
    # [Optional] HomeKit Device
-   pod 'ThingSmartAppleDeviceKit', '~> 7.8.0'
+   pod 'ThingSmartAppleDeviceKit', '~> 7.11.0'
   
    # [Optional] Special category
-   pod 'ThingSmartCameraKit', '~> 7.8.0'
+   pod 'ThingSmartCameraKit', '~> 7.11.0'
    pod 'ThingCameraUIKit'
-   pod 'ThingSmartOutdoorKit', '~> 7.8.0'
-   pod 'ThingSmartSweeperKit', '~> 7.8.0'
-   pod 'ThingSmartLockKit', '~> 7.8.0'
+   pod 'ThingSmartOutdoorKit', '~> 7.11.0'
+   pod 'ThingSmartSweeperKit', '~> 7.11.0'
+   pod 'ThingSmartLockKit', '~> 7.11.0'
 
    # [Optional] AI Stream
-   pod 'ThingSmartBusinessExtensionKitAIStreamExtra', '~> 7.8.0'
+   pod 'ThingSmartBusinessExtensionKitAIStreamExtra', '~> 7.11.0'
   
   # The following components are only required for this demo and are not necessary when integrating into your own project.
   pod 'SVProgressHUD'
@@ -60,7 +60,7 @@ end
 #end
 #
 #target 'TuyaAppSDKWidgetExtension' do
-# pod 'ThingSmartHomeKit', '~> 7.8.0'
+# pod 'ThingSmartHomeKit', '~> 7.11.0'
 # pod 'SDWebImage', '~> 5.21.0'
 #end
 
